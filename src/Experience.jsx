@@ -8,7 +8,7 @@ extend({ OrbitControls });
 export default function Experience() {
   return (
     <>
-      <Environment background files="./assets/images/hdri/golf_course_sunrise_1k.hdr" />
+      <Environment background files="assets/images/hdri/golf_course_sunrise_1k.hdr" />
       <OrbitControls makeDefault />
 
       <ambientLight intensity={0.3} />
