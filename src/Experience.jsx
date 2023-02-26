@@ -12,7 +12,7 @@ export default function Experience() {
       <OrbitControls makeDefault />
 
       <ambientLight intensity={0.3} />
-      <mesh position-y={0.35} position-x={0.5} rotation-x={-Math.PI * 0.5} scale={10}>
+      <mesh position-y={0.35} position-x={0} rotation-x={-Math.PI * 0.5} scale={10}>
         <planeGeometry />
         <meshStandardMaterial color="#202410" />
       </mesh>

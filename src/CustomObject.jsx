@@ -7,6 +7,6 @@ export default function CustomObject() {
   console.log(model);
 
   return (
-    <primitive object={model.scene} rotation={[0, Math.PI, 0]} scale={2} />
+    <primitive object={model.scene} position-x={0.5} rotation={[0, Math.PI, 0]} scale={2} />
   );
 }
