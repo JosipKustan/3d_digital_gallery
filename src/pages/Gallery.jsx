@@ -1,7 +1,7 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
-import Experience from '../Experience';
+import Scena from '../Scena.jsx';
 
 function Gallery() {
   return (
@@ -18,7 +18,7 @@ function Gallery() {
         position: [3, 2, 6],
       }}
     >
-      <Experience />
+      <Scena />
     </Canvas>
   );
 }
