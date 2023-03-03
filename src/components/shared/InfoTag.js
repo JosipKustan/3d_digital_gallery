@@ -5,7 +5,7 @@ export const InfoTag = styled.div`
   align-items: center;
   padding: 8px;
   gap: 4px;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(244, 233, 230, 0.6);
   backdrop-filter: blur(5px);
   border-radius: 16px 0px 0px 16px;
   font-weight: 500;

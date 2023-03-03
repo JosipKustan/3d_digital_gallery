@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import Scena from '../Scena.jsx';
 import GuideInfo from '../components/app/GuideInfo.jsx';
+import BottomSlider from '../components/app/bottomSlider/BottomSlider.jsx';
 
 function Gallery() {
   return (
@@ -23,6 +24,7 @@ function Gallery() {
       >
         <Scena />
       </Canvas>
+      <BottomSlider />
     </>
   );
 }

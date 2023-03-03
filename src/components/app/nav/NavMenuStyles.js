@@ -7,7 +7,7 @@ export const Nav = styled(motion.nav)`
   left: 0;
   width: 80%;
   height: 100%;
-  background-color: #160425;
+  background-color: #F4E9E6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@ export const Hamburger = styled.button`
   left: 0;
   top: 0;
 
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(244, 233, 230, 0.6);
   /* Glassmorphism */
 
   backdrop-filter: blur(5px);
@@ -46,10 +46,10 @@ export const Hamburger = styled.button`
 
   border-radius: 0px 0px 16px 0px;
   z-index: 20;
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px #9ecaed;
-  }
+  //&:focus {
+  //  outline: none;
+  //  box-shadow: 0 0 0 4px #9ecaed;
+  //}
 `;
 export const Backdrop = styled(motion.div)`
   position: fixed;

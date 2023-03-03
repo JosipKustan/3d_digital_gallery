@@ -4,7 +4,7 @@ import { Button } from '../components/shared/Button';
 function Home() {
   return (
     <>
-      <div>Ovo je homepage</div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Ovo je homepage</div>
       <Button>Button</Button>
     </>
   );

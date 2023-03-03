@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Backdrop,
   Hamburger, Nav, NavItem, NavList,
@@ -15,12 +16,22 @@ const variants = {
 function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBackdrop, setShowBackdrop] = useState(false);
-
+  const [startX, setStartX] = useState(null);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setShowBackdrop(!showBackdrop);
   };
+  const handleTouchStart = (event) => {
+    setStartX(event.touches[0].clientX);
+  };
 
+  const handleTouchEnd = (event) => {
+    const endX = event.changedTouches[0].clientX;
+
+    if (endX < startX) {
+      toggleMenu();
+    }
+  };
   return (
     <>
       <Hamburger onClick={toggleMenu}>
@@ -34,12 +45,16 @@ function NavMenu() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={toggleMenu}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       />
       )}
       <Nav
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
         variants={variants}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         <NavList>
           <NavItem
@@ -47,14 +62,14 @@ function NavMenu() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Ovdje
+            <Link to="/gallery">Go to Gallery</Link>
           </NavItem>
           <NavItem
             onClick={toggleMenu}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            nema jos
+            <Link to="/">Go to Home</Link>
           </NavItem>
           <NavItem
             onClick={toggleMenu}
