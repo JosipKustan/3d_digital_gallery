@@ -8,7 +8,7 @@ import {
 } from './BottomSliderStyles.js';
 import { InfoHeader } from './InfoHeader.jsx';
 
-function BottomSlider({ artName, description }) {
+function BottomSlider({ artPiece }) {
   const [isOpen, setIsOpen] = useState(false);
   const [startY, setStartY] = useState(null);
   const toggleSlider = () => {
@@ -43,9 +43,9 @@ function BottomSlider({ artName, description }) {
         <ChevronIcon isOpen={isOpen} />
       </ChevronWrapper>
       <BottomSliderContent>
-        <InfoHeader isOpen={isOpen} />
-        <ArtName>{artName}</ArtName>
-        <Description>{description}</Description>
+        <InfoHeader artPiece={artPiece} isOpen={isOpen} />
+        <ArtName>{artPiece.name}</ArtName>
+        <Description>{artPiece.description}</Description>
       </BottomSliderContent>
 
     </BottomSliderWrapper>

@@ -6,6 +6,7 @@ import Placeholder from '../../components/shared/Placeholder.jsx'; import { Rast
 import BottomSlider from '../../components/app/bottomSlider/BottomSlider.jsx';
 import GuideInfo from '../../components/app/GuideInfo.jsx';
 import DeimosAxe from '../../components/objects/DeimosAxe.jsx';
+import { galleryWorks } from '../../art/galleryWorks.js';
 
 extend({ OrbitControls });
 
@@ -41,7 +42,7 @@ export default function DeimosAxeScene() {
           <DeimosAxe />
         </Suspense>
       </Canvas>
-      <BottomSlider artName={RastovacArtName} description={RastovacDescription} />
+      <BottomSlider artPiece={galleryWorks[2]} />
     </>
   );
 }

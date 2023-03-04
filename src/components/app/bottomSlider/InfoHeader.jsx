@@ -1,15 +1,16 @@
 import { InfoHeaderContainer, Name, NameContainer } from './BottomSliderStyles.js';
 import AvatarImage from '../../shared/Avatar.jsx';
 
-export function InfoHeader({ isOpen }) {
+export function InfoHeader({ isOpen, artPiece }) {
   return (
     <InfoHeaderContainer>
       <AvatarImage
+        image={artPiece.artistsImage}
         isOpen={isOpen}
       />
       <NameContainer>
-        <strong>Kukicrafts</strong>
-        <Name>Josip Kuštan</Name>
+        <strong>{artPiece.artistName}</strong>
+        <Name>{artPiece.artistRealName}</Name>
       </NameContainer>
     </InfoHeaderContainer>
   );

@@ -7,12 +7,12 @@ const Avatar = styled(motion.img)`
   border-radius: 100%;
   object-fit: cover;
 `;
-function AvatarImage({ isOpen }) {
+function AvatarImage({ isOpen, image }) {
   const imageSize = isOpen ? '48px' : '32px';
 
   return (
     <Avatar
-      src="assets/images/avatarImage.webp"
+      src={image}
       alt="Avatar"
       width={imageSize}
       height={imageSize}

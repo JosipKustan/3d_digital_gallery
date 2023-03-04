@@ -7,6 +7,7 @@ import Placeholder from '../../components/shared/Placeholder.jsx';
 import BottomSlider from '../../components/app/bottomSlider/BottomSlider.jsx';
 import { RastovacArtName, RastovacDescription } from '../../components/app/bottomSlider/BottomSliderContent.jsx';
 import GuideInfo from '../../components/app/GuideInfo.jsx';
+import { galleryWorks } from '../../art/galleryWorks.js';
 
 extend({ OrbitControls });
 
@@ -38,7 +39,7 @@ export default function RastovacLiDARScene() {
           <RastovacLiDAR />
         </Suspense>
       </Canvas>
-      <BottomSlider artName={RastovacArtName} description={RastovacDescription} />
+      <BottomSlider artPiece={galleryWorks[0]} />
     </>
   );
 }
