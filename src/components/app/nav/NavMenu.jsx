@@ -1,16 +1,23 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
   Backdrop,
   Hamburger, Nav, NavItem, NavList,
 } from './NavMenuStyles.js';
+import ThumbnailPicker from '../thumbnailPicker/ThumbnailPicker.jsx';
+import { galleryWorks } from '../../../art/galleryWorks.js';
 
 const variants = {
   open: {
     x: 0,
+    transition: {
+      ease: 'easeInOut',
+    },
   },
   closed: {
     x: '-100%',
+    transition: {
+      ease: 'easeInOut',
+    },
   },
 };
 function NavMenu() {
@@ -57,27 +64,16 @@ function NavMenu() {
         onTouchEnd={handleTouchEnd}
       >
         <NavList>
-          <NavItem
-            onClick={toggleMenu}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Link to="/gallery">Go to Gallery</Link>
-          </NavItem>
-          <NavItem
-            onClick={toggleMenu}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Link to="/">Go to Home</Link>
-          </NavItem>
-          <NavItem
-            onClick={toggleMenu}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Nista
-          </NavItem>
+          {galleryWorks.map((image) => (
+            <NavItem
+              onClick={toggleMenu}
+              whileHover={{ opacity: 0.8 }}
+              whileTap={{ scale: 0.2 }}
+              key={image.id}
+            >
+              <ThumbnailPicker image={image} />
+            </NavItem>
+          ))}
         </NavList>
       </Nav>
     </>

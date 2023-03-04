@@ -5,7 +5,7 @@ export const Nav = styled(motion.nav)`
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 100%;
   background-color: #F4E9E6;
   display: flex;
@@ -13,17 +13,32 @@ export const Nav = styled(motion.nav)`
   justify-content: center;
   align-items: center;
   z-index: 15;
+  overflow: scroll;
+
+  @media screen and (max-width: 768px) {
+    /* set width for mobile screens */
+    max-width: 300px;
+  }
+
+  @media screen and (min-width: 769px) {
+    /* set width for desktop screens */
+    max-width: 400px;
+  }
 `;
 
 export const NavList = styled.ul`
-  list-style: none;
-  padding: 0;
   margin: 0;
+  margin-top: 48px;
+  height: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+  padding: 8px;
+  box-sizing: border-box;
 `;
 
 export const NavItem = styled(motion.li)`
-  margin-bottom: 1rem;
-  text-align: center;
 `;
 export const Hamburger = styled.button`
   all: unset;
@@ -44,7 +59,7 @@ export const Hamburger = styled.button`
   backdrop-filter: blur(5px);
   /* Note: backdrop-filter has minimal browser support */
 
-  border-radius: 0px 0px 16px 0px;
+  border-radius: 0 0 16px 0;
   z-index: 20;
   //&:focus {
   //  outline: none;
