@@ -68,7 +68,7 @@ function NavMenu() {
             <NavItem
               onClick={toggleMenu}
               whileHover={{ opacity: 0.8 }}
-              whileTap={{ scale: 0.2 }}
+              whileTap={{ scale: 0.7 }}
               key={image.id}
             >
               <ThumbnailPicker image={image} />
