@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
-import Scena from '../Scena.jsx';
+import RastovacLiDAR from './scenes/RastovacLiDAR.jsx';
 import GuideInfo from '../components/app/GuideInfo.jsx';
 import BottomSlider from '../components/app/bottomSlider/BottomSlider.jsx';
+import { RastovacArtName, RastovacDescription } from '../components/app/bottomSlider/BottomSliderContent.jsx';
 
 function Gallery() {
   return (
@@ -22,9 +23,11 @@ function Gallery() {
           position: [3, 2, 6],
         }}
       >
-        <Scena />
+        <RastovacLiDAR />
+
       </Canvas>
-      <BottomSlider />
+
+      <BottomSlider artName={RastovacArtName} description={RastovacDescription} />
     </>
   );
 }
