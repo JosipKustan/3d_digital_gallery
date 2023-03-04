@@ -17,7 +17,7 @@ export const Nav = styled(motion.nav)`
 
   @media screen and (max-width: 768px) {
     /* set width for mobile screens */
-    max-width: 300px;
+    max-width: 340px;
   }
 
   @media screen and (min-width: 769px) {
