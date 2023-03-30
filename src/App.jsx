@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Navigate, Route, Routes,
+  HashRouter, Navigate, Route, Routes,
 } from 'react-router-dom';
 import { GlobalWrapper } from './components/shared/containers/GlobalWrapper';
 import NavMenu from './components/app/nav/NavMenu.jsx';
@@ -12,7 +12,7 @@ function App() {
   return (
     <GlobalWrapper>
 
-      <BrowserRouter>
+      <HashRouter>
         <NavMenu />
         <Routes>
           <Route exact path="/" element={<RastovacLiDARScene />} />
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/deimos-axe" element={<DeimosAxeScene />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </GlobalWrapper>
   );
 }
