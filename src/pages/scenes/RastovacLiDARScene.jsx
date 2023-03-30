@@ -14,6 +14,7 @@ export default function RastovacLiDARScene() {
   const pedestalSize = [6, 50, 6];
   const pedestalPosition = [0, -25.9, 0];
   const pedestalColor = '#201212';
+
   return (
     <>
       <GuideInfo />
@@ -28,11 +29,10 @@ export default function RastovacLiDARScene() {
           fov: 45,
           near: 0.1,
           far: 200,
-          position: [3, 2, 6],
+          position: [15, 12, 15],
         }}
       >
         {/* <Environment background blur={0.1} files="assets/images/hdri/golf_course_sunrise_1k.hdr" /> */}
-
         <ambientLight intensity={0.6} color="#FFFFFF" />
         {/* <SpotLight position={[0, position, 0]} color="#ffffff" intensity={intensity} distance={distance} angle={Math.PI / 8} penumbra={1} scale={scale} attenuation={attenuation} /> */}
         <SpotLight position={[0, 10.0, 0]} color="#ffffff" intensity={1} distance={9.89} angle={Math.PI / 8} penumbra={1} scale={10.00} attenuation={10.00} />
@@ -45,7 +45,7 @@ export default function RastovacLiDARScene() {
           makeDefault
           maxPolarAngle={Math.PI / 2}
           minDistance={2}
-          maxDistance={20}
+          maxDistance={30}
         />
         <Suspense fallback={<Placeholder />}>
           <RastovacLiDAR />
