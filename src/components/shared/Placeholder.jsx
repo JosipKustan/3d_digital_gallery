@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { Text } from '@react-three/drei';
 
 function Placeholder() {
   const meshRef = useRef();
@@ -11,11 +12,15 @@ function Placeholder() {
   });
 
   return (
-
-    <mesh ref={meshRef}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="gray" />
-    </mesh>
+    <>
+      <Text position={[0, 1, 0]} font="https://fonts.googleapis.com/css2?family=Inter:wght@400" characters="abcdefghijklmnopqrstuvwxyz0123456789!">
+        Loading
+      </Text>
+      <mesh ref={meshRef}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial color="gray" />
+      </mesh>
+    </>
 
   );
 }

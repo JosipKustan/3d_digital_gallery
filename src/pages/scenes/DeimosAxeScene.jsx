@@ -2,7 +2,7 @@ import { extend, Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
-import Placeholder from '../../components/shared/Placeholder.jsx'; import { RastovacArtName, RastovacDescription } from '../../components/app/bottomSlider/BottomSliderContent.jsx';
+import Placeholder from '../../components/shared/Placeholder.jsx';
 import BottomSlider from '../../components/app/bottomSlider/BottomSlider.jsx';
 import GuideInfo from '../../components/app/GuideInfo.jsx';
 import DeimosAxe from '../../components/objects/DeimosAxe.jsx';
@@ -36,7 +36,7 @@ export default function DeimosAxeScene() {
           makeDefault
           maxPolarAngle={Math.PI / 2}
           minDistance={2}
-          maxDistance={10}
+          maxDistance={20}
         />
         <Suspense fallback={<Placeholder />}>
           <DeimosAxe />
