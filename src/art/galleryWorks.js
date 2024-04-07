@@ -20,6 +20,16 @@ export const galleryWorks = [
     artistsImage: 'assets/images/avatarImage.webp',
   },
   {
+    id: 4,
+    name: 'Nautaloid Crash - Baldur\'s Gate 3',
+    src: 'assets/images/works/NautaloidCrash.jpg',
+    link: '/bg3crash',
+    description: 'Miniture sculpture of a Nautaloid Crash from The Game of the Year awarded Baldur\'s gate 3',
+    artistName: 'Kukicrafts',
+    artistRealName: 'Josip Kuštan',
+    artistsImage: 'assets/images/avatarImage.webp',
+  },
+  {
     id: 3,
     name: 'Deimos\'s Axe',
     src: 'assets/images/works/Deimos\'s Axe.png',
