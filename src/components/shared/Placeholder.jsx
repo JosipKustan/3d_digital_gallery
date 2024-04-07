@@ -13,7 +13,7 @@ function Placeholder() {
 
   return (
     <>
-      <Text position={[0, 1, 0]} font="https://fonts.googleapis.com/css2?family=Inter:wght@400" characters="abcdefghijklmnopqrstuvwxyz0123456789!">
+      <Text position={[0, 1, 0]} font="/assets/font/Inter-Regular.ttf" characters="abcdefghijklmnopqrstuvwxyz0123456789!">
         Loading
       </Text>
       <mesh ref={meshRef}>

@@ -38,7 +38,7 @@ export default function RastovacLiDARScene() {
         <SpotLight position={[0, 10.0, 0]} color="#ffffff" intensity={1} distance={9.89} angle={Math.PI / 8} penumbra={1} scale={10.00} attenuation={10.00} />
 
         <mesh position={pedestalPosition}>
-          <boxBufferGeometry args={pedestalSize} />
+          <boxGeometry args={pedestalSize} />
           <meshStandardMaterial color={pedestalColor} />
         </mesh>
         <OrbitControls
