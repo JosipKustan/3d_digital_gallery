@@ -2,7 +2,7 @@ import { extend, Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 import { OrbitControls, SpotLight } from '@react-three/drei';
 import * as THREE from 'three';
-import Bg3Crash from '../../components/objects/Bg3Crash.jsx';
+import AttackOnBaldursGate from '../../components/objects/AttackOnBaldursGate.jsx';
 import Placeholder from '../../components/shared/Placeholder.jsx';
 import BottomSlider from '../../components/app/bottomSlider/BottomSlider.jsx';
 import GuideInfo from '../../components/app/GuideInfo.jsx';
@@ -10,7 +10,8 @@ import { galleryWorks } from '../../art/galleryWorks.js';
 
 extend({ OrbitControls });
 
-export default function RastovacLiDARScene() {
+
+export default function AttackOnBaldursGateScene() {
   const pedestalSize = [6, 50, 6];
   const pedestalPosition = [0, -25.9, 0];
   const pedestalColor = '#201212';
@@ -29,7 +30,7 @@ export default function RastovacLiDARScene() {
           fov: 45,
           near: 0.1,
           far: 200,
-          position: [15, 12, 15],
+          position: [-6, 0, -4],
         }}
       >
        
@@ -48,7 +49,7 @@ export default function RastovacLiDARScene() {
           maxDistance={30}
         />
         <Suspense fallback={<Placeholder />}>
-          <Bg3Crash />
+          <AttackOnBaldursGate />
         </Suspense>
       </Canvas>
       <BottomSlider artPiece={galleryWorks[2]} />

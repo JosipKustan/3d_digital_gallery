@@ -20,6 +20,16 @@ export const galleryWorks = [
     artistsImage: 'assets/images/avatarImage.webp',
   },
   {
+    id: 5,
+    name: 'Attack on Baldur\'s Gate 3',
+    src: 'assets/images/works/AttackOnBaldursGate.jpg',
+    link: '/attackonbaldursgate',
+    description: 'Miniture sculpture of an Intro Cinematic sceen from Baldur\'s Gate 3 Where the Nautaloid is grabbing the tower and destroying it. ',
+    artistName: 'Kukicrafts',
+    artistRealName: 'Josip Kuštan',
+    artistsImage: 'assets/images/avatarImage.webp',
+  },
+  {
     id: 4,
     name: 'Nautaloid Crash - Baldur\'s Gate 3',
     src: 'assets/images/works/NautaloidCrash.jpg',
