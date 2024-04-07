@@ -1,9 +1,18 @@
-import React, { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import React, { useRef, useEffect } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import { Text } from '@react-three/drei';
 
 function Placeholder() {
   const meshRef = useRef();
+  const textRef = useRef();
+  const { camera } = useThree();
+
+  useEffect(() => {
+    if (textRef.current) {
+      // This will make the placeholder mesh always face the camera
+      textRef.current.lookAt(camera.position);
+    }
+  }, [camera.position]);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
@@ -13,7 +22,7 @@ function Placeholder() {
 
   return (
     <>
-      <Text position={[0, 1, 0]} font="/assets/font/Inter-Regular.ttf" characters="abcdefghijklmnopqrstuvwxyz0123456789!">
+      <Text ref={textRef} position={[0, 1, 0]} font="/assets/font/Inter-Regular.ttf" characters="abcdefghijklmnopqrstuvwxyz0123456789!">
         Loading
       </Text>
       <mesh ref={meshRef}>
