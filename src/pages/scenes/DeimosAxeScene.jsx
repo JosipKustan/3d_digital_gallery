@@ -42,7 +42,7 @@ export default function DeimosAxeScene() {
           <DeimosAxe />
         </Suspense>
       </Canvas>
-      <BottomSlider artPiece={galleryWorks[2]} />
+      <BottomSlider artPiece={galleryWorks[4]} />
     </>
   );
 }
