@@ -32,14 +32,16 @@ export const NavList = styled.ul`
   padding: 8px;
   box-sizing: border-box;
   height: 102px;
-  min-height: 118px;
   width: 100%;
   overflow-y: scroll;
+
+  margin-top: ${(props) => !props.size || "24px"};
+  min-height: ${(props) => (props.size ? "256px" : "118px")};
 `;
 
 export const NavItem = styled(motion.li)`
-  width: 172px;
-  height: 96px;
+  width: ${(props) => (props.size ? "330px" : "172px")};
+  height: ${(props) => (props.size ? "230px" : "96px")};
   border: solid 3px ${theme.colors.purple_accent};
   border-radius: ${theme.border.medium};
 `;

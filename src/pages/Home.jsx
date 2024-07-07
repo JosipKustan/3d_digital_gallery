@@ -7,23 +7,26 @@ import {
   H1Header,
   H1Highlight,
   H2Header,
+  H5Header,
   HeaderWrapper,
   HeroSection,
   MainContentContainer,
-  ScrollZone,
+  ScrollZoneBottom,
+  ScrollZoneTop,
   Section,
   SubHeader,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
 import { HeroZuki } from "../components/app/SVG/HeroZuki";
 import RastovacLiDARScene from "./scenes/RastovacLiDARScene";
-import { galleryWorks } from "../art/galleryWorks";
 import { ModelDescription } from "../components/app/cards/ModelDescription";
 import GuideInfo from "../components/app/GuideInfo";
+import GalleryList from "../components/app/nav/GalleryList";
 
 function Home() {
   return (
     <MainContentContainer>
+      {/*HERO SECTION*/}
       <HeroSection>
         <HeaderWrapper>
           <H1Header>
@@ -39,12 +42,14 @@ function Home() {
         </AbsoluteIllustration>
       </HeroSection>
 
+      {/*3D SECTION*/}
       <Section background={theme.colors.purple_dark} color={theme.colors.white}>
         <HeaderWrapper>
           <H2Header>Take it for a spin</H2Header>
           <SubHeader>No really, it's a 3D model. Spin it.</SubHeader>
         </HeaderWrapper>
-        <ScrollZone />
+        <ScrollZoneTop />
+        <ScrollZoneBottom />
         <Fake3DModel>
           <GuideInfo />
         </Fake3DModel>
@@ -52,6 +57,14 @@ function Home() {
           <RastovacLiDARScene />
         </Absolute3DModel>
         <ModelDescription galleryWorksID={0} />
+      </Section>
+
+      {/*Mooou wuuuk SECTION*/}
+      <Section color={theme.colors.black}>
+        <HeaderWrapper>
+          <H5Header>Check out other works in 3D!</H5Header>
+        </HeaderWrapper>
+        <GalleryList big />
       </Section>
     </MainContentContainer>
   );

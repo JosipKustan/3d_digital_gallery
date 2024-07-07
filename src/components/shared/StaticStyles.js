@@ -25,7 +25,7 @@ export const Section = styled.section`
   width: 100vw;
   height: fit-content;
   box-sizing: border-box;
-  padding: 64px 24px;
+  padding: 64px 0px;
   background-color: ${(props) => props.background || theme.colors.white};
   color: ${(props) => props.color || theme.colors.black};
 
@@ -58,13 +58,13 @@ export const H1Header = styled.h1`
 export const H2Header = styled.h2`
   margin: 0;
   font-size: 64px;
-
+  line-height: 100%;
+  font-weight: 700;
   text-transform: uppercase;
 `;
 
 export const H1Highlight = styled.span`
   font-size: 20px;
-
   text-transform: uppercase;
 `;
 
@@ -72,7 +72,7 @@ export const SubHeader = styled.h3`
   margin: 0;
   font-family: ${theme.fonts.body};
   font-weight: 500;
-  line-height: 100%;
+  line-height: 130%;
 `;
 
 export const AbsoluteIllustration = styled.div`
@@ -93,9 +93,17 @@ export const Fake3DModel = styled.div`
   width: 100%;
   z-index: 0;
 `;
-export const ScrollZone = styled.div`
+export const ScrollZoneTop = styled.div`
   position: absolute;
   top: 0px;
+  height: 220px;
+  width: 100%;
+  z-index: 10;
+`;
+
+export const ScrollZoneBottom = styled.div`
+  position: absolute;
+  bottom: 0px;
   height: 220px;
   width: 100%;
   z-index: 10;
