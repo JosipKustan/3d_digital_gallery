@@ -1,20 +1,17 @@
-import { extend, Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
-import { OrbitControls, SpotLight } from '@react-three/drei';
-import * as THREE from 'three';
-import Bg3Crash from '../../components/objects/Bg3Crash.jsx';
-import Placeholder from '../../components/shared/Placeholder.jsx';
-import BottomSlider from '../../components/app/bottomSlider/BottomSlider.jsx';
-import GuideInfo from '../../components/app/GuideInfo.jsx';
-import { galleryWorks } from '../../art/galleryWorks.js';
+import { extend, Canvas } from "@react-three/fiber";
+import React, { Suspense } from "react";
+import { OrbitControls, SpotLight } from "@react-three/drei";
+import * as THREE from "three";
+import Bg3Crash from "../../components/objects/Bg3Crash.jsx";
+import Placeholder from "../../components/shared/Placeholder.jsx";
+import BottomSlider from "../../components/app/bottomSlider/BottomSlider.jsx";
+import GuideInfo from "../../components/app/GuideInfo.jsx";
+import { galleryWorks } from "../../art/galleryWorks.js";
+import Hand from "../../components/objects/Hand.jsx";
 
 extend({ OrbitControls });
 
 export default function Bg3CrashScene() {
-  const pedestalSize = [6, 50, 6];
-  const pedestalPosition = [0, -25.9, 0];
-  const pedestalColor = '#201212';
-
   return (
     <>
       <GuideInfo />
@@ -23,7 +20,6 @@ export default function Bg3CrashScene() {
           antialias: true,
           toneMapping: THREE.ACESFilmicToneMapping,
           outputEncoding: THREE.sRGBEncoding,
-
         }}
         camera={{
           fov: 45,
@@ -32,21 +28,26 @@ export default function Bg3CrashScene() {
           position: [-4, 6, -1],
         }}
       >
-       
         <ambientLight intensity={0.6} color="#FFFFFF" />
-  
-        <SpotLight position={[0, 10.0, 0]} color="#ffffff" intensity={1} distance={9.89} angle={Math.PI / 8} penumbra={1} scale={10.00} attenuation={10.00} />
 
-        <mesh position={pedestalPosition}>
-          <boxGeometry args={pedestalSize} />
-          <meshStandardMaterial color={pedestalColor} />
-        </mesh>
+        <SpotLight
+          position={[0, 10.0, 0]}
+          color="#ffffff"
+          intensity={1}
+          distance={9.89}
+          angle={Math.PI / 8}
+          penumbra={1}
+          scale={10.0}
+          attenuation={10.0}
+        />
+
         <OrbitControls
           makeDefault
           maxPolarAngle={Math.PI / 2}
           minDistance={2}
           maxDistance={30}
         />
+        <Hand />
         <Suspense fallback={<Placeholder />}>
           <Bg3Crash />
         </Suspense>

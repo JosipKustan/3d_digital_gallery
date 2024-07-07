@@ -1,12 +1,15 @@
-import { useState } from 'react';
-import { ChevronIcon, ChevronWrapper } from './Chevron.jsx';
-import AvatarImage from '../../shared/Avatar.jsx';
+import { useState } from "react";
+import { ChevronIcon, ChevronWrapper } from "./Chevron.jsx";
+import AvatarImage from "../../shared/Avatar.jsx";
 import {
   ArtName,
   BottomSliderContent,
-  BottomSliderWrapper, Description,
-} from './BottomSliderStyles.js';
-import { InfoHeader } from './InfoHeader.jsx';
+  BottomSliderWrapper,
+  Description,
+} from "./BottomSliderStyles.js";
+import { InfoHeader } from "./InfoHeader.jsx";
+import { GallerySlider } from "./GallerySlider.jsx";
+import theme from "../../theme.js";
 
 function BottomSlider({ artPiece }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +31,15 @@ function BottomSlider({ artPiece }) {
       setIsOpen(false);
     }
   };
+  const sliderHeight = isOpen ? "0%" : "calc(100% - 96px)";
 
-  const sliderHeight = isOpen ? '0%' : 'calc(100% - 88px)';
-
-  const wrapperBgColor = isOpen ? 'rgba(244, 233, 230)' : 'rgba(244, 233, 230, 0.45)';
+  const wrapperBgColor = isOpen
+    ? theme.colors.purple_dark
+    : theme.colors.purple_dark_transparent;
   return (
     <BottomSliderWrapper
       animate={{ y: sliderHeight, backgroundColor: wrapperBgColor }}
-      transition={{ type: 'glide' }}
+      transition={{ type: "glide" }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -44,10 +48,9 @@ function BottomSlider({ artPiece }) {
       </ChevronWrapper>
       <BottomSliderContent>
         <InfoHeader artPiece={artPiece} isOpen={isOpen} />
-        <ArtName>{artPiece.name}</ArtName>
         <Description>{artPiece.description}</Description>
+        <GallerySlider images={artPiece.galleryImages} />
       </BottomSliderContent>
-
     </BottomSliderWrapper>
   );
 }

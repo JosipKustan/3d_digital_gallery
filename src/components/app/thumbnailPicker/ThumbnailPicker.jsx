@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import theme from "../../theme";
 
 const Thumbnail = styled.div`
   width: 100%;
@@ -10,27 +11,36 @@ const Thumbnail = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  border-radius: ${theme.border.small};
 `;
 
 const ThumbnailImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  border-radius: ${theme.border.small};
 `;
 
 const ThumbnailName = styled.div`
-  padding: 8px 16px;
+  padding: 12px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, rgba(244, 233, 230, 0.65) 0%, rgba(244, 233, 230, 0.65) 100%);
-  backdrop-filter: blur(5px);
-  border-radius: 16px 16px 0 0;
-  color:black;
+  color: ${theme.colors.white};
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
-  text-overflow: ellipsis;
+  height: 100%;
   overflow: hidden;
-  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: ${theme.colors.black_transparent};
+
+  border-radius: ${theme.border.small};
+
+  font-family: ${theme.fonts.heading};
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
 `;
 
 function ThumbnailPicker({ image }) {

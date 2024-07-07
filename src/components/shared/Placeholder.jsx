@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import { useFrame, useThree } from '@react-three/fiber';
-import { Text } from '@react-three/drei';
+import React, { useRef, useEffect } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
+import { Text } from "@react-three/drei";
 
 function Placeholder() {
   const meshRef = useRef();
@@ -22,7 +22,12 @@ function Placeholder() {
 
   return (
     <>
-      <Text ref={textRef} position={[0, 1, 0]} font="/assets/font/Inter-Regular.ttf" characters="abcdefghijklmnopqrstuvwxyz0123456789!">
+      <Text
+        ref={textRef}
+        position={[0, 1, 0]}
+        font="/assets/font/Kanit-Bold.ttf"
+        characters="abcdefghijklmnopqrstuvwxyz0123456789!"
+      >
         Loading
       </Text>
       <mesh ref={meshRef}>
@@ -30,7 +35,6 @@ function Placeholder() {
         <meshStandardMaterial color="gray" />
       </mesh>
     </>
-
   );
 }
 

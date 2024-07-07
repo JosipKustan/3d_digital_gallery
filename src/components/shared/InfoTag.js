@@ -1,12 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import theme from "../theme";
 
 export const InfoTag = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   padding: 8px;
   gap: 4px;
-  background: rgba(244, 233, 230, 0.6);
-  backdrop-filter: blur(5px);
+  color: ${theme.colors.white};
   border-radius: 16px 0px 0px 16px;
+
+  font-size: 14px;
   font-weight: 500;
 `;
