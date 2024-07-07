@@ -6,6 +6,10 @@ export const galleryWorks = [
     link: "/lidar",
     description:
       "A 3D scan of an object using LiDAR technology. First parts of this house were built around 1910 by the wealthiest family in the village. In next 30 years it was built apon and finished and the chicken coop was rebuilt in 1940s. Last 15 solitary years of old lady Milka’s life were spent here. She took care of her chickens, the house and the property. Every rain leak, fox brake in, fance repair was done by her. After her passing the old chicken coop was planned for demolition. Because this person and place was a big part of my childhood, I decided to take photos and exact messurments to replicate it as close as possible",
+    shortDescription:
+      "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
+    making:
+      "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Personal project",
     artistRealName: "2021",
     artistsImage: "assets/images/avatarImage.webp",
@@ -23,6 +27,10 @@ export const galleryWorks = [
     link: "/photogrammetry",
     description:
       "3D reconstruction of an object using photogrammetry. First parts of this house were built around 1910 by the wealthiest family in the village. In next 30 years it was built apon and finished and the chicken coop was rebuilt in 1940s. Last 15 solitary years of old lady Milka’s life were spent here. She took care of her chickens, the house and the property. Every rain leak, fox brake in, fance repair was done by her. After her passing the old chicken coop was planned for demolition. Because this person and place was a big part of my childhood, I decided to take photos and exact messurments to replicate it as close as possible",
+    shortDescription:
+      "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
+    making:
+      "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Personal project",
     artistRealName: "2021",
     artistsImage: "assets/images/avatarImage.webp",
@@ -40,6 +48,10 @@ export const galleryWorks = [
     link: "/attackonbaldursgate",
     description:
       "Miniture sculpture of an Intro Cinematic sceen from Baldur's Gate 3 Where the Nautaloid is grabbing the tower and destroying it.",
+    shortDescription:
+      "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
+    making:
+      "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Baldur's Gate 3",
     artistRealName: "Larian Studios",
     artistsImage: "assets/images/HeaderImages/Bg3_Simple.png",
@@ -57,6 +69,10 @@ export const galleryWorks = [
     link: "/bg3crash",
     description:
       "Miniture sculpture of a Nautaloid Crash from The Game of the Year awarded Baldur's gate 3",
+    shortDescription:
+      "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
+    making:
+      "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Baldur's Gate 3",
     artistRealName: "Larian Studios",
     artistsImage: "assets/images/HeaderImages/Bg3_Simple.png",
@@ -74,6 +90,10 @@ export const galleryWorks = [
     link: "/deimos-axe",
     description:
       "A 3D model of Deimos's axe from the homebrew D&D game. The model is made in blender and the materials are in substance painter",
+    shortDescription:
+      "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
+    making:
+      "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Filip Valjavec",
     artistRealName: "Filip Valjavec",
     artistsImage: "assets/images/filipvaljavec.png",

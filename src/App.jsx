@@ -7,7 +7,9 @@ import RastovacPhotogrammetryScene from "./pages/scenes/RastovacPhotogrammetrySc
 import DeimosAxeScene from "./pages/scenes/DeimosAxeScene.jsx";
 import Bg3CrashScene from "./pages/scenes/Bg3CrashScene.jsx";
 import AttackOnBaldursGateScene from "./pages/scenes/AttackOnBaldursGateScene.jsx";
-import GalleryList from "./components/app/nav/GalleryList.jsx";
+import Home from "./pages/Home.jsx";
+import GalleryArt from "./pages/GalleryArt.jsx";
+import { galleryWorks } from "./art/galleryWorks.js";
 
 function App() {
   return (
@@ -16,18 +18,42 @@ function App() {
         <NavMenu />
 
         <Routes>
-          <Route exact path="/" element={<RastovacLiDARScene />} />
-          <Route exact path="/lidar" element={<RastovacLiDARScene />} />
-          <Route exact path="/bg3crash" element={<Bg3CrashScene />} />
+          <Route exact path="/" element={<Home />} />
+          <Route
+            exact
+            path="/lidar"
+            element={
+              <GalleryArt galleryID={galleryWorks[0]}>
+                <RastovacLiDARScene />
+              </GalleryArt>
+            }
+          />
+          <Route
+            exact
+            path="/bg3crash"
+            element={
+              <GalleryArt galleryID={galleryWorks[3]}>
+                <Bg3CrashScene />
+              </GalleryArt>
+            }
+          />
           <Route
             exact
             path="/attackonbaldursgate"
-            element={<AttackOnBaldursGateScene />}
+            element={
+              <GalleryArt galleryID={galleryWorks[2]}>
+                <AttackOnBaldursGateScene />
+              </GalleryArt>
+            }
           />
           <Route
             exact
             path="/photogrammetry"
-            element={<RastovacPhotogrammetryScene />}
+            element={
+              <GalleryArt galleryID={galleryWorks[1]}>
+                <RastovacPhotogrammetryScene />
+              </GalleryArt>
+            }
           />
           <Route exact path="/deimos-axe" element={<DeimosAxeScene />} />
           <Route path="*" element={<Navigate to="/" />} />

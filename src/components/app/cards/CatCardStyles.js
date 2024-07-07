@@ -5,7 +5,6 @@ export const CardWrapper = styled.div`
   position: relative;
   width: 100%;
   max-width: 540px;
-  height: fit-content;
   background-color: ${(props) => props.color || theme.colors.purple_dark};
   display: flex;
   gap: 8px;
@@ -34,7 +33,7 @@ export const SVGWrapper = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 `;
 
 export const CatCardHeader = styled.h4`

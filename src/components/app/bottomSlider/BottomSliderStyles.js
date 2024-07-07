@@ -9,7 +9,7 @@ export const BottomSliderWrapper = styled(motion.div)`
   width: 100%;
   max-height: calc(100% - 64px - 16px);
   padding: 16px;
-  background: ${theme.colors.primary};
+  background: ${theme.colors.purple_dark_transparent};
   color: ${theme.colors.white};
   z-index: 30;
   border-radius: 16px 16px 0px 0px;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import theme from "../../theme";
+import { Link } from "react-router-dom";
 
 export const Nav = styled(motion.nav)`
   position: fixed;
@@ -97,7 +98,7 @@ export const MenuList = styled.ul`
   box-sizing: border-box;
 `;
 
-export const MenuItem = styled(motion.li)`
+export const MenuItem = styled(Link)`
   font-family: ${theme.fonts.heading};
   font-size: 36px;
   font-weight: 700;
@@ -106,7 +107,7 @@ export const MenuItem = styled(motion.li)`
   text-transform: capitalize;
   cursor: pointer;
   width: fit-content;
-
+  text-decoration: none;
   &:hover {
     color: ${theme.colors.purple_accent};
     transform: scale(1.05);

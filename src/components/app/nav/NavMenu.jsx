@@ -85,28 +85,28 @@ function NavMenu() {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        //onTouchStart={handleTouchStart}
-        //onTouchEnd={handleTouchEnd}
+        // onTouchStart={handleTouchStart}
+        // onTouchEnd={handleTouchEnd}
         onClick={toggleMenu}
       >
         <GalleryList />
         <MenuList>
-          <MenuItem>Home</MenuItem>
-          <MenuItem>Gallery</MenuItem>
-          <MenuItem>About Us</MenuItem>
-          <MenuItem>Contact</MenuItem>
+          <MenuItem to="/">Home</MenuItem>
+          <MenuItem to="/">Gallery</MenuItem>
+          <MenuItem to="/">About Us</MenuItem>
+          <MenuItem to="/">Contact</MenuItem>
         </MenuList>
         <CardsWrapper>
           <CatCard
             svg={<IndividualCatSVG />}
-            header={"For Individuals"}
-            description={"Personalized Miniature Art for one or many."}
+            header="For Individuals"
+            description="Personalized Miniature Art for one or many."
             color={theme.colors.tiel_dark}
           />
           <CatCard
             svg={<BusinessCatSVG />}
-            header={"For Businesses"}
-            description={"Gifts, Memorabilia, Awards and Game Events."}
+            header="For Businesses"
+            description="Gifts, Memorabilia, Awards and Game Events."
             color={theme.colors.blue_dark}
           />
         </CardsWrapper>
