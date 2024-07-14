@@ -7,6 +7,7 @@ const theme = {
     tiel_accent: "#27F7F0",
     blue_dark: "#1B2473",
     blue_accent: "#3141CE",
+    yellow_accent: "#FFB422",
     background_dark: "#212121",
     white: "#ffffff",
     black: "000000",

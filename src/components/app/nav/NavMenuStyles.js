@@ -35,7 +35,6 @@ export const NavList = styled.ul`
   width: 100%;
   overflow-y: scroll;
 
-  margin-top: ${(props) => !props.size || "24px"};
   min-height: ${(props) => (props.size ? "256px" : "118px")};
 `;
 
@@ -114,4 +113,12 @@ export const MenuItem = styled(Link)`
     color: ${theme.colors.purple_accent};
     transform: scale(1.05);
   }
+  &:visited {
+    text-decoration: none;
+  }
+`;
+
+export const NavScrollZone = styled.div`
+  min-height: 128px;
+  width: 100%;
 `;

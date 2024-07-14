@@ -67,5 +67,4 @@ export const CardsWrapper = styled.div`
   gap: 48px;
   padding: 16px;
   box-sizing: border-box;
-  padding-bottom: 128px;
 `;

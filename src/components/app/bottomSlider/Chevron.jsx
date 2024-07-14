@@ -8,8 +8,8 @@ export const ChevronWrapper = styled(motion.div)`
   left: 50%;
   transform: translate(-50%, 0%);
   cursor: pointer;
-  width: 72px;
-  height: 32px; /* Adjust if needed */
+  width: 100%;
+  height: 100px; /* Adjust if needed */
   display: flex;
   justify-content: center;
   z-index: 2;

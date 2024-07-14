@@ -6,6 +6,7 @@ import {
   MenuItem,
   MenuList,
   Nav,
+  NavScrollZone,
   TopNavigationWrapper,
 } from "./NavMenuStyles.js";
 import GalleryList from "./GalleryList.jsx";
@@ -110,6 +111,7 @@ function NavMenu() {
             color={theme.colors.blue_dark}
           />
         </CardsWrapper>
+        <NavScrollZone />
       </Nav>
     </>
   );

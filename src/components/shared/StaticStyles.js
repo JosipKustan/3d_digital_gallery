@@ -32,6 +32,7 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 48px;
 `;
 
 export const HeaderWrapper = styled.header`
@@ -46,6 +47,23 @@ export const HeaderWrapper = styled.header`
   font-weight: 700;
   line-height: 280%;
   max-width: 450px;
+`;
+
+export const TextListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-inline: 16px;
+  text-align: start;
+  max-width: 456px;
+  padding-inline: 24px;
+`;
+
+export const StepWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-inline: 16px;
 `;
 
 export const H1Header = styled.h1`
