@@ -45,10 +45,19 @@ export const HeaderWrapper = styled.header`
   box-sizing: border-box;
   font-family: ${theme.fonts.heading};
   font-weight: 700;
-  line-height: 280%;
+  line-height: 360%;
   max-width: 450px;
 `;
 
+export const GalleryPageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: 16px;
+`;
 export const TextListWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -84,6 +93,7 @@ export const H2Header = styled.h2`
 export const H1Highlight = styled.span`
   font-size: 20px;
   text-transform: uppercase;
+  line-height: 100%;
 `;
 
 export const SubHeader = styled.h3`
@@ -127,9 +137,17 @@ export const ScrollZoneBottom = styled.div`
   z-index: 10;
 `;
 
-export const H5Header = styled.h5`
+export const H4Header = styled.h4`
+  margin: 0px;
   font-family: ${theme.fonts.heading};
   font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+`;
+
+export const H5Header = styled.h5`
+  font-family: ${theme.fonts.heading};
+  font-size: 20px;
   font-weight: 700;
   line-height: 100%;
   max-width: 450px;

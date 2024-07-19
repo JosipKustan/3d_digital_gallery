@@ -10,7 +10,7 @@ const theme = {
     yellow_accent: "#FFB422",
     background_dark: "#212121",
     white: "#ffffff",
-    black: "000000",
+    black: "#000000",
     black_transparent: "rgba(0,0,0,0.25)",
   },
   fonts: {

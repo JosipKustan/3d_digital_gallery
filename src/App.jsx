@@ -10,6 +10,7 @@ import AttackOnBaldursGateScene from "./pages/scenes/AttackOnBaldursGateScene.js
 import Home from "./pages/Home.jsx";
 import GalleryArt from "./pages/GalleryArt.jsx";
 import { galleryWorks } from "./art/galleryWorks.js";
+import ImageGalleryPage from "./pages/ImageGalleryPage.jsx";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/gallery" element={<ImageGalleryPage />} />
+          <Route exact path="/#About" />
           <Route
             exact
             path="/lidar"

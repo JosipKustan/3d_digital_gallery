@@ -4,6 +4,7 @@ import {
   BrandName,
   Hamburger,
   MenuItem,
+  MenuItemHash,
   MenuList,
   Nav,
   NavScrollZone,
@@ -15,6 +16,7 @@ import theme from "../../theme.js";
 import { BusinessCatSVG } from "../SVG/BusinessCatSVG.jsx";
 import { IndividualCatSVG } from "../SVG/IndividualCatSVG.jsx";
 import { CardsWrapper } from "../cards/CatCardStyles.js";
+import { H5Header, H6Header } from "../../shared/StaticStyles.js";
 
 const variants = {
   open: {
@@ -90,13 +92,22 @@ function NavMenu() {
         // onTouchEnd={handleTouchEnd}
         onClick={toggleMenu}
       >
+        <H5Header style={{ paddingLeft: "16px" }}>
+          VIEW SOME WORK IN 3D
+        </H5Header>
         <GalleryList />
         <MenuList>
           <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/">Gallery</MenuItem>
-          <MenuItem to="/">About Us</MenuItem>
+          <MenuItem to="/gallery">Gallery</MenuItem>
+          <MenuItemHash smooth to="/#about">
+            About Us
+          </MenuItemHash>
           <MenuItem to="/">Contact</MenuItem>
         </MenuList>
+
+        <H5Header style={{ paddingLeft: "16px", marginTop: "16px" }}>
+          CHECK OUT OUR SERVICES
+        </H5Header>
         <CardsWrapper>
           <CatCard
             svg={<IndividualCatSVG />}

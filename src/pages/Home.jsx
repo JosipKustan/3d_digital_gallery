@@ -7,7 +7,7 @@ import {
   H1Header,
   H1Highlight,
   H2Header,
-  H5Header,
+  H4Header,
   HeaderWrapper,
   HeroSection,
   MainContentContainer,
@@ -69,9 +69,9 @@ function Home() {
       {/*Mooou wuuuk SECTION*/}
       <Section color={theme.colors.black}>
         <HeaderWrapper>
-          <H5Header>Check out other works in 3D!</H5Header>
+          <H4Header>Check out other works in 3D!</H4Header>
         </HeaderWrapper>
-        <GalleryList big />
+        <GalleryList big="true" />
       </Section>
 
       {/*Biznis sekciono*/}
@@ -113,35 +113,35 @@ function Home() {
         </HeaderWrapper>
         <TextListWrapper>
           <StepWrapper>
-            <H5Header>1. We talk about the memories</H5Header>
+            <H4Header>1. We talk about the memories</H4Header>
             <p>
               Depending on projects demands and possibilities we have different
               operational workflows.
             </p>
           </StepWrapper>
           <StepWrapper>
-            <H5Header>2. You choose the idea</H5Header>
+            <H4Header>2. You choose the idea</H4Header>
             <p>
               Depending on projects demands and possibilities we have different
               operational workflows.
             </p>
           </StepWrapper>
           <StepWrapper>
-            <H5Header>3. We shake hands</H5Header>
+            <H4Header>3. We shake hands</H4Header>
             <p>
               Depending on projects demands and possibilities we have different
               operational workflows.
             </p>
           </StepWrapper>
           <StepWrapper>
-            <H5Header>4. Magic of making </H5Header>
+            <H4Header>4. Magic of making </H4Header>
             <p>
               Depending on projects demands and possibilities we have different
               operational workflows.
             </p>
           </StepWrapper>
           <StepWrapper>
-            <H5Header>5. Delivery </H5Header>
+            <H4Header>5. Delivery </H4Header>
             <p>
               Depending on projects demands and possibilities we have different
               operational workflows.
@@ -151,7 +151,7 @@ function Home() {
       </Section>
 
       {/*About us Sekcion*/}
-      <Section color={theme.colors.black}>
+      <Section color={theme.colors.black} id="about">
         <HeaderWrapper>
           <H1Header>About us</H1Header>
           <SubHeader>Well, me and the cats...</SubHeader>

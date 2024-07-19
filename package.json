@@ -30,6 +30,7 @@
     "react-dom": "18.2",
     "react-photoswipe-gallery": "^3.0.1",
     "react-router-dom": "^6.8.0",
+    "react-router-hash-link": "^2.4.3",
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.6",
     "three": "^0.148.0",

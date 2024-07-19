@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import theme from "../../theme";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Nav = styled(motion.nav)`
   position: fixed;
@@ -105,6 +106,27 @@ export const MenuItem = styled(Link)`
   font-weight: 700;
   line-height: 100%;
   border-bottom: solid 3px ${theme.colors.purple_accent};
+  color: ${theme.colors.black};
+  text-transform: capitalize;
+  cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+  &:hover {
+    color: ${theme.colors.purple_accent};
+    transform: scale(1.05);
+  }
+  &:visited {
+    text-decoration: none;
+  }
+`;
+
+export const MenuItemHash = styled(HashLink)`
+  font-family: ${theme.fonts.heading};
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+  border-bottom: solid 3px ${theme.colors.purple_accent};
+  color: ${theme.colors.black};
   text-transform: capitalize;
   cursor: pointer;
   width: fit-content;
