@@ -150,6 +150,13 @@ export const ScrollZoneBottom = styled.div`
   width: 100%;
   z-index: 10;
 `;
+export const ButtonZone = styled.div`
+  margin-top: 32px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
 export const BasicCard = styled.div`
   width: 96%;
   max-width: 540px;

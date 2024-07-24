@@ -3,13 +3,13 @@ import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
   BasicCard,
+  ButtonZone,
   Fake3DModel,
   Footer,
   H1Header,
   H1Highlight,
   H2Header,
   H4Header,
-  H5Header,
   HeaderWrapper,
   HeroSection,
   MainContentContainer,
@@ -35,6 +35,7 @@ import { FlekicaSVG } from "../components/app/SVG/FlekicaSVG";
 import { MagareVinkoSVG } from "../components/app/SVG/MagareVinkoSVG";
 import { DolphinKrisSVG } from "../components/app/SVG/DolphinKrisSVG";
 import { MuckoStretchSVG } from "../components/app/SVG/MuckoStretchSVG";
+import { MiniZukiLeziSVG } from "../components/app/SVG/MiniZukiLeziSVG";
 
 function Home() {
   return (
@@ -68,6 +69,10 @@ function Home() {
             piece is crafted with meticulous care,{" "}
             <strong>ensuring that your special moments are preserved!</strong>
           </p>
+          <ButtonZone>
+            <MiniZukiLeziSVG style={{ position: "absolute", top: "-32px" }} />
+            <Button>Follow us on the social medias</Button>
+          </ButtonZone>
         </BasicCard>
       </HeroSection>
 
@@ -161,9 +166,8 @@ function Home() {
           <StepWrapper>
             <H4Header>4. Magic of making </H4Header>
             <p>
-              We don’t leave you in the dark. Except if you want it that way
-              :)We start making and we give updated on the progress when
-              necessary.
+              We don’t leave you in the dark. Except if you want it that way :We
+              start making and we give updated on the progress when necessary.
             </p>
           </StepWrapper>
           <StepWrapper>
@@ -209,10 +213,10 @@ function Home() {
         </CardsWrapper>
       </Section>
       <Footer>
-        <MuckoStretchSVG style={{ width: "100%" }} />
+        <MuckoStretchSVG />
         <p>Still in development. Website and illustrations created by me</p>
         <p>
-          &copy; <span id="year"></span> Creative Studio Kuki. All rights
+          &copy; <span id="year">2024</span> Creative Studio Kuki. All rights
           reserved.
         </p>
       </Footer>
