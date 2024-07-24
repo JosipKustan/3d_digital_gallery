@@ -1,5 +1,5 @@
 import { galleryWorks } from "../../art/galleryWorks";
-import { TextWrapper } from "../app/cards/CatCardStyles";
+import { TextWrapper } from "../app/cards/CardStyles";
 import { H5Header, H6Header } from "./StaticStyles";
 
 export function Description({ galleryWorksID }) {

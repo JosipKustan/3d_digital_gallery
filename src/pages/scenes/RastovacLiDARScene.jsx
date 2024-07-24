@@ -4,7 +4,6 @@ import { OrbitControls, SpotLight } from "@react-three/drei";
 import * as THREE from "three";
 import RastovacLiDAR from "../../components/objects/RastovacLiDAR.jsx";
 import Placeholder from "../../components/shared/Placeholder.jsx";
-import GuideInfo from "../../components/app/GuideInfo.jsx";
 import Hand from "../../components/objects/Hand.jsx";
 
 extend({ OrbitControls });

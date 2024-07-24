@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  AbsoluteIllustration,
   GalleryPageWrapper,
   H1Header,
   HeaderWrapper,
@@ -11,6 +12,8 @@ import theme from "../components/theme";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { Thumbnail } from "../components/app/bottomSlider/GallerySliderStyles";
 import { galleryWorks } from "../art/galleryWorks";
+import { ZvrkiBodySVG } from "../components/app/SVG/ZvrkiBody";
+import { ZvrkiHeadSVG } from "../components/app/SVG/ZvrkiHead";
 
 function ImageGalleryPage() {
   const images = galleryWorks[0].galleryImages;
@@ -21,7 +24,15 @@ function ImageGalleryPage() {
       {/*3D SECTION*/}
       <Section color={theme.colors.black}>
         <HeaderWrapper>
-          <H1Header>Art is in the details</H1Header>
+          <AbsoluteIllustration style={{ bottom: "-40px", right: "10px" }}>
+            <ZvrkiBodySVG />
+          </AbsoluteIllustration>
+          <AbsoluteIllustration
+            style={{ bottom: "50px", right: "30px", zIndex: "10" }}
+          >
+            <ZvrkiHeadSVG />
+          </AbsoluteIllustration>
+          <H1Header style={{ width: "300px" }}>Art is in the details</H1Header>
           <SubHeader>And the meaning behind them</SubHeader>
         </HeaderWrapper>
         <GalleryPageWrapper>

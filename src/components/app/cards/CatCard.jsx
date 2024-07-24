@@ -4,7 +4,7 @@ import {
   CatCardHeader,
   SVGWrapper,
   TextWrapper,
-} from "./CatCardStyles";
+} from "./CardStyles";
 
 export function CatCard({ svg, header, description, color }) {
   return (

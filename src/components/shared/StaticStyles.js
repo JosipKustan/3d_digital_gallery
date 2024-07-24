@@ -8,7 +8,6 @@ export const MainContentContainer = styled.div`
 export const HeroSection = styled.section`
   position: relative;
   width: 100vw;
-  height: calc(100vh - 64px);
   box-sizing: border-box;
   padding: 64px 24px;
   background-color: ${(props) => props.background || theme.colors.white};
@@ -17,8 +16,6 @@ export const HeroSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  max-height: 700px;
 `;
 export const Section = styled.section`
   position: relative;
@@ -35,7 +32,23 @@ export const Section = styled.section`
   gap: 48px;
 `;
 
+export const Footer = styled.footer`
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 128px 24px;
+  background-color: ${theme.colors.background_dark};
+  color: ${theme.colors.white};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+`;
+
 export const HeaderWrapper = styled.header`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -80,6 +93,8 @@ export const H1Header = styled.h1`
   font-size: 64px;
 
   text-transform: uppercase;
+
+  z-index: 5;
 `;
 
 export const H2Header = styled.h2`
@@ -101,12 +116,11 @@ export const SubHeader = styled.h3`
   font-family: ${theme.fonts.body};
   font-weight: 500;
   line-height: 130%;
+  z-index: 5;
 `;
 
 export const AbsoluteIllustration = styled.div`
   position: absolute;
-  bottom: -208px;
-  right: -250px;
 `;
 
 export const Absolute3DModel = styled.div`
@@ -134,6 +148,25 @@ export const ScrollZoneBottom = styled.div`
   bottom: 0px;
   height: 220px;
   width: 100%;
+  z-index: 10;
+`;
+export const BasicCard = styled.div`
+  width: 96%;
+  max-width: 540px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: ${theme.colors.white};
+  font-size: 20px;
+  font-weight: 300;
+  background: ${theme.colors.background_dark};
+  box-sizing: border-box;
+
+  padding: 32px 16px;
+  margin-top: -164px;
+  border-radius: ${theme.border.medium};
+
   z-index: 10;
 `;
 

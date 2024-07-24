@@ -29,7 +29,6 @@ export const SVGWrapper = styled.div`
     width: 102px;
   }
 `;
-
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -44,7 +43,7 @@ export const CatCardHeader = styled.h4`
 
   margin: 0;
   @media (max-width: 370px) {
-    font-size: 24px; /* Adjust this value as needed for smaller screens */
+    font-size: 24px;
   }
 `;
 
@@ -58,12 +57,38 @@ export const CatCardDescription = styled.p`
   }
 `;
 
+export const TestemonialText = styled.p`
+  font-family: ${theme.fonts.body};
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+
+  margin: 0;
+  @media (max-width: 370px) {
+    font-size: 24px;
+  }
+`;
+export const CardName = styled.p`
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-family: ${theme.fonts.body};
+  font-size: 16px;
+  font-weight: 400;
+  text-align: right;
+  margin: 0;
+  @media (max-width: 370px) {
+    font-size: 24px;
+  }
+`;
+
 export const CardsWrapper = styled.div`
   position: relative;
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 48px;
   padding: 16px;
   box-sizing: border-box;

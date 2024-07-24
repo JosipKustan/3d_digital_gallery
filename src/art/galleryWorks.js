@@ -9,7 +9,7 @@ export const galleryWorks = [
     shortDescription:
       "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
     making:
-      "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
+      "Every detail is crafted by hand using wood, clay, paper, plastic, and paint. It even has working lights inside! ",
     artistName: "Personal project",
     artistRealName: "2021",
     artistsImage: "assets/images/avatarImage.webp",

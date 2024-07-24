@@ -15,7 +15,7 @@ import { CatCard } from "../cards/CatCard.jsx";
 import theme from "../../theme.js";
 import { BusinessCatSVG } from "../SVG/BusinessCatSVG.jsx";
 import { IndividualCatSVG } from "../SVG/IndividualCatSVG.jsx";
-import { CardsWrapper } from "../cards/CatCardStyles.js";
+import { CardsWrapper } from "../cards/CardStyles.js";
 import { H5Header, H6Header } from "../../shared/StaticStyles.js";
 
 const variants = {
@@ -99,10 +99,9 @@ function NavMenu() {
         <MenuList>
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/gallery">Gallery</MenuItem>
-          <MenuItemHash smooth to="/#about">
-            About Us
+          <MenuItemHash smooth to="/#contact">
+            Contact
           </MenuItemHash>
-          <MenuItem to="/">Contact</MenuItem>
         </MenuList>
 
         <H5Header style={{ paddingLeft: "16px", marginTop: "16px" }}>
