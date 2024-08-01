@@ -20,4 +20,9 @@ export const ModelDescriptionWrapper = styled.div`
   border-radius: ${theme.border.medium};
 
   z-index: 10;
+
+  @media (min-width: 1080px) {
+    width: 100%;
+    margin-top: 500px;
+  }
 `;

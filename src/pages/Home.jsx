@@ -5,17 +5,21 @@ import {
   BasicCard,
   ButtonZone,
   Fake3DModel,
+  FloatCardSection,
   Footer,
   H1Header,
   H1Highlight,
   H2Header,
   H4Header,
   HeaderWrapper,
+  HeroIllustration,
   HeroSection,
+  IllustrationWrapper,
   MainContentContainer,
   ScrollZoneBottom,
   ScrollZoneTop,
   Section,
+  Section3D,
   StepWrapper,
   SubHeader,
   TextListWrapper,
@@ -51,7 +55,11 @@ function Home() {
             for individuals and businesses.
           </SubHeader>
         </HeaderWrapper>
-        <HeroFull />
+        <IllustrationWrapper>
+          <HeroIllustration />
+        </IllustrationWrapper>
+      </HeroSection>
+      <FloatCardSection>
         <BasicCard>
           <H4Header> About us</H4Header>
           <br />
@@ -74,12 +82,18 @@ function Home() {
             <Button>Follow us on the social medias</Button>
           </ButtonZone>
         </BasicCard>
-      </HeroSection>
+      </FloatCardSection>
 
       {/*3D SECTION*/}
-      <Section background={theme.colors.purple_dark} color={theme.colors.white}>
+      <Section3D
+        background={theme.colors.purple_dark}
+        color={theme.colors.white}
+      >
         <HeaderWrapper>
-          <H2Header>Take it for a spin</H2Header>
+          <H2Header>
+            Take it <br />
+            for a spin
+          </H2Header>
           <SubHeader>No really, it's a 3D model. Spin it.</SubHeader>
         </HeaderWrapper>
         <ScrollZoneTop />
@@ -91,13 +105,17 @@ function Home() {
           <RastovacLiDARScene />
         </Absolute3DModel>
         <ModelDescription galleryWorksID={0} />
-      </Section>
+      </Section3D>
 
       {/*Mooou wuuuk SECTION*/}
       <Section
         background={theme.colors.purple_dark}
         color={theme.colors.white}
-        style={{ paddingTop: "0px" }}
+        style={{
+          paddingBlock: "64px",
+          paddingInline: "0px",
+          flexDirection: "column",
+        }}
       >
         <HeaderWrapper>
           <H4Header>Check out other works in 3D!</H4Header>
@@ -111,7 +129,7 @@ function Home() {
         color={theme.colors.white}
       >
         <HeaderWrapper>
-          <H1Header>What we do for you?</H1Header>
+          <H2Header>What we do for you?</H2Header>
           <SubHeader>
             Personalized Miniature Art, Unique Gifts, Awards, and Fun Game
             Events.
@@ -136,7 +154,7 @@ function Home() {
       {/*How we work sekcion*/}
       <Section background={theme.colors.yellow_accent}>
         <HeaderWrapper>
-          <H1Header>How we work?</H1Header>
+          <H2Header>How we work?</H2Header>
           <SubHeader>
             Depending on projects demands and possibilities we have different
             operational workflows.
@@ -183,7 +201,7 @@ function Home() {
       {/*Lets get it touch Sekcion*/}
       <Section color={theme.colors.black} id="contact">
         <HeaderWrapper>
-          <H1Header>Let’s get in touch</H1Header>
+          <H2Header>Let’s get in touch</H2Header>
           <SubHeader>
             Let’s unlock the ideas together! You might be surprised what can be
             done.

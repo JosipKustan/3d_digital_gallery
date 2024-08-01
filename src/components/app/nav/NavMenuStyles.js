@@ -34,6 +34,7 @@ export const NavList = styled.ul`
   box-sizing: border-box;
   height: 102px;
   width: 100%;
+  max-width: fit-content;
   overflow-y: scroll;
 
   min-height: ${(props) => (props.size ? "256px" : "118px")};

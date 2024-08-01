@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../theme";
+import { HeroFull } from "../app/SVG/HeroFull";
 
 export const MainContentContainer = styled.div`
   margin-top: 64px;
@@ -12,11 +13,80 @@ export const HeroSection = styled.section`
   padding: 64px 24px;
   background-color: ${(props) => props.background || theme.colors.white};
   color: ${(props) => props.color || theme.colors.black};
+  gap: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1080px) {
+    align-items: start;
+    padding: 128px 0px 0px 128px;
+    flex-direction: row;
+    height: 100vh;
+  }
+`;
+export const HeroIllustration = styled(HeroFull)`
+  height: 100%;
+`;
+export const IllustrationWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: end;
+  justify-content: end;
+
+  @media (max-width: 1080px) {
+    position: relative;
+    height: fit-content;
+  }
+`;
+
+export const FloatCardSection = styled.section`
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 64px 24px;
+  background-color: ${(props) => props.background || theme.colors.white};
+  color: ${(props) => props.color || theme.colors.black};
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 0px 128px;
+  height: 0vh;
+  @media (max-width: 1080px) {
+    padding-inline: 24px;
+    padding-bottom: 64px;
+    align-items: center;
+    justify-content: end;
+    height: fit-content;
+  }
+`;
+
+export const Section3D = styled.section`
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 64px 0px;
+  background-color: ${(props) => props.background || theme.colors.white};
+  color: ${(props) => props.color || theme.colors.black};
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 48px;
+  @media (min-width: 1080px) {
+    flex-direction: row;
+    padding: 128px 0px 0px 128px;
+    align-items: center;
+    height: 100vh;
+  }
 `;
+
 export const Section = styled.section`
   position: relative;
   width: 100vw;
@@ -30,6 +100,11 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 48px;
+  @media (min-width: 1080px) {
+    flex-direction: row;
+    padding: 128px 128px;
+    align-items: center;
+  }
 `;
 
 export const Footer = styled.footer`
@@ -52,14 +127,19 @@ export const HeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-inline: 16px;
+  padding-inline: 24px;
 
   text-align: center;
   box-sizing: border-box;
   font-family: ${theme.fonts.heading};
   font-weight: 700;
   line-height: 360%;
-  max-width: 450px;
+  max-width: 540px;
+  @media (min-width: 768px) {
+    line-height: 600%;
+    max-width: 700px;
+    padding-inline: 0px;
+  }
 `;
 
 export const GalleryPageWrapper = styled.div`
@@ -95,6 +175,9 @@ export const H1Header = styled.h1`
   text-transform: uppercase;
 
   z-index: 5;
+  @media (min-width: 768px) {
+    font-size: 128px;
+  }
 `;
 
 export const H2Header = styled.h2`
@@ -103,20 +186,29 @@ export const H2Header = styled.h2`
   line-height: 100%;
   font-weight: 700;
   text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 128px;
+  }
 `;
 
 export const H1Highlight = styled.span`
   font-size: 20px;
   text-transform: uppercase;
   line-height: 100%;
+  @media (min-width: 768px) {
+    font-size: 64px;
+  }
 `;
 
 export const SubHeader = styled.h3`
   margin: 0;
   font-family: ${theme.fonts.body};
   font-weight: 500;
-  line-height: 130%;
+  line-height: 120%;
   z-index: 5;
+  @media (min-width: 1080px) {
+    font-size: 32px;
+  }
 `;
 
 export const AbsoluteIllustration = styled.div`
@@ -128,6 +220,11 @@ export const Absolute3DModel = styled.div`
   top: 0;
   height: 85%;
   width: 100%;
+  @media (min-width: 1080px) {
+    right: 0;
+    width: 60%;
+    height: 100%;
+  }
 `;
 export const Fake3DModel = styled.div`
   position: absolute;
@@ -158,8 +255,8 @@ export const ButtonZone = styled.div`
   justify-content: center;
 `;
 export const BasicCard = styled.div`
-  width: 96%;
-  max-width: 540px;
+  width: 100%;
+  max-width: 620px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -175,6 +272,10 @@ export const BasicCard = styled.div`
   border-radius: ${theme.border.medium};
 
   z-index: 10;
+
+  @media (min-width: 1080px) {
+    margin-top: 0px;
+  }
 `;
 
 export const H4Header = styled.h4`
