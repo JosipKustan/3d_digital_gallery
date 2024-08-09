@@ -18,6 +18,10 @@ export const BottomSliderWrapper = styled(motion.div)`
     inset -3px 0 0 0 ${theme.colors.purple_accent};
 
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
 `;
 
 export const BottomSliderContent = styled.div`

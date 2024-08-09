@@ -30,7 +30,7 @@ export const HeroIllustration = styled(HeroFull)`
 `;
 export const IllustrationWrapper = styled.div`
   position: absolute;
-  width: 100%;
+  width: 96%;
   height: 100vh;
 
   display: flex;
@@ -40,6 +40,8 @@ export const IllustrationWrapper = styled.div`
   @media (max-width: 1080px) {
     position: relative;
     height: fit-content;
+
+    width: 100%;
   }
 `;
 
@@ -159,6 +161,14 @@ export const TextListWrapper = styled.div`
   text-align: start;
   max-width: 456px;
   padding-inline: 24px;
+
+  @media (min-width: 1080px) {
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+
+    padding-inline: 0px;
+  }
 `;
 
 export const StepWrapper = styled.div`
@@ -166,6 +176,9 @@ export const StepWrapper = styled.div`
   flex-direction: column;
   gap: 8px;
   padding-inline: 16px;
+  @media (min-width: 1080px) {
+    width: 600px;
+  }
 `;
 
 export const H1Header = styled.h1`

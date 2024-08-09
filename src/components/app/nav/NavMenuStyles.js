@@ -89,6 +89,11 @@ export const BrandName = styled.span`
   font-size: 20px;
   font-weight: 700;
   text-transform: capitalize;
+
+  @media (min-width: 1080px) {
+    font-size: 40px;
+    align-self: center;
+  }
 `;
 
 export const MenuList = styled.ul`
@@ -99,6 +104,11 @@ export const MenuList = styled.ul`
   gap: 24px;
   padding: 32px;
   box-sizing: border-box;
+
+  @media (min-width: 1080px) {
+    flex-direction: row;
+    padding: 0px;
+  }
 `;
 
 export const MenuItem = styled(Link)`
@@ -144,4 +154,22 @@ export const MenuItemHash = styled(HashLink)`
 export const NavScrollZone = styled.div`
   min-height: 128px;
   width: 100%;
+`;
+
+export const DesktopNavWrapper = styled.nav`
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 64px;
+  width: 100%;
+
+  background-color: ${theme.colors.white};
+
+  box-sizing: border-box;
+  padding-inline: 64px;
+  padding-block: 16px;
+
+  z-index: 1000;
 `;

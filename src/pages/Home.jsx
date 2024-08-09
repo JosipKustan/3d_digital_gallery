@@ -179,7 +179,10 @@ function Home() {
           </StepWrapper>
           <StepWrapper>
             <H4Header>3. We shake hands</H4Header>
-            <p>Paper work and delivery agreements</p>
+            <p>
+              Paper work and delivery agreements, we can not go without them,
+              for both of our sake.
+            </p>
           </StepWrapper>
           <StepWrapper>
             <H4Header>4. Magic of making </H4Header>
@@ -192,7 +195,7 @@ function Home() {
             <H4Header>5. Delivery </H4Header>
             <p>
               We carefully package and protect the item so it is delivered
-              safely
+              safely, small things are really fragile.
             </p>
           </StepWrapper>
         </TextListWrapper>

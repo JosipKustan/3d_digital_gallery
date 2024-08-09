@@ -1,7 +1,6 @@
 import React from "react";
-import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { GlobalWrapper } from "./components/shared/containers/GlobalWrapper";
-import NavMenu from "./components/app/nav/NavMenu.jsx";
 import RastovacLiDARScene from "./pages/scenes/RastovacLiDARScene.jsx";
 import RastovacPhotogrammetryScene from "./pages/scenes/RastovacPhotogrammetryScene.jsx";
 import DeimosAxeScene from "./pages/scenes/DeimosAxeScene.jsx";
@@ -11,11 +10,12 @@ import Home from "./pages/Home.jsx";
 import GalleryArt from "./pages/GalleryArt.jsx";
 import { galleryWorks } from "./art/galleryWorks.js";
 import ImageGalleryPage from "./pages/ImageGalleryPage.jsx";
+import NavMenu from "./components/app/nav/NavMenu.jsx";
 
 function App() {
   return (
     <GlobalWrapper>
-      <HashRouter>
+      <BrowserRouter>
         <NavMenu />
 
         <Routes>
@@ -61,7 +61,7 @@ function App() {
           <Route exact path="/deimos-axe" element={<DeimosAxeScene />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </GlobalWrapper>
   );
 }
