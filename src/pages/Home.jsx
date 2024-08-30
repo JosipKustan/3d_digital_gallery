@@ -216,7 +216,7 @@ function Home() {
           <TestemonialsCard
             svg={<JelenaPapigaSVG />}
             name="Jelena P."
-            testemonial="“Best gift EVER! Personalised, beautiful and it even glows. Who ever sees it, is impressed”"
+            testemonial="“Best gift EVER! Personalised, beautiful and it even glows. Whoever sees it, is impressed”"
             backgroundColor={theme.colors.background_dark}
           />
           <TestemonialsCard
