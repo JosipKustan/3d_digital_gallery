@@ -14,6 +14,7 @@ import { Thumbnail } from "../components/app/bottomSlider/GallerySliderStyles";
 import { galleryWorks } from "../art/galleryWorks";
 import { ZvrkiBodySVG } from "../components/app/SVG/ZvrkiBody";
 import { ZvrkiHeadSVG } from "../components/app/SVG/ZvrkiHead";
+import Footer from "../components/shared/Footer";
 
 function ImageGalleryPage() {
   const images = galleryWorks[0].galleryImages;
@@ -60,6 +61,8 @@ function ImageGalleryPage() {
           </Gallery>
         </GalleryPageWrapper>
       </Section>
+
+      <Footer />
     </MainContentContainer>
   );
 }

@@ -109,7 +109,7 @@ export const Section = styled.section`
   }
 `;
 
-export const Footer = styled.footer`
+export const FooterWrapper = styled.footer`
   position: relative;
   width: 100vw;
   height: fit-content;

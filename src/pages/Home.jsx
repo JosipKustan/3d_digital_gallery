@@ -6,7 +6,6 @@ import {
   ButtonZone,
   Fake3DModel,
   FloatCardSection,
-  Footer,
   H1Header,
   H1Highlight,
   H2Header,
@@ -40,6 +39,9 @@ import { MagareVinkoSVG } from "../components/app/SVG/MagareVinkoSVG";
 import { DolphinKrisSVG } from "../components/app/SVG/DolphinKrisSVG";
 import { MuckoStretchSVG } from "../components/app/SVG/MuckoStretchSVG";
 import { MiniZukiLeziSVG } from "../components/app/SVG/MiniZukiLeziSVG";
+import Footer from "../components/shared/Footer";
+import { JelenaPapigaSVG } from "../components/app/SVG/JelenaPapigaSVG";
+import { TomicSVGDragon } from "../components/app/SVG/TomicSVGDragon";
 
 function Home() {
   return (
@@ -212,35 +214,27 @@ function Home() {
         </HeaderWrapper>
         <CardsWrapper>
           <TestemonialsCard
-            svg={<FlekicaSVG />}
-            name="Josip Tomić"
-            testemonial="“Kuki made small art that is a centerpiece of my home now”"
+            svg={<JelenaPapigaSVG />}
+            name="Jelena P."
+            testemonial="“Best gift EVER! Personalised, beautiful and it even glows. Who ever sees it, is impressed”"
             backgroundColor={theme.colors.background_dark}
           />
           <TestemonialsCard
             svg={<MagareVinkoSVG />}
-            name="Mirela"
+            name="Mirela U."
             testemonial="“I don’t know how did he manage to get it spot on. And so detailed!!!”"
             backgroundColor={theme.colors.background_dark}
           />
           <TestemonialsCard
-            svg={<DolphinKrisSVG />}
-            name="Kristina"
-            testemonial="“His head is full of ideas, creativity and energy! He always creates stunning results :D”"
+            svg={<TomicSVGDragon />}
+            name="Josip T."
+            testemonial="“Kuki made a small art piece that is a centerpiece of my living room"
             backgroundColor={theme.colors.background_dark}
           />
-
           <H4Header>Contact me on one of these :D</H4Header>
         </CardsWrapper>
       </Section>
-      <Footer>
-        <MuckoStretchSVG />
-        <p>Still in development. Website and illustrations created by me</p>
-        <p>
-          &copy; <span id="year">2024</span> Creative Studio Kuki. All rights
-          reserved.
-        </p>
-      </Footer>
+      <Footer />
     </MainContentContainer>
   );
 }
