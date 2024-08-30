@@ -32,7 +32,6 @@ export const NavList = styled.ul`
   grid-gap: 8px;
   padding: 8px;
   box-sizing: border-box;
-  height: 102px;
   width: 100%;
   max-width: fit-content;
   overflow-y: scroll;
