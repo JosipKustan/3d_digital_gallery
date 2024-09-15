@@ -36,3 +36,8 @@ body,
 p {
   margin: 0;
 }
+
+/*adding so lightbox does not need a image size*
+.pswp img {
+  object-fit: contain;
+}*/

@@ -35,7 +35,7 @@ function App() {
             exact
             path="/bg3crash"
             element={
-              <GalleryArt galleryID={galleryWorks[3]}>
+              <GalleryArt galleryID={galleryWorks[2]}>
                 <Bg3CrashScene />
               </GalleryArt>
             }
@@ -44,7 +44,7 @@ function App() {
             exact
             path="/attackonbaldursgate"
             element={
-              <GalleryArt galleryID={galleryWorks[2]}>
+              <GalleryArt galleryID={galleryWorks[1]}>
                 <AttackOnBaldursGateScene />
               </GalleryArt>
             }

@@ -15,6 +15,7 @@ import { galleryWorks } from "../art/galleryWorks";
 import { ZvrkiBodySVG } from "../components/app/SVG/ZvrkiBody";
 import { ZvrkiHeadSVG } from "../components/app/SVG/ZvrkiHead";
 import Footer from "../components/shared/Footer";
+import useImageDimensions from "../components/shared/hooks/getImageDimensions";
 
 function ImageGalleryPage() {
   const images = galleryWorks[0].galleryImages;
@@ -38,26 +39,29 @@ function ImageGalleryPage() {
         </HeaderWrapper>
         <GalleryPageWrapper>
           <Gallery>
-            {images.map((path, index) => (
-              <Item
-                key={index}
-                original={path}
-                thumbnail={path}
-                width={6053}
-                height={5624}
-                caption={`Gallery Image ${index + 1}`}
-              >
-                {({ ref, open }) => (
-                  <Thumbnail
-                    ref={ref}
-                    onClick={open}
-                    className="image-item"
-                    src={path}
-                    alt={`Gallery Image ${index + 1}`}
-                  />
-                )}
-              </Item>
-            ))}
+            {images.map((path, index) => {
+              const { width, height } = useImageDimensions(path);
+              return (
+                <Item
+                  key={index}
+                  original={path}
+                  thumbnail={path}
+                  width={width}
+                  height={height}
+                  caption={`Gallery Image ${index + 1}`}
+                >
+                  {({ ref, open }) => (
+                    <Thumbnail
+                      ref={ref}
+                      onClick={open}
+                      className="image-item"
+                      src={path}
+                      alt={`Gallery Image ${index + 1}`}
+                    />
+                  )}
+                </Item>
+              );
+            })}
           </Gallery>
         </GalleryPageWrapper>
       </Section>

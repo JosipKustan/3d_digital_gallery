@@ -5,6 +5,7 @@ import {
   Thumbnail,
 } from "./GallerySliderStyles";
 import "photoswipe/style.css";
+import useImageDimensions from "../../shared/hooks/getImageDimensions";
 
 export function GallerySlider({ images }) {
   return (
@@ -30,26 +31,29 @@ export function GallerySlider({ images }) {
             />
           </svg>
         </CameraFrontDrop>
-        {images.map((path, index) => (
-          <Item
-            key={index}
-            original={path}
-            thumbnail={path}
-            width={6053}
-            height={5624}
-            caption={`Gallery Image ${index + 1}`}
-          >
-            {({ ref, open }) => (
-              <Thumbnail
-                ref={ref}
-                onClick={open}
-                className="image-item"
-                src={path}
-                alt={`Gallery Image ${index + 1}`}
-              />
-            )}
-          </Item>
-        ))}
+        {images.map((path, index) => {
+          const { width, height } = useImageDimensions(path);
+          return (
+            <Item
+              key={index}
+              original={path}
+              thumbnail={path}
+              width={width}
+              height={height}
+              caption={`Gallery Image ${index + 1}`}
+            >
+              {({ ref, open }) => (
+                <Thumbnail
+                  ref={ref}
+                  onClick={open}
+                  className="image-item"
+                  src={path}
+                  alt={`Gallery Image ${index + 1}`}
+                />
+              )}
+            </Item>
+          );
+        })}
       </GallerySliderWrapper>
     </Gallery>
   );

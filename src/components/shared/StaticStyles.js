@@ -244,6 +244,7 @@ export const Fake3DModel = styled.div`
   top: 220px;
   width: 100%;
   z-index: 0;
+  right: 0;
 `;
 export const ScrollZoneTop = styled.div`
   position: absolute;
