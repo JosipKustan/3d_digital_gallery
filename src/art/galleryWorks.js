@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 export const galleryWorks = [
   {
     id: 1,
@@ -23,7 +24,7 @@ export const galleryWorks = [
       "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-8-1724x2296.webp",
     ],
   },
-  /*{
+  /* {
     id: 2,
     name: "Photogrammetry Rastovac",
     src: "assets/images/works/PolyFotogrametrija.png",
@@ -43,7 +44,7 @@ export const galleryWorks = [
       "assets/images/works/attackonbaldursgate/attack_3.jpg",
       "assets/images/works/attackonbaldursgate/attack_4.jpg",
     ],
-  },*/
+  }, */
   {
     id: 5,
     name: "Attack on Baldur's Gate city-state",
@@ -95,7 +96,7 @@ export const galleryWorks = [
       "assets/images/works/Crash/Webp/big/BG_Crash-9-1512x2016.webp",
     ],
   },
-  /*{
+  /* {
     id: 3,
     name: "Deimos's Axe",
     src: "assets/images/works/Deimos's Axe.png",
@@ -115,5 +116,5 @@ export const galleryWorks = [
       "assets/images/works/attackonbaldursgate/attack_3.jpg",
       "assets/images/works/attackonbaldursgate/attack_4.jpg",
     ],
-  },*/
+  }, */
 ];

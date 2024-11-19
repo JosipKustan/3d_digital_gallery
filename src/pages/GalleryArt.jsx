@@ -1,4 +1,5 @@
-import { extend, Canvas } from "@react-three/fiber";
+/* eslint-disable quotes */
+import { extend } from "@react-three/fiber";
 import React from "react";
 import { OrbitControls } from "@react-three/drei";
 import BottomSlider from "../components/app/bottomSlider/BottomSlider";

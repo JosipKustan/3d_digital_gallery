@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { GlobalWrapper } from "./components/shared/containers/GlobalWrapper";

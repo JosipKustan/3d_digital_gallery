@@ -1,8 +1,7 @@
+/* eslint-disable quotes */
 import { useState } from "react";
 import { ChevronIcon, ChevronWrapper } from "./Chevron.jsx";
-import AvatarImage from "../../shared/Avatar.jsx";
 import {
-  ArtName,
   BottomSliderContent,
   BottomSliderWrapper,
   Description,

@@ -1,4 +1,6 @@
+/* eslint-disable quotes */
 import React from "react";
+import { Gallery, Item } from "react-photoswipe-gallery";
 import {
   AbsoluteIllustration,
   GalleryPageWrapper,
@@ -9,7 +11,6 @@ import {
   SubHeader,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
-import { Gallery, Item } from "react-photoswipe-gallery";
 import { Thumbnail } from "../components/app/bottomSlider/GallerySliderStyles";
 import { galleryWorks } from "../art/galleryWorks";
 import { ZvrkiBodySVG } from "../components/app/SVG/ZvrkiBody";
@@ -21,9 +22,9 @@ function ImageGalleryPage() {
   const images = galleryWorks[0].galleryImages;
   return (
     <MainContentContainer>
-      {/*HERO SECTION*/}
+      {/* HERO SECTION */}
 
-      {/*3D SECTION*/}
+      {/* 3D SECTION */}
       <Section color={theme.colors.black}>
         <HeaderWrapper>
           <AbsoluteIllustration style={{ bottom: "-40px", right: "10px" }}>
