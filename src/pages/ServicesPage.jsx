@@ -4,6 +4,11 @@ import {
   Absolute3DModel,
   BasicCard,
   ButtonZone,
+  BeachIllustrationWrapper,
+  Cart1Illustration,
+  Cart2Illustration,
+  Cart3Illustration,
+  CartIllustrationWrapper,
   Fake3DModel,
   FloatCardSection,
   H1Header,
@@ -12,6 +17,7 @@ import {
   H4Header,
   HeaderWrapper,
   HeroIllustration,
+  HeroBeachIllustration,
   HeroSection,
   IllustrationWrapper,
   MainContentContainer,
@@ -56,8 +62,9 @@ function ServicesPage() {
           </SubHeader>
         </HeaderWrapper>
         <IllustrationWrapper>
-          <HeroIllustration/>
+          <HeroBeachIllustration />
         </IllustrationWrapper>
+        
       </HeroSection>
 
       {/*3D SECTION*/}
@@ -85,7 +92,13 @@ function ServicesPage() {
           <ButtonZone>
             <Button>Get a quote.</Button>
           </ButtonZone><br />
+          
         </HeaderWrapper>
+        <IllustrationWrapper>
+          <img src="./../../public/assets/images/works/Rastovac/Carts/Card.png" alt="Cart1" />
+          <img src="./../../public/assets/images/works/Rastovac/Carts/Card(1).png" alt="Cart2" />
+          <img src="./../../public/assets/images/works/Rastovac/Carts/Card(2).png" alt="Cart3" />
+        </IllustrationWrapper>
       </Section3D>
       {/*Biznis sekciono*/}
       <Section

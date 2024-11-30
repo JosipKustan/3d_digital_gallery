@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import theme from "../theme";
 import { HeroFull } from "../app/SVG/HeroFull";
+import { HeroBeach } from "../app/SVG/HeroBeach";
 
 export const MainContentContainer = styled.div`
   margin-top: 64px;
@@ -28,6 +29,9 @@ export const HeroSection = styled.section`
 export const HeroIllustration = styled(HeroFull)`
   height: 100%;
 `;
+export const HeroBeachIllustration = styled(HeroBeach)`
+  height: 100%;
+`;
 export const IllustrationWrapper = styled.div`
   position: absolute;
   width: 96%;
@@ -41,6 +45,35 @@ export const IllustrationWrapper = styled.div`
     position: relative;
     height: fit-content;
 
+    width: 100%;
+  }
+`;
+export const CartIllustrationWrapper = styled.div`
+  position: absolute;
+  width: 96%;
+  height: 100vh;
+
+  display: flex;
+  align-items: end;
+  justify-content: end;
+
+  @media (max-width: 1080px) {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+  }
+`;
+export const BeachIllustrationWrapper = styled.div`
+  position: absolute;
+  width: 96%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  @media (max-width: 1080px) {
+    position: relative;
+    height: fit-content;
     width: 100%;
   }
 `;
