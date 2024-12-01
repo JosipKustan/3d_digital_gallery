@@ -5,10 +5,8 @@ import {
   BasicCard,
   ButtonZone,
   BeachIllustrationWrapper,
-  Cart1Illustration,
-  Cart2Illustration,
-  Cart3Illustration,
   CartIllustrationWrapper,
+  DivIllustrationWrapper,
   Fake3DModel,
   FloatCardSection,
   H1Header,
@@ -61,9 +59,12 @@ function ServicesPage() {
           we provide creative and personalized artwork for every occasion.
           </SubHeader>
         </HeaderWrapper>
-        <IllustrationWrapper>
-          <HeroBeachIllustration />
-        </IllustrationWrapper>
+        <DivIllustrationWrapper>
+          <IllustrationWrapper>
+            <HeroBeachIllustration />
+          </IllustrationWrapper>
+        </DivIllustrationWrapper>
+        
         
       </HeroSection>
 
@@ -95,9 +96,7 @@ function ServicesPage() {
           
         </HeaderWrapper>
         <IllustrationWrapper>
-          <img src="./../../public/assets/images/works/Rastovac/Carts/Card.png" alt="Cart1" />
-          <img src="./../../public/assets/images/works/Rastovac/Carts/Card(1).png" alt="Cart2" />
-          <img src="./../../public/assets/images/works/Rastovac/Carts/Card(2).png" alt="Cart3" />
+          
         </IllustrationWrapper>
       </Section3D>
       {/*Biznis sekciono*/}

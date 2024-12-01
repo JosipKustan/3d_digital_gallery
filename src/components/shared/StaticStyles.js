@@ -44,9 +44,11 @@ export const IllustrationWrapper = styled.div`
   @media (max-width: 1080px) {
     position: relative;
     height: fit-content;
-
     width: 100%;
   }
+`;
+export const DivIllustrationWrapper = styled.div`
+  display: flex;
 `;
 export const CartIllustrationWrapper = styled.div`
   position: absolute;
