@@ -29,8 +29,28 @@ export const HeroSection = styled.section`
 export const HeroIllustration = styled(HeroFull)`
   height: 100%;
 `;
+
+export const HeroServicesSection = styled.section`
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 64px 0px 0px 24px;
+  background-color: ${(props) => props.background || theme.colors.white};
+  color: ${(props) => props.color || theme.colors.black};
+  gap: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1080px) {
+    align-items: start;
+    padding: 128px 0px 0px 128px;
+    flex-direction: row;
+    height: 100vh;
+  }
+`;
 export const HeroBeachIllustration = styled(HeroBeach)`
-  height: 100%;
+  max-height: 80%;
 `;
 export const IllustrationWrapper = styled.div`
   position: absolute;
