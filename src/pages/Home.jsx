@@ -92,7 +92,6 @@ function Home() {
             Take it <br />
             for a spin
           </H2Header>
-          <SubHeader>No really, it's a 3D model. Spin it.</SubHeader>
         </HeaderWrapper>
         <ScrollZoneTop />
         <ScrollZoneBottom />

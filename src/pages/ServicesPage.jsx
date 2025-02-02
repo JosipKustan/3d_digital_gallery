@@ -1,5 +1,4 @@
-import React from "react";
-import { Button } from "../components/shared/Button";
+import { Button, SecondaryButton } from "../components/shared/Button";
 import {
   ButtonZone,
   H1Header,
@@ -11,16 +10,20 @@ import {
   IllustrationWrapper,
   MainContentContainer,
   Section,
-  Section3D,
   SubHeader,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
 import { CardsWrapper } from "../components/app/cards/CardStyles";
-import { CatCard } from "../components/app/cards/CatCard";
 import { IndividualCatSVG } from "../components/app/SVG/IndividualCatSVG";
 import { BusinessCatSVG } from "../components/app/SVG/BusinessCatSVG";
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/shared/Footer";
+import { InfoCard } from "../components/app/cards/InfoCard";
+import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 
 function ServicesPage() {
+  const navigate = useNavigate();
+  const isMobileView = useIsMobileView();
   return (
     <MainContentContainer>
       {/*HERO SECTION*/}
@@ -39,52 +42,106 @@ function ServicesPage() {
         </IllustrationWrapper>
       </HeroServicesSection>
 
-      {/*3D SECTION*/}
-      <Section3D background={theme.colors.tiel_dark} color={theme.colors.white}>
+      {/*PriceFactors*/}
+      <Section
+        background={theme.colors.background_dark}
+        color={theme.colors.white}
+      >
         <HeaderWrapper>
-          <CatCard
-            svg={<IndividualCatSVG />}
-            header="For Individuals"
-            color={theme.colors.tiel_dark}
-          />
           <H2Header>What IS the PRICE?</H2Header>
           <SubHeader>
-            It depends on what we come up with and how complex you want it. We
-            believe that the value of our work is in its uniqueness and the
-            memories it captures. Contact us to discuss your wants and get a
-            personalized quote.
+            The price depends on the design and the complexity of your
+            project.Reach out to us to share your vision, and we’ll provide a
+            personalized quote to bring it to life.
           </SubHeader>
-          <H4Header>What IS the PRICE?</H4Header>
           <ButtonZone>
-            <Button>Get a quote.</Button>
+            <SecondaryButton onClick={() => navigate("/price-factors")}>
+              Detailed price factors
+            </SecondaryButton>
           </ButtonZone>
-          <br />
         </HeaderWrapper>
-        <IllustrationWrapper></IllustrationWrapper>
-      </Section3D>
+      </Section>
+
+      {/*INDIVIDUALS*/}
+      <Section background={theme.colors.tiel_dark} color={theme.colors.white}>
+        <HeaderWrapper>
+          <IndividualCatSVG />
+          <H2Header>For You</H2Header>
+          {!isMobileView && (
+            <ButtonZone>
+              <Button>Get a quote.</Button>
+            </ButtonZone>
+          )}
+        </HeaderWrapper>
+        <CardsWrapper>
+          <H4Header>Examples of approximate prices</H4Header>
+          <InfoCard
+            info={"Low Complexity"}
+            price={"150-500€"}
+            backgroundImage={
+              "assets/images/works/weddinggifts/Wedding_Scale.jpg"
+            }
+          />
+          <InfoCard
+            info={"Medium Complexity"}
+            price={"600-1000€"}
+            backgroundImage={
+              "assets/images/works/Rastovac/Rastovac_KuminaKuca-3.jpg"
+            }
+          />
+          <InfoCard
+            info={"High Complexity"}
+            price={"1000+ €"}
+            backgroundImage={
+              "assets/images/works/attackonbaldursgate/BG_Attack-7.jpg"
+            }
+          />
+          {isMobileView && (
+            <ButtonZone>
+              <Button>Get a quote.</Button>
+            </ButtonZone>
+          )}
+        </CardsWrapper>
+      </Section>
       {/*Biznis sekciono*/}
       <Section background={theme.colors.blue_dark} color={theme.colors.white}>
         <HeaderWrapper>
-          <CardsWrapper>
-            <CatCard
-              svg={<BusinessCatSVG />}
-              header="For Businesses"
-              description="Gifts, Memorabilia, Awards and Game Events."
-              color={theme.colors.blue_dark}
-            />
-          </CardsWrapper>
-          <H2Header>From art to events</H2Header>
-          <SubHeader>
-            We collaborate with companies to deliver innovative and custom
-            artwork and game events for a variety of purposes
-          </SubHeader>
-          <H4Header>Examples of some works</H4Header>
-          <ButtonZone>
-            <Button>Get a quote.</Button>
-          </ButtonZone>
-          <br />
+          <BusinessCatSVG />
+          <H2Header>For Your Business</H2Header>
+          {!isMobileView && (
+            <ButtonZone>
+              <Button>Get a quote.</Button>
+            </ButtonZone>
+          )}
         </HeaderWrapper>
+        <CardsWrapper>
+          <H4Header>Examples of some works</H4Header>
+          <InfoCard
+            info={"Gifts for Employees"}
+            backgroundImage={
+              "assets/images/works/weddinggifts/Wedding_Scale.jpg"
+            }
+          />
+          <InfoCard
+            info={"Moderating Live Events and Conferences"}
+            backgroundImage={"assets/images/events/DSC_3615.jpg"}
+          />
+          <InfoCard
+            info={"Game Nights"}
+            backgroundImage={"assets/images/events/DSC_4278.jpg"}
+          />
+          {isMobileView && (
+            <ButtonZone>
+              <Button>Get a quote.</Button>
+            </ButtonZone>
+          )}
+        </CardsWrapper>
       </Section>
+
+      <Footer
+        credit={"Fotografija evenata: Edin Tuzlak"}
+        link={"https://www.instagram.com/edin.tuzlak/"}
+      />
     </MainContentContainer>
   );
 }

@@ -2,7 +2,7 @@
 export const galleryWorks = [
   {
     id: 1,
-    name: "LiDAR Rastovac",
+    name: "Rastovac - A childhood memory",
     src: "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-4-1337x1004.webp",
     link: "/lidar",
     description:

@@ -13,6 +13,7 @@ import { galleryWorks } from "./art/galleryWorks.js";
 import ImageGalleryPage from "./pages/ImageGalleryPage.jsx";
 import NavMenu from "./components/app/nav/NavMenu.jsx";
 import ServicesPage from "./pages/ServicesPage.jsx";
+import PriceFactors from "./pages/PriceFactors.jsx";
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
             }
           />
           <Route exact path="/deimos-axe" element={<DeimosAxeScene />} />
+          <Route exact path="/price-factors" element={<PriceFactors />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

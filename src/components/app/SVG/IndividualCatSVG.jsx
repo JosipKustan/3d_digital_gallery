@@ -1,4 +1,4 @@
-export function IndividualCatSVG() {
+export function IndividualCatSVG(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export function IndividualCatSVG() {
       height="171"
       fill="none"
       viewBox="0 0 128 171"
+      {...props}
     >
       <rect width="128" height="128" y="25" fill="#07BEB8" rx="64" />
       <path

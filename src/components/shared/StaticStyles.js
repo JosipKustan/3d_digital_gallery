@@ -172,7 +172,7 @@ export const FooterWrapper = styled.footer`
   padding: 128px 24px;
   background-color: ${theme.colors.background_dark};
   color: ${theme.colors.white};
-
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,6 +188,7 @@ export const HeaderWrapper = styled.header`
 
   text-align: center;
   box-sizing: border-box;
+  align-items: center;
   font-family: ${theme.fonts.heading};
   font-weight: 700;
   line-height: 360%;
@@ -368,4 +369,9 @@ export const H6Header = styled.h6`
   font-size: 18px;
   font-weight: 700;
   margin: 0;
+`;
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;
