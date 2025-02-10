@@ -17,7 +17,7 @@ import { galleryWorks } from "../art/galleryWorks";
 import { ZvrkiBodySVG } from "../components/app/SVG/ZvrkiBody";
 import { ZvrkiHeadSVG } from "../components/app/SVG/ZvrkiHead";
 import Footer from "../components/shared/Footer";
-import useImageDimensions from "../components/shared/hooks/getImageDimensions";
+import useImageDimensions from "../components/shared/hooks/useImageDimensions";
 import ImageGalleryRow from "../components/shared/ImageGalleryRow";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 

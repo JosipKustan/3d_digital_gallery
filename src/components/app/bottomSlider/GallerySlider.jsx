@@ -5,7 +5,7 @@ import {
   Thumbnail,
 } from "./GallerySliderStyles";
 import "photoswipe/style.css";
-import useImageDimensions from "../../shared/hooks/getImageDimensions";
+import useImageDimensions from "../../shared/hooks/useImageDimensions";
 
 export function GallerySlider({ images }) {
   return (
@@ -32,6 +32,7 @@ export function GallerySlider({ images }) {
           </svg>
         </CameraFrontDrop>
         {images.map((path, index) => {
+          console.log(path);
           const { width, height } = useImageDimensions(path);
           return (
             <Item

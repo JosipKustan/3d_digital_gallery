@@ -4,7 +4,7 @@ import {
   GalleryWorkWrapper,
   Thumbnail,
 } from "../app/bottomSlider/GallerySliderStyles";
-import useImageDimensions from "./hooks/getImageDimensions";
+import useImageDimensions from "./hooks/useImageDimensions";
 import { galleryWorks } from "../../art/galleryWorks";
 
 function ImageGalleryRow({ number }) {
