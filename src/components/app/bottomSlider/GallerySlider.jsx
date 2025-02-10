@@ -5,7 +5,7 @@ import {
   Thumbnail,
 } from "./GallerySliderStyles";
 import "photoswipe/style.css";
-import useImageDimensions from "../../shared/hooks/getImageDimensions";
+import useImageDimensions from "../../shared/hooks/useImageDimensions";
 
 export function GallerySlider({ images }) {
   return (

@@ -1,10 +1,11 @@
-import { extend, Canvas } from "@react-three/fiber";
+import { extend, Canvas, useFrame } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { OrbitControls, SpotLight } from "@react-three/drei";
 import * as THREE from "three";
 import RastovacLiDAR from "../../components/objects/RastovacLiDAR.jsx";
 import Placeholder from "../../components/shared/Placeholder.jsx";
 import Hand from "../../components/objects/Hand.jsx";
+import RotatingObject from "../../components/shared/RotatingObject.jsx";
 
 extend({ OrbitControls });
 
@@ -20,7 +21,7 @@ export default function RastovacLiDARScene() {
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [15, 6, 15],
+        position: [10, 6, 2],
       }}
     >
       {/* <Environment background blur={0.1} files="assets/images/hdri/golf_course_sunrise_1k.hdr" /> */}
@@ -43,10 +44,12 @@ export default function RastovacLiDARScene() {
         minDistance={2}
         maxDistance={30}
       />
-      <Hand />
-      <Suspense fallback={<Placeholder />}>
-        <RastovacLiDAR />
-      </Suspense>
+      <RotatingObject>
+        <Hand />
+        <Suspense fallback={<Placeholder />}>
+          <RastovacLiDAR />
+        </Suspense>
+      </RotatingObject>
     </Canvas>
   );
 }

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import theme from "../theme";
 import { HeroFull } from "../app/SVG/HeroFull";
+import { HeroBeach } from "../app/SVG/HeroBeach";
 
 export const MainContentContainer = styled.div`
   margin-top: 64px;
@@ -28,6 +29,29 @@ export const HeroSection = styled.section`
 export const HeroIllustration = styled(HeroFull)`
   height: 100%;
 `;
+
+export const HeroServicesSection = styled.section`
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 64px 0px 0px 24px;
+  background-color: ${(props) => props.background || theme.colors.white};
+  color: ${(props) => props.color || theme.colors.black};
+  gap: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1080px) {
+    align-items: start;
+    padding: 128px 0px 0px 128px;
+    flex-direction: row;
+    height: 100vh;
+  }
+`;
+export const HeroBeachIllustration = styled(HeroBeach)`
+  max-height: 80%;
+`;
 export const IllustrationWrapper = styled.div`
   position: absolute;
   width: 96%;
@@ -40,7 +64,38 @@ export const IllustrationWrapper = styled.div`
   @media (max-width: 1080px) {
     position: relative;
     height: fit-content;
+    width: 100%;
+  }
+`;
+export const DivIllustrationWrapper = styled.div`
+  display: flex;
+`;
+export const CartIllustrationWrapper = styled.div`
+  position: absolute;
+  width: 96%;
+  height: 100vh;
 
+  display: flex;
+  align-items: end;
+  justify-content: end;
+
+  @media (max-width: 1080px) {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+  }
+`;
+export const BeachIllustrationWrapper = styled.div`
+  position: absolute;
+  width: 96%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  @media (max-width: 1080px) {
+    position: relative;
+    height: fit-content;
     width: 100%;
   }
 `;
@@ -109,6 +164,24 @@ export const Section = styled.section`
   }
 `;
 
+export const GallerySection = styled.section`
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 64px 0px;
+  background-color: ${(props) => props.background || theme.colors.white};
+  color: ${(props) => props.color || theme.colors.black};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  @media (min-width: 1080px) {
+    align-items: center;
+  }
+`;
+
 export const FooterWrapper = styled.footer`
   position: relative;
   width: 100vw;
@@ -117,7 +190,7 @@ export const FooterWrapper = styled.footer`
   padding: 128px 24px;
   background-color: ${theme.colors.background_dark};
   color: ${theme.colors.white};
-
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,11 +206,12 @@ export const HeaderWrapper = styled.header`
 
   text-align: center;
   box-sizing: border-box;
+  align-items: center;
   font-family: ${theme.fonts.heading};
   font-weight: 700;
   line-height: 360%;
   max-width: 540px;
-  @media (min-width: 768px) {
+  @media (min-width: 1080px) {
     line-height: 600%;
     max-width: 700px;
     padding-inline: 0px;
@@ -146,9 +220,8 @@ export const HeaderWrapper = styled.header`
 
 export const GalleryPageWrapper = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 24px;
-
+  overflow-y: scroll;
   box-sizing: border-box;
   width: 100%;
   padding-inline: 16px;
@@ -177,7 +250,7 @@ export const StepWrapper = styled.div`
   gap: 8px;
   padding-inline: 16px;
   @media (min-width: 1080px) {
-    width: 600px;
+    max-width: 600px;
   }
 `;
 
@@ -188,7 +261,7 @@ export const H1Header = styled.h1`
   text-transform: uppercase;
 
   z-index: 5;
-  @media (min-width: 768px) {
+  @media (min-width: 1080px) {
     font-size: 128px;
   }
 `;
@@ -199,7 +272,7 @@ export const H2Header = styled.h2`
   line-height: 100%;
   font-weight: 700;
   text-transform: uppercase;
-  @media (min-width: 768px) {
+  @media (min-width: 1080px) {
     font-size: 128px;
   }
 `;
@@ -208,7 +281,7 @@ export const H1Highlight = styled.span`
   font-size: 20px;
   text-transform: uppercase;
   line-height: 100%;
-  @media (min-width: 768px) {
+  @media (min-width: 1080px) {
     font-size: 64px;
   }
 `;
@@ -313,4 +386,9 @@ export const H6Header = styled.h6`
   font-size: 18px;
   font-weight: 700;
   margin: 0;
+`;
+
+export const StyledLink = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;

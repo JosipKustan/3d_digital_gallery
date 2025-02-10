@@ -89,7 +89,74 @@ export const CardsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
   padding: 16px;
   box-sizing: border-box;
+  @media (min-width: 1080px) {
+    align-items: end;
+  }
+`;
+
+export const InfoCardWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  min-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  color: ${theme.colors.white};
+  background-color: ${theme.colors.background_dark};
+  background-image: url(${({ backgroundImage }) => backgroundImage});
+  background-size: cover;
+  background-position: center;
+  border-radius: ${theme.border.big};
+  height: 290px;
+  box-sizing: border-box;
+  padding: 0px 16px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+    border-radius: ${theme.border.big};
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+`;
+
+export const InfoText = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  z-index: 2;
+  padding-top: 8px;
+`;
+
+export const MoneyandShippingInfoWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  box-sizing: border-box;
+
+  font-size: 36px;
+  font-family: ${theme.fonts.heading};
+  font-weight: 700;
+
+  margin: 0;
+  z-index: 2;
 `;

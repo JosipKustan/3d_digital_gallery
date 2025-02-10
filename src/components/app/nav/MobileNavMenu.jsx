@@ -99,6 +99,7 @@ function MobileNavMenu() {
         <MenuList>
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/gallery">Gallery</MenuItem>
+          <MenuItem to="/services">Services</MenuItem>
           <MenuItemHash smooth to="/#contact">
             Contact
           </MenuItemHash>
