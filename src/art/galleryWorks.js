@@ -15,13 +15,13 @@ export const galleryWorks = [
     artistRealName: "2021",
     artistsImage: "assets/images/avatarImage.webp",
     galleryImages: [
-      "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-1-2000x1500.webp",
-      "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-2-2000x1500.webp",
       "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-3-1672x1255.webp",
       "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-4-1337x1004.webp",
       "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-5-2296x1724.webp",
       "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-7-2259x1696.webp",
       "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-8-1724x2296.webp",
+      "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-1-2000x1500.webp",
+      "assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-2-2000x1500.webp",
     ],
   },
   /* {

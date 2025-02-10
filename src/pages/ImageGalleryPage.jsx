@@ -4,6 +4,7 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import {
   AbsoluteIllustration,
   GalleryPageWrapper,
+  GallerySection,
   H1Header,
   HeaderWrapper,
   MainContentContainer,
@@ -17,55 +18,41 @@ import { ZvrkiBodySVG } from "../components/app/SVG/ZvrkiBody";
 import { ZvrkiHeadSVG } from "../components/app/SVG/ZvrkiHead";
 import Footer from "../components/shared/Footer";
 import useImageDimensions from "../components/shared/hooks/getImageDimensions";
+import ImageGalleryRow from "../components/shared/ImageGalleryRow";
+import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 
 function ImageGalleryPage() {
-  const images = galleryWorks[0].galleryImages;
+  const isMobileView = useIsMobileView();
   return (
     <MainContentContainer>
       {/* HERO SECTION */}
 
       {/* 3D SECTION */}
-      <Section color={theme.colors.black}>
+      <GallerySection color={theme.colors.black}>
         <HeaderWrapper>
-          <AbsoluteIllustration style={{ bottom: "-40px", right: "10px" }}>
+          <AbsoluteIllustration
+            style={{ bottom: isMobileView ? "-40px" : "-10px", right: "10px" }}
+          >
             <ZvrkiBodySVG />
           </AbsoluteIllustration>
           <AbsoluteIllustration
-            style={{ bottom: "50px", right: "30px", zIndex: "10" }}
+            style={{
+              bottom: isMobileView ? "50px" : "80px",
+              right: "30px",
+              zIndex: "10",
+            }}
           >
             <ZvrkiHeadSVG />
           </AbsoluteIllustration>
-          <H1Header style={{ width: "300px" }}>Art is in the details</H1Header>
-          <SubHeader>And the meaning behind them</SubHeader>
+          <H1Header style={{ width: isMobileView ? "300px" : "600px" }}>
+            Art is in the details
+          </H1Header>
+          <SubHeader>And in the meaning behind them</SubHeader>
         </HeaderWrapper>
-        <GalleryPageWrapper>
-          <Gallery>
-            {images.map((path, index) => {
-              const { width, height } = useImageDimensions(path);
-              return (
-                <Item
-                  key={index}
-                  original={path}
-                  thumbnail={path}
-                  width={width}
-                  height={height}
-                  caption={`Gallery Image ${index + 1}`}
-                >
-                  {({ ref, open }) => (
-                    <Thumbnail
-                      ref={ref}
-                      onClick={open}
-                      className="image-item"
-                      src={path}
-                      alt={`Gallery Image ${index + 1}`}
-                    />
-                  )}
-                </Item>
-              );
-            })}
-          </Gallery>
-        </GalleryPageWrapper>
-      </Section>
+        <ImageGalleryRow number={0} />
+        <ImageGalleryRow number={1} />
+        <ImageGalleryRow number={2} />
+      </GallerySection>
 
       <Footer />
     </MainContentContainer>

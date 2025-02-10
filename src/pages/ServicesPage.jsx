@@ -107,7 +107,7 @@ function ServicesPage() {
       <Section background={theme.colors.blue_dark} color={theme.colors.white}>
         <HeaderWrapper>
           <BusinessCatSVG />
-          <H2Header>For Your Business</H2Header>
+          <H2Header>For Busi ness</H2Header>
           {!isMobileView && (
             <ButtonZone>
               <Button>Get a quote.</Button>

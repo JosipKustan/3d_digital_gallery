@@ -19,7 +19,7 @@ export const GallerySliderWrapper = styled.div`
   cursor: pointer;
 `;
 export const Thumbnail = styled.img`
-  width: 100%;
+  width: 360px;
   height: 250px;
   background-color: gray;
   object-fit: cover;
@@ -43,4 +43,21 @@ export const CameraFrontDrop = styled.div`
   justify-content: center;
 
   pointer-events: none;
+`;
+export const GalleryWorkWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+export const WorkName = styled.h2`
+  margin: 0;
+  padding-left: 8px;
+  font-size: 64px;
+  line-height: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 128px;
+  }
 `;

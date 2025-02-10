@@ -89,15 +89,19 @@ export const CardsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
   padding: 16px;
   box-sizing: border-box;
+  @media (min-width: 1080px) {
+    align-items: end;
+  }
 `;
 
 export const InfoCardWrapper = styled.div`
   position: relative;
   width: 100%;
-  max-width: 540px;
+  max-width: 640px;
+  min-width: 480px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -108,7 +112,7 @@ export const InfoCardWrapper = styled.div`
   background-size: cover;
   background-position: center;
   border-radius: ${theme.border.big};
-  height: 190px;
+  height: 290px;
   box-sizing: border-box;
   padding: 0px 16px;
   cursor: pointer;
