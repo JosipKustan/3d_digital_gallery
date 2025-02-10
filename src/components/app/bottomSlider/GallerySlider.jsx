@@ -32,7 +32,6 @@ export function GallerySlider({ images }) {
           </svg>
         </CameraFrontDrop>
         {images.map((path, index) => {
-          console.log(path);
           const { width, height } = useImageDimensions(path);
           return (
             <Item
