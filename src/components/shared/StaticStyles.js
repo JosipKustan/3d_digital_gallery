@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import theme from "../theme";
 import { HeroFull } from "../app/SVG/HeroFull";
 import { HeroBeach } from "../app/SVG/HeroBeach";
+import { PurPur } from "../app/SVG/PurPur";
 
 export const MainContentContainer = styled.div`
   margin-top: 64px;
@@ -391,4 +392,31 @@ export const H6Header = styled.h6`
 export const StyledLink = styled.a`
   text-decoration: none;
   color: inherit;
+`;
+
+export const ContactWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+//Animations
+
+// Define the animation
+const stretchSquish = keyframes`
+  0%, 100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.7) scaleX(1.6);
+  }
+`;
+
+// Create a styled SVG component
+export const PurPurAnimated = styled(PurPur)`
+  position: absolute;
+  transform-origin: center;
+  animation: ${stretchSquish} 3s ease-in-out infinite alternate;
 `;
