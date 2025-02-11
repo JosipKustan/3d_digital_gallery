@@ -4,6 +4,7 @@ import {
   Absolute3DModel,
   BasicCard,
   ButtonZone,
+  ContactWrapper,
   Fake3DModel,
   FloatCardSection,
   H1Header,
@@ -15,6 +16,7 @@ import {
   HeroSection,
   IllustrationWrapper,
   MainContentContainer,
+  PurPurAnimated,
   ScrollZoneBottom,
   ScrollZoneTop,
   Section,
@@ -38,6 +40,9 @@ import { MiniZukiLeziSVG } from "../components/app/SVG/MiniZukiLeziSVG";
 import Footer from "../components/shared/Footer";
 import { JelenaPapigaSVG } from "../components/app/SVG/JelenaPapigaSVG";
 import { TomicSVGDragon } from "../components/app/SVG/TomicSVGDragon";
+import { ContactZuki } from "../components/app/SVG/ContactZuki";
+import { PurPur } from "../components/app/SVG/PurPur";
+import { delay, transform } from "framer-motion";
 
 function Home() {
   return (
@@ -227,6 +232,23 @@ function Home() {
             backgroundColor={theme.colors.background_dark}
           />
           <H4Header>Contact me on one of these :D</H4Header>
+          <ContactWrapper>
+            <ContactZuki eyes={false} />
+
+            <PurPurAnimated />
+            <PurPurAnimated
+              style={{
+                top: "20px",
+                right: "60%",
+              }}
+            />
+            <PurPurAnimated
+              style={{
+                top: "-15px",
+                right: "30%",
+              }}
+            />
+          </ContactWrapper>
         </CardsWrapper>
       </Section>
       <Footer />
