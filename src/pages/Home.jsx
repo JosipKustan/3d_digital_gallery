@@ -231,7 +231,7 @@ function Home() {
             testemonial="“Kuki made a small art piece that is a centerpiece of my living room"
             backgroundColor={theme.colors.background_dark}
           />
-          <H4Header>Contact me on one of these :D</H4Header>
+          <H4Header>Contact us on one of these :D</H4Header>
           <ContactWrapper>
             <ContactZuki eyes={false} />
 

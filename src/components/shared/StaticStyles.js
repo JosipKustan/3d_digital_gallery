@@ -400,6 +400,14 @@ export const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+export const HoverLink = styled.a`
+  display: inline-block;
+  transition: opacity 0.15s ease-in;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5; /* Light blue effect */
+  }
+`;
 
 //Animations
 
