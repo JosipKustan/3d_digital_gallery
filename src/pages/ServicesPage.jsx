@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../components/shared/Footer";
 import { InfoCard } from "../components/app/cards/InfoCard";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
+import { TigiSVG } from "../components/app/SVG/TigiSVG";
 
 function ServicesPage() {
   const navigate = useNavigate();
@@ -60,6 +61,7 @@ function ServicesPage() {
             </SecondaryButton>
           </ButtonZone>
         </HeaderWrapper>
+        <TigiSVG />
       </Section>
 
       {/*INDIVIDUALS*/}

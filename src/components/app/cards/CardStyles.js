@@ -15,7 +15,6 @@ export const CardWrapper = styled.div`
   justify-content: space-around;
   box-sizing: border-box;
   padding: 8px 16px;
-  cursor: pointer;
 `;
 export const SVGWrapper = styled.div`
   height: 128px;
@@ -25,8 +24,8 @@ export const SVGWrapper = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 370px) {
-    height: 102px;
-    width: 102px;
+    height: 84px;
+    width: 84px;
   }
 `;
 export const TextWrapper = styled.div`
@@ -64,13 +63,10 @@ export const TestemonialText = styled.p`
   font-style: italic;
 
   margin: 0;
-  @media (max-width: 370px) {
-    font-size: 24px;
-  }
 `;
 export const CardName = styled.p`
   position: absolute;
-  bottom: 16px;
+  bottom: 8px;
   right: 16px;
   font-family: ${theme.fonts.body};
   font-size: 16px;
@@ -78,7 +74,7 @@ export const CardName = styled.p`
   text-align: right;
   margin: 0;
   @media (max-width: 370px) {
-    font-size: 24px;
+    font-size: 10px;
   }
 `;
 

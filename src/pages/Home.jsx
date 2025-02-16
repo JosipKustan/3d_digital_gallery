@@ -211,8 +211,26 @@ function Home() {
             Let’s unlock the ideas together! You might be surprised what can be
             done.
           </SubHeader>
+          <ContactWrapper>
+            <ContactZuki eyes={false} />
+
+            <PurPurAnimated />
+            <PurPurAnimated
+              style={{
+                top: "20px",
+                right: "60%",
+              }}
+            />
+            <PurPurAnimated
+              style={{
+                top: "-15px",
+                right: "30%",
+              }}
+            />
+          </ContactWrapper>
         </HeaderWrapper>
         <CardsWrapper>
+          <H4Header>Žuki asked what people think...</H4Header>
           <TestemonialsCard
             svg={<JelenaPapigaSVG />}
             name="Jelena P."
@@ -231,24 +249,6 @@ function Home() {
             testemonial="“Kuki made a small art piece that is a centerpiece of my living room"
             backgroundColor={theme.colors.background_dark}
           />
-          <H4Header>Contact us on one of these :D</H4Header>
-          <ContactWrapper>
-            <ContactZuki eyes={false} />
-
-            <PurPurAnimated />
-            <PurPurAnimated
-              style={{
-                top: "20px",
-                right: "60%",
-              }}
-            />
-            <PurPurAnimated
-              style={{
-                top: "-15px",
-                right: "30%",
-              }}
-            />
-          </ContactWrapper>
         </CardsWrapper>
       </Section>
       <Footer />
