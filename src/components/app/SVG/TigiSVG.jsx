@@ -1,4 +1,4 @@
-export function TigiSVG() {
+export function TigiSVG(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export function TigiSVG() {
       height="369"
       fill="none"
       viewBox="0 0 702 369"
+      {...props}
     >
       <path
         fill="#EEE"

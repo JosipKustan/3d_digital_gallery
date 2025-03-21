@@ -189,7 +189,7 @@ function Home() {
           <StepWrapper>
             <H4Header>4. Magic of making </H4Header>
             <p>
-              We don’t leave you in the dark. Except if you want it that way :We
+              We don’t leave you in the dark. Except if you want it that way. We
               start making and we give updated on the progress when necessary.
             </p>
           </StepWrapper>

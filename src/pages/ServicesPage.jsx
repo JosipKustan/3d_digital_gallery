@@ -61,7 +61,7 @@ function ServicesPage() {
             </SecondaryButton>
           </ButtonZone>
         </HeaderWrapper>
-        <TigiSVG />
+        <TigiSVG style={{ width: "100%", minWidth: "400px" }} />
       </Section>
 
       {/*INDIVIDUALS*/}
@@ -109,7 +109,7 @@ function ServicesPage() {
       <Section background={theme.colors.blue_dark} color={theme.colors.white}>
         <HeaderWrapper>
           <BusinessCatSVG />
-          <H2Header>For Busi ness</H2Header>
+          <H2Header>For Busi&#8203;ness</H2Header>
           {!isMobileView && (
             <ButtonZone>
               <Button>Get a quote.</Button>

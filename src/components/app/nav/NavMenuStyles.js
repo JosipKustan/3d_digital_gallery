@@ -88,10 +88,12 @@ export const BrandName = styled.span`
   font-size: 20px;
   font-weight: 700;
   text-transform: capitalize;
-
   @media (min-width: 1080px) {
     font-size: 40px;
     align-self: center;
+  }
+  @media (min-width: 1080px) and (max-width: 1280px) {
+    font-size: 32px;
   }
 `;
 

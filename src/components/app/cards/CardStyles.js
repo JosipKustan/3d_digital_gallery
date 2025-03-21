@@ -133,6 +133,10 @@ export const InfoCardWrapper = styled.div`
     bottom: 0;
     transform: rotate(180deg);
   }
+
+  @media (max-width: 768px) {
+    min-width: 280px;
+  }
 `;
 
 export const InfoText = styled.div`
