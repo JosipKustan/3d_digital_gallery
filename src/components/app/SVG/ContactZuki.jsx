@@ -146,7 +146,7 @@ export function ContactZuki(props) {
         transform="matrix(.98456 .17503 0 1 120.008 146.414)"
       />
       <HoverLink
-        href="https://www.linkedin.com/in/josip-kustan/"
+        href="https://www.facebook.com/CreativeStudioKuki"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -160,7 +160,7 @@ export function ContactZuki(props) {
         />
       </HoverLink>
       <HoverLink
-        href="https://www.instagram.com/kukicrafts/"
+        href="https://www.instagram.com/creativestudiokuki/"
         target="_blank"
         rel="noopener noreferrer"
       >
