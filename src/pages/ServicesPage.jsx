@@ -121,7 +121,7 @@ function ServicesPage() {
           <InfoCard
             info={"Gifts for Employees"}
             backgroundImage={
-              "assets/images/works/weddinggifts/Wedding_Scale.jpg"
+              "assets/images/works/MiniMees/GiftforEmployees.jpg"
             }
           />
           <InfoCard
