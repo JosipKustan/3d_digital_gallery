@@ -16,19 +16,21 @@ import theme from "../components/theme";
 import { CardsWrapper } from "../components/app/cards/CardStyles";
 import { IndividualCatSVG } from "../components/app/SVG/IndividualCatSVG";
 import { BusinessCatSVG } from "../components/app/SVG/BusinessCatSVG";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Footer from "../components/shared/Footer";
 import { InfoCard } from "../components/app/cards/InfoCard";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 import { TigiSVG } from "../components/app/SVG/TigiSVG";
+import { useEffect } from "react";
 
 function ServicesPage() {
   const navigate = useNavigate();
   const isMobileView = useIsMobileView();
+
   return (
     <MainContentContainer>
       {/*HERO SECTION*/}
-      <HeroServicesSection>
+      <HeroServicesSection id="services">
         <HeaderWrapper>
           <H1Header>Services</H1Header>
           <SubHeader>

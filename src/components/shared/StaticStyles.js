@@ -218,6 +218,9 @@ export const HeaderWrapper = styled.header`
     padding-inline: 0px;
   }
 `;
+export const ScreenWrapper = styled.div`
+  height: 100vh;
+`;
 
 export const GalleryPageWrapper = styled.div`
   display: flex;
