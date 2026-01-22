@@ -116,7 +116,7 @@ export const galleryWorks = [
       "assets/images/works/attackonbaldursgate/attack_3.jpg",
       "assets/images/works/attackonbaldursgate/attack_4.jpg",
     ],
-  }, */
+  }, 
   {
     id: 6,
     name: "Waterfall Family Memory",
@@ -142,5 +142,5 @@ export const galleryWorks = [
       "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-8-1951x1202.webp",
       "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-9-1512x2016.webp",
     ],
-  },
+  }, */
 ];
