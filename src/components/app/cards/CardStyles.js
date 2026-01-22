@@ -7,8 +7,9 @@ export const CardWrapper = styled.div`
   max-width: 540px;
   background-color: ${(props) => props.color || theme.colors.purple_dark};
   display: flex;
+  flex-direction: ${(props) => props.direction || "row"};
   gap: 8px;
-  align-items: center;
+  align-items: ${(props) => props.align || "center"};
   color: ${theme.colors.white};
   border-radius: ${theme.border.big};
   height: fit-content;
@@ -16,9 +17,25 @@ export const CardWrapper = styled.div`
   box-sizing: border-box;
   padding: 8px 16px;
 `;
+export const SkillCardWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: ${(props) => props.direction || "row"};
+  gap: 8px;
+  align-items: ${(props) => props.align || "center"};
+  color: ${theme.colors.black};
+  border-radius: ${theme.border.big};
+  height: fit-content;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 8px 16px;
+`;
 export const SVGWrapper = styled.div`
-  height: 128px;
-  width: 128px;
+  height: 156px;
+  width: 156px;
 
   display: flex;
   align-items: center;
@@ -32,8 +49,13 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding-block: 8px;
 `;
-
+export const CardBottomWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding-top: 16px;
+`;
 export const CatCardHeader = styled.h4`
   font-family: ${theme.fonts.heading};
   font-size: 36px;
@@ -51,6 +73,7 @@ export const CatCardDescription = styled.p`
   font-weight: 500;
   line-height: 100%;
   margin: 0;
+  padding-top: 16px;
   @media (max-width: 370px) {
     font-size: 14px; /* Adjust this value as needed for smaller screens */
   }
@@ -159,4 +182,16 @@ export const MoneyandShippingInfoWrapper = styled.div`
 
   margin: 0;
   z-index: 2;
+`;
+
+// CardStyles.js
+export const CircleWrapper = styled.div`
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background-color: ${({ color }) => color};
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

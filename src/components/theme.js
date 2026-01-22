@@ -12,6 +12,7 @@ const theme = {
     white: "#ffffff",
     black: "#000000",
     black_transparent: "rgba(0,0,0,0.25)",
+    transparent: "transparent",
   },
   fonts: {
     body: "Inter, sans-serif",
