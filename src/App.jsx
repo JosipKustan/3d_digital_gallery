@@ -22,6 +22,7 @@ import ServicesPage from "./pages/ServicesPage.jsx";
 import PriceFactors from "./pages/PriceFactors.jsx";
 import { useLayoutEffect } from "react";
 import ScrollToTop from "./components/shared/hooks/ScrollToTop.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/gallery" element={<ImageGalleryPage />} />
             <Route exact path="/services" element={<ServicesPage />} />
             <Route exact path="/#About" />
+            <Route exact path="/portfolio" element={<Portfolio />} />
             <Route
               exact
               path="/lidar"

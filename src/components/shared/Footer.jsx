@@ -14,7 +14,7 @@ function Footer({ credit, link }) {
       <MuckoStretchSVG />
       <p>Still in development. Website and illustrations created in house</p>
       <p>
-        &copy; <span id="year">2024</span>
+        &copy; <span id="year">2024 - 2026 &nbsp;</span>
         Creative Studio Kuki. All rights reserved.
       </p>
     </FooterWrapper>

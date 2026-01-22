@@ -117,4 +117,30 @@ export const galleryWorks = [
       "assets/images/works/attackonbaldursgate/attack_4.jpg",
     ],
   }, */
+  {
+    id: 6,
+    name: "Waterfall Family Memory",
+    src: "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-1-1836x1033.webp",
+    link: "/waterfallfamily",
+    description:
+      "This piece portrays a family of five at their hometown waterfall, complete with a duck family of five swimming nearby.",
+    shortDescription:
+      "A miniature sculpture capturing a family of five at a waterfall, their cherished place of origin.",
+    making:
+      "They are 3cm, 3D printed using a 3D resin printer. Model was created with refrence to their picture. Crafted from epoxy and plaster with delicate lighting effects behind the waterfall to enhance the scene's warmness.",
+    artistName: "Waterfall Family",
+    artistRealName: "Josip Kuštan",
+    artistsImage: "assets/images/HeaderImages/Waterfall_Simple.png",
+    galleryImages: [
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-1-1836x1033.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-2-1643x791.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-3-3026x2812.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-4-1787x926.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-5-1975x1073.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-6-1850x1092.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-7-2016x1215.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-8-1951x1202.webp",
+      "assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-9-1512x2016.webp",
+    ],
+  },
 ];

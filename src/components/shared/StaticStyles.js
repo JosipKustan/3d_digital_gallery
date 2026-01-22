@@ -3,6 +3,7 @@ import theme from "../theme";
 import { HeroFull } from "../app/SVG/HeroFull";
 import { HeroBeach } from "../app/SVG/HeroBeach";
 import { PurPur } from "../app/SVG/PurPur";
+import { PortfolioHero } from "../app/SVG/PortfolioHero";
 
 export const MainContentContainer = styled.div`
   margin-top: 64px;
@@ -29,6 +30,13 @@ export const HeroSection = styled.section`
 `;
 export const HeroIllustration = styled(HeroFull)`
   height: 100%;
+`;
+export const HeroPortfolioIllustration = styled(PortfolioHero)`
+  height: 100%;
+  width: 100%;
+  @media (min-width: 1080px) {
+    min-width: 480px;
+  }
 `;
 
 export const HeroServicesSection = styled.section`
@@ -164,6 +172,45 @@ export const Section = styled.section`
     align-items: center;
   }
 `;
+export const SectionPortfolio = styled.section`
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 64px 0px;
+  background-color: ${(props) => props.background || theme.colors.white};
+  color: ${(props) => props.color || theme.colors.black};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  @media (min-width: 1080px) {
+    flex-direction: row;
+    padding: 128px 128px;
+    align-items: start;
+  }
+`;
+
+export const SkillSectionPortfolio = styled.section`
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 64px 0px;
+  background-color: ${(props) => props.background || theme.colors.white};
+  color: ${(props) => props.color || theme.colors.black};
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  @media (min-width: 1080px) {
+    flex-direction: column;
+    padding: 128px 128px;
+    align-items: center;
+  }
+`;
 
 export const GallerySection = styled.section`
   position: relative;
@@ -242,9 +289,29 @@ export const TextListWrapper = styled.div`
   @media (min-width: 1080px) {
     max-width: 100%;
     width: 100%;
-    align-items: center;
+    align-items: left;
 
     padding-inline: 0px;
+  }
+`;
+export const SkillCardsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-inline: 16px;
+  text-align: start;
+  max-width: 456px;
+  padding-inline: 24px;
+
+  @media (min-width: 1080px) {
+    max-width: 100%;
+    width: 100%;
+    align-items: left;
+    gap: 48px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-inline: 0px;
+    justify-content: center;
   }
 `;
 
@@ -261,12 +328,13 @@ export const StepWrapper = styled.div`
 export const H1Header = styled.h1`
   margin: 0;
   font-size: 64px;
-
   text-transform: uppercase;
 
   z-index: 5;
   @media (min-width: 1080px) {
     font-size: 128px;
+
+    line-height: 128px;
   }
 `;
 
