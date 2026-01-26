@@ -58,9 +58,14 @@ import { CookingSvg } from "../components/app/SVG/CookingSvg";
 import { GameMasterSVG } from "../components/app/SVG/GameMasterSVG";
 import { DanceSVG } from "../components/app/SVG/DanceSVG";
 import { CountrysideSVG } from "../components/app/SVG/CountrysideSVG";
+import { QedSVG } from "../components/app/SVG/QedSVG";
+import useIsMobileView from "../components/shared/hooks/useIsMobileView";
+import NavMenu from "../components/app/nav/NavMenu";
 
 function Portfolio() {
   const { openLink } = useOpenLink();
+
+  const isMobileView = useIsMobileView();
   return (
     <MainContentContainer>
       {/*HERO SECTION*/}
@@ -85,15 +90,28 @@ function Portfolio() {
             with me?
           </H2Header>
           <SubHeader>
-            4+ years of agency + freelance experience across complex enterprise
-            apps, niche B2B solutions, and simple small business sites. Ready
-            for product teams, but open to interesting challenges anywhere.
+            4+ years of agency and freelance experience across complex
+            enterprise apps, niche B2B solutions, and small business sites.
+            Ready for product teams, but open to interesting challenges
+            anywhere.
           </SubHeader>
         </HeaderWrapper>
+        {!isMobileView && (
+          <>
+            <ScrollZoneTop />
+            <ScrollZoneBottom />
+            <Fake3DModel>
+              <GuideInfo />
+            </Fake3DModel>
+            <Absolute3DModel>
+              <RastovacLiDARScene />
+            </Absolute3DModel>
+          </>
+        )}
       </Section3D>
 
       {/*Biznis sekciono*/}
-      <SectionPortfolio
+      <SkillSectionPortfolio
         background={theme.colors.background_dark}
         color={theme.colors.white}
       >
@@ -103,13 +121,13 @@ function Portfolio() {
             Most work is under NDA, but here's what I can show
           </SubHeader>
         </HeaderWrapper>
-        <CardsWrapper>
+        <SkillCardsWrapper>
           <PortfolioCard
             svg={<IndividualCatSVG />}
             img={CpsImg}
-            header="Fundraising site"
+            header="Fundraising website for charities"
             description="3x donation revenue through intuitive UX flows."
-            responsibilities="UX research, Workshops, User Flows, Lo-Fi design, Prototypes and User testing"
+            responsibilities="UX research, workshops, user flows, design, prototypes, and user testing."
             color={theme.colors.tiel_dark}
             colorAccent={theme.colors.tiel_accent}
             links={[
@@ -121,10 +139,22 @@ function Portfolio() {
             ]}
           />
           <PortfolioCard
-            svg={<NDAZukiSvg />}
+            svg={<QedSVG style={{ width: "100%", height: "100%" }} />}
+            header="International conference moderator"
+            description="QED (Quality in Enterprise Development) for 2 years"
+            responsibilities="keynote moderation, creative role in the organizing team, and game‑night hosting."
+            color={theme.colors.purple_dark}
+            colorAccent={theme.colors.purple_accent}
+            links={[
+              ["https://www.youtube.com/watch?v=DJrN_hCNKxE&t", "Keynote talk"],
+              ["https://qed.croz.net/", "Conference"],
+            ]}
+          />
+          <PortfolioCard
+            svg={<NDAZukiSvg style={{ width: "auto", height: "100%" }} />}
             header="Enterprise Design System (NDA)"
             description="Unified 120+ applications, legacy 1980s to modern 2020s)"
-            responsibilities="Client Communication, App analysis and categorization, Global layout, Pattern creation, component creation, Figma demos and prototypes, Design Guide book with all UX examples..."
+            responsibilities="client communication, app analysis and categorization, global layout, pattern creation, component creation, Figma demos and prototypes, and a design guidebook with all UX examples."
             color={theme.colors.blue_dark}
             colorAccent={theme.colors.blue_accent}
             links={[
@@ -134,35 +164,21 @@ function Portfolio() {
               ],
             ]}
           />
-          <PortfolioCard
-            svg={<BusinessCatSVG />}
-            img={QedImg}
-            header="International conference moderator"
-            description="QED (Quality in Enterprise Development) for 2 years"
-            responsibilities="Keynote talk moderation, creative mind in an organization team, game night host"
-            color={theme.colors.purple_dark}
-            colorAccent={theme.colors.purple_accent}
-            links={[
-              ["https://www.youtube.com/watch?v=DJrN_hCNKxE&t", "Keynote talk"],
-              ["https://qed.croz.net/", "Conference"],
-            ]}
-          />
-        </CardsWrapper>
-      </SectionPortfolio>
+        </SkillCardsWrapper>
+      </SkillSectionPortfolio>
 
       {/*MoWook*/}
       <SectionPortfolio background={theme.colors.yellow_accent}>
         <HeaderWrapper>
           <H2Header>More work</H2Header>
-          <SubHeader>I am proud of this too</SubHeader>
+          <SubHeader>I’m proud of this work too.</SubHeader>
         </HeaderWrapper>
         <TextListWrapper>
           <StepWrapper>
             <H4Header>1. Tiller - Design System</H4Header>
             <p>
-              My first of 4 design systems - open source. Working with
-              developers and designers to create a tool that fits companies
-              goals
+              My first of four design systems—open source. I worked with
+              developers and designers to create a tool that fits company goals.
             </p>
             <Button
               background={theme.colors.transparent}
@@ -186,9 +202,9 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>2. Bank UX consultant</H4Header>
             <p>
-              Enterprise UX. Biggest impacts are creating an Information
-              Architecture of legal heavy websites with user testing and using
-              and teaching complex figma systems for faster iteration.
+              Enterprise UX. Biggest impacts: creating the information
+              architecture for legally heavy websites, running user testing, and
+              using and teaching complex Figma systems for faster iteration.
             </p>
             <Button
               background={theme.colors.transparent}
@@ -208,16 +224,17 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>3. Co-Leading UX Community of Practice (UX CoP)</H4Header>
             <p>
-              I was mentoring junior designers, reviewing and guiding them in
-              their projects. UX Cop was the best way to learn and share
-              knowledge between designers. You practically never work alone.
+              I mentored junior designers, reviewed and guided them in their
+              projects. UX CoP was the best way to learn and share knowledge
+              between designers — you practically never work alone.
             </p>
           </StepWrapper>
           <StepWrapper>
             <H4Header>4. Creative Studio Kuki (This site) </H4Header>
             <p>
-              Solo-built. Focus on 3D visualization and interaction design based
-              on Qualitative User research + fun illustrations of my cats
+              Solo‑built. Focused on 3D visualization and interaction design
+              based on qualitative user research, plus fun illustrations of my
+              cats.
             </p>
             <Button
               background={theme.colors.transparent}
@@ -237,7 +254,7 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>5. Code-X Marine </H4Header>
             <p>
-              Niche product showcase website of the one of the worlds lightest
+              Niche product showcase website for one of the world’s lightest*
               sailing boats.
             </p>
             <Button
@@ -263,32 +280,36 @@ function Portfolio() {
         <HeaderWrapper>
           <H2Header>LIFE Skills</H2Header>
           <SubHeader>
-            Life experience was preparing me for UX and Design
+            Life experience has been preparing me for UX and design.
           </SubHeader>
         </HeaderWrapper>
 
         <SkillCardsWrapper>
           <SkillsCard
-            svg={<CookingSvg />}
+            svg={<CookingSvg style={{ width: "100%", height: "100%" }} />}
             header="Cooking – 13 years"
             description="I love science behind food and how we perceive it. And of course to feed my friends and family."
             color={theme.colors.blue_dark}
             skills={[
-              "Iteration/testing",
+              "Iteration and testing",
               "Visual composition",
               "Time management",
             ]}
           />
           <SkillsCard
-            svg={<GameMasterSVG />}
+            svg={<GameMasterSVG style={{ width: "100%", height: "100%" }} />}
             header="Game Master (D&D) – 10 years"
-            description="Creative game in which I've lead more then 50+ people through 10+ big and small stories."
+            description="A creative game where I’ve led more than 50 players through 10+ big and small stories.”"
             color={theme.colors.purple_dark} // Adjust color
-            skills={["Design workshops", "Storytelling", "User empathy"]}
+            skills={[
+              "Running design workshops",
+              "Storytelling",
+              "User empathy",
+            ]}
           />
 
           <SkillsCard
-            svg={<DanceSVG />}
+            svg={<DanceSVG style={{ width: "100%", height: "100%" }} />}
             header="Art & Dance – 9 years"
             description="I was in competitive Standard and Latin dancing as a young one and now I make miniature art."
             color={theme.colors.tiel_dark} // Adjust color
@@ -296,11 +317,11 @@ function Portfolio() {
           />
 
           <SkillsCard
-            svg={<CountrysideSVG />}
+            svg={<CountrysideSVG style={{ width: "100%", height: "100%" }} />}
             header="Countryside living"
             description="No problem is hard enough if you get together with people."
             color={theme.colors.yellow_accent} // Adjust color
-            skills={["Problem-solving", "Resourcefulness", "Self-relianc"]}
+            skills={["Problem-solving", "Resourcefulness", "Self-reliance"]}
           />
         </SkillCardsWrapper>
       </SkillSectionPortfolio>
@@ -345,8 +366,8 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>Miniature Art Worlds</H4Header>
             <p>
-              Precision-crafted dioramas that preserve memories and create
-              unique gifts
+              Precision‑crafted dioramas that preserve memories and make unique
+              gifts.
             </p>
             <br />
           </StepWrapper>
@@ -354,9 +375,9 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>Professional '25 Kitchen</H4Header>
             <p>
-              Worked as a cook in a small restaurant. Did everything from Menu
-              R&D to execution. And It was very successful! Also the hardest job
-              I’ve ever done.
+              Worked as a cook in a small restaurant, from menu R&D to daily
+              execution. It was very successful—and also the hardest job I’ve
+              ever done.
             </p>
             <br />
           </StepWrapper>
@@ -364,20 +385,22 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>Hand-sewn Vest &amp; Tie</H4Header>
             <p>
-              Patterned and stitched formal wear from sewing machine before
-              this.
+              Patterned and stitched formal wear before I ever touched a sewing
+              machine for anything else.
             </p>
             <br />
           </StepWrapper>
 
           <StepWrapper>
             <H4Header>Hand-forged Chef Knife</H4Header>
-            <p>Designed and forged my own knife. Handle waiting it’s time.</p>
+            <p>
+              Designed and forged my own chef’s knife. The handle is just
+              waiting for its time.
+            </p>
             <br />
           </StepWrapper>
         </TextListWrapper>
       </SectionPortfolio>
-
       <Footer />
     </MainContentContainer>
   );

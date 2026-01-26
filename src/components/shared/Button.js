@@ -21,6 +21,10 @@ export const Button = styled.button`
   &:hover {
     background-color: ${(props) => props.color || theme.colors.purple_dark};
   }
+
+  @media (max-width: 420px) {
+    padding: 12px 16px;
+  }
 `;
 
 export const SecondaryButton = styled.button`

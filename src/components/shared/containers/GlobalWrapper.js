@@ -5,5 +5,5 @@ export const GlobalWrapper = styled.div`
   width: 100vw;
   overflow-x: hidden;
 
-  background-color: ${theme.colors.background_dark};
+  background-color: ${theme.colors.white};
 `;

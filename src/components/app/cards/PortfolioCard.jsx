@@ -3,9 +3,11 @@ import { useOpenLink } from "../../shared/hooks/useOpenLink";
 import { IconNewTab } from "../SVG/IconNewTab";
 import {
   CardBottomWrapper,
+  CardImage,
   CardWrapper,
   CatCardDescription,
   CatCardHeader,
+  CircleWrapper,
   SVGWrapper,
   TextWrapper,
 } from "./CardStyles";
@@ -35,15 +37,13 @@ export function PortfolioCard({
         </CatCardDescription>
       </TextWrapper>
       <CardBottomWrapper>
-        {img ? (
-          <img
-            src={img}
-            alt={`${header} preview`}
-            style={{ width: "148px", height: "auto", objectFit: "cover" }}
-          />
-        ) : (
-          <SVGWrapper>{svg}</SVGWrapper>
-        )}
+        <CircleWrapper color={colorAccent}>
+          {img ? (
+            <CardImage src={img} alt={`${header} art`} />
+          ) : (
+            <SVGWrapper>{svg}</SVGWrapper>
+          )}
+        </CircleWrapper>
         <TextWrapper>
           {links &&
             links.map(([link, name], index) => (

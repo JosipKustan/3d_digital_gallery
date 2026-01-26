@@ -1,4 +1,4 @@
-export function CookingSvg() {
+export function CookingSvg(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export function CookingSvg() {
       height="178"
       fill="none"
       viewBox="0 0 178 88"
+      {...props}
     >
       <path
         fill="#ECC7AC"

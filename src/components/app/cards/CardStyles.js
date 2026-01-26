@@ -36,24 +36,25 @@ export const SkillCardWrapper = styled.div`
 export const SVGWrapper = styled.div`
   height: 156px;
   width: 156px;
-
+vv
   display: flex;
   align-items: center;
   justify-content: center;
   @media (max-width: 370px) {
-    height: 84px;
-    width: 84px;
+    height: 102px;
+    width: auto;
   }
 `;
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   padding-block: 8px;
 `;
 export const CardBottomWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding-top: 16px;
 `;
 export const CatCardHeader = styled.h4`
@@ -98,6 +99,15 @@ export const CardName = styled.p`
   margin: 0;
   @media (max-width: 370px) {
     font-size: 10px;
+  }
+`;
+
+export const CardImage = styled.img`
+  width: auto;
+  height: 148px;
+  object-fit: cover;
+  @media (max-width: 420px) {
+    height: 96px;
   }
 `;
 
@@ -194,4 +204,8 @@ export const CircleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 390px) {
+    width: 102px;
+    height: 102px;
+  }
 `;

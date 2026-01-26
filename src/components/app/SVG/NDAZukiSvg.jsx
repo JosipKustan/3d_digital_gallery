@@ -2,11 +2,16 @@ import styled from "styled-components";
 
 const RelativeDiv = styled.div`
   position: relative;
+  height: 100%;
+  width: 100%;
 `;
 const AbsoluteSvg = styled.svg`
   position: absolute;
   bottom: 0;
   left: -40px;
+  @media (max-width: 370px) {
+    bottom: -64px;
+  }
 `;
 
 export function NDAZukiSvg(props) {

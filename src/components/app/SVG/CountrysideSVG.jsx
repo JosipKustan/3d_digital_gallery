@@ -1,4 +1,4 @@
-export function CountrysideSVG() {
+export function CountrysideSVG(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export function CountrysideSVG() {
       height="117"
       fill="none"
       viewBox="0 0 151 117"
+      {...props}
     >
       <path
         fill="#211507"

@@ -1,4 +1,4 @@
-export function GameMasterSVG() {
+export function GameMasterSVG(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export function GameMasterSVG() {
       height="184"
       fill="none"
       viewBox="0 0 117 184"
+      {...props}
     >
       <path
         fill="#E7B795"

@@ -11,7 +11,9 @@ function Footer({ credit, link }) {
           </StyledLink>
         </p>
       )}
-      <MuckoStretchSVG />
+      <MuckoStretchSVG
+        style={{ width: "100%", height: "100%", maxWidth: "500px" }}
+      />
       <p>Still in development. Website and illustrations created in house</p>
       <p>
         &copy; <span id="year">2024 - 2026 &nbsp;</span>

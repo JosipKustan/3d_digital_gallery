@@ -23,12 +23,14 @@ import PriceFactors from "./pages/PriceFactors.jsx";
 import { useLayoutEffect } from "react";
 import ScrollToTop from "./components/shared/hooks/ScrollToTop.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
+import { useIsPathname } from "./components/shared/hooks/useIsPathname.js";
 
 function App() {
+  const isPortfolio = useIsPathname("/portfolio");
   return (
     <GlobalWrapper>
       <BrowserRouter>
-        <NavMenu />
+        {!isPortfolio && <NavMenu />}
         <ScrollToTop>
           <Routes>
             <Route exact path="/" element={<Home />} />

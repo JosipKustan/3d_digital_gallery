@@ -1,4 +1,4 @@
-export function DanceSVG() {
+export function DanceSVG(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export function DanceSVG() {
       height="148"
       fill="none"
       viewBox="0 0 118 148"
+      {...props}
     >
       <path
         fill="#D59365"
