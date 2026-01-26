@@ -127,12 +127,7 @@ function Portfolio() {
             responsibilities="Client Communication, App analysis and categorization, Global layout, Pattern creation, component creation, Figma demos and prototypes, Design Guide book with all UX examples..."
             color={theme.colors.blue_dark}
             colorAccent={theme.colors.blue_accent}
-            links={[
-              [
-                "https://www.behance.net/gallery/193394665/Do-the-right-thing-(hrv-Cini-pravu-stvar)",
-                "Case Study",
-              ],
-            ]}
+            links={[["/assets/PDF/NDA Case Study.pdf#zoom=50", "Case Study"]]}
           />
           <PortfolioCard
             svg={<BusinessCatSVG />}
@@ -300,7 +295,7 @@ function Portfolio() {
             header="Countryside living"
             description="No problem is hard enough if you get together with people."
             color={theme.colors.yellow_accent} // Adjust color
-            skills={["Problem-solving", "Resourcefulness", "Self-relianc"]}
+            skills={["Problem-solving", "Resourcefulness", "Self-reliance"]}
           />
         </SkillCardsWrapper>
       </SkillSectionPortfolio>
