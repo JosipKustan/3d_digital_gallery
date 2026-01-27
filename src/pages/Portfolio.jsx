@@ -157,12 +157,7 @@ function Portfolio() {
             responsibilities="client communication, app analysis and categorization, global layout, pattern creation, component creation, Figma demos and prototypes, and a design guidebook with all UX examples."
             color={theme.colors.blue_dark}
             colorAccent={theme.colors.blue_accent}
-            links={[
-              [
-                "https://www.behance.net/gallery/193394665/Do-the-right-thing-(hrv-Cini-pravu-stvar)",
-                "Case Study",
-              ],
-            ]}
+            links={[["/assets/PDF/NDA Case Study.pdf#zoom=50", "Case Study"]]}
           />
         </SkillCardsWrapper>
       </SkillSectionPortfolio>
