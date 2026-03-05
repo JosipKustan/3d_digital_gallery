@@ -380,6 +380,18 @@ export const H1Small = styled.h1`
     font-size: 32px;
   }
 `;
+export const H1Header = styled.h1`
+  margin: 0;
+  font-size: 64px;
+  text-transform: uppercase;
+
+  z-index: 5;
+  @media (min-width: 1080px) {
+    font-size: 128px;
+
+    line-height: 128px;
+  }
+`;
 export const SubHeader = styled.h3`
   margin: 0;
   font-family: ${theme.fonts.body};
