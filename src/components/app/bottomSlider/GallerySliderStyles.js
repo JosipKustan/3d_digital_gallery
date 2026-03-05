@@ -19,7 +19,7 @@ export const GallerySliderWrapper = styled.div`
   cursor: pointer;
 `;
 export const Thumbnail = styled.img`
-  width: 360px;
+  width: 100%;
   height: 250px;
   background-color: gray;
   object-fit: cover;
