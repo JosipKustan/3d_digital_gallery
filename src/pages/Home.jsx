@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO } from "../components/shared/SEO";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
@@ -47,6 +48,10 @@ import { delay, transform } from "framer-motion";
 function Home() {
   return (
     <MainContentContainer>
+      <SEO
+        title="Handcrafted Miniature Art & Personalized Gifts"
+        description="Creative Studio Kuki crafts personalized miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuki."
+      />
       {/*HERO SECTION*/}
       <HeroSection>
         <HeaderWrapper>

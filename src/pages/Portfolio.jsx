@@ -1,4 +1,5 @@
 import React from "react";
+import { SEO } from "../components/shared/SEO";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
@@ -68,6 +69,10 @@ function Portfolio() {
   const isMobileView = useIsMobileView();
   return (
     <MainContentContainer>
+      <SEO
+        title="Portfolio — Josip Kuki, Designer & Artist"
+        description="The personal portfolio of Josip Kuki — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
+      />
       {/*HERO SECTION*/}
       <SectionPortfolio>
         <HeaderWrapper>

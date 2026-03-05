@@ -1,3 +1,4 @@
+import { SEO } from "../components/shared/SEO";
 import {
   H2Header,
   H4Header,
@@ -13,6 +14,10 @@ import theme from "../components/theme";
 export default function PriceFactors() {
   return (
     <MainContentContainer>
+      <SEO
+        title="Pricing Factors — Custom Miniature Art"
+        description="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalized quote."
+      />
       <Section
         background={theme.colors.background_dark}
         color={theme.colors.white}

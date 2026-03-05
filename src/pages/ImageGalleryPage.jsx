@@ -1,5 +1,6 @@
 /* eslint-disable quotes */
 import React from "react";
+import { SEO } from "../components/shared/SEO";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import {
   AbsoluteIllustration,
@@ -25,6 +26,10 @@ function ImageGalleryPage() {
   const isMobileView = useIsMobileView();
   return (
     <MainContentContainer>
+      <SEO
+        title="Gallery — Miniature Art Portfolio"
+        description="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalized gifts, and unique creations by Josip Kuki."
+      />
       {/* HERO SECTION */}
 
       {/* 3D SECTION */}

@@ -1,3 +1,4 @@
+import { SEO } from "../components/shared/SEO";
 import { Button, SecondaryButton } from "../components/shared/Button";
 import {
   ButtonZone,
@@ -29,6 +30,10 @@ function ServicesPage() {
 
   return (
     <MainContentContainer>
+      <SEO
+        title="Services — Miniature Art for Individuals & Businesses"
+        description="Personalized miniature art, gifts, awards, and business event experiences. See our services and pricing for individuals and businesses."
+      />
       {/*HERO SECTION*/}
       <HeroServicesSection id="services">
         <HeaderWrapper>
