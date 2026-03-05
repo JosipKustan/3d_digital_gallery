@@ -3,21 +3,19 @@ import { motion } from "framer-motion";
 import theme from "../../theme.js";
 
 export const BottomSliderWrapper = styled(motion.div)`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   max-height: calc(100% - 64px - 16px);
   padding: 16px;
   background: ${theme.colors.purple_dark_transparent};
   color: ${theme.colors.white};
-  z-index: 30;
   border-radius: 16px 16px 0px 0px;
   box-shadow: inset 0 3px 0 0 ${theme.colors.purple_accent},
     inset 3px 0 0 0 ${theme.colors.purple_accent},
     inset -3px 0 0 0 ${theme.colors.purple_accent};
 
   box-sizing: border-box;
+  pointer-events: auto;
 
   @media (min-width: 768px) {
     max-width: 768px;

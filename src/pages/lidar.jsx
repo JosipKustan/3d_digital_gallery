@@ -23,7 +23,7 @@ export default function LidarPage() {
           content="Interactive 3D LiDAR scan of Rastovac — a childhood memory preserved in miniature. Explore the model in your browser."
         />
       </Head>
-      <GalleryArt galleryID={galleryWorks[0]}>
+      <GalleryArt galleryID={galleryWorks.find((w) => w.id === 1)}>
         <RastovacLiDARScene />
       </GalleryArt>
     </>

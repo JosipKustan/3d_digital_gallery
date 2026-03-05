@@ -23,7 +23,7 @@ export default function AttackOnBaldursGatePage() {
           content="Interactive 3D miniature of the Attack on Baldur's Gate scene. Explore the handcrafted model in your browser."
         />
       </Head>
-      <GalleryArt galleryID={galleryWorks[1]}>
+      <GalleryArt galleryID={galleryWorks.find((w) => w.id === 5)}>
         <AttackOnBaldursGateScene />
       </GalleryArt>
     </>

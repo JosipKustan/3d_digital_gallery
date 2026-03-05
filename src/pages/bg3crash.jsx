@@ -23,7 +23,7 @@ export default function Bg3CrashPage() {
           content="Interactive 3D miniature of the Nautaloid crash scene from Baldur's Gate 3. Explore the model in your browser."
         />
       </Head>
-      <GalleryArt galleryID={galleryWorks[2]}>
+      <GalleryArt galleryID={galleryWorks.find((w) => w.id === 4)}>
         <Bg3CrashScene />
       </GalleryArt>
     </>

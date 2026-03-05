@@ -269,6 +269,18 @@ export const ScreenWrapper = styled.div`
   height: 100vh;
 `;
 
+export const BottomBar = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 30;
+  pointer-events: none;
+`;
+
 export const GalleryPageWrapper = styled.div`
   display: flex;
   gap: 24px;
