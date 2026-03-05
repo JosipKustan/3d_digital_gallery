@@ -1,27 +1,22 @@
 import React from "react";
-import { SEO } from "../components/shared/SEO";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
-  BasicCard,
   ButtonZone,
   ContactWrapper,
   Fake3DModel,
-  FloatCardSection,
   H1Header,
   H1Highlight,
   H2Header,
   H4Header,
   HeaderWrapper,
-  HeroIllustration,
   HeroPortfolioIllustration,
-  HeroSection,
-  IllustrationWrapper,
   MainContentContainer,
   PurPurAnimated,
   ScrollZoneBottom,
   ScrollZoneTop,
-  Section,
   Section3D,
   SectionPortfolio,
   SkillCardsWrapper,
@@ -31,26 +26,10 @@ import {
   TextListWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
-import RastovacLiDARScene from "./scenes/RastovacLiDARScene";
-import { ModelDescription } from "../components/app/cards/ModelDescription";
 import GuideInfo from "../components/app/GuideInfo";
-import GalleryList from "../components/app/nav/GalleryList";
-import { CardsWrapper } from "../components/app/cards/CardStyles";
-import { CatCard } from "../components/app/cards/CatCard";
 import { IndividualCatSVG } from "../components/app/SVG/IndividualCatSVG";
-import { BusinessCatSVG } from "../components/app/SVG/BusinessCatSVG";
-import { TestemonialsCard } from "../components/app/cards/TestemonialsCard";
-import { MagareVinkoSVG } from "../components/app/SVG/MagareVinkoSVG";
-import { MiniZukiLeziSVG } from "../components/app/SVG/MiniZukiLeziSVG";
 import Footer from "../components/shared/Footer";
-import { JelenaPapigaSVG } from "../components/app/SVG/JelenaPapigaSVG";
-import { TomicSVGDragon } from "../components/app/SVG/TomicSVGDragon";
-import { ContactZuki } from "../components/app/SVG/ContactZuki";
-import { PurPur } from "../components/app/SVG/PurPur";
-import { delay, transform } from "framer-motion";
 import { PortfolioCard } from "../components/app/cards/PortfolioCard";
-import CpsImg from "../../public/assets/images/Logos/cpsHand.png";
-import QedImg from "../../public/assets/images/Logos/Qed.png";
 import { NDAZukiSvg } from "../components/app/SVG/NDAZukiSvg";
 import { IconNewTab } from "../components/app/SVG/IconNewTab";
 import { useOpenLink } from "../components/shared/hooks/useOpenLink";
@@ -60,24 +39,40 @@ import { GameMasterSVG } from "../components/app/SVG/GameMasterSVG";
 import { DanceSVG } from "../components/app/SVG/DanceSVG";
 import { CountrysideSVG } from "../components/app/SVG/CountrysideSVG";
 import { QedSVG } from "../components/app/SVG/QedSVG";
+import { ContactZuki } from "../components/app/SVG/ContactZuki";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
-import NavMenu from "../components/app/nav/NavMenu";
+
+const RastovacLiDARScene = dynamic(
+  () => import("../scenes/RastovacLiDARScene"),
+  {
+    ssr: false,
+    loading: () => (
+      <div style={{ width: "100%", height: "100%", background: "#131122" }} />
+    ),
+  }
+);
 
 function Portfolio() {
   const { openLink } = useOpenLink();
-
   const isMobileView = useIsMobileView();
+
   return (
     <MainContentContainer>
-      <SEO
-        title="Portfolio — Josip Kuki, Designer & Artist"
-        description="The personal portfolio of Josip Kuki — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
-      />
+      <Head>
+        <title>Portfolio — Josip Kuki, Designer & Artist | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/portfolio" />
+        <meta
+          name="description"
+          content="The personal portfolio of Josip Kuki — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
+        />
+        <meta property="og:title" content="Portfolio — Josip Kuki, Designer & Artist | Creative Studio Kuki" />
+        <meta property="og:description" content="The personal portfolio of Josip Kuki — UX designer, software engineer, and miniature artist." />
+      </Head>
       {/*HERO SECTION*/}
       <SectionPortfolio>
         <HeaderWrapper>
           <H1Header>
-            <H1Highlight>Hi! I’m </H1Highlight> Josip Kuštan
+            <H1Highlight>Hi! I'm </H1Highlight> Josip Kuštan
           </H1Header>
           <SubHeader>UX Designer - with miniature artist's patience.</SubHeader>
         </HeaderWrapper>
@@ -129,7 +124,7 @@ function Portfolio() {
         <SkillCardsWrapper>
           <PortfolioCard
             svg={<IndividualCatSVG />}
-            img={CpsImg}
+            img="/assets/images/Logos/cpsHand.png"
             header="Fundraising website for charities"
             description="3x donation revenue through intuitive UX flows."
             responsibilities="UX research, workshops, user flows, design, prototypes, and user testing."
@@ -171,7 +166,7 @@ function Portfolio() {
       <SectionPortfolio background={theme.colors.yellow_accent}>
         <HeaderWrapper>
           <H2Header>More work</H2Header>
-          <SubHeader>I’m proud of this work too.</SubHeader>
+          <SubHeader>I'm proud of this work too.</SubHeader>
         </HeaderWrapper>
         <TextListWrapper>
           <StepWrapper>
@@ -192,11 +187,7 @@ function Portfolio() {
               }
             >
               Showcase
-              <IconNewTab
-                style={{
-                  fill: "black", // Solid black fill
-                }}
-              />
+              <IconNewTab style={{ fill: "black" }} />
             </Button>
           </StepWrapper>
           <StepWrapper>
@@ -214,11 +205,7 @@ function Portfolio() {
               onClick={() => openLink("https://www.rba.hr/hr/gradani.html")}
             >
               Website
-              <IconNewTab
-                style={{
-                  fill: "black", // Solid black fill
-                }}
-              />
+              <IconNewTab style={{ fill: "black" }} />
             </Button>
           </StepWrapper>
           <StepWrapper>
@@ -244,17 +231,13 @@ function Portfolio() {
               onClick={() => openLink("https://creativestudiokuki.com/")}
             >
               Homepage
-              <IconNewTab
-                style={{
-                  fill: "black", // Solid black fill
-                }}
-              />
+              <IconNewTab style={{ fill: "black" }} />
             </Button>
           </StepWrapper>
           <StepWrapper>
             <H4Header>5. Code-X Marine </H4Header>
             <p>
-              Niche product showcase website for one of the world’s lightest*
+              Niche product showcase website for one of the world's lightest*
               sailing boats.
             </p>
             <Button
@@ -265,11 +248,7 @@ function Portfolio() {
               onClick={() => openLink("https://code-x-marine.com/")}
             >
               Website
-              <IconNewTab
-                style={{
-                  fill: "black", // Solid black fill
-                }}
-              />
+              <IconNewTab style={{ fill: "black" }} />
             </Button>
           </StepWrapper>
         </TextListWrapper>
@@ -299,28 +278,26 @@ function Portfolio() {
           <SkillsCard
             svg={<GameMasterSVG style={{ width: "100%", height: "100%" }} />}
             header="Game Master (D&D) – 10 years"
-            description="A creative game where I’ve led more than 50 players through 10+ big and small stories.”"
-            color={theme.colors.purple_dark} // Adjust color
+            description="A creative game where I've led more than 50 players through 10+ big and small stories."
+            color={theme.colors.purple_dark}
             skills={[
               "Running design workshops",
               "Storytelling",
               "User empathy",
             ]}
           />
-
           <SkillsCard
             svg={<DanceSVG style={{ width: "100%", height: "100%" }} />}
             header="Art & Dance – 9 years"
             description="I was in competitive Standard and Latin dancing as a young one and now I make miniature art."
-            color={theme.colors.tiel_dark} // Adjust color
+            color={theme.colors.tiel_dark}
             skills={["Beauty appreciation", "Spatial harmony"]}
           />
-
           <SkillsCard
             svg={<CountrysideSVG style={{ width: "100%", height: "100%" }} />}
             header="Countryside living"
             description="No problem is hard enough if you get together with people."
-            color={theme.colors.yellow_accent} // Adjust color
+            color={theme.colors.yellow_accent}
             skills={["Problem-solving", "Resourcefulness", "Self-reliance"]}
           />
         </SkillCardsWrapper>
@@ -333,26 +310,16 @@ function Portfolio() {
         id="contact"
       >
         <HeaderWrapper>
-          <H2Header>Let’s get in touch</H2Header>
+          <H2Header>Let's get in touch</H2Header>
           <ContactWrapper>
             <ContactZuki eyes={false} />
-
             <PurPurAnimated />
-            <PurPurAnimated
-              style={{
-                top: "20px",
-                right: "60%",
-              }}
-            />
-            <PurPurAnimated
-              style={{
-                top: "-15px",
-                right: "30%",
-              }}
-            />
+            <PurPurAnimated style={{ top: "20px", right: "60%" }} />
+            <PurPurAnimated style={{ top: "-15px", right: "30%" }} />
           </ContactWrapper>
         </HeaderWrapper>
       </SkillSectionPortfolio>
+
       {/* Miniature Artworks & Handmade */}
       <SectionPortfolio
         background={theme.colors.purple_dark}
@@ -371,17 +338,15 @@ function Portfolio() {
             </p>
             <br />
           </StepWrapper>
-
           <StepWrapper>
             <H4Header>Professional '25 Kitchen</H4Header>
             <p>
               Worked as a cook in a small restaurant, from menu R&D to daily
-              execution. It was very successful—and also the hardest job I’ve
+              execution. It was very successful—and also the hardest job I've
               ever done.
             </p>
             <br />
           </StepWrapper>
-
           <StepWrapper>
             <H4Header>Hand-sewn Vest &amp; Tie</H4Header>
             <p>
@@ -390,11 +355,10 @@ function Portfolio() {
             </p>
             <br />
           </StepWrapper>
-
           <StepWrapper>
             <H4Header>Hand-forged Chef Knife</H4Header>
             <p>
-              Designed and forged my own chef’s knife. The handle is just
+              Designed and forged my own chef's knife. The handle is just
               waiting for its time.
             </p>
             <br />

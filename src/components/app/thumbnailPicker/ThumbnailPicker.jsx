@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import styled from "styled-components";
 import theme from "../../theme";
 
@@ -45,7 +45,7 @@ const ThumbnailName = styled.div`
 
 function ThumbnailPicker({ image }) {
   return (
-    <Link key={image.id} to={image.link}>
+    <Link key={image.id} href={image.link}>
       <Thumbnail>
         <ThumbnailImage src={image.src} alt={image.name} />
         <ThumbnailName>{image.name}</ThumbnailName>

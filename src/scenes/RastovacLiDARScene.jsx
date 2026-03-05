@@ -1,11 +1,11 @@
-import { extend, Canvas, useFrame } from "@react-three/fiber";
+import { extend, Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { OrbitControls, SpotLight } from "@react-three/drei";
 import * as THREE from "three";
-import RastovacLiDAR from "../../components/objects/RastovacLiDAR.jsx";
-import Placeholder from "../../components/shared/Placeholder.jsx";
-import Hand from "../../components/objects/Hand.jsx";
-import RotatingObject from "../../components/shared/RotatingObject.jsx";
+import RastovacLiDAR from "../components/objects/RastovacLiDAR.jsx";
+import Placeholder from "../components/shared/Placeholder.jsx";
+import Hand from "../components/objects/Hand.jsx";
+import RotatingObject from "../components/shared/RotatingObject.jsx";
 
 extend({ OrbitControls });
 
@@ -24,9 +24,7 @@ export default function RastovacLiDARScene() {
         position: [10, 6, 2],
       }}
     >
-      {/* <Environment background blur={0.1} files="assets/images/hdri/golf_course_sunrise_1k.hdr" /> */}
       <ambientLight intensity={0.6} color="#FFFFFF" />
-      {/* <SpotLight position={[0, position, 0]} color="#ffffff" intensity={intensity} distance={distance} angle={Math.PI / 8} penumbra={1} scale={scale} attenuation={attenuation} /> */}
       <SpotLight
         position={[0, 10.0, 0]}
         color="#ffffff"

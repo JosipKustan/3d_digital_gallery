@@ -1,17 +1,14 @@
 import { extend, Canvas } from "@react-three/fiber";
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import { OrbitControls, SpotLight } from "@react-three/drei";
 import * as THREE from "three";
-import AttackOnBaldursGate from "../../components/objects/AttackOnBaldursGate.jsx";
-import Placeholder from "../../components/shared/Placeholder.jsx";
-import BottomSlider from "../../components/app/bottomSlider/BottomSlider.jsx";
-import GuideInfo from "../../components/app/GuideInfo.jsx";
-import { galleryWorks } from "../../art/galleryWorks.js";
-import Hand from "../../components/objects/Hand.jsx";
+import Bg3Crash from "../components/objects/Bg3Crash.jsx";
+import Placeholder from "../components/shared/Placeholder.jsx";
+import Hand from "../components/objects/Hand.jsx";
 
 extend({ OrbitControls });
 
-export default function AttackOnBaldursGateScene() {
+export default function Bg3CrashScene() {
   return (
     <Canvas
       gl={{
@@ -23,7 +20,7 @@ export default function AttackOnBaldursGateScene() {
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [-6, 0, -4],
+        position: [-4, 6, -1],
       }}
     >
       <ambientLight intensity={0.6} color="#FFFFFF" />
@@ -45,11 +42,10 @@ export default function AttackOnBaldursGateScene() {
         minDistance={2}
         maxDistance={30}
       />
-
-      <Suspense fallback={<Placeholder />}>
-        <AttackOnBaldursGate />
-      </Suspense>
       <Hand />
+      <Suspense fallback={<Placeholder />}>
+        <Bg3Crash />
+      </Suspense>
     </Canvas>
   );
 }

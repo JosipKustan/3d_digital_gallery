@@ -269,6 +269,18 @@ export const ScreenWrapper = styled.div`
   height: 100vh;
 `;
 
+export const BottomBar = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 30;
+  pointer-events: none;
+`;
+
 export const GalleryPageWrapper = styled.div`
   display: flex;
   gap: 24px;
@@ -325,7 +337,7 @@ export const StepWrapper = styled.div`
   }
 `;
 
-export const H1Header = styled.h1`
+export const HeroHeader = styled.h3`
   margin: 0;
   font-size: 64px;
   text-transform: uppercase;
@@ -358,6 +370,28 @@ export const H1Highlight = styled.span`
   }
 `;
 
+export const H1Small = styled.h1`
+  margin: 0;
+  font-family: ${theme.fonts.body};
+  font-weight: 500;
+  line-height: 120%;
+  z-index: 5;
+  @media (min-width: 1080px) {
+    font-size: 32px;
+  }
+`;
+export const H1Header = styled.h1`
+  margin: 0;
+  font-size: 64px;
+  text-transform: uppercase;
+
+  z-index: 5;
+  @media (min-width: 1080px) {
+    font-size: 128px;
+
+    line-height: 128px;
+  }
+`;
 export const SubHeader = styled.h3`
   margin: 0;
   font-family: ${theme.fonts.body};

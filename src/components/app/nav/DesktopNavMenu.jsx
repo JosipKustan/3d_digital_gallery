@@ -13,12 +13,10 @@ function DesktopNavMenu() {
       <BrandName>CREATIVE STUDIO KUKI</BrandName>
 
       <MenuList>
-        <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/gallery">Gallery</MenuItem>
-        <MenuItem to="/services">Services</MenuItem>
-        <MenuItemHash smooth to="/#contact">
-          Contact
-        </MenuItemHash>
+        <MenuItem href="/">Home</MenuItem>
+        <MenuItem href="/gallery">Gallery</MenuItem>
+        <MenuItem href="/services">Services</MenuItem>
+        <MenuItemHash href="/#contact">Contact</MenuItemHash>
       </MenuList>
     </DesktopNavWrapper>
   );

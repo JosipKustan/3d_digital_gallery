@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { InfoTag } from "../shared/InfoTag.js";
 import { TopRightContainer } from "../shared/containers/TopRightContainer.js";
 
-function TouchIcons() {
+function TouchIcons({ color }) {
   return (
     <>
-      <InfoTag>
+      <InfoTag $color={color}>
         Rotate
         <svg
           width="24"
@@ -35,7 +35,7 @@ function TouchIcons() {
           </defs>
         </svg>
       </InfoTag>
-      <InfoTag>
+      <InfoTag $color={color}>
         Zoom
         <svg
           width="24"
@@ -50,7 +50,7 @@ function TouchIcons() {
           />
         </svg>
       </InfoTag>
-      <InfoTag>
+      <InfoTag $color={color}>
         Move
         <svg
           width="24"
@@ -84,10 +84,10 @@ function TouchIcons() {
     </>
   );
 }
-function DesktopIcons() {
+function DesktopIcons({ color }) {
   return (
     <>
-      <InfoTag>
+      <InfoTag $color={color}>
         Rotate
         <svg
           width="24"
@@ -117,7 +117,7 @@ function DesktopIcons() {
           </defs>
         </svg>
       </InfoTag>
-      <InfoTag>
+      <InfoTag $color={color}>
         Zoom
         <svg
           width="24"
@@ -135,7 +135,7 @@ function DesktopIcons() {
           <path d="M2 11L5 14L8 11H6V8H4V11H2Z" fill="currentColor" />
         </svg>
       </InfoTag>
-      <InfoTag>
+      <InfoTag $color={color}>
         Move
         <svg
           width="24"
@@ -173,7 +173,7 @@ function DesktopIcons() {
     </>
   );
 }
-function GuideInfo() {
+function GuideInfo({ color }) {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
@@ -194,10 +194,10 @@ function GuideInfo() {
     <TopRightContainer>
       {isTouchDevice ? (
         // Render the touch version of the component
-        <TouchIcons />
+        <TouchIcons color={color} />
       ) : (
         // Render the desktop version of the component
-        <DesktopIcons />
+        <DesktopIcons color={color} />
       )}
     </TopRightContainer>
   );
