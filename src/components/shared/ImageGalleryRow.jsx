@@ -1,11 +1,9 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { GalleryPageWrapper, H2Header, H4Header } from "./StaticStyles";
-import {
-  GalleryWorkWrapper,
-  Thumbnail,
-} from "../app/bottomSlider/GallerySliderStyles";
+import { GalleryWorkWrapper } from "../app/bottomSlider/GallerySliderStyles";
 import useImageDimensions from "./hooks/useImageDimensions";
 import { galleryWorks } from "../../art/galleryWorks";
+import ProgressiveImg from "./ProgressiveImg";
 
 function ImageGalleryRow({ number }) {
   const images1 = galleryWorks[number];
@@ -26,7 +24,7 @@ function ImageGalleryRow({ number }) {
                 caption={`Gallery Image ${index + 1}`}
               >
                 {({ ref, open }) => (
-                  <Thumbnail
+                  <ProgressiveImg
                     ref={ref}
                     onClick={open}
                     className="image-item"
