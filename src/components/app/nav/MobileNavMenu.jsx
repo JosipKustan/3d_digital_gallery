@@ -97,12 +97,10 @@ function MobileNavMenu() {
         </H5Header>
         <GalleryList />
         <MenuList>
-          <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/gallery">Gallery</MenuItem>
-          <MenuItem to="/services">Services</MenuItem>
-          <MenuItemHash smooth to="/#contact">
-            Contact
-          </MenuItemHash>
+          <MenuItem href="/">Home</MenuItem>
+          <MenuItem href="/gallery">Gallery</MenuItem>
+          <MenuItem href="/services">Services</MenuItem>
+          <MenuItemHash href="/#contact">Contact</MenuItemHash>
         </MenuList>
 
         <H5Header style={{ paddingLeft: "16px", marginTop: "16px" }}>

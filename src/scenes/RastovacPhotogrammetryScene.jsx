@@ -2,11 +2,8 @@ import { extend, Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import Placeholder from "../../components/shared/Placeholder.jsx";
-import BottomSlider from "../../components/app/bottomSlider/BottomSlider.jsx";
-import GuideInfo from "../../components/app/GuideInfo.jsx";
-import RastovacPhotogrammetry from "../../components/objects/RastovacPhotogrammetry.jsx";
-import { galleryWorks } from "../../art/galleryWorks.js";
+import Placeholder from "../components/shared/Placeholder.jsx";
+import RastovacPhotogrammetry from "../components/objects/RastovacPhotogrammetry.jsx";
 
 extend({ OrbitControls });
 
@@ -28,7 +25,7 @@ export default function RastovacPhotogrammetryScene() {
       <Environment
         background
         blur={0.1}
-        files="assets/images/hdri/golf_course_sunrise_1k.hdr"
+        files="/assets/images/hdri/golf_course_sunrise_1k.hdr"
       />
       <OrbitControls
         makeDefault

@@ -1,5 +1,6 @@
 import React from "react";
-import { SEO } from "../components/shared/SEO";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
@@ -27,7 +28,6 @@ import {
   TextListWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
-import RastovacLiDARScene from "./scenes/RastovacLiDARScene";
 import { ModelDescription } from "../components/app/cards/ModelDescription";
 import GuideInfo from "../components/app/GuideInfo";
 import GalleryList from "../components/app/nav/GalleryList";
@@ -42,16 +42,38 @@ import Footer from "../components/shared/Footer";
 import { JelenaPapigaSVG } from "../components/app/SVG/JelenaPapigaSVG";
 import { TomicSVGDragon } from "../components/app/SVG/TomicSVGDragon";
 import { ContactZuki } from "../components/app/SVG/ContactZuki";
-import { PurPur } from "../components/app/SVG/PurPur";
-import { delay, transform } from "framer-motion";
+
+const RastovacLiDARScene = dynamic(
+  () => import("../scenes/RastovacLiDARScene"),
+  {
+    ssr: false,
+    loading: () => (
+      <div style={{ width: "100%", height: "100%", background: "#131122" }} />
+    ),
+  },
+);
 
 function Home() {
   return (
     <MainContentContainer>
-      <SEO
-        title="Handcrafted Miniature Art & Personalized Gifts"
-        description="Creative Studio Kuki crafts personalized miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuki."
-      />
+      <Head>
+        <title>
+          Creative Studio Kuki | Handcrafted Miniature Art &amp; Personalized
+          Gifts
+        </title>
+        <meta
+          name="description"
+          content="Creative Studio Kuki crafts personalized miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan."
+        />
+        <meta
+          property="og:title"
+          content="Creative Studio Kuki | Handcrafted Miniature Art & Personalized Gifts"
+        />
+        <meta
+          property="og:description"
+          content="Creative Studio Kuki crafts personalized miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan and his team."
+        />
+      </Head>
       {/*HERO SECTION*/}
       <HeroSection>
         <HeaderWrapper>
@@ -171,7 +193,7 @@ function Home() {
           <StepWrapper>
             <H4Header>1. We talk about the memories</H4Header>
             <p>
-              You don’t need to have ideas on what the art will be, but you sure
+              You don't need to have ideas on what the art will be, but you sure
               have a memory, person, pet, place, or really anything that might
               make you emotional. That is for me the best reason to create small
               art.
@@ -180,7 +202,7 @@ function Home() {
           <StepWrapper>
             <H4Header>2. You choose the idea</H4Header>
             <p>
-              Don’t worry, we are here to help you decide. We talk about
+              Don't worry, we are here to help you decide. We talk about
               possible ideas and options to fit in your budget.
             </p>
           </StepWrapper>
@@ -194,7 +216,7 @@ function Home() {
           <StepWrapper>
             <H4Header>4. Magic of making </H4Header>
             <p>
-              We don’t leave you in the dark. Except if you want it that way. We
+              We don't leave you in the dark. Except if you want it that way. We
               start making and we give updated on the progress when necessary.
             </p>
           </StepWrapper>
@@ -211,9 +233,9 @@ function Home() {
       {/*Lets get it touch Sekcion*/}
       <Section color={theme.colors.black} id="contact">
         <HeaderWrapper>
-          <H2Header>Let’s get in touch</H2Header>
+          <H2Header>Let's get in touch</H2Header>
           <SubHeader>
-            Let’s unlock the ideas together! You might be surprised what can be
+            Let's unlock the ideas together! You might be surprised what can be
             done.
           </SubHeader>
           <ContactWrapper>
@@ -239,19 +261,19 @@ function Home() {
           <TestemonialsCard
             svg={<JelenaPapigaSVG />}
             name="Jelena P."
-            testemonial="“Best gift EVER! Personalised, beautiful and it even glows. Whoever sees it, is impressed”"
+            testemonial="“Best gift EVER! Personalised, beautiful and it even glows. Whoever sees it, is impressed“"
             backgroundColor={theme.colors.background_dark}
           />
           <TestemonialsCard
             svg={<MagareVinkoSVG />}
             name="Mirela U."
-            testemonial="“I don’t know how did he manage to get it spot on. And so detailed!!!”"
+            testemonial="“I don't know how did he manage to get it spot on. And so detailed!!!“"
             backgroundColor={theme.colors.background_dark}
           />
           <TestemonialsCard
             svg={<TomicSVGDragon />}
             name="Josip T."
-            testemonial="“Kuki made a small art piece that is a centerpiece of my living room"
+            testemonial="“Kuki made a small art piece that is a centerpiece of my living room“"
             backgroundColor={theme.colors.background_dark}
           />
         </CardsWrapper>

@@ -2,8 +2,12 @@
 node_modules
 *.log
 
-# Output directory
+# Output directories
 dist
+.next
+
+# Next.js cache
+.next/cache
 
 # @vitjs/vit temporary directory
 .vit

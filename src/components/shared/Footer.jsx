@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { MuckoStretchSVG } from "../app/SVG/MuckoStretchSVG";
 import { FooterWrapper, StyledLink } from "./StaticStyles";
 
@@ -13,11 +13,11 @@ function Footer({ credit, link }) {
         </p>
       )}
       <nav aria-label="Footer navigation" style={{ display: "flex", gap: "24px", flexWrap: "wrap", justifyContent: "center", marginBottom: "16px" }}>
-        <Link to="/" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Home</Link>
-        <Link to="/gallery" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Gallery</Link>
-        <Link to="/services" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Services</Link>
-        <Link to="/portfolio" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Portfolio</Link>
-        <Link to="/price-factors" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Pricing</Link>
+        <Link href="/" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Home</Link>
+        <Link href="/gallery" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Gallery</Link>
+        <Link href="/services" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Services</Link>
+        <Link href="/portfolio" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Portfolio</Link>
+        <Link href="/price-factors" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Pricing</Link>
       </nav>
       <MuckoStretchSVG
         style={{ width: "100%", height: "100%", maxWidth: "500px" }}

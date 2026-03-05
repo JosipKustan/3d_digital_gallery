@@ -1,4 +1,4 @@
-import { SEO } from "../components/shared/SEO";
+import Head from "next/head";
 import {
   H2Header,
   H4Header,
@@ -14,10 +14,15 @@ import theme from "../components/theme";
 export default function PriceFactors() {
   return (
     <MainContentContainer>
-      <SEO
-        title="Pricing Factors — Custom Miniature Art"
-        description="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalized quote."
-      />
+      <Head>
+        <title>Pricing Factors — Custom Miniature Art | Creative Studio Kuki</title>
+        <meta
+          name="description"
+          content="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalized quote."
+        />
+        <meta property="og:title" content="Pricing Factors — Custom Miniature Art | Creative Studio Kuki" />
+        <meta property="og:description" content="Understand how pricing works for custom miniature art at Creative Studio Kuki." />
+      </Head>
       <Section
         background={theme.colors.background_dark}
         color={theme.colors.white}
@@ -33,13 +38,13 @@ export default function PriceFactors() {
           <StepWrapper>
             <H4Header>1. People and Character Details</H4Header>
             <p>
-              <strong>Figures Up to 3 cm:</strong> Small-scale figures don’t
+              <strong>Figures Up to 3 cm:</strong> Small-scale figures don't
               require intricate facial details, so the price remains manageable
               for generic representations.
             </p>
             <p>
               <strong>Detailed Sculptures of Specific People:</strong> When a
-              project requires realistic 3D modeling of someone’s face or
+              project requires realistic 3D modeling of someone's face or
               figure, especially for larger works, the time and effort increase
               significantly. Sculpting a lifelike representation demands
               advanced techniques and precision, adding to the cost.
@@ -49,7 +54,7 @@ export default function PriceFactors() {
             <H4Header>2. Epoxy Resin (Water Effects)</H4Header>
             <p>
               Epoxy resin is an essential material for creating realistic water
-              effects, transparent surfaces, or glossy finishes. However, it’s:
+              effects, transparent surfaces, or glossy finishes. However, it's:
             </p>
             <ul>
               <li>
@@ -81,7 +86,7 @@ export default function PriceFactors() {
                 <strong>Larger Projects:</strong> The complexity increases with
                 the need for more complex light composition, wiring, and
                 installation techniques to ensure the lighting enhances the
-                piece’s overall aesthetic.
+                piece's overall aesthetic.
               </li>
             </ul>
             <p>
@@ -100,7 +105,7 @@ export default function PriceFactors() {
           <StepWrapper>
             <H4Header>5. Delivery</H4Header>
             <p>
-              Ensuring your art piece arrives safely is a priority. Here’s how
+              Ensuring your art piece arrives safely is a priority. Here's how
               delivery affects pricing:
             </p>
             <ul>
@@ -112,11 +117,11 @@ export default function PriceFactors() {
               </li>
               <li>
                 <strong>Shipping Costs:</strong> Depending on the size, weight,
-                and destination, shipping costs will vary. We’ll provide a clear
+                and destination, shipping costs will vary. We'll provide a clear
                 estimate based on your location.
               </li>
               <li>
-                <strong>International Shipping:</strong> If you’re outside our
+                <strong>International Shipping:</strong> If you're outside our
                 local delivery area, customs fees, insurance, and extended
                 transit times may apply.
               </li>

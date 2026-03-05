@@ -1,38 +1,35 @@
 /* eslint-disable quotes */
 import React from "react";
-import { SEO } from "../components/shared/SEO";
-import { Gallery, Item } from "react-photoswipe-gallery";
+import Head from "next/head";
 import {
   AbsoluteIllustration,
-  GalleryPageWrapper,
   GallerySection,
   H1Header,
   HeaderWrapper,
   MainContentContainer,
-  Section,
   SubHeader,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
-import { Thumbnail } from "../components/app/bottomSlider/GallerySliderStyles";
-import { galleryWorks } from "../art/galleryWorks";
 import { ZvrkiBodySVG } from "../components/app/SVG/ZvrkiBody";
 import { ZvrkiHeadSVG } from "../components/app/SVG/ZvrkiHead";
 import Footer from "../components/shared/Footer";
-import useImageDimensions from "../components/shared/hooks/useImageDimensions";
 import ImageGalleryRow from "../components/shared/ImageGalleryRow";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 
-function ImageGalleryPage() {
+function GalleryPage() {
   const isMobileView = useIsMobileView();
   return (
     <MainContentContainer>
-      <SEO
-        title="Gallery — Miniature Art Portfolio"
-        description="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalized gifts, and unique creations by Josip Kuki."
-      />
-      {/* HERO SECTION */}
+      <Head>
+        <title>Gallery — Miniature Art Portfolio | Creative Studio Kuki</title>
+        <meta
+          name="description"
+          content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalized gifts, and unique creations by Josip Kuki."
+        />
+        <meta property="og:title" content="Gallery — Miniature Art Portfolio | Creative Studio Kuki" />
+        <meta property="og:description" content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalized gifts, and unique creations by Josip Kuki." />
+      </Head>
 
-      {/* 3D SECTION */}
       <GallerySection color={theme.colors.black}>
         <HeaderWrapper>
           <AbsoluteIllustration
@@ -64,4 +61,4 @@ function ImageGalleryPage() {
   );
 }
 
-export default ImageGalleryPage;
+export default GalleryPage;

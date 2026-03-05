@@ -1,4 +1,5 @@
-import { SEO } from "../components/shared/SEO";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import { Button, SecondaryButton } from "../components/shared/Button";
 import {
   ButtonZone,
@@ -17,23 +18,26 @@ import theme from "../components/theme";
 import { CardsWrapper } from "../components/app/cards/CardStyles";
 import { IndividualCatSVG } from "../components/app/SVG/IndividualCatSVG";
 import { BusinessCatSVG } from "../components/app/SVG/BusinessCatSVG";
-import { useLocation, useNavigate } from "react-router-dom";
 import Footer from "../components/shared/Footer";
 import { InfoCard } from "../components/app/cards/InfoCard";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 import { TigiSVG } from "../components/app/SVG/TigiSVG";
-import { useEffect } from "react";
 
 function ServicesPage() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const isMobileView = useIsMobileView();
 
   return (
     <MainContentContainer>
-      <SEO
-        title="Services — Miniature Art for Individuals & Businesses"
-        description="Personalized miniature art, gifts, awards, and business event experiences. See our services and pricing for individuals and businesses."
-      />
+      <Head>
+        <title>Services — Miniature Art for Individuals & Businesses | Creative Studio Kuki</title>
+        <meta
+          name="description"
+          content="Personalized miniature art, gifts, awards, and business event experiences. See our services and pricing for individuals and businesses."
+        />
+        <meta property="og:title" content="Services — Miniature Art for Individuals & Businesses | Creative Studio Kuki" />
+        <meta property="og:description" content="Personalized miniature art, gifts, awards, and business event experiences." />
+      </Head>
       {/*HERO SECTION*/}
       <HeroServicesSection id="services">
         <HeaderWrapper>
@@ -59,11 +63,11 @@ function ServicesPage() {
           <H2Header>What IS the PRICE?</H2Header>
           <SubHeader>
             The price depends on the design and the complexity of your
-            project.Reach out to us to share your vision, and we’ll provide a
+            project.Reach out to us to share your vision, and we'll provide a
             personalized quote to bring it to life.
           </SubHeader>
           <ButtonZone>
-            <SecondaryButton onClick={() => navigate("/price-factors")}>
+            <SecondaryButton onClick={() => router.push("/price-factors")}>
               Detailed price factors
             </SecondaryButton>
           </ButtonZone>
@@ -88,21 +92,21 @@ function ServicesPage() {
             info={"Low Complexity"}
             price={"150-500€"}
             backgroundImage={
-              "assets/images/works/weddinggifts/Wedding_Scale.jpg"
+              "/assets/images/works/weddinggifts/Wedding_Scale.jpg"
             }
           />
           <InfoCard
             info={"Medium Complexity"}
             price={"600-1000€"}
             backgroundImage={
-              "assets/images/works/Rastovac/Rastovac_KuminaKuca-3.jpg"
+              "/assets/images/works/Rastovac/Rastovac_KuminaKuca-3.jpg"
             }
           />
           <InfoCard
             info={"High Complexity"}
             price={"1000+ €"}
             backgroundImage={
-              "assets/images/works/attackonbaldursgate/BG_Attack-7.jpg"
+              "/assets/images/works/attackonbaldursgate/BG_Attack-7.jpg"
             }
           />
           {isMobileView && (
@@ -128,16 +132,16 @@ function ServicesPage() {
           <InfoCard
             info={"Gifts for Employees"}
             backgroundImage={
-              "assets/images/works/MiniMees/GiftforEmployees.jpg"
+              "/assets/images/works/MiniMees/GiftforEmployees.jpg"
             }
           />
           <InfoCard
             info={"Moderating Live Events and Conferences"}
-            backgroundImage={"assets/images/events/DSC_3615.jpg"}
+            backgroundImage={"/assets/images/events/DSC_3615.jpg"}
           />
           <InfoCard
             info={"Game Nights"}
-            backgroundImage={"assets/images/events/DSC_4278.jpg"}
+            backgroundImage={"/assets/images/events/DSC_4278.jpg"}
           />
           {isMobileView && (
             <ButtonZone>
