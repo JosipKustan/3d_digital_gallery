@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import SceneErrorBoundary from "../components/shared/SceneErrorBoundary";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
@@ -131,7 +132,9 @@ function Home() {
           <GuideInfo />
         </Fake3DModel>
         <Absolute3DModel>
-          <RastovacLiDARScene />
+          <SceneErrorBoundary>
+            <RastovacLiDARScene />
+          </SceneErrorBoundary>
         </Absolute3DModel>
         <ModelDescription galleryWorksID={0} />
       </Section3D>
