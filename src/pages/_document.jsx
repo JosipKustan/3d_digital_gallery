@@ -29,10 +29,9 @@ export default class MyDocument extends Document {
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="author" content="Josip Kuštan" />
-          <link rel="canonical" href="https://creativestudiokuki.com" />
           <meta
             name="keywords"
-            content="miniature art, personalized gifts, handcrafted art, custom miniatures, wedding gifts, anniversary gifts, business awards, creative studio, Kuki, Josip Kuštan, unique gifts, 3D gallery"
+            content="miniature art, personalised gifts, handcrafted art, custom miniatures, wedding gifts, anniversary gifts, business awards, creative studio, Kuki, Josip Kuštan, unique gifts, 3D gallery"
           />
 
           {/* Open Graph base */}
@@ -60,7 +59,7 @@ export default class MyDocument extends Document {
                 "@type": "LocalBusiness",
                 name: "Creative Studio Kuki",
                 description:
-                  "Handcrafted personalized miniature art, unique gifts, wedding keepsakes, and business awards.",
+                  "Handcrafted personalised miniature art, unique gifts, wedding keepsakes, and business awards.",
                 url: "https://creativestudiokuki.com",
                 image:
                   "https://creativestudiokuki.com/assets/images/Logos/OSLinkImage.png",

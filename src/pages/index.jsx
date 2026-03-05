@@ -11,7 +11,6 @@ import {
   Fake3DModel,
   FloatCardSection,
   H1Header,
-  H1Highlight,
   H2Header,
   H4Header,
   HeaderWrapper,
@@ -58,32 +57,30 @@ function Home() {
   return (
     <MainContentContainer>
       <Head>
-        <title>
-          Creative Studio Kuki | Handcrafted Miniature Art &amp; Personalized
-          Gifts
-        </title>
+        <title>Personalised Miniature Art &amp; Handcrafted Gifts | Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/" />
         <meta
           name="description"
-          content="Creative Studio Kuki crafts personalized miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan."
+          content="Studio Kuki crafts personalised miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan."
         />
         <meta
           property="og:title"
-          content="Creative Studio Kuki | Handcrafted Miniature Art & Personalized Gifts"
+          content="Personalised Miniature Art & Handcrafted Gifts | Studio Kuki"
         />
         <meta
           property="og:description"
-          content="Creative Studio Kuki crafts personalized miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan and his team."
+          content="Studio Kuki crafts personalised miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan."
         />
       </Head>
       {/*HERO SECTION*/}
       <HeroSection>
         <HeaderWrapper>
           <H1Header>
-            <H1Highlight>Tiny art.</H1Highlight>Big memories
+            Personalised Miniature Art &amp; Handcrafted Gifts
           </H1Header>
           <SubHeader>
-            Crafting personalized miniature art and unforgettable experiences
-            for individuals and businesses.
+            Tiny art, big memories — crafting personalised miniature art and
+            handcrafted gifts for individuals and businesses.
           </SubHeader>
         </HeaderWrapper>
         <IllustrationWrapper>
@@ -163,7 +160,7 @@ function Home() {
         <HeaderWrapper>
           <H2Header>What we do for you?</H2Header>
           <SubHeader>
-            Personalized Miniature Art, Unique Gifts, Awards, and Fun Game
+            Personalised Miniature Art, Unique Gifts, Awards, and Fun Game
             Events.
           </SubHeader>
         </HeaderWrapper>
@@ -171,7 +168,7 @@ function Home() {
           <CatCard
             svg={<IndividualCatSVG />}
             header="For Individuals"
-            description="Personalized Miniature Art for one or many."
+            description="Personalised Miniature Art for one or many."
             color={theme.colors.tiel_dark}
           />
           <CatCard

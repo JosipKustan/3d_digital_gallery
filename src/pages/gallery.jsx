@@ -22,12 +22,13 @@ function GalleryPage() {
     <MainContentContainer>
       <Head>
         <title>Gallery — Miniature Art Portfolio | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/gallery" />
         <meta
           name="description"
-          content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalized gifts, and unique creations by Josip Kuki."
+          content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalised gifts, and unique creations by Josip Kuki."
         />
         <meta property="og:title" content="Gallery — Miniature Art Portfolio | Creative Studio Kuki" />
-        <meta property="og:description" content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalized gifts, and unique creations by Josip Kuki." />
+        <meta property="og:description" content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalised gifts, and unique creations by Josip Kuki." />
       </Head>
 
       <GallerySection color={theme.colors.black}>

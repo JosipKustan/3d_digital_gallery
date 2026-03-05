@@ -31,12 +31,13 @@ function ServicesPage() {
     <MainContentContainer>
       <Head>
         <title>Services — Miniature Art for Individuals & Businesses | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/services" />
         <meta
           name="description"
-          content="Personalized miniature art, gifts, awards, and business event experiences. See our services and pricing for individuals and businesses."
+          content="Personalised miniature art, gifts, awards, and business event experiences. See our services and pricing for individuals and businesses."
         />
         <meta property="og:title" content="Services — Miniature Art for Individuals & Businesses | Creative Studio Kuki" />
-        <meta property="og:description" content="Personalized miniature art, gifts, awards, and business event experiences." />
+        <meta property="og:description" content="Personalised miniature art, gifts, awards, and business event experiences." />
       </Head>
       {/*HERO SECTION*/}
       <HeroServicesSection id="services">
@@ -46,7 +47,7 @@ function ServicesPage() {
             Here we specialize in delivering handcrafted, one-of-a-kind
             miniature art pieces tailored to your needs. Whether you're looking
             for personal gifts or business solutions, we provide creative and
-            personalized artwork for every occasion.
+            personalised artwork for every occasion.
           </SubHeader>
         </HeaderWrapper>
         <IllustrationWrapper>
@@ -64,7 +65,7 @@ function ServicesPage() {
           <SubHeader>
             The price depends on the design and the complexity of your
             project.Reach out to us to share your vision, and we'll provide a
-            personalized quote to bring it to life.
+            personalised quote to bring it to life.
           </SubHeader>
           <ButtonZone>
             <SecondaryButton onClick={() => router.push("/price-factors")}>

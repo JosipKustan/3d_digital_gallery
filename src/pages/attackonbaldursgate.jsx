@@ -18,6 +18,7 @@ export default function AttackOnBaldursGatePage() {
     <>
       <Head>
         <title>Attack on Baldur's Gate — 3D Miniature | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/attackonbaldursgate" />
         <meta
           name="description"
           content="Interactive 3D miniature of the Attack on Baldur's Gate scene. Explore the handcrafted model in your browser."

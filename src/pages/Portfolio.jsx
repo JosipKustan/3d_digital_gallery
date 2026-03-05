@@ -60,6 +60,7 @@ function Portfolio() {
     <MainContentContainer>
       <Head>
         <title>Portfolio — Josip Kuki, Designer & Artist | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/portfolio" />
         <meta
           name="description"
           content="The personal portfolio of Josip Kuki — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."

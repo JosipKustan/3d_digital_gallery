@@ -16,9 +16,10 @@ export default function PriceFactors() {
     <MainContentContainer>
       <Head>
         <title>Pricing Factors — Custom Miniature Art | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/price-factors" />
         <meta
           name="description"
-          content="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalized quote."
+          content="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalised quote."
         />
         <meta property="og:title" content="Pricing Factors — Custom Miniature Art | Creative Studio Kuki" />
         <meta property="og:description" content="Understand how pricing works for custom miniature art at Creative Studio Kuki." />

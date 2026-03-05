@@ -18,6 +18,7 @@ export default function Bg3CrashPage() {
     <>
       <Head>
         <title>Nautaloid Crash — Baldur's Gate 3 | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/bg3crash" />
         <meta
           name="description"
           content="Interactive 3D miniature of the Nautaloid crash scene from Baldur's Gate 3. Explore the model in your browser."

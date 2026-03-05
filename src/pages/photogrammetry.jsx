@@ -18,6 +18,7 @@ export default function PhotogrammetryPage() {
     <>
       <Head>
         <title>Rastovac Photogrammetry — 3D Scan | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/photogrammetry" />
         <meta
           name="description"
           content="Interactive 3D photogrammetry scan of Rastovac — explore the model with realistic HDRI lighting in your browser."

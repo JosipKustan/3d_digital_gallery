@@ -110,7 +110,7 @@ function MobileNavMenu() {
           <CatCard
             svg={<IndividualCatSVG />}
             header="For Individuals"
-            description="Personalized Miniature Art for one or many."
+            description="Personalised Miniature Art for one or many."
             color={theme.colors.tiel_dark}
           />
           <CatCard
