@@ -337,7 +337,7 @@ export const StepWrapper = styled.div`
   }
 `;
 
-export const H1Header = styled.h1`
+export const HeroHeader = styled.h3`
   margin: 0;
   font-size: 64px;
   text-transform: uppercase;
@@ -370,6 +370,16 @@ export const H1Highlight = styled.span`
   }
 `;
 
+export const H1Small = styled.h1`
+  margin: 0;
+  font-family: ${theme.fonts.body};
+  font-weight: 500;
+  line-height: 120%;
+  z-index: 5;
+  @media (min-width: 1080px) {
+    font-size: 32px;
+  }
+`;
 export const SubHeader = styled.h3`
   margin: 0;
   font-family: ${theme.fonts.body};

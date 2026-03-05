@@ -11,9 +11,12 @@ import {
   Fake3DModel,
   FloatCardSection,
   H1Header,
+  H1Highlight,
+  H1Small,
   H2Header,
   H4Header,
   HeaderWrapper,
+  HeroHeader,
   HeroIllustration,
   HeroSection,
   IllustrationWrapper,
@@ -57,7 +60,9 @@ function Home() {
   return (
     <MainContentContainer>
       <Head>
-        <title>Personalised Miniature Art &amp; Handcrafted Gifts | Studio Kuki</title>
+        <title>
+          Personalised Miniature Art &amp; Handcrafted Gifts | Studio Kuki
+        </title>
         <link rel="canonical" href="https://creativestudiokuki.com/" />
         <meta
           name="description"
@@ -75,13 +80,13 @@ function Home() {
       {/*HERO SECTION*/}
       <HeroSection>
         <HeaderWrapper>
-          <H1Header>
-            Personalised Miniature Art &amp; Handcrafted Gifts
-          </H1Header>
-          <SubHeader>
-            Tiny art, big memories — crafting personalised miniature art and
-            handcrafted gifts for individuals and businesses.
-          </SubHeader>
+          <HeroHeader>
+            <H1Highlight>Tiny art, </H1Highlight>big memories
+          </HeroHeader>
+          <H1Small>
+            Personalised Miniature Art &amp; Handcrafted Gifts — crafting for
+            individuals and businesses.
+          </H1Small>
         </HeaderWrapper>
         <IllustrationWrapper>
           <HeroIllustration />
