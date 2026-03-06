@@ -1,6 +1,6 @@
 import { extend, Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import Placeholder from "../components/shared/Placeholder.jsx";
 import DeimosAxe from "../components/objects/DeimosAxe.jsx";
@@ -13,7 +13,7 @@ export default function DeimosAxeScene() {
       gl={{
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
-        outputEncoding: THREE.sRGBEncoding,
+        outputColorSpace: THREE.SRGBColorSpace,
       }}
       camera={{
         fov: 45,
@@ -22,11 +22,10 @@ export default function DeimosAxeScene() {
         position: [3, 2, 6],
       }}
     >
-      <ambientLight intensity={1} />
-
+      <Environment preset="studio" intensity={0.5} />
       <spotLight
         position={[0, 5, 0]}
-        intensity={2}
+        intensity={1.5}
         angle={Math.PI / 4}
         penumbra={1}
       />

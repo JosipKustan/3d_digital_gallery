@@ -1,6 +1,6 @@
 import { extend, Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
-import { OrbitControls, SpotLight } from "@react-three/drei";
+import { Environment, OrbitControls, SpotLight } from "@react-three/drei";
 import * as THREE from "three";
 import RastovacLiDAR from "../components/objects/RastovacLiDAR.jsx";
 import Placeholder from "../components/shared/Placeholder.jsx";
@@ -15,7 +15,7 @@ export default function RastovacLiDARScene() {
       gl={{
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
-        outputEncoding: THREE.sRGBEncoding,
+        outputColorSpace: THREE.SRGBColorSpace,
       }}
       camera={{
         fov: 45,
@@ -24,11 +24,10 @@ export default function RastovacLiDARScene() {
         position: [10, 6, 2],
       }}
     >
-      <ambientLight intensity={0.6} color="#FFFFFF" />
+      <Environment preset="apartment" />
       <SpotLight
         position={[0, 10.0, 0]}
         color="#ffffff"
-        intensity={1}
         distance={9.89}
         angle={Math.PI / 8}
         penumbra={1}

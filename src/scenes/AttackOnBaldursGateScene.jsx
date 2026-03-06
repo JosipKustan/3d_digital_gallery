@@ -1,6 +1,6 @@
 import { extend, Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
-import { OrbitControls, SpotLight } from "@react-three/drei";
+import { Environment, OrbitControls, SpotLight } from "@react-three/drei";
 import * as THREE from "three";
 import AttackOnBaldursGate from "../components/objects/AttackOnBaldursGate.jsx";
 import Placeholder from "../components/shared/Placeholder.jsx";
@@ -14,7 +14,7 @@ export default function AttackOnBaldursGateScene() {
       gl={{
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
-        outputEncoding: THREE.sRGBEncoding,
+        outputColorSpace: THREE.SRGBColorSpace,
       }}
       camera={{
         fov: 45,
@@ -23,8 +23,7 @@ export default function AttackOnBaldursGateScene() {
         position: [-6, 0, -4],
       }}
     >
-      <ambientLight intensity={0.6} color="#FFFFFF" />
-
+      <Environment preset="apartment" intensity={0.5} />
       <SpotLight
         position={[0, 10.0, 0]}
         color="#ffffff"
