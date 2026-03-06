@@ -30,9 +30,9 @@ export function GameMasterSVG(props) {
       />
       <path
         fill="url(#a)"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m23.163 69.442 1.57 26.572 8.962 11.93 9.904-8.02 4.709-8.049 12.102-3.082 11.758 3.482 3.169 7.649 11.616 8.02 6.907-8.02 6.622-25.773 2.825 12.101-4.081 24.832-22.177 31.595-11.788 6.593H53.017l-12.244-6.593-16.04-28.456-4.567-15.869 2.997-36.933v8.02Zm31.281 41.642-13.671-1.713 8.363 10.047 10.731-3.283 10.817 3.283 7.678-8.334-1.313-1.713-11.788 2.512-2.968-2.512h-4.566l-3.283 1.713Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#E7B795"
@@ -183,8 +183,8 @@ export function GameMasterSVG(props) {
           y2="149.272"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#655A52" />
-          <stop offset=".683" stop-color="#1C2225" />
+          <stop stopColor="#655A52" />
+          <stop offset=".683" stopColor="#1C2225" />
         </linearGradient>
       </defs>
     </svg>

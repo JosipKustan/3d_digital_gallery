@@ -10,9 +10,9 @@ export function CookingSvg(props) {
     >
       <path
         fill="#ECC7AC"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m111.99 18.729-8.47 14.344v11.493l35.414 7.449 5.746-7.45 3.448-12.556-1.618-14.515 4.427-12.386-27.412-3.363-4.597 15.75-6.938 1.234Zm18.771 29.753 4.597-10.003 1.192 1.788-2.596 3.405-3.193 4.81Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#D9D9D9"
@@ -33,15 +33,15 @@ export function CookingSvg(props) {
       />
       <path
         fill="#ECC7AC"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M80.32 43.672c-3.807 6.834-6.646 9.579-14.301 10.47l-6.385-2.127-12.557 2.128-2.852-2.128h-4.767l-5.831-3.533h-6.385l-1.234-6.896h4.597v-6.044l-4.597-3.533-7.236-7.066-6.385-6.214L13.79 5.108 30.605 0l8.853 5.108L61.21 16.43l4.81 3.746c1.887.284 5.831 1.175 6.512 2.469.681 1.294 1.958 5.732 2.512 7.79 5.404 4.181 6.23 7.177 5.278 13.237Zm-14.3-7.449 3.958 5.363c-3.463 1.719-4.602 2.638-4.64 4.172H63.55l2.469-9.535Zm-14.26 8.683c-.195-3.063.323-4.803 2.725-7.96l-2.724 1.065-2.767 6.895h2.767Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#F99231"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m75.734 55.13-5.852 2.365-.656 6.186 7.553 5.281 6.603.106 2.996-4.463-2.033-4.82-8.611-4.655Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#F27C0E"
@@ -57,9 +57,9 @@ export function CookingSvg(props) {
       />
       <path
         fill="#F99231"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m102.899 62.226-8.934-.311-8.134 5.209 1.492 7.783 6.739 2.808 8.493-2.721 3.69-5.104-3.346-7.664Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#F27C0E"
@@ -75,9 +75,9 @@ export function CookingSvg(props) {
       />
       <path
         fill="#F99231"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M75.003 79.317 71.91 75.39l3.497-2.5 9.403 2.168 5.292 3.465-.526 3.143-4.737.599-9.835-2.948Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#F27C0E"
@@ -93,9 +93,9 @@ export function CookingSvg(props) {
       />
       <path
         fill="#F99231"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m66.593 81.995-4.327-2.505 2.325-3.616 9.54-1.46 6.198 1.264.672 3.115-4.18 2.307-10.228.895Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#F27C0E"
@@ -111,9 +111,9 @@ export function CookingSvg(props) {
       />
       <path
         fill="#F99231"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m62.853 82.28-4.604-.02 1.314-3.404 8.517-4.762 6.053-1.57 1.353 1.878-3.343 3.234-9.29 4.644Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#F27C0E"
@@ -140,10 +140,10 @@ export function CookingSvg(props) {
           gradientTransform="matrix(.28687 4.80582 -9.2802 .55396 8.648 4.479)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".361" stop-color="#F27C0E" />
-          <stop offset=".466" stop-color="#F99231" />
-          <stop offset=".591" stop-color="#FBBB7F" />
-          <stop offset=".851" stop-color="#F99231" />
+          <stop offset=".361" stopColor="#F27C0E" />
+          <stop offset=".466" stopColor="#F99231" />
+          <stop offset=".591" stopColor="#FBBB7F" />
+          <stop offset=".851" stopColor="#F99231" />
         </radialGradient>
         <radialGradient
           id="b"
@@ -153,10 +153,10 @@ export function CookingSvg(props) {
           gradientTransform="matrix(.28687 4.80582 -9.2802 .55396 8.648 4.479)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".361" stop-color="#F27C0E" />
-          <stop offset=".466" stop-color="#F99231" />
-          <stop offset=".591" stop-color="#FBBB7F" />
-          <stop offset=".851" stop-color="#F99231" />
+          <stop offset=".361" stopColor="#F27C0E" />
+          <stop offset=".466" stopColor="#F99231" />
+          <stop offset=".591" stopColor="#FBBB7F" />
+          <stop offset=".851" stopColor="#F99231" />
         </radialGradient>
         <radialGradient
           id="c"
@@ -166,10 +166,10 @@ export function CookingSvg(props) {
           gradientTransform="matrix(.28687 4.80582 -9.2802 .55396 8.648 4.479)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".361" stop-color="#F27C0E" />
-          <stop offset=".466" stop-color="#F99231" />
-          <stop offset=".591" stop-color="#FBBB7F" />
-          <stop offset=".851" stop-color="#F99231" />
+          <stop offset=".361" stopColor="#F27C0E" />
+          <stop offset=".466" stopColor="#F99231" />
+          <stop offset=".591" stopColor="#FBBB7F" />
+          <stop offset=".851" stopColor="#F99231" />
         </radialGradient>
         <radialGradient
           id="d"
@@ -179,10 +179,10 @@ export function CookingSvg(props) {
           gradientTransform="matrix(.28687 4.80582 -9.2802 .55396 8.648 4.479)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".361" stop-color="#F27C0E" />
-          <stop offset=".466" stop-color="#F99231" />
-          <stop offset=".591" stop-color="#FBBB7F" />
-          <stop offset=".851" stop-color="#F99231" />
+          <stop offset=".361" stopColor="#F27C0E" />
+          <stop offset=".466" stopColor="#F99231" />
+          <stop offset=".591" stopColor="#FBBB7F" />
+          <stop offset=".851" stopColor="#F99231" />
         </radialGradient>
         <radialGradient
           id="e"
@@ -192,10 +192,10 @@ export function CookingSvg(props) {
           gradientTransform="matrix(.28687 4.80582 -9.2802 .55396 8.648 4.479)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".361" stop-color="#F27C0E" />
-          <stop offset=".466" stop-color="#F99231" />
-          <stop offset=".591" stop-color="#FBBB7F" />
-          <stop offset=".851" stop-color="#F99231" />
+          <stop offset=".361" stopColor="#F27C0E" />
+          <stop offset=".466" stopColor="#F99231" />
+          <stop offset=".591" stopColor="#FBBB7F" />
+          <stop offset=".851" stopColor="#F99231" />
         </radialGradient>
       </defs>
     </svg>

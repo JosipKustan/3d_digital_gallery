@@ -86,12 +86,12 @@ export function HeroBeach(props) {
         fill="#201600"
         d="M244.959 158.408c-.014-.101.495-.833.19-2.403-.446-2.301-1.757-5.691-1.757-5.691l2.752 6.55.906-6.31.379 7.185-2.516.776m11.692-4.162c.02-.147.184-2.586 1.302-3.588 0 0-1.143 2.162-.629 3.707 0 0 .191-.866.615-1.316 0 0-.421 1.271.284 1.842.704.57-1.774.824-1.572-.645Z"
       />
-      <g clip-path="url(#a)">
+      <g clipPath="url(#a)">
         <path
           fill="#fff"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M265.39 140.38c-.054.044-.158.076-.171.181-.014.104.051.213.076.306.087-.106.048-.34.095-.487Zm2.231-8.454c-.019.008.017.04.019.058.032-.009.008-.022 0-.039.043.017-.005-.011-.019-.019Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill="#000"
@@ -128,7 +128,7 @@ export function HeroBeach(props) {
       />
       <path
         fill="#26D1F8"
-        fill-opacity=".63"
+        fillOpacity=".63"
         d="M236.102 156.009h87.909v23.153h-87.909z"
       />
       <path
@@ -137,13 +137,13 @@ export function HeroBeach(props) {
       />
       <path
         fill="#E8F8FD"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M231.73 189.742h2.377V85.656c0-46.23 92.305-45.948 92.305 0v104.086h2.325V82.334c0-44.543-97.007-43.444-97.007 0v107.408Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#D3E8EE"
-        fill-opacity=".2"
+        fillOpacity=".2"
         d="M234.107 85.656v104.086h92.305V85.656c0-45.948-92.305-46.23-92.305 0Z"
       />
       <path fill="url(#b)" d="M228.793 186.471h101.811v11.346H228.793z" />
@@ -153,7 +153,7 @@ export function HeroBeach(props) {
       />
       <path
         stroke="#000"
-        stroke-width="2"
+        strokeWidth="2"
         d="M412.815 99.714v46.667m0-46.667 21.698 7.302v39.365h-21.698m0-46.667-16.592-19.682-16.432 23.651v42.698h33.024"
       />
       <path
@@ -182,9 +182,9 @@ export function HeroBeach(props) {
       />
       <path
         fill="#332B26"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M382.686 161.268c10.099-2.457 18.661-12.825 19.123-23.16.461-10.334-7.352-16.72-17.452-14.264-10.099 2.457-18.661 12.825-19.123 23.16-.461 10.334 7.352 16.72 17.452 14.264Zm.127-2.855c8.559-2.081 15.815-10.868 16.206-19.626.391-8.758-6.23-14.17-14.789-12.088-8.559 2.081-15.815 10.868-16.206 19.626-.391 8.758 6.23 14.17 14.789 12.088Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#332B26"
@@ -204,9 +204,9 @@ export function HeroBeach(props) {
       />
       <path
         fill="#7C5F4D"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M378.295 161.274c10.1-2.456 18.661-12.825 19.123-23.159.462-10.334-7.352-16.721-17.451-14.264-10.1 2.456-18.662 12.825-19.123 23.159-.462 10.334 7.351 16.72 17.451 14.264Zm.127-2.854c8.559-2.082 15.815-10.869 16.206-19.627.392-8.758-6.23-14.17-14.789-12.088-8.559 2.082-15.815 10.869-16.206 19.626-.391 8.758 6.23 14.17 14.789 12.089Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#7C5F4D"
@@ -226,7 +226,7 @@ export function HeroBeach(props) {
       />
       <path
         fill="#57E0F5"
-        fill-opacity=".5"
+        fillOpacity=".5"
         d="M413.401 151.999H356.4v25.673h82.708l4.595-4.306v-21.367h-30.302Z"
       />
       <path
@@ -243,13 +243,13 @@ export function HeroBeach(props) {
       />
       <path
         fill="#E8F8FD"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M351.766 189.293h2.376V85.207c0-46.229 92.305-45.948 92.305 0v104.086h2.326V81.885c0-44.542-97.007-43.444-97.007 0v107.408Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#D3E8EE"
-        fill-opacity=".2"
+        fillOpacity=".2"
         d="M354.142 85.207v104.086h92.305V85.207c0-45.948-92.305-46.229-92.305 0Z"
       />
       <path fill="url(#c)" d="M348.826 186.022h101.811v11.346H348.826z" />
@@ -292,9 +292,9 @@ export function HeroBeach(props) {
       />
       <path
         fill="#B40909"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m193.842 150.253-5.594-2.518v5.175l5.184-1.815c.082.476.625.844 1.282.844.61 0 1.122-.317 1.258-.743l3.915 1.714v-4.528l-4.291 1.878a1.543 1.543 0 0 0-.882-.261c-.336 0-.642.096-.872.254Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#000"
@@ -322,9 +322,9 @@ export function HeroBeach(props) {
           y2="192.144"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#915829" />
-          <stop offset=".36" stop-color="#FEB74C" />
-          <stop offset="1" stop-color="#9C6531" />
+          <stop stopColor="#915829" />
+          <stop offset=".36" stopColor="#FEB74C" />
+          <stop offset="1" stopColor="#9C6531" />
         </linearGradient>
         <linearGradient
           id="c"
@@ -334,9 +334,9 @@ export function HeroBeach(props) {
           y2="191.695"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#915829" />
-          <stop offset=".36" stop-color="#FEB74C" />
-          <stop offset="1" stop-color="#9C6531" />
+          <stop stopColor="#915829" />
+          <stop offset=".36" stopColor="#FEB74C" />
+          <stop offset="1" stopColor="#9C6531" />
         </linearGradient>
         <clipPath id="a">
           <path fill="#fff" d="M260.84 118.341h37.668v37.668H260.84z" />

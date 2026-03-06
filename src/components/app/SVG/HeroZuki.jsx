@@ -8,8 +8,8 @@ export function HeroZuki() {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M405.134 25.1318H375.375L373.432 46.6458C337.007 55.1357 309.703 90.2802 309.703 132.346C309.703 160.784 322.182 186.059 341.522 202.073V220H439.428V202.073C458.768 186.059 475.85 157.077 475.85 128.639C475.85 86.2929 454.797 53.1048 406.787 46.4793L405.134 25.1318Z"
         fill="#D9D9D9"
       />
@@ -40878,8 +40878,8 @@ export function HeroZuki() {
         fill="#F9A2A2"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M249.279 154.797L242.816 151.889V157.866L248.805 155.77C248.9 156.32 249.528 156.746 250.287 156.746C250.992 156.746 251.583 156.38 251.74 155.887L256.264 157.866V152.636L251.307 154.805C251.04 154.618 250.681 154.504 250.287 154.504C249.899 154.504 249.545 154.615 249.279 154.797Z"
         fill="#B40909"
       />
@@ -41040,8 +41040,8 @@ export function HeroZuki() {
           y2="69.8444"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF3538" />
-          <stop offset="1" stop-color="#390001" />
+          <stop stopColor="#FF3538" />
+          <stop offset="1" stopColor="#390001" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_955_27396"
@@ -41051,8 +41051,8 @@ export function HeroZuki() {
           y2="92.9725"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_955_27396"
@@ -41062,8 +41062,8 @@ export function HeroZuki() {
           y2="114.806"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_955_27396"
@@ -41073,8 +41073,8 @@ export function HeroZuki() {
           y2="115.305"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_955_27396"
@@ -41084,8 +41084,8 @@ export function HeroZuki() {
           y2="112.015"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_955_27396"
@@ -41095,8 +41095,8 @@ export function HeroZuki() {
           y2="120.544"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_955_27396"
@@ -41106,8 +41106,8 @@ export function HeroZuki() {
           y2="117.355"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_955_27396"
@@ -41117,8 +41117,8 @@ export function HeroZuki() {
           y2="115.017"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_955_27396"
@@ -41128,8 +41128,8 @@ export function HeroZuki() {
           y2="130.652"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_955_27396"
@@ -41139,8 +41139,8 @@ export function HeroZuki() {
           y2="118.575"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_955_27396"
@@ -41150,8 +41150,8 @@ export function HeroZuki() {
           y2="120.818"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_955_27396"
@@ -41161,8 +41161,8 @@ export function HeroZuki() {
           y2="131.911"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_955_27396"
@@ -41172,8 +41172,8 @@ export function HeroZuki() {
           y2="134.496"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_955_27396"
@@ -41183,8 +41183,8 @@ export function HeroZuki() {
           y2="136.277"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_955_27396"
@@ -41194,8 +41194,8 @@ export function HeroZuki() {
           y2="131.72"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_955_27396"
@@ -41205,8 +41205,8 @@ export function HeroZuki() {
           y2="101.303"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_955_27396"
@@ -41216,8 +41216,8 @@ export function HeroZuki() {
           y2="98.9719"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_955_27396"
@@ -41227,8 +41227,8 @@ export function HeroZuki() {
           y2="100.168"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_955_27396"
@@ -41238,8 +41238,8 @@ export function HeroZuki() {
           y2="102.3"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_955_27396"
@@ -41249,8 +41249,8 @@ export function HeroZuki() {
           y2="103.498"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_955_27396"
@@ -41260,8 +41260,8 @@ export function HeroZuki() {
           y2="105.122"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint21_linear_955_27396"
@@ -41271,8 +41271,8 @@ export function HeroZuki() {
           y2="113.962"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_955_27396"
@@ -41282,8 +41282,8 @@ export function HeroZuki() {
           y2="104.277"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_955_27396"
@@ -41293,8 +41293,8 @@ export function HeroZuki() {
           y2="98.9242"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_955_27396"
@@ -41304,8 +41304,8 @@ export function HeroZuki() {
           y2="109.724"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint25_linear_955_27396"
@@ -41315,8 +41315,8 @@ export function HeroZuki() {
           y2="97.3838"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint26_linear_955_27396"
@@ -41326,8 +41326,8 @@ export function HeroZuki() {
           y2="93.5491"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint27_linear_955_27396"
@@ -41337,8 +41337,8 @@ export function HeroZuki() {
           y2="98.755"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint28_linear_955_27396"
@@ -41348,8 +41348,8 @@ export function HeroZuki() {
           y2="106.92"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint29_linear_955_27396"
@@ -41359,8 +41359,8 @@ export function HeroZuki() {
           y2="108.345"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint30_linear_955_27396"
@@ -41370,8 +41370,8 @@ export function HeroZuki() {
           y2="102.003"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint31_linear_955_27396"
@@ -41381,8 +41381,8 @@ export function HeroZuki() {
           y2="105.294"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint32_linear_955_27396"
@@ -41392,8 +41392,8 @@ export function HeroZuki() {
           y2="108.921"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint33_linear_955_27396"
@@ -41403,8 +41403,8 @@ export function HeroZuki() {
           y2="90.8814"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint34_linear_955_27396"
@@ -41414,8 +41414,8 @@ export function HeroZuki() {
           y2="93.4458"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint35_linear_955_27396"
@@ -41425,8 +41425,8 @@ export function HeroZuki() {
           y2="150.726"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint36_linear_955_27396"
@@ -41436,8 +41436,8 @@ export function HeroZuki() {
           y2="153.878"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint37_linear_955_27396"
@@ -41447,8 +41447,8 @@ export function HeroZuki() {
           y2="149.203"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint38_linear_955_27396"
@@ -41458,8 +41458,8 @@ export function HeroZuki() {
           y2="145.459"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint39_linear_955_27396"
@@ -41469,8 +41469,8 @@ export function HeroZuki() {
           y2="128.309"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint40_linear_955_27396"
@@ -41480,8 +41480,8 @@ export function HeroZuki() {
           y2="129.592"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint41_linear_955_27396"
@@ -41491,8 +41491,8 @@ export function HeroZuki() {
           y2="136.35"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint42_linear_955_27396"
@@ -41502,8 +41502,8 @@ export function HeroZuki() {
           y2="130.537"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint43_linear_955_27396"
@@ -41513,8 +41513,8 @@ export function HeroZuki() {
           y2="149.807"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint44_linear_955_27396"
@@ -41524,8 +41524,8 @@ export function HeroZuki() {
           y2="142.648"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint45_linear_955_27396"
@@ -41535,8 +41535,8 @@ export function HeroZuki() {
           y2="157.53"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint46_linear_955_27396"
@@ -41546,8 +41546,8 @@ export function HeroZuki() {
           y2="161.388"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint47_linear_955_27396"
@@ -41557,8 +41557,8 @@ export function HeroZuki() {
           y2="158.763"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint48_linear_955_27396"
@@ -41568,8 +41568,8 @@ export function HeroZuki() {
           y2="156.154"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint49_linear_955_27396"
@@ -41579,8 +41579,8 @@ export function HeroZuki() {
           y2="148.063"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint50_linear_955_27396"
@@ -41590,8 +41590,8 @@ export function HeroZuki() {
           y2="149.765"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint51_linear_955_27396"
@@ -41601,8 +41601,8 @@ export function HeroZuki() {
           y2="152.587"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint52_linear_955_27396"
@@ -41612,8 +41612,8 @@ export function HeroZuki() {
           y2="150.502"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint53_linear_955_27396"
@@ -41623,8 +41623,8 @@ export function HeroZuki() {
           y2="159.43"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint54_linear_955_27396"
@@ -41634,8 +41634,8 @@ export function HeroZuki() {
           y2="155.715"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint55_linear_955_27396"
@@ -41645,8 +41645,8 @@ export function HeroZuki() {
           y2="117.817"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint56_linear_955_27396"
@@ -41656,8 +41656,8 @@ export function HeroZuki() {
           y2="118.686"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint57_linear_955_27396"
@@ -41667,8 +41667,8 @@ export function HeroZuki() {
           y2="115.009"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint58_linear_955_27396"
@@ -41678,8 +41678,8 @@ export function HeroZuki() {
           y2="123.336"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint59_linear_955_27396"
@@ -41689,8 +41689,8 @@ export function HeroZuki() {
           y2="117.32"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint60_linear_955_27396"
@@ -41700,8 +41700,8 @@ export function HeroZuki() {
           y2="119.659"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint61_linear_955_27396"
@@ -41711,8 +41711,8 @@ export function HeroZuki() {
           y2="133.445"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint62_linear_955_27396"
@@ -41722,8 +41722,8 @@ export function HeroZuki() {
           y2="120.88"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint63_linear_955_27396"
@@ -41733,8 +41733,8 @@ export function HeroZuki() {
           y2="124.386"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint64_linear_955_27396"
@@ -41744,8 +41744,8 @@ export function HeroZuki() {
           y2="135.479"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint65_linear_955_27396"
@@ -41755,8 +41755,8 @@ export function HeroZuki() {
           y2="137.507"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint66_linear_955_27396"
@@ -41766,8 +41766,8 @@ export function HeroZuki() {
           y2="139.658"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint67_linear_955_27396"
@@ -41777,8 +41777,8 @@ export function HeroZuki() {
           y2="134.714"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint68_linear_955_27396"
@@ -41788,8 +41788,8 @@ export function HeroZuki() {
           y2="103.216"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint69_linear_955_27396"
@@ -41799,8 +41799,8 @@ export function HeroZuki() {
           y2="101.059"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint70_linear_955_27396"
@@ -41810,8 +41810,8 @@ export function HeroZuki() {
           y2="102.066"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint71_linear_955_27396"
@@ -41821,8 +41821,8 @@ export function HeroZuki() {
           y2="107.04"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint72_linear_955_27396"
@@ -41832,8 +41832,8 @@ export function HeroZuki() {
           y2="104.117"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint73_linear_955_27396"
@@ -41843,8 +41843,8 @@ export function HeroZuki() {
           y2="105.33"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint74_linear_955_27396"
@@ -41854,8 +41854,8 @@ export function HeroZuki() {
           y2="116.559"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint75_linear_955_27396"
@@ -41865,8 +41865,8 @@ export function HeroZuki() {
           y2="106.121"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint76_linear_955_27396"
@@ -41876,8 +41876,8 @@ export function HeroZuki() {
           y2="101.552"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint77_linear_955_27396"
@@ -41887,8 +41887,8 @@ export function HeroZuki() {
           y2="113.035"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint78_linear_955_27396"
@@ -41898,8 +41898,8 @@ export function HeroZuki() {
           y2="102.321"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint79_linear_955_27396"
@@ -41909,8 +41909,8 @@ export function HeroZuki() {
           y2="107.747"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint80_linear_955_27396"
@@ -41920,8 +41920,8 @@ export function HeroZuki() {
           y2="109.148"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint81_linear_955_27396"
@@ -41931,8 +41931,8 @@ export function HeroZuki() {
           y2="106.664"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint82_linear_955_27396"
@@ -41942,8 +41942,8 @@ export function HeroZuki() {
           y2="91.4845"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint83_linear_955_27396"
@@ -41953,8 +41953,8 @@ export function HeroZuki() {
           y2="95.15"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint84_linear_955_27396"
@@ -41964,8 +41964,8 @@ export function HeroZuki() {
           y2="152.638"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint85_linear_955_27396"
@@ -41975,8 +41975,8 @@ export function HeroZuki() {
           y2="155.965"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint86_linear_955_27396"
@@ -41986,8 +41986,8 @@ export function HeroZuki() {
           y2="151.1"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint87_linear_955_27396"
@@ -41997,8 +41997,8 @@ export function HeroZuki() {
           y2="130.125"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint88_linear_955_27396"
@@ -42008,8 +42008,8 @@ export function HeroZuki() {
           y2="131.423"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint89_linear_955_27396"
@@ -42019,8 +42019,8 @@ export function HeroZuki() {
           y2="147.376"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint90_linear_955_27396"
@@ -42030,8 +42030,8 @@ export function HeroZuki() {
           y2="138.947"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint91_linear_955_27396"
@@ -42041,8 +42041,8 @@ export function HeroZuki() {
           y2="132.381"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint92_linear_955_27396"
@@ -42052,8 +42052,8 @@ export function HeroZuki() {
           y2="152.434"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint93_linear_955_27396"
@@ -42063,8 +42063,8 @@ export function HeroZuki() {
           y2="145.96"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint94_linear_955_27396"
@@ -42074,8 +42074,8 @@ export function HeroZuki() {
           y2="148.891"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint95_linear_955_27396"
@@ -42085,8 +42085,8 @@ export function HeroZuki() {
           y2="150.568"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint96_linear_955_27396"
@@ -42096,8 +42096,8 @@ export function HeroZuki() {
           y2="156.473"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint97_linear_955_27396"
@@ -42107,8 +42107,8 @@ export function HeroZuki() {
           y2="153.958"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint98_linear_955_27396"
@@ -42118,8 +42118,8 @@ export function HeroZuki() {
           y2="151.298"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint99_linear_955_27396"
@@ -42129,8 +42129,8 @@ export function HeroZuki() {
           y2="160.033"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint100_linear_955_27396"
@@ -42140,8 +42140,8 @@ export function HeroZuki() {
           y2="157.419"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
         <linearGradient
           id="paint101_linear_955_27396"
@@ -42151,8 +42151,8 @@ export function HeroZuki() {
           y2="109.717"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CCC8C8" />
-          <stop offset="1" stop-color="#383737" />
+          <stop stopColor="#CCC8C8" />
+          <stop offset="1" stopColor="#383737" />
         </linearGradient>
       </defs>
     </svg>

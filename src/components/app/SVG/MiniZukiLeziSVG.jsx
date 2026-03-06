@@ -74,9 +74,9 @@ export function MiniZukiLeziSVG(props) {
       />
       <path
         fill="#B40909"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m66.891 14.203-7.731-3.48v7.15l7.165-2.508c.113.659.863 1.168 1.772 1.168.843 0 1.55-.438 1.738-1.027l5.41 2.367v-6.256l-5.93 2.595a2.137 2.137 0 0 0-1.218-.36 2.15 2.15 0 0 0-1.206.35Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
     </svg>
   );

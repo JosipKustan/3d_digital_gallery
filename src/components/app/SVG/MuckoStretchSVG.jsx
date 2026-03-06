@@ -54,9 +54,9 @@ export function MuckoStretchSVG(props) {
       />
       <path
         fill="#312B28"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M117.204 94.86c-2.055 3.633-2.859 4.602-3.429 3.644 1.975-4.071 1.342-7.907-.01-12.729l1.235.12c1.646 2.856 3.424 6.807 2.204 8.964Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#312B28"
@@ -177,9 +177,9 @@ export function MuckoStretchSVG(props) {
       />
       <path
         fill="#C3C3C3"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m574.755 223.535-2.508-.217-.646 2.976 2.894.25.173-2.006.087-1.003Zm-2.05.328 1.505.13-.675 1.963-1.505-.13.675-1.963Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#FAD6A0"
@@ -239,9 +239,9 @@ export function MuckoStretchSVG(props) {
       />
       <path
         fill="#929292"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m593.563 227.775.968.839-4.564 5.27-1.384-.36-.553-.479-.761-.659-3.044-2.637 4.979-5.749 4.359 3.775Zm-3.736-1.558 2.906 2.516-3.32 3.833-2.906-2.517 3.32-3.832Zm-2.489 8.745.554 1.318-4.565 5.27-.968-.839-4.359-3.775 4.98-5.749 3.044 2.636.761.659.553.48Zm-3.735-1.559 2.905 2.517-3.319 3.833-2.906-2.517 3.32-3.833Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#929292"
@@ -261,9 +261,9 @@ export function MuckoStretchSVG(props) {
       />
       <path
         fill="#F3F3F3"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M266 178.108v-3.678L183 178v1l83-.892Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path fill="#B7B7B7" d="M276 178v-4l-10 .43v3.678l10-.108Z" />
       <path
@@ -272,9 +272,9 @@ export function MuckoStretchSVG(props) {
       />
       <path
         fill="#F3F3F3"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m245.167 187.938-.476-3.647-58.173 11.203.13.992 58.519-8.548Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#B7B7B7"
@@ -286,9 +286,9 @@ export function MuckoStretchSVG(props) {
       />
       <path
         fill="#F3F3F3"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m293.112 189.82-.477-3.647-58.172 11.203.129.992 58.52-8.548Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#B7B7B7"
@@ -300,9 +300,9 @@ export function MuckoStretchSVG(props) {
       />
       <path
         fill="#F3F3F3"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m354.416 191.596-.859-6.573-80.723 17.039.234 1.789 81.348-12.255Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#B7B7B7"

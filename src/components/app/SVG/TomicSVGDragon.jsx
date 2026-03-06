@@ -43,9 +43,9 @@ export function TomicSVGDragon() {
       />
       <path
         fill="#000"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="m55.209 55.97 2.325 7.683 1.618 3.69c10.514-3.185 7.178.657 12.08 0l2.579-3.69 7.279-8.088-.564-.592c-5.209-5.46-8.297-8.699-2.166-12.45l-5.055-1.01-5.863-2.124-9.908.809c2.84 3.426.882 6.725-4.246 13.244l1.92 2.527Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill="#E6E5E5"
