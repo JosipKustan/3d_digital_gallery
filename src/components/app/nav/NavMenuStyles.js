@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import theme from "../../theme";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import Link from "next/link";
 
 export const Nav = styled(motion.nav)`
   position: fixed;
@@ -132,7 +131,7 @@ export const MenuItem = styled(Link)`
   }
 `;
 
-export const MenuItemHash = styled(HashLink)`
+export const MenuItemHash = styled(Link)`
   font-family: ${theme.fonts.heading};
   font-size: 36px;
   font-weight: 700;

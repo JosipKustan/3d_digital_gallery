@@ -7,7 +7,7 @@ export const InfoTag = styled.div`
   justify-content: flex-end;
   padding: 8px;
   gap: 4px;
-  color: ${theme.colors.white};
+  color: ${(props) => props.$color || theme.colors.white};
   border-radius: 16px 0px 0px 16px;
 
   font-size: 14px;
