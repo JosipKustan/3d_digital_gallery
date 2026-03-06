@@ -1,6 +1,6 @@
 import { extend, Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
-import { OrbitControls, SpotLight } from "@react-three/drei";
+import { Environment, OrbitControls, SpotLight } from "@react-three/drei";
 import * as THREE from "three";
 import Bg3Crash from "../components/objects/Bg3Crash.jsx";
 import Placeholder from "../components/shared/Placeholder.jsx";
@@ -23,12 +23,11 @@ export default function Bg3CrashScene() {
         position: [-4, 6, -1],
       }}
     >
-      <ambientLight intensity={0.6} color="#FFFFFF" />
-
+      <Environment preset="apartment" />
       <SpotLight
         position={[0, 10.0, 0]}
         color="#ffffff"
-        intensity={1}
+        intensity={4}
         distance={9.89}
         angle={Math.PI / 8}
         penumbra={1}
