@@ -13,7 +13,7 @@ export default function RastovacPhotogrammetryScene() {
       gl={{
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
-        outputEncoding: THREE.sRGBEncoding,
+        outputColorSpace: THREE.SRGBColorSpace,
       }}
       camera={{
         fov: 45,

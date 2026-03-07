@@ -14,7 +14,7 @@ export default function Bg3CrashScene() {
       gl={{
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
-        outputEncoding: THREE.sRGBEncoding,
+        outputColorSpace: THREE.SRGBColorSpace,
       }}
       camera={{
         fov: 45,
