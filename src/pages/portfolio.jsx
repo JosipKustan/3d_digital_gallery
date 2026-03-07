@@ -49,7 +49,7 @@ const RastovacLiDARScene = dynamic(
     loading: () => (
       <div style={{ width: "100%", height: "100%", background: "#131122" }} />
     ),
-  }
+  },
 );
 
 function Portfolio() {
@@ -59,14 +59,22 @@ function Portfolio() {
   return (
     <MainContentContainer>
       <Head>
-        <title>Portfolio — Josip Kuki, Designer & Artist | Creative Studio Kuki</title>
+        <title>
+          Portfolio — Josip Kuštan, Designer & Artist | Creative Studio Kuki
+        </title>
         <link rel="canonical" href="https://creativestudiokuki.com/portfolio" />
         <meta
           name="description"
-          content="The personal portfolio of Josip Kuki — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
+          content="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
         />
-        <meta property="og:title" content="Portfolio — Josip Kuki, Designer & Artist | Creative Studio Kuki" />
-        <meta property="og:description" content="The personal portfolio of Josip Kuki — UX designer, software engineer, and miniature artist." />
+        <meta
+          property="og:title"
+          content="Portfolio — Josip Kuštan, Designer & Artist | Creative Studio Kuki"
+        />
+        <meta
+          property="og:description"
+          content="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist."
+        />
       </Head>
       {/*HERO SECTION*/}
       <SectionPortfolio>
