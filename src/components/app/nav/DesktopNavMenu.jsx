@@ -3,7 +3,6 @@ import {
   BrandName,
   DesktopNavWrapper,
   MenuItem,
-  MenuItemHash,
   MenuList,
 } from "./NavMenuStyles.js";
 
@@ -16,7 +15,7 @@ function DesktopNavMenu() {
         <MenuItem href="/">Home</MenuItem>
         <MenuItem href="/gallery">Gallery</MenuItem>
         <MenuItem href="/services">Services</MenuItem>
-        <MenuItemHash href="/#contact">Contact</MenuItemHash>
+        <MenuItem href="/contact">Contact</MenuItem>
       </MenuList>
     </DesktopNavWrapper>
   );

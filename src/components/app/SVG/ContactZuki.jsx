@@ -114,7 +114,7 @@ export function ContactZuki(props) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <g clipPath="url(#a)">
+        <g clipPath="url(#contact-zuki-clip)">
           <path fill="#212121" d="m178 158 47.259 8.401v48L178 206z" />
           <path
             fill="#fff"
@@ -190,7 +190,7 @@ export function ContactZuki(props) {
         transform="matrix(.98456 .17503 0 1 5.008 123.914)"
       />
       <defs>
-        <clipPath id="a">
+        <clipPath id="contact-zuki-clip">
           <path fill="#fff" d="m178 158 47.259 8.401v48L178 206z" />
         </clipPath>
       </defs>

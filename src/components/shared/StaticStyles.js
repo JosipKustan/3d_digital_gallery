@@ -251,6 +251,7 @@ export const HeaderWrapper = styled.header`
   flex-direction: column;
   gap: 24px;
   padding-inline: 24px;
+  width: 100%;
 
   text-align: center;
   box-sizing: border-box;
@@ -263,6 +264,7 @@ export const HeaderWrapper = styled.header`
     line-height: 600%;
     max-width: 700px;
     padding-inline: 0px;
+    width: auto;
   }
 `;
 export const ScreenWrapper = styled.div`
@@ -505,6 +507,45 @@ export const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+export const ContactFormWrapper = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 560px;
+  padding: 16px;
+  box-sizing: border-box;
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: solid 2px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.15s ease;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:focus {
+      border-color: #c15efd;
+    }
+  }
+
+  textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+`;
 export const HoverLink = styled.a`
   display: inline-block;
   transition: opacity 0.15s ease-in;
@@ -516,14 +557,91 @@ export const HoverLink = styled.a`
 
 //Animations
 
-// Define the animation
-const stretchSquish = keyframes`
-  0%, 100% {
-    transform: scaleY(1);
-    transform: scaleX(1);
+// Cat purr: 18 jitters over 1s (29% of 3.5s) → 2.5s slow release
+// Each jitter step ≈ 55ms (1s / 18), scale builds up then slow ease-out back
+const catPurr = keyframes`
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
   }
-  50% {
-    transform: scaleY(0.7) scaleX(1.6);
+  2% {
+    transform: scale(1.04) rotate(-4deg);
+    animation-timing-function: linear;
+  }
+  3% {
+    transform: scale(1.01) rotate(4deg);
+    opacity: 1;
+    animation-timing-function: linear;
+  }
+  5% {
+    transform: scale(1.07) rotate(-3deg);
+    animation-timing-function: linear;
+  }
+  6% {
+    transform: scale(1.04) rotate(3deg);
+    animation-timing-function: linear;
+  }
+  8% {
+    transform: scale(1.09) rotate(-4deg);
+    animation-timing-function: linear;
+  }
+  10% {
+    transform: scale(1.06) rotate(4deg);
+    animation-timing-function: linear;
+  }
+  11% {
+    transform: scale(1.12) rotate(-3deg);
+    animation-timing-function: linear;
+  }
+  13% {
+    transform: scale(1.09) rotate(3deg);
+    animation-timing-function: linear;
+  }
+  14% {
+    transform: scale(1.14) rotate(-4deg);
+    animation-timing-function: linear;
+  }
+  16% {
+    transform: scale(1.11) rotate(4deg);
+    animation-timing-function: linear;
+  }
+  17% {
+    transform: scale(1.16) rotate(-3deg);
+    animation-timing-function: linear;
+  }
+  19% {
+    transform: scale(1.13) rotate(3deg);
+    animation-timing-function: linear;
+  }
+  21% {
+    transform: scale(1.18) rotate(-4deg);
+    animation-timing-function: linear;
+  }
+  22% {
+    transform: scale(1.15) rotate(4deg);
+    animation-timing-function: linear;
+  }
+  24% {
+    transform: scale(1.20) rotate(-3deg);
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: scale(1.17) rotate(3deg);
+    animation-timing-function: linear;
+  }
+  27% {
+    transform: scale(1.22) rotate(-4deg);
+    animation-timing-function: linear;
+  }
+  29% {
+    transform: scale(1.20) rotate(0deg);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0;
   }
 `;
 
@@ -531,5 +649,5 @@ const stretchSquish = keyframes`
 export const PurPurAnimated = styled(PurPur)`
   position: absolute;
   transform-origin: center;
-  animation: ${stretchSquish} 3s ease-in-out infinite alternate;
+  animation: ${catPurr} 3.5s linear infinite;
 `;

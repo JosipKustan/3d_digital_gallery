@@ -1,16 +1,15 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import Link from "next/link";
 import SceneErrorBoundary from "../components/shared/SceneErrorBoundary";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
   BasicCard,
   ButtonZone,
-  ContactWrapper,
   Fake3DModel,
   FloatCardSection,
-  H1Header,
   H1Highlight,
   H1Small,
   H2Header,
@@ -21,7 +20,6 @@ import {
   HeroSection,
   IllustrationWrapper,
   MainContentContainer,
-  PurPurAnimated,
   ScrollZoneBottom,
   ScrollZoneTop,
   Section,
@@ -44,7 +42,7 @@ import { MiniZukiLeziSVG } from "../components/app/SVG/MiniZukiLeziSVG";
 import Footer from "../components/shared/Footer";
 import { JelenaPapigaSVG } from "../components/app/SVG/JelenaPapigaSVG";
 import { TomicSVGDragon } from "../components/app/SVG/TomicSVGDragon";
-import { ContactZuki } from "../components/app/SVG/ContactZuki";
+import { ContactZukiPurr } from "../components/app/ContactZukiPurr";
 
 const RastovacLiDARScene = dynamic(
   () => import("../scenes/RastovacLiDARScene"),
@@ -94,25 +92,20 @@ function Home() {
       </HeroSection>
       <FloatCardSection>
         <BasicCard>
-          <H4Header> About us</H4Header>
+          <H4Header>The artisan behind it all</H4Header>
           <br />
           <p>
-            My name is Josip, but everyone calls me <strong>Kuki</strong>.
+            An engineer with too many hobbies and too little time for them all.
+            Woodworking, sculpting, painting, gaming — somewhere in between,{" "}
+            <strong>Creative Studio Kuki was born</strong>.
           </p>
           <p>
-            My memory isn't the best, so I started turning my{" "}
-            <strong>memories into miniature art</strong> to keep them from
-            slipping away. I combine passion and precision to create pieces that
-            capture stories.
-          </p>
-          <p>
-            By day, I design software; by night, I bring memories to life. Each
-            piece is crafted with meticulous care,{" "}
-            <strong>ensuring that your special moments are preserved!</strong>
+            A place to turn memories into something you can hold, gift, and keep
+            forever.
           </p>
           <ButtonZone>
             <MiniZukiLeziSVG style={{ position: "absolute", top: "-32px" }} />
-            <Button>Follow us on the social medias</Button>
+            <Button as={Link} href="/about">About us →</Button>
           </ButtonZone>
         </BasicCard>
       </FloatCardSection>
@@ -243,23 +236,7 @@ function Home() {
             Let's unlock the ideas together! You might be surprised what can be
             done.
           </SubHeader>
-          <ContactWrapper>
-            <ContactZuki eyes={false} />
-
-            <PurPurAnimated />
-            <PurPurAnimated
-              style={{
-                top: "20px",
-                right: "60%",
-              }}
-            />
-            <PurPurAnimated
-              style={{
-                top: "-15px",
-                right: "30%",
-              }}
-            />
-          </ContactWrapper>
+          <ContactZukiPurr />
         </HeaderWrapper>
         <CardsWrapper>
           <H4Header>Žuki asked what people think...</H4Header>
