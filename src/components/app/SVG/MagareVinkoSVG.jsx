@@ -8,7 +8,7 @@ export function MagareVinkoSVG() {
       viewBox="0 0 133 134"
     >
       <rect width="128" height="128" x="5" y="6" fill="#FFB422" rx="64" />
-      <g clipPath="url(#a)">
+      <g clipPath="url(#magare-clip)">
         <path
           fill="#3F3423"
           fillRule="evenodd"
@@ -51,7 +51,7 @@ export function MagareVinkoSVG() {
         />
       </g>
       <defs>
-        <clipPath id="a">
+        <clipPath id="magare-clip">
           <path fill="#fff" d="M0 0h133v113H0z" />
         </clipPath>
       </defs>

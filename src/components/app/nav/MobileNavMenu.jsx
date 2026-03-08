@@ -4,7 +4,6 @@ import {
   BrandName,
   Hamburger,
   MenuItem,
-  MenuItemHash,
   MenuList,
   Nav,
   NavScrollZone,
@@ -100,7 +99,7 @@ function MobileNavMenu() {
           <MenuItem href="/">Home</MenuItem>
           <MenuItem href="/gallery">Gallery</MenuItem>
           <MenuItem href="/services">Services</MenuItem>
-          <MenuItemHash href="/#contact">Contact</MenuItemHash>
+          <MenuItem href="/contact">Contact</MenuItem>
         </MenuList>
 
         <H5Header style={{ paddingLeft: "16px", marginTop: "16px" }}>
