@@ -31,7 +31,7 @@ export default function ContactPage() {
 
     setStatus("submitting");
     try {
-      const res = await fetch("/", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
@@ -82,8 +82,6 @@ export default function ContactPage() {
         </HeaderWrapper>
         <ContactFormWrapper
           onSubmit={handleSubmit}
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
           name="commission"
         >
           <input type="hidden" name="form-name" value="commission" />
