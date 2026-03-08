@@ -77,14 +77,6 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          {/* Hidden form for Netlify's build-time form detection */}
-          <form name="commission" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <select name="type"><option value="personal-gift" /></select>
-            <textarea name="message" />
-            <input name="bot-field" />
-          </form>
           <Main />
           <NextScript />
         </body>
