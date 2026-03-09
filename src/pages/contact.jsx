@@ -80,10 +80,7 @@ export default function ContactPage() {
           </SubHeader>
           <ContactZukiPurr />
         </HeaderWrapper>
-        <ContactFormWrapper
-          onSubmit={handleSubmit}
-          name="commission"
-        >
+        <ContactFormWrapper onSubmit={handleSubmit} name="commission">
           <input type="hidden" name="form-name" value="commission" />
           {/* Honeypot — hidden from humans, bots fill it in */}
           <input name="bot-field" style={{ display: "none" }} />
@@ -133,7 +130,9 @@ export default function ContactPage() {
         <HeaderWrapper>
           <H2Header>Real stories, real impact</H2Header>
           <SubHeader>
-            {"Every piece started with a conversation. Sometimes it is enough to just ask. You might be surprised by the ideas we come up with together."}
+            {
+              "Every piece started with a conversation. Sometimes it is enough to just ask."
+            }
           </SubHeader>
         </HeaderWrapper>
         <CardsWrapper>

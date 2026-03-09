@@ -13,23 +13,30 @@ export const HeroSection = styled.section`
   position: relative;
   width: 100vw;
   box-sizing: border-box;
-  padding: 64px 24px;
+  padding: 64px 24px 0;
   background-color: ${(props) => props.background || theme.colors.white};
   color: ${(props) => props.color || theme.colors.black};
-  gap: 64px;
+  gap: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: 1080px) {
-    align-items: start;
-    padding: 128px 0px 0px 128px;
+    align-items: stretch;
+    padding: 0;
     flex-direction: row;
     height: 100vh;
+    min-height: 680px;
+    overflow: hidden;
+
+    padding-left: 128px;
+    padding-top: 128px;
   }
 `;
 export const HeroIllustration = styled(HeroFull)`
-  height: 100%;
+  height: auto;
+  width: auto;
+  max-height: 100%;
 `;
 export const HeroPortfolioIllustration = styled(PortfolioHero)`
   height: 100%;
@@ -62,18 +69,19 @@ export const HeroBeachIllustration = styled(HeroBeach)`
   max-height: 80%;
 `;
 export const IllustrationWrapper = styled.div`
-  position: absolute;
-  width: 96%;
-  height: 100vh;
-
   display: flex;
   align-items: end;
   justify-content: end;
+  width: 100%;
+
+  @media (min-width: 1080px) {
+    flex: 1;
+    align-self: stretch;
+    overflow: hidden;
+  }
 
   @media (max-width: 1080px) {
-    position: relative;
     height: fit-content;
-    width: 100%;
   }
 `;
 export const DivIllustrationWrapper = styled.div`
@@ -262,7 +270,7 @@ export const HeaderWrapper = styled.header`
   max-width: 540px;
   @media (min-width: 1080px) {
     line-height: 600%;
-    max-width: 700px;
+    max-width: 575px;
     padding-inline: 0px;
     width: auto;
   }
@@ -400,6 +408,7 @@ export const SubHeader = styled.h3`
   font-weight: 500;
   line-height: 120%;
   z-index: 5;
+  font-size: 18px;
   @media (min-width: 1080px) {
     font-size: 32px;
   }
@@ -552,6 +561,21 @@ export const HoverLink = styled.a`
   cursor: pointer;
   &:hover {
     opacity: 0.5; /* Light blue effect */
+  }
+`;
+
+// Responsive visibility utilities
+export const DesktopOnly = styled.div`
+  display: none;
+  @media (min-width: 1080px) {
+    display: contents;
+  }
+`;
+
+export const MobileOnly = styled.div`
+  display: contents;
+  @media (min-width: 1080px) {
+    display: none;
   }
 `;
 

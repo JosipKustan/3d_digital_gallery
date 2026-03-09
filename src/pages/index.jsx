@@ -1,4 +1,3 @@
-import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
@@ -6,10 +5,8 @@ import SceneErrorBoundary from "../components/shared/SceneErrorBoundary";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
-  BasicCard,
-  ButtonZone,
+  DesktopOnly,
   Fake3DModel,
-  FloatCardSection,
   H1Highlight,
   H1Small,
   H2Header,
@@ -20,6 +17,7 @@ import {
   HeroSection,
   IllustrationWrapper,
   MainContentContainer,
+  MobileOnly,
   ScrollZoneBottom,
   ScrollZoneTop,
   Section,
@@ -85,31 +83,14 @@ function Home() {
             Personalised Miniature Art &amp; Handcrafted Gifts — crafting for
             individuals and businesses.
           </H1Small>
+          <Link href="/gallery">
+            <Button variant="dark">See all work →</Button>
+          </Link>
         </HeaderWrapper>
         <IllustrationWrapper>
           <HeroIllustration />
         </IllustrationWrapper>
       </HeroSection>
-      <FloatCardSection>
-        <BasicCard>
-          <H4Header>The artisan behind it all</H4Header>
-          <br />
-          <p>
-            An engineer with too many hobbies and too little time for them all.
-            Woodworking, sculpting, painting, gaming — somewhere in between,{" "}
-            <strong>Creative Studio Kuki was born</strong>.
-          </p>
-          <p>
-            A place to turn memories into something you can hold, gift, and keep
-            forever.
-          </p>
-          <ButtonZone>
-            <MiniZukiLeziSVG style={{ position: "absolute", top: "-32px" }} />
-            <Button as={Link} href="/about">About us →</Button>
-          </ButtonZone>
-        </BasicCard>
-      </FloatCardSection>
-
       {/*3D SECTION*/}
       <Section3D
         background={theme.colors.purple_dark}
@@ -150,6 +131,29 @@ function Home() {
         <GalleryList big="true" />
       </Section>
 
+      {/*About sekcion*/}
+      <Section
+        background={theme.colors.background_dark}
+        color={theme.colors.white}
+      >
+        <HeaderWrapper>
+          <H2Header>The artisan </H2Header>
+          <SubHeader>
+            An engineer with too many hobbies and too little time for them all.
+            Woodworking, sculpting, painting, cooking... somewhere in between,{" "}
+            <strong>Creative Studio Kuki was born</strong>.
+          </SubHeader>
+          <SubHeader>
+            A place to turn memories into something you can hold, gift, and keep
+            forever.
+          </SubHeader>
+          <Button variant="light" as={Link} href="/about">
+            Meet the maker →
+          </Button>
+        </HeaderWrapper>
+        <MiniZukiLeziSVG />
+      </Section>
+
       {/*Biznis sekciono*/}
       <Section
         background={theme.colors.background_dark}
@@ -186,6 +190,11 @@ function Home() {
             Depending on projects demands and possibilities we have different
             operational workflows.
           </SubHeader>
+          <DesktopOnly>
+            <Button variant="dark" as={Link} href="/contact">
+              Start a commission →
+            </Button>
+          </DesktopOnly>
         </HeaderWrapper>
         <TextListWrapper>
           <StepWrapper>
@@ -225,41 +234,14 @@ function Home() {
               safely, small things are really fragile.
             </p>
           </StepWrapper>
+          <MobileOnly>
+            <Button variant="dark" as={Link} href="/contact">
+              Start a commission →
+            </Button>
+          </MobileOnly>
         </TextListWrapper>
       </Section>
 
-      {/*Lets get it touch Sekcion*/}
-      <Section color={theme.colors.black} id="contact">
-        <HeaderWrapper>
-          <H2Header>Let's get in touch</H2Header>
-          <SubHeader>
-            Let's unlock the ideas together! You might be surprised what can be
-            done.
-          </SubHeader>
-          <ContactZukiPurr />
-        </HeaderWrapper>
-        <CardsWrapper>
-          <H4Header>Žuki asked what people think...</H4Header>
-          <TestemonialsCard
-            svg={<JelenaPapigaSVG />}
-            name="Jelena P."
-            testemonial="“Best gift EVER! Personalised, beautiful and it even glows. Whoever sees it, is impressed“"
-            backgroundColor={theme.colors.background_dark}
-          />
-          <TestemonialsCard
-            svg={<MagareVinkoSVG />}
-            name="Mirela U."
-            testemonial="“I don't know how did he manage to get it spot on. And so detailed!!!“"
-            backgroundColor={theme.colors.background_dark}
-          />
-          <TestemonialsCard
-            svg={<TomicSVGDragon />}
-            name="Josip T."
-            testemonial="“Kuki made a small art piece that is a centerpiece of my living room“"
-            backgroundColor={theme.colors.background_dark}
-          />
-        </CardsWrapper>
-      </Section>
       <Footer />
     </MainContentContainer>
   );
