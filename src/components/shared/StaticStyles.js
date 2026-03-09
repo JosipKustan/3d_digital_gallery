@@ -265,7 +265,7 @@ export const HeaderWrapper = styled.header`
   box-sizing: border-box;
   align-items: center;
   font-family: ${theme.fonts.heading};
-  font-weight: 700;
+  font-weight: ${theme.typography.weight.bold};
   line-height: 360%;
   max-width: 540px;
   @media (min-width: 1080px) {
@@ -349,66 +349,57 @@ export const StepWrapper = styled.div`
 
 export const HeroHeader = styled.h3`
   margin: 0;
-  font-size: 64px;
+  font-size: ${theme.typography.size.hero};
   text-transform: uppercase;
 
   z-index: 5;
   @media (min-width: 1080px) {
-    font-size: 128px;
-
-    line-height: 128px;
+    line-height: ${theme.typography.leading.tight};
   }
 `;
 
 export const H2Header = styled.h2`
   margin: 0;
-  font-size: 64px;
-  line-height: 100%;
-  font-weight: 700;
+  font-size: ${theme.typography.size.hero};
+  line-height: ${theme.typography.leading.tight};
+  font-weight: ${theme.typography.weight.bold};
   text-transform: uppercase;
-  @media (min-width: 1080px) {
-    font-size: 128px;
-  }
 `;
 
 export const H1Highlight = styled.span`
-  font-size: 20px;
+  font-size: clamp(1.25rem, 2vw + 0.5rem, 2rem);
   text-transform: uppercase;
-  line-height: 100%;
-  @media (min-width: 1080px) {
-    font-size: 64px;
-  }
+  line-height: ${theme.typography.leading.tight};
 `;
 
 export const H1Small = styled.h1`
   margin: 0;
   font-family: ${theme.fonts.body};
-  font-weight: 500;
-  line-height: 120%;
+  font-size: ${theme.typography.size.body};
+  font-weight: ${theme.typography.weight.medium};
+  line-height: ${theme.typography.leading.snug};
   z-index: 5;
   @media (min-width: 1080px) {
-    font-size: 32px;
+    font-size: 1.5rem;
   }
 `;
 export const H1Header = styled.h1`
   margin: 0;
-  font-size: 64px;
+  font-size: ${theme.typography.size.hero};
   text-transform: uppercase;
 
   z-index: 5;
   @media (min-width: 1080px) {
-    font-size: 128px;
-
-    line-height: 128px;
+    line-height: ${theme.typography.leading.tight};
   }
 `;
 export const SubHeader = styled.h3`
   margin: 0;
   font-family: ${theme.fonts.body};
-  font-weight: 500;
-  line-height: 120%;
-  z-index: 5;
-  font-size: 18px;
+  font-weight: ${theme.typography.weight.medium};
+  line-height: ${theme.typography.leading.snug};
+
+  font-size: ${theme.typography.size.lead};
   @media (min-width: 1080px) {
     font-size: 32px;
   }
@@ -466,7 +457,7 @@ export const BasicCard = styled.div`
   flex-direction: column;
   gap: 16px;
   color: ${theme.colors.white};
-  font-size: 20px;
+  font-size: ${theme.typography.size.subheading};
   font-weight: 300;
   background: ${theme.colors.background_dark};
   box-sizing: border-box;
@@ -485,23 +476,23 @@ export const BasicCard = styled.div`
 export const H4Header = styled.h4`
   margin: 0px;
   font-family: ${theme.fonts.heading};
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 100%;
+  font-size: ${theme.typography.size.heading};
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
 `;
 
 export const H5Header = styled.h5`
   font-family: ${theme.fonts.heading};
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 100%;
+  font-size: ${theme.typography.size.subheading};
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
   max-width: 450px;
   margin: 0;
 `;
 
 export const H6Header = styled.h6`
-  font-size: 18px;
-  font-weight: 700;
+  font-size: ${theme.typography.size.lead};
+  font-weight: ${theme.typography.weight.bold};
   margin: 0;
 `;
 
@@ -535,7 +526,7 @@ export const ContactFormWrapper = styled.form`
     border: solid 2px rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: ${theme.typography.size.body};
     font-family: inherit;
     padding: 14px 16px;
     outline: none;
@@ -674,4 +665,62 @@ export const PurPurAnimated = styled(PurPur)`
   position: absolute;
   transform-origin: center;
   animation: ${catPurr} 3.5s linear infinite;
+`;
+
+// Artisan section — polaroid photo gallery
+export const ArtisanGalleryWrap = styled.div`
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
+
+  @media (max-width: 1080px) {
+    gap: 10px;
+    max-width: 360px;
+  }
+`;
+
+export const ArtisanPhotoCol = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: 1080px) {
+    gap: 10px;
+  }
+`;
+
+export const ArtisanPhoto = styled.div`
+  background: #fff;
+  padding: 8px 8px 32px;
+  box-shadow:
+    0 6px 24px rgba(0, 0, 0, 0.45),
+    0 1px 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease;
+  z-index: 1;
+
+  &:hover {
+    transform: rotate(0deg) scale(1.05) !important;
+    box-shadow:
+      0 20px 56px rgba(0, 0, 0, 0.6),
+      0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+`;
+export const PolaroidTitle = styled.span`
+  font-family: "Kanit", sans-serif;
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 600;
+  color: ${theme.colors.black};
+  margin: 0;
+  line-height: 1.3;
+`;
+
+export const ArtisanPhotoInner = styled.div`
+  position: relative;
+  overflow: hidden;
+  display: block;
 `;

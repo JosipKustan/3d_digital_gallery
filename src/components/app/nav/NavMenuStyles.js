@@ -84,16 +84,10 @@ export const TopNavigationWrapper = styled.div`
 
 export const BrandName = styled.span`
   font-family: ${theme.fonts.heading};
-  font-size: 20px;
-  font-weight: 700;
+  font-size: clamp(0.75rem, 3.5vw + 0.35rem, 2rem);
+  font-weight: ${theme.typography.weight.bold};
   text-transform: capitalize;
-  @media (min-width: 1080px) {
-    font-size: 40px;
-    align-self: center;
-  }
-  @media (min-width: 1080px) and (max-width: 1280px) {
-    font-size: 32px;
-  }
+  align-self: center;
 `;
 
 export const MenuList = styled.ul`
@@ -113,9 +107,9 @@ export const MenuList = styled.ul`
 
 export const MenuItem = styled(Link)`
   font-family: ${theme.fonts.heading};
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 100%;
+  font-size: ${theme.typography.size.subheading};
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
   border-bottom: solid 3px ${theme.colors.purple_accent};
   color: ${theme.colors.black};
   text-transform: capitalize;
@@ -133,9 +127,9 @@ export const MenuItem = styled(Link)`
 
 export const MenuItemHash = styled(Link)`
   font-family: ${theme.fonts.heading};
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 100%;
+  font-size: ${theme.typography.size.subheading};
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
   border-bottom: solid 3px ${theme.colors.purple_accent};
   color: ${theme.colors.black};
   text-transform: capitalize;

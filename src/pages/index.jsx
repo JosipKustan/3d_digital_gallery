@@ -3,8 +3,14 @@ import Head from "next/head";
 import Link from "next/link";
 import SceneErrorBoundary from "../components/shared/SceneErrorBoundary";
 import { Button } from "../components/shared/Button";
+import Image from "next/image";
 import {
   Absolute3DModel,
+  ArtisanGalleryWrap,
+  ArtisanPhoto,
+  ArtisanPhotoCol,
+  ArtisanPhotoInner,
+  ButtonZone,
   DesktopOnly,
   Fake3DModel,
   H1Highlight,
@@ -18,6 +24,7 @@ import {
   IllustrationWrapper,
   MainContentContainer,
   MobileOnly,
+  PolaroidTitle,
   ScrollZoneBottom,
   ScrollZoneTop,
   Section,
@@ -29,7 +36,7 @@ import {
 import theme from "../components/theme";
 import { ModelDescription } from "../components/app/cards/ModelDescription";
 import GuideInfo from "../components/app/GuideInfo";
-import GalleryList from "../components/app/nav/GalleryList";
+import { GalleryTeaser } from "../components/app/GalleryTeaser";
 import { CardsWrapper } from "../components/app/cards/CardStyles";
 import { CatCard } from "../components/app/cards/CatCard";
 import { IndividualCatSVG } from "../components/app/SVG/IndividualCatSVG";
@@ -101,6 +108,7 @@ function Home() {
             Take it <br />
             for a spin
           </H2Header>
+          <SubHeader>This miniature was captured using 3D scanning</SubHeader>
         </HeaderWrapper>
         <ScrollZoneTop />
         <ScrollZoneBottom />
@@ -115,20 +123,19 @@ function Home() {
         <ModelDescription galleryWorksID={0} />
       </Section3D>
 
-      {/*Mooou wuuuk SECTION*/}
+      {/*Gallery Teaser SECTION*/}
       <Section
-        background={theme.colors.purple_dark}
+        background={theme.colors.white}
         color={theme.colors.white}
-        style={{
-          paddingBlock: "64px",
-          paddingInline: "0px",
-          flexDirection: "column",
-        }}
+        style={{ padding: 0 }}
       >
-        <HeaderWrapper>
-          <H4Header>Check out other works in 3D!</H4Header>
-        </HeaderWrapper>
-        <GalleryList big="true" />
+        <GalleryTeaser
+          featured={[
+            { id: 1, category: "Places" },
+            { id: 5, category: "Fan Art — Gaming" },
+            { id: 4, category: "Fan Art — Gaming" },
+          ]}
+        />
       </Section>
 
       {/*About sekcion*/}
@@ -147,11 +154,65 @@ function Home() {
             A place to turn memories into something you can hold, gift, and keep
             forever.
           </SubHeader>
-          <Button variant="light" as={Link} href="/about">
-            Meet the maker →
-          </Button>
+          <ButtonZone>
+            <MiniZukiLeziSVG
+              style={{
+                position: "absolute",
+                top: "-32px",
+                pointerEvents: "none",
+              }}
+            />
+            <Button variant="light" as={Link} href="/about">
+              Meet the maker →
+            </Button>
+          </ButtonZone>
         </HeaderWrapper>
-        <MiniZukiLeziSVG />
+
+        <ArtisanGalleryWrap>
+          {/* Tall left column — wedding keepsake */}
+          <ArtisanPhotoCol>
+            <ArtisanPhoto style={{ transform: "rotate(-2.5deg)" }}>
+              <ArtisanPhotoInner style={{ width: 230, height: 360 }}>
+                <Image
+                  src="/assets/images/Portrets/MeInAPainting.JPG"
+                  fill
+                  sizes="210px"
+                  style={{ objectFit: "cover" }}
+                  alt="Me in a frame"
+                />
+              </ArtisanPhotoInner>
+              <PolaroidTitle>Me in a frame</PolaroidTitle>
+            </ArtisanPhoto>
+          </ArtisanPhotoCol>
+
+          {/* Right column — two smaller pieces */}
+          <ArtisanPhotoCol>
+            <ArtisanPhoto style={{ transform: "rotate(1.8deg)" }}>
+              <ArtisanPhotoInner style={{ width: 240, height: 236 }}>
+                <Image
+                  src="/assets/images/Portrets/WholeTeamMeeting.JPG"
+                  fill
+                  sizes="174px"
+                  style={{ objectFit: "cover" }}
+                  alt="Team meeting - all cats on a window"
+                />
+              </ArtisanPhotoInner>
+              <PolaroidTitle>Team meeting</PolaroidTitle>
+            </ArtisanPhoto>
+            <ArtisanPhoto style={{ transform: "rotate(-1.2deg)" }}>
+              <ArtisanPhotoInner style={{ width: 240, height: 210 }}>
+                <Image
+                  src="/assets/images/Portrets/ZukiSundown.JPG"
+                  fill
+                  sizes="174px"
+                  style={{ objectFit: "cover" }}
+                  alt="Attack on Baldur's Gate fan art"
+                />
+              </ArtisanPhotoInner>
+              <PolaroidTitle>Director Portret</PolaroidTitle>
+            </ArtisanPhoto>
+          </ArtisanPhotoCol>
+        </ArtisanGalleryWrap>
       </Section>
 
       {/*Biznis sekciono*/}
