@@ -1,29 +1,65 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import theme from "../theme";
 
+const variants = {
+  primary: css`
+    border-color: rgba(193, 94, 253, 0.55);
+    color: ${theme.colors.purple_accent};
+    &:hover {
+      background: rgba(193, 94, 253, 0.12);
+      border-color: ${theme.colors.purple_accent};
+      box-shadow: 0 0 28px rgba(193, 94, 253, 0.2);
+    }
+  `,
+  dark: css`
+    border-color: rgba(0, 0, 0, 0.55);
+    color: ${theme.colors.black};
+    &:hover {
+      background: rgba(193, 94, 253, 0.12);
+      border-color: ${theme.colors.purple_dark};
+      box-shadow: 0 0 28px rgba(193, 94, 253, 0.2);
+      color: ${theme.colors.purple_dark};
+    }
+  `,
+  light: css`
+    border-color: rgba(255, 255, 255, 0.55);
+    color: ${theme.colors.white};
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: ${theme.colors.white};
+      box-shadow: 0 0 28px rgba(255, 255, 255, 0.15);
+    }
+  `,
+};
+
 export const Button = styled.button`
-  border: solid 3px
-    ${(props) => props.colorAccent || theme.colors.purple_accent};
-  border-radius: ${theme.border.medium};
-  background-color: ${(props) =>
-    props.background || theme.colors.background_dark};
-  color: ${(props) => props.colorText || theme.colors.white};
-  padding: 16px 16px;
-
-  font-size: 16px;
-  font-weight: 500;
-  width: fit-content;
-  min-width: 156px;
-  cursor: pointer;
   display: inline-flex;
-  justify-content: space-between;
-  align-content: center;
-  &:hover {
-    background-color: ${(props) => props.color || theme.colors.purple_dark};
-  }
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border: 2px solid;
+  background: transparent;
+  font-family: "Kanit", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
-  @media (max-width: 420px) {
-    padding: 12px 16px;
+  ${(props) => variants[props.variant] ?? variants.primary}
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;
 
