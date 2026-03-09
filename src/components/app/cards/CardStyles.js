@@ -36,7 +36,6 @@ export const SkillCardWrapper = styled.div`
 export const SVGWrapper = styled.div`
   height: 156px;
   width: 156px;
-vv
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,31 +58,28 @@ export const CardBottomWrapper = styled.div`
 `;
 export const CatCardHeader = styled.h4`
   font-family: ${theme.fonts.heading};
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 100%;
+  font-size: ${theme.typography.size.heading};
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
 
   margin: 0;
-  @media (max-width: 370px) {
-    font-size: 24px;
-  }
 `;
 
 export const CatCardDescription = styled.p`
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 100%;
+  font-size: ${theme.typography.size.body};
+  font-weight: ${theme.typography.weight.medium};
+  line-height: ${theme.typography.leading.tight};
   margin: 0;
   padding-top: 16px;
   @media (max-width: 370px) {
-    font-size: 14px; /* Adjust this value as needed for smaller screens */
+    font-size: ${theme.typography.size.caption};
   }
 `;
 
 export const TestemonialText = styled.p`
   font-family: ${theme.fonts.body};
-  font-size: 16px;
-  font-weight: 400;
+  font-size: ${theme.typography.size.body};
+  font-weight: ${theme.typography.weight.regular};
   font-style: italic;
 
   margin: 0;
@@ -93,12 +89,12 @@ export const CardName = styled.p`
   bottom: 8px;
   right: 16px;
   font-family: ${theme.fonts.body};
-  font-size: 16px;
-  font-weight: 400;
+  font-size: ${theme.typography.size.body};
+  font-weight: ${theme.typography.weight.regular};
   text-align: right;
   margin: 0;
   @media (max-width: 370px) {
-    font-size: 10px;
+    font-size: ${theme.typography.size.tag};
   }
 `;
 
@@ -173,8 +169,8 @@ export const InfoCardWrapper = styled.div`
 `;
 
 export const InfoText = styled.div`
-  font-size: 24px;
-  font-weight: 600;
+  font-size: ${theme.typography.size.subheading};
+  font-weight: ${theme.typography.weight.semibold};
   margin: 0;
   z-index: 2;
   padding-top: 8px;
@@ -186,9 +182,9 @@ export const MoneyandShippingInfoWrapper = styled.div`
   justify-content: end;
   box-sizing: border-box;
 
-  font-size: 36px;
+  font-size: ${theme.typography.size.heading};
   font-family: ${theme.fonts.heading};
-  font-weight: 700;
+  font-weight: ${theme.typography.weight.bold};
 
   margin: 0;
   z-index: 2;

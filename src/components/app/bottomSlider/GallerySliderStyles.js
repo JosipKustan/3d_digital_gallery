@@ -53,11 +53,8 @@ export const GalleryWorkWrapper = styled.div`
 export const WorkName = styled.h2`
   margin: 0;
   padding-left: 8px;
-  font-size: 64px;
-  line-height: 100%;
-  font-weight: 700;
+  font-size: ${theme.typography.size.hero};
+  line-height: ${theme.typography.leading.tight};
+  font-weight: ${theme.typography.weight.bold};
   text-transform: uppercase;
-  @media (min-width: 768px) {
-    font-size: 128px;
-  }
 `;

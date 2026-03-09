@@ -43,25 +43,25 @@ export const NameContainer = styled.div`
 
   text-align: end;
 
-  font-size: 12px;
-  font-weight: 500;
+  font-size: ${theme.typography.size.micro};
+  font-weight: ${theme.typography.weight.medium};
 `;
 export const Name = styled.span`
-  font-size: 12px;
-  font-weight: 500;
+  font-size: ${theme.typography.size.micro};
+  font-weight: ${theme.typography.weight.medium};
 `;
 export const ArtName = styled.span`
   flex: 1.5;
   margin-right: 8px;
-  font-size: 20px;
+  font-size: ${theme.typography.size.subheading};
   font-family: ${theme.fonts.heading};
-  font-weight: 700;
-  line-height: 100%;
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
 `;
 export const Description = styled.p`
   max-width: 600px;
   margin: 0;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: ${theme.typography.weight.medium};
+  font-size: ${theme.typography.size.caption};
+  line-height: ${theme.typography.leading.snug};
 `;
