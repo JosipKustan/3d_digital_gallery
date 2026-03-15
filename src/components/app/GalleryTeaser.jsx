@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
-import { galleryWorks } from "../../art/galleryWorks";
+import { galleryWorks } from "../../data/siteContent";
 import { Button } from "../shared/Button";
 import { MiniZukiInAHat } from "./SVG/MiniZukiInAHat";
 import theme from "../theme";

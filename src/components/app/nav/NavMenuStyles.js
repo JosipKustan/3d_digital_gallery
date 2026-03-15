@@ -70,6 +70,7 @@ export const Backdrop = styled(motion.div)`
 
 export const TopNavigationWrapper = styled.div`
   position: fixed;
+  top: 0;
   height: 64px;
   width: 100%;
   display: flex;
@@ -166,4 +167,89 @@ export const DesktopNavWrapper = styled.nav`
   padding-block: 16px;
 
   z-index: 1000;
+`;
+
+// ─── Services sticky category nav ─────────────────────────────────────────────
+
+export const StickyNav = styled.nav`
+  position: sticky;
+  top: 64px;
+  z-index: 40;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(33, 33, 33, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+  gap: 6px;
+  height: 54px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 480px) {
+    justify-content: center;
+    padding: 0 24px;
+    gap: 10px;
+    overflow-x: unset;
+  }
+`;
+
+export const NavPill = styled.button`
+  background: ${({ $active, $accent }) =>
+    $active ? `${$accent}22` : "transparent"};
+  border: 1.5px solid
+    ${({ $active, $accent }) => ($active ? $accent : "rgba(255,255,255,0.18)")};
+  color: ${({ $active, $accent }) =>
+    $active ? $accent : "rgba(255,255,255,0.6)"};
+  font-family: "Kanit", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+  white-space: nowrap;
+  line-height: 1;
+
+  &:hover {
+    background: ${({ $accent }) => `${$accent}18`};
+    border-color: ${({ $accent }) => $accent};
+    color: ${({ $accent }) => $accent};
+  }
+`;
+
+export const NavSep = styled.span`
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+`;
+
+export const CategoryLabel = styled.div`
+  display: inline-flex;
+  font-family: "Kanit", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: ${({ $accent }) => $accent};
+  padding: 5px 14px;
+  border: 1.5px solid ${({ $accent }) => $accent};
+  border-radius: 100px;
+  width: fit-content;
 `;

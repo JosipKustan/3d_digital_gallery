@@ -172,11 +172,11 @@ function Home() {
           {/* Tall left column — wedding keepsake */}
           <ArtisanPhotoCol>
             <ArtisanPhoto style={{ transform: "rotate(-2.5deg)" }}>
-              <ArtisanPhotoInner style={{ width: 230, height: 360 }}>
+              <ArtisanPhotoInner style={{ aspectRatio: "23/36" }}>
                 <Image
                   src="/assets/images/Portrets/MeInAPainting.JPG"
                   fill
-                  sizes="210px"
+                  sizes="(min-width: 1080px) 25vw, 45vw"
                   style={{ objectFit: "cover" }}
                   alt="Me in a frame"
                 />
@@ -188,11 +188,11 @@ function Home() {
           {/* Right column — two smaller pieces */}
           <ArtisanPhotoCol>
             <ArtisanPhoto style={{ transform: "rotate(1.8deg)" }}>
-              <ArtisanPhotoInner style={{ width: 240, height: 236 }}>
+              <ArtisanPhotoInner style={{ aspectRatio: "1/1" }}>
                 <Image
                   src="/assets/images/Portrets/WholeTeamMeeting.JPG"
                   fill
-                  sizes="174px"
+                  sizes="(min-width: 1080px) 20vw, 40vw"
                   style={{ objectFit: "cover" }}
                   alt="Team meeting - all cats on a window"
                 />
@@ -200,13 +200,13 @@ function Home() {
               <PolaroidTitle>Team meeting</PolaroidTitle>
             </ArtisanPhoto>
             <ArtisanPhoto style={{ transform: "rotate(-1.2deg)" }}>
-              <ArtisanPhotoInner style={{ width: 240, height: 210 }}>
+              <ArtisanPhotoInner style={{ aspectRatio: "8/7" }}>
                 <Image
                   src="/assets/images/Portrets/ZukiSundown.JPG"
                   fill
-                  sizes="174px"
+                  sizes="(min-width: 1080px) 20vw, 40vw"
                   style={{ objectFit: "cover" }}
-                  alt="Attack on Baldur's Gate fan art"
+                  alt="Zuki at sundown"
                 />
               </ArtisanPhotoInner>
               <PolaroidTitle>Director Portret</PolaroidTitle>

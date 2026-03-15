@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 import theme from "../../theme";
 
@@ -204,4 +205,85 @@ export const CircleWrapper = styled.div`
     width: 102px;
     height: 102px;
   }
+`;
+
+// ─── Services image cards ──────────────────────────────────────────────────────
+
+export const CardsGridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+`;
+
+export const ServiceCardLink = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: ${theme.colors.white};
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    border-color: ${({ $accent }) => $accent};
+    transform: translateY(-3px);
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+`;
+
+export const CardImageWrap = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+
+  img {
+    transition: transform 0.4s ease;
+  }
+`;
+
+export const CardBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px 24px;
+`;
+
+export const CardTitle = styled.h3`
+  font-family: "Kanit", sans-serif;
+  font-size: ${theme.typography.size.subheading};
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
+  margin: 0;
+  color: ${theme.colors.white};
+`;
+
+export const CardCopy = styled.p`
+  font-size: ${theme.typography.size.body};
+  line-height: ${theme.typography.leading.relaxed};
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  flex: 1;
+`;
+
+export const CardLink = styled.span`
+  font-family: "Kanit", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: ${({ $accent }) => $accent};
+  margin-top: 6px;
 `;

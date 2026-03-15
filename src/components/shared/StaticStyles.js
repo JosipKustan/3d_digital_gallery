@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 import theme from "../theme";
 import { HeroFull } from "../app/SVG/HeroFull";
@@ -178,6 +179,7 @@ export const Section = styled.section`
     flex-direction: row;
     padding: 128px 128px;
     align-items: center;
+    justify-content: space-evenly;
   }
 `;
 export const SectionPortfolio = styled.section`
@@ -671,12 +673,14 @@ export const PurPurAnimated = styled(PurPur)`
 export const ArtisanGalleryWrap = styled.div`
   display: flex;
   gap: 16px;
-  align-items: center;
-  flex-shrink: 0;
+  align-items: stretch;
+  flex: 1;
+  min-width: 360px;
 
   @media (max-width: 1080px) {
     gap: 10px;
-    max-width: 360px;
+    width: 100%;
+    max-width: 480px;
   }
 `;
 
@@ -684,6 +688,8 @@ export const ArtisanPhotoCol = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1;
+  min-width: 0;
 
   @media (max-width: 1080px) {
     gap: 10px;
@@ -701,15 +707,18 @@ export const ArtisanPhoto = styled.div`
     transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.35s ease;
   z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
 
   &:hover {
-    transform: rotate(0deg) scale(1.05) !important;
+    transform: rotate(0deg) scale(1.02) !important;
     box-shadow:
       0 20px 56px rgba(0, 0, 0, 0.6),
       0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 10;
   }
 `;
+
 export const PolaroidTitle = styled.span`
   font-family: "Kanit", sans-serif;
   font-size: clamp(15px, 1.4vw, 18px);
@@ -723,4 +732,90 @@ export const ArtisanPhotoInner = styled.div`
   position: relative;
   overflow: hidden;
   display: block;
+  width: 100%;
+`;
+
+// ─── Services page — category section layout ───────────────────────────────────
+
+export const CategorySection = styled.section`
+  position: relative;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: ${({ $bg }) => $bg};
+  color: ${theme.colors.white};
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 72px 24px 96px;
+
+  @media (min-width: 1080px) {
+    padding: 80px 128px 112px;
+  }
+`;
+
+export const SectionTopRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+`;
+
+export const SectionTitleGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+// ─── Services page — FAQ ───────────────────────────────────────────────────────
+
+export const FAQSection = styled(Section)`
+  padding: 72px 24px 96px;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1080px) {
+    padding: 80px 128px 112px;
+  }
+`;
+
+export const FAQList = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 680px;
+`;
+
+export const FAQItem = styled.div`
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 28px 0;
+
+  &:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export const FAQLink = styled(Link)`
+  color: ${theme.colors.purple_dark};
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: ${theme.colors.purple_accent};
+  }
+`;
+
+export const InlineLink = styled(Link)`
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.75;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
