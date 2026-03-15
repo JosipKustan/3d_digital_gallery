@@ -1,6 +1,6 @@
 import { NavItem, NavList } from "./NavMenuStyles.js";
 import ThumbnailPicker from "../thumbnailPicker/ThumbnailPicker.jsx";
-import { galleryWorks } from "../../../art/galleryWorks.js";
+import { galleryWorks } from "../../../data/siteContent";
 
 function GalleryList({ big, excludeId }) {
   const items = excludeId

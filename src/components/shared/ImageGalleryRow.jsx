@@ -2,7 +2,7 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import { GalleryPageWrapper, H2Header, H4Header } from "./StaticStyles";
 import { GalleryWorkWrapper } from "../app/bottomSlider/GallerySliderStyles";
 import useImageDimensions from "./hooks/useImageDimensions";
-import { galleryWorks } from "../../art/galleryWorks";
+import { galleryWorks } from "../../data/siteContent";
 import ProgressiveImg from "./ProgressiveImg";
 
 function ImageGalleryRow({ number }) {

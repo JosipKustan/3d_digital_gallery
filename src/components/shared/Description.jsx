@@ -1,4 +1,4 @@
-import { galleryWorks } from "../../art/galleryWorks";
+import { galleryWorks } from "../../data/siteContent";
 import { TextWrapper } from "../app/cards/CardStyles";
 import { H5Header, H6Header } from "./StaticStyles";
 

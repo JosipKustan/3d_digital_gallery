@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import GalleryArt from "../components/GalleryArt";
-import { galleryWorks } from "../art/galleryWorks";
+import { galleryWorks } from "../data/siteContent";
 
 const RastovacLiDARScene = dynamic(
   () => import("../scenes/RastovacLiDARScene"),
