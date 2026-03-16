@@ -1,12 +1,13 @@
 import { Gallery, Item } from "react-photoswipe-gallery";
+import "photoswipe/style.css";
 import { GalleryPageWrapper, H2Header, H4Header } from "./StaticStyles";
 import { GalleryWorkWrapper } from "../app/bottomSlider/GallerySliderStyles";
 import useImageDimensions from "./hooks/useImageDimensions";
 import { galleryWorks } from "../../data/siteContent";
 import ProgressiveImg from "./ProgressiveImg";
 
-function ImageGalleryRow({ number }) {
-  const images1 = galleryWorks[number];
+function ImageGalleryRow({ number, work: workProp }) {
+  const images1 = workProp ?? galleryWorks[number];
   return (
     <GalleryWorkWrapper>
       <H4Header style={{ paddingLeft: "16px" }}>{images1.name}</H4Header>

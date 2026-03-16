@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import GalleryArt from "../components/GalleryArt";
-import { galleryWorks } from "../data/siteContent";
+import GalleryArt from "../../../components/GalleryArt";
+import { galleryWorks } from "../../../data/siteContent";
 
 const AttackOnBaldursGateScene = dynamic(
-  () => import("../scenes/AttackOnBaldursGateScene"),
+  () => import("../../../scenes/AttackOnBaldursGateScene"),
   {
     ssr: false,
     loading: () => (
@@ -17,8 +17,8 @@ export default function AttackOnBaldursGatePage() {
   return (
     <>
       <Head>
-        <title>Attack on Baldur's Gate — 3D Miniature | Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/attackonbaldursgate" />
+        <title>Attack on Baldur&apos;s Gate — 3D Miniature | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/gallery/3d/attack-on-baldurs-gate" />
         <meta
           name="description"
           content="Interactive 3D miniature of the Attack on Baldur's Gate scene. Explore the handcrafted model in your browser."

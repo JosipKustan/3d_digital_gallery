@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import GalleryArt from "../components/GalleryArt";
-import { galleryWorks } from "../data/siteContent";
+import GalleryArt from "../../../components/GalleryArt";
+import { galleryWorks } from "../../../data/siteContent";
 
 const RastovacLiDARScene = dynamic(
-  () => import("../scenes/RastovacLiDARScene"),
+  () => import("../../../scenes/RastovacLiDARScene"),
   {
     ssr: false,
     loading: () => (
@@ -13,12 +13,12 @@ const RastovacLiDARScene = dynamic(
   }
 );
 
-export default function LidarPage() {
+export default function RastovacLidarPage() {
   return (
     <>
       <Head>
         <title>Rastovac LiDAR — 3D Scan | Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/lidar" />
+        <link rel="canonical" href="https://creativestudiokuki.com/gallery/3d/rastovac" />
         <meta
           name="description"
           content="Interactive 3D LiDAR scan of Rastovac — a childhood memory preserved in miniature. Explore the model in your browser."
