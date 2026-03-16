@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 
 export default function Hand() {
-  const nodes = useGLTF("assets/objects/hand2.glb");
+  const nodes = useGLTF("/assets/objects/hand2.glb");
 
   return (
     <primitive

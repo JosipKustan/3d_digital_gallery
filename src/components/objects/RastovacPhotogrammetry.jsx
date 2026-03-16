@@ -2,7 +2,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export default function RastovacPhotogrammetry() {
-  const model = useGLTF('assets/objects/Miniature - Old counts house and chicken coop.glb');
+  const model = useGLTF('/assets/objects/Miniature - Old counts house and chicken coop.glb');
   return (
     <primitive
       object={model.scene}

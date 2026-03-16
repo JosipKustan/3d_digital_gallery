@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import GalleryArt from "../components/GalleryArt";
-import { galleryWorks } from "../data/siteContent";
+import GalleryArt from "../../../components/GalleryArt";
+import { galleryWorks } from "../../../data/siteContent";
 
 const Bg3CrashScene = dynamic(
-  () => import("../scenes/Bg3CrashScene"),
+  () => import("../../../scenes/Bg3CrashScene"),
   {
     ssr: false,
     loading: () => (
@@ -13,12 +13,12 @@ const Bg3CrashScene = dynamic(
   }
 );
 
-export default function Bg3CrashPage() {
+export default function NautaloidCrashPage() {
   return (
     <>
       <Head>
-        <title>Nautaloid Crash — Baldur's Gate 3 | Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/bg3crash" />
+        <title>Nautaloid Crash — Baldur&apos;s Gate 3 | Creative Studio Kuki</title>
+        <link rel="canonical" href="https://creativestudiokuki.com/gallery/3d/nautaloid-crash" />
         <meta
           name="description"
           content="Interactive 3D miniature of the Nautaloid crash scene from Baldur's Gate 3. Explore the model in your browser."

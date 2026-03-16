@@ -2,12 +2,25 @@
 
 // ─── Gallery works (3D art pieces) ────────────────────────────────────────────
 
+export const GALLERY_CATEGORIES = [
+  { slug: "love-stories",         label: "Love Stories",          accent: "#27F7F0", group: "individual", description: "Proposals, weddings, anniversaries." },
+  { slug: "life-moments",         label: "Life Moments",          accent: "#27F7F0", group: "individual", description: "Births, milestones, defining days." },
+  { slug: "places",               label: "Places",                accent: "#27F7F0", group: "individual", description: "Homes, corners, views that stay." },
+  { slug: "achievements",         label: "Achievements",          accent: "#27F7F0", group: "individual", description: "Graduations, promotions, completions." },
+  { slug: "employee-gifts",       label: "Employee & Team Gifts", accent: "#FFB422", group: "business",   description: "Individual gifts that mean something." },
+  { slug: "anniversary-projects", label: "Anniversary Projects",  accent: "#FFB422", group: "business",   description: "Ten years. Twenty. A real milestone." },
+  { slug: "gaming-art",           label: "Gaming Art",            accent: "#C15EFD", group: "fan",        description: "Scenes from games that stayed." },
+  { slug: "movie-art",            label: "Movie & TV Art",        accent: "#C15EFD", group: "fan",        description: "A frame frozen in three dimensions." },
+];
+
 export const galleryWorks = [
   {
     id: 1,
+    category: "places",
+    slug: "rastovac",
     name: "Rastovac - A childhood memory",
     src: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-4-1337x1004.webp",
-    link: "/lidar",
+    link: "/gallery/3d/rastovac",
     description:
       "A 3D scan of an object using LiDAR technology. First parts of this house were built around 1910 by the wealthiest family in the village. In next 30 years it was built apon and finished and the chicken coop was rebuilt in 1940s. Last 15 solitary years of old lady Milka's life were spent here. She took care of her chickens, the house and the property. Every rain leak, fox brake in, fance repair was done by her. After her passing the old chicken coop was planned for demolition. Because this person and place was a big part of my childhood, I decided to take photos and exact messurments to replicate it as close as possible",
     shortDescription:
@@ -50,9 +63,11 @@ export const galleryWorks = [
   }, */
   {
     id: 5,
+    category: "gaming-art",
+    slug: "attack-on-baldurs-gate",
     name: "Attack on Baldur's Gate city-state",
     src: "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-6-2016x1512.webp",
-    link: "/attackonbaldursgate",
+    link: "/gallery/3d/attack-on-baldurs-gate",
     description:
       "Miniture sculpture of an Intro Cinematic sceen from Baldur's Gate 3 Where the Nautaloid is grabbing the tower and destroying it.",
     shortDescription:
@@ -75,9 +90,11 @@ export const galleryWorks = [
   },
   {
     id: 4,
+    category: "gaming-art",
+    slug: "nautaloid-crash",
     name: "Nautaloid Crash - Starting area",
     src: "/assets/images/works/Crash/Webp/big/BG_Crash-1-1836x1033.webp",
-    link: "/bg3crash",
+    link: "/gallery/3d/nautaloid-crash",
     description:
       "Miniture sculpture of a Nautaloid Crash from The Game of the Year awarded Baldur's gate 3",
     shortDescription:

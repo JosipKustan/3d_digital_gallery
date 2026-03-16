@@ -2,7 +2,7 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function RastovacLiDAR() {
-  const model = useGLTF("assets/objects/polycam_LiDAR_house.glb");
+  const model = useGLTF("/assets/objects/polycam_LiDAR_house.glb");
   return (
     <primitive
       object={model.scene}
