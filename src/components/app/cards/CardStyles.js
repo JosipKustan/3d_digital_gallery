@@ -225,17 +225,17 @@ export const ServiceCardLink = styled(Link)`
   flex-direction: column;
   text-decoration: none;
   color: ${theme.colors.white};
-  border-radius: 8px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid ${({ $accent }) => $accent};
   transition:
     border-color 0.25s ease,
     transform 0.25s ease;
 
   &:hover {
     border-color: ${({ $accent }) => $accent};
-    transform: translateY(-3px);
+    transform: scale(1.03);
+    box-shadow: 6px 8px 0 0 ${({ $accent }) => $accent};
   }
 
   &:hover img {

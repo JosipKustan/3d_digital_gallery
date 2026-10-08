@@ -1,15 +1,13 @@
 /* eslint-disable quotes */
 import Head from "next/head";
 import Link from "next/link";
-import styled from "styled-components";
+import { motion } from "framer-motion";
+import styled, { keyframes } from "styled-components";
 import Footer from "../../../components/shared/Footer";
-import ImageGalleryRow from "../../../components/shared/ImageGalleryRow";
+import PhotoswipeScroller from "../../../components/shared/PhotoswipeScroller";
 import {
-  CategorySection,
-  GallerySection,
   H1Header,
   H4Header,
-  HeaderWrapper,
   MainContentContainer,
   SubHeader,
 } from "../../../components/shared/StaticStyles";
@@ -25,29 +23,116 @@ const GROUP_BG = {
   fan:        theme.colors.purple_dark,
 };
 
-// ─── Breadcrumb ───────────────────────────────────────────────────────────────
+// ─── Hero section ─────────────────────────────────────────────────────────────
 
-const Breadcrumb = styled.nav`
+const kenBurns = keyframes`
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
+`;
+
+const HeroSection = styled.section`
+  position: relative;
+  width: 100vw;
+  min-height: 65vh;
+  box-sizing: border-box;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  @media (min-width: 1080px) {
+    min-height: 72vh;
+  }
+`;
+
+const HeroBg = styled.div`
+  position: absolute;
+  inset: 0;
+  background-image: url(${({ $src }) => $src});
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  animation: ${kenBurns} 22s ease-in-out infinite alternate;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+`;
+
+const HeroOverlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.72) 75%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 2;
+  padding: 80px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 1080px) {
+    padding: 120px 128px 64px;
+  }
+`;
+
+// ─── Navigation: mobile back / desktop breadcrumb ─────────────────────────────
+
+const MobileBack = styled(Link)`
+  display: inline-flex;
   align-items: center;
   gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Kanit", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.2em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  transition: color 0.15s, gap 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+    gap: 14px;
+  }
+
+  @media (min-width: 1080px) {
+    display: none;
+  }
+`;
+
+const DesktopBreadcrumb = styled.nav`
+  display: none;
+
+  @media (min-width: 1080px) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Kanit", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+  }
 `;
 
 const BreadcrumbLink = styled(Link)`
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   transition: color 0.15s;
-  &:hover { color: ${theme.colors.black}; }
+  &:hover { color: rgba(255, 255, 255, 1); }
 `;
 
 const BreadcrumbSep = styled.span`
-  color: rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.35);
 `;
 
 // ─── Detail layout ────────────────────────────────────────────────────────────
@@ -77,6 +162,7 @@ const HeroImage = styled.img`
   object-fit: cover;
   display: block;
   flex-shrink: 0;
+  box-shadow: 16px 20px 0 0 ${({ $accent }) => $accent};
 
   @media (min-width: 1080px) {
     width: 50%;
@@ -125,14 +211,14 @@ const ArtistName = styled.span`
 const ArtistSub = styled.span`
   font-family: "Inter", sans-serif;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.65);
 `;
 
 const DescriptionText = styled.p`
   margin: 0;
   font-size: ${theme.typography.size.lead};
   line-height: ${theme.typography.leading.relaxed};
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.92);
 `;
 
 const MakingLabel = styled.span`
@@ -150,7 +236,12 @@ const MakingText = styled.p`
   margin: 0;
   font-size: ${theme.typography.size.body};
   line-height: ${theme.typography.leading.relaxed};
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.82);
+`;
+
+const borderPulse = keyframes`
+  0%, 100% { border-color: transparent; }
+  50%       { border-color: ${() => "currentColor"}; }
 `;
 
 const ThreeDBlock = styled.div`
@@ -160,12 +251,22 @@ const ThreeDBlock = styled.div`
   padding: 20px;
   border: 1px solid ${({ $color }) => $color}44;
   background: ${({ $color }) => $color}10;
+  animation: borderPulse 3.5s ease-in-out infinite;
+
+  @keyframes borderPulse {
+    0%, 100% { border-color: ${({ $color }) => $color}33; }
+    50%       { border-color: ${({ $color }) => $color}99; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 const ThreeDHint = styled.p`
   margin: 0;
   font-size: ${theme.typography.size.caption};
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.68);
   line-height: ${theme.typography.leading.snug};
 `;
 
@@ -207,6 +308,17 @@ const GallerySectionWrap = styled.section`
   gap: 8px;
 `;
 
+const GalleryMetaRow = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-inline: 24px;
+
+  @media (min-width: 1080px) {
+    padding-inline: 128px;
+  }
+`;
+
 const GalleryLabel = styled.span`
   font-family: "Kanit", sans-serif;
   font-size: 11px;
@@ -214,12 +326,17 @@ const GalleryLabel = styled.span`
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.3);
-  padding-inline: 24px;
-
-  @media (min-width: 1080px) {
-    padding-inline: 128px;
-  }
 `;
+
+const ScrollHint = styled.span`
+  font-family: "Kanit", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+`;
+
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -232,32 +349,44 @@ function ProjectPage({ work, cat }) {
       <Head>
         <title>{work.name} — {cat.label} | Creative Studio Kuki</title>
         <link rel="canonical" href={`https://creativestudiokuki.com/gallery/${cat.slug}/${work.slug}`} />
-        <meta
-          name="description"
-          content={work.shortDescription}
-        />
+        <meta name="description" content={work.shortDescription} />
         <meta property="og:title" content={`${work.name} | Creative Studio Kuki`} />
         <meta property="og:description" content={work.shortDescription} />
         <meta property="og:image" content={work.src} />
       </Head>
 
-      {/* ── BREADCRUMB + TITLE ── */}
-      <GallerySection color={theme.colors.black}>
-        <HeaderWrapper>
-          <Breadcrumb>
+      {/* ── HERO: full-bleed image ── */}
+      <HeroSection>
+        <HeroBg $src={work.src} />
+        <HeroOverlay />
+        <HeroContent>
+          {/* Mobile: single back link */}
+          <MobileBack href={`/gallery/${cat.slug}`}>← {cat.label}</MobileBack>
+
+          {/* Desktop: full breadcrumb */}
+          <DesktopBreadcrumb>
             <BreadcrumbLink href="/gallery">Gallery</BreadcrumbLink>
             <BreadcrumbSep>/</BreadcrumbSep>
             <BreadcrumbLink href={`/gallery/${cat.slug}`}>{cat.label}</BreadcrumbLink>
             <BreadcrumbSep>/</BreadcrumbSep>
-            <span style={{ color: "rgba(0,0,0,0.65)" }}>{work.name}</span>
-          </Breadcrumb>
-          <H1Header style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}>{work.name}</H1Header>
-        </HeaderWrapper>
-      </GallerySection>
+            <span style={{ color: "rgba(255,255,255,0.95)" }}>{work.name}</span>
+          </DesktopBreadcrumb>
 
-      {/* ── HERO IMAGE + DESCRIPTION ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: [0.25, 1, 0.5, 1] }}
+          >
+            <H1Header style={{ color: "white", fontSize: "clamp(2rem, 5vw, 4rem)", margin: 0 }}>
+              {work.name}
+            </H1Header>
+          </motion.div>
+        </HeroContent>
+      </HeroSection>
+
+      {/* ── DETAIL: image + description ── */}
       <DetailSection $bg={bg}>
-        <HeroImage src={work.galleryImages[0]} alt={work.name} />
+        <HeroImage src={work.galleryImages[0]} alt={work.name} $accent={accent} />
 
         <DescriptionColumn>
           <ArtistRow>
@@ -293,8 +422,14 @@ function ProjectPage({ work, cat }) {
 
       {/* ── FULL IMAGE GALLERY ── */}
       <GallerySectionWrap>
-        <GalleryLabel>All photos — {work.galleryImages.length} images</GalleryLabel>
-        <ImageGalleryRow work={work} />
+        <GalleryMetaRow>
+          <GalleryLabel>All photos — {work.galleryImages.length} images</GalleryLabel>
+          <ScrollHint>scroll →</ScrollHint>
+        </GalleryMetaRow>
+        <PhotoswipeScroller
+          images={work.galleryImages}
+          fadeColor={theme.colors.background_dark}
+        />
       </GallerySectionWrap>
 
       {/* ── CTA ── */}

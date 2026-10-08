@@ -6,28 +6,27 @@ const variants = {
     border-color: rgba(193, 94, 253, 0.55);
     color: ${theme.colors.purple_accent};
     &:hover {
-      background: rgba(193, 94, 253, 0.12);
+      background: ${theme.colors.purple_accent};
       border-color: ${theme.colors.purple_accent};
-      box-shadow: 0 0 28px rgba(193, 94, 253, 0.2);
+      color: ${theme.colors.white};
     }
   `,
   dark: css`
     border-color: rgba(0, 0, 0, 0.55);
     color: ${theme.colors.black};
     &:hover {
-      background: rgba(193, 94, 253, 0.12);
-      border-color: ${theme.colors.purple_dark};
-      box-shadow: 0 0 28px rgba(193, 94, 253, 0.2);
-      color: ${theme.colors.purple_dark};
+      background: ${theme.colors.black};
+      border-color: ${theme.colors.black};
+      color: ${theme.colors.white};
     }
   `,
   light: css`
     border-color: rgba(255, 255, 255, 0.55);
     color: ${theme.colors.white};
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: ${theme.colors.white};
       border-color: ${theme.colors.white};
-      box-shadow: 0 0 28px rgba(255, 255, 255, 0.15);
+      color: ${theme.colors.black};
     }
   `,
 };
@@ -53,7 +52,7 @@ export const Button = styled.button`
   transition:
     background 0.2s ease,
     border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    color 0.15s ease;
 
   ${(props) => variants[props.variant] ?? variants.primary}
 

@@ -1,12 +1,12 @@
 import Head from "next/head";
 import {
+  BodyLead,
   H2Header,
   H4Header,
   HeaderWrapper,
   MainContentContainer,
   Section,
   StepWrapper,
-  SubHeader,
   TextListWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
@@ -30,10 +30,10 @@ export default function PriceFactors() {
       >
         <HeaderWrapper>
           <H2Header>Price Factors</H2Header>
-          <SubHeader>
+          <BodyLead>
             A closer look at the elements that impact pricing for your custom
             art projects.
-          </SubHeader>
+          </BodyLead>
         </HeaderWrapper>
         <TextListWrapper>
           <StepWrapper>

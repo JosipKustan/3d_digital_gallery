@@ -3,14 +3,62 @@
 // ─── Gallery works (3D art pieces) ────────────────────────────────────────────
 
 export const GALLERY_CATEGORIES = [
-  { slug: "love-stories",         label: "Love Stories",          accent: "#27F7F0", group: "individual", description: "Proposals, weddings, anniversaries." },
-  { slug: "life-moments",         label: "Life Moments",          accent: "#27F7F0", group: "individual", description: "Births, milestones, defining days." },
-  { slug: "places",               label: "Places",                accent: "#27F7F0", group: "individual", description: "Homes, corners, views that stay." },
-  { slug: "achievements",         label: "Achievements",          accent: "#27F7F0", group: "individual", description: "Graduations, promotions, completions." },
-  { slug: "employee-gifts",       label: "Employee & Team Gifts", accent: "#FFB422", group: "business",   description: "Individual gifts that mean something." },
-  { slug: "anniversary-projects", label: "Anniversary Projects",  accent: "#FFB422", group: "business",   description: "Ten years. Twenty. A real milestone." },
-  { slug: "gaming-art",           label: "Gaming Art",            accent: "#C15EFD", group: "fan",        description: "Scenes from games that stayed." },
-  { slug: "movie-art",            label: "Movie & TV Art",        accent: "#C15EFD", group: "fan",        description: "A frame frozen in three dimensions." },
+  {
+    slug: "love-stories",
+    label: "Love Stories",
+    accent: "#27F7F0",
+    group: "individual",
+    description: "Proposals, weddings, anniversaries.",
+  },
+  {
+    slug: "life-moments",
+    label: "Life Moments",
+    accent: "#27F7F0",
+    group: "individual",
+    description: "Births, milestones, defining days.",
+  },
+  {
+    slug: "places",
+    label: "Places",
+    accent: "#27F7F0",
+    group: "individual",
+    description: "Homes, corners, views that stay.",
+  },
+  {
+    slug: "achievements",
+    label: "Achievements",
+    accent: "#27F7F0",
+    group: "individual",
+    description: "Graduations, promotions, completions.",
+  },
+  {
+    slug: "employee-gifts",
+    label: "Employee & Team Gifts",
+    accent: "#FFB422",
+    group: "business",
+    description: "Individual gifts that mean something.",
+  },
+  {
+    slug: "anniversary-projects",
+    label: "Anniversary Projects",
+    accent: "#FFB422",
+    group: "business",
+    description: "Ten years. Twenty. A real milestone.",
+  },
+  {
+    slug: "gaming-art",
+    label: "Gaming Art",
+    accent: "#C15EFD",
+    group: "fan",
+    description: "Scenes from games that stayed.",
+  },
+  {
+    slug: "movie-art",
+    label: "Movie & TV Art",
+    accent: "#C15EFD",
+    group: "fan",
+    description: "A frame frozen in three dimensions.",
+  },
 ];
 
 export const galleryWorks = [
@@ -19,7 +67,7 @@ export const galleryWorks = [
     category: "places",
     slug: "rastovac",
     name: "Rastovac - A childhood memory",
-    src: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-4-1337x1004.webp",
+    src: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-7-2259x1696.webp",
     link: "/gallery/3d/rastovac",
     description:
       "A 3D scan of an object using LiDAR technology. First parts of this house were built around 1910 by the wealthiest family in the village. In next 30 years it was built apon and finished and the chicken coop was rebuilt in 1940s. Last 15 solitary years of old lady Milka's life were spent here. She took care of her chickens, the house and the property. Every rain leak, fox brake in, fance repair was done by her. After her passing the old chicken coop was planned for demolition. Because this person and place was a big part of my childhood, I decided to take photos and exact messurments to replicate it as close as possible",
@@ -256,8 +304,8 @@ export const FAQ_ITEMS = [
 // ─── Services sticky nav config ────────────────────────────────────────────────
 
 export const SERVICES_NAV = [
-  { id: "individual", label: "For People",   accent: "#27F7F0" },
-  { id: "business",   label: "For Companies", accent: "#FFB422" },
-  { id: "fan-art",    label: "For Fans",      accent: "#C15EFD" },
-  { id: "faq",        label: "FAQ",           accent: "#ffffff" },
+  { id: "individual", label: "For People", accent: "#27F7F0" },
+  { id: "business", label: "For Companies", accent: "#FFB422" },
+  { id: "fan-art", label: "For Fans", accent: "#C15EFD" },
+  { id: "faq", label: "FAQ", accent: "#ffffff" },
 ];

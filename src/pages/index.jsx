@@ -10,6 +10,7 @@ import {
   ArtisanPhoto,
   ArtisanPhotoCol,
   ArtisanPhotoInner,
+  BodyLead,
   ButtonZone,
   DesktopOnly,
   Fake3DModel,
@@ -137,7 +138,95 @@ function Home() {
           ]}
         />
       </Section>
+      {/*Biznis sekciono*/}
+      <Section
+        background={theme.colors.background_dark}
+        color={theme.colors.white}
+      >
+        <HeaderWrapper>
+          <H2Header>What we do for you?</H2Header>
+          <BodyLead>
+            Personalised Miniature Art, Unique Gifts, Awards, and Fun Game
+            Events.
+          </BodyLead>
+        </HeaderWrapper>
+        <CardsWrapper>
+          <CatCard
+            href="/services#individual"
+            svg={<IndividualCatSVG />}
+            header="For Individuals"
+            description="Personalised Miniature Art for one or many."
+            color={theme.colors.tiel_dark}
+          />
+          <CatCard
+            href="/services#business"
+            svg={<BusinessCatSVG />}
+            header="For Businesses"
+            description="Gifts, Memorabilia, Awards and Game Events."
+            color={theme.colors.blue_dark}
+          />
+        </CardsWrapper>
+      </Section>
 
+      {/*How we work sekcion*/}
+      <Section background={theme.colors.yellow_accent}>
+        <HeaderWrapper>
+          <H2Header>How we work?</H2Header>
+          <BodyLead>
+            Depending on projects demands and possibilities we have different
+            operational workflows.
+          </BodyLead>
+          <DesktopOnly>
+            <Button variant="dark" as={Link} href="/contact">
+              Start a commission →
+            </Button>
+          </DesktopOnly>
+        </HeaderWrapper>
+        <TextListWrapper>
+          <StepWrapper>
+            <H4Header>1. We talk about the memories</H4Header>
+            <p>
+              You don't need to have ideas on what the art will be, but you sure
+              have a memory, person, pet, place, or really anything that might
+              make you emotional. That is for me the best reason to create small
+              art.
+            </p>
+          </StepWrapper>
+          <StepWrapper>
+            <H4Header>2. You choose the idea</H4Header>
+            <p>
+              Don't worry, we are here to help you decide. We talk about
+              possible ideas and options to fit in your budget.
+            </p>
+          </StepWrapper>
+          <StepWrapper>
+            <H4Header>3. We shake hands</H4Header>
+            <p>
+              Paper work and delivery agreements, we can not go without them,
+              for both of our sake.
+            </p>
+          </StepWrapper>
+          <StepWrapper>
+            <H4Header>4. Magic of making </H4Header>
+            <p>
+              We don't leave you in the dark. Except if you want it that way. We
+              start making and we give updated on the progress when necessary.
+            </p>
+          </StepWrapper>
+          <StepWrapper>
+            <H4Header>5. Delivery </H4Header>
+            <p>
+              We carefully package and protect the item so it is delivered
+              safely, small things are really fragile.
+            </p>
+          </StepWrapper>
+          <MobileOnly>
+            <Button variant="dark" as={Link} href="/contact">
+              Start a commission →
+            </Button>
+          </MobileOnly>
+        </TextListWrapper>
+      </Section>
       {/*About sekcion*/}
       <Section
         background={theme.colors.background_dark}
@@ -145,15 +234,15 @@ function Home() {
       >
         <HeaderWrapper>
           <H2Header>The artisan </H2Header>
-          <SubHeader>
+          <BodyLead>
             An engineer with too many hobbies and too little time for them all.
             Woodworking, sculpting, painting, cooking... somewhere in between,{" "}
             <strong>Creative Studio Kuki was born</strong>.
-          </SubHeader>
-          <SubHeader>
+          </BodyLead>
+          <BodyLead>
             A place to turn memories into something you can hold, gift, and keep
             forever.
-          </SubHeader>
+          </BodyLead>
           <ButtonZone>
             <MiniZukiLeziSVG
               style={{
@@ -213,94 +302,6 @@ function Home() {
             </ArtisanPhoto>
           </ArtisanPhotoCol>
         </ArtisanGalleryWrap>
-      </Section>
-
-      {/*Biznis sekciono*/}
-      <Section
-        background={theme.colors.background_dark}
-        color={theme.colors.white}
-      >
-        <HeaderWrapper>
-          <H2Header>What we do for you?</H2Header>
-          <SubHeader>
-            Personalised Miniature Art, Unique Gifts, Awards, and Fun Game
-            Events.
-          </SubHeader>
-        </HeaderWrapper>
-        <CardsWrapper>
-          <CatCard
-            svg={<IndividualCatSVG />}
-            header="For Individuals"
-            description="Personalised Miniature Art for one or many."
-            color={theme.colors.tiel_dark}
-          />
-          <CatCard
-            svg={<BusinessCatSVG />}
-            header="For Businesses"
-            description="Gifts, Memorabilia, Awards and Game Events."
-            color={theme.colors.blue_dark}
-          />
-        </CardsWrapper>
-      </Section>
-
-      {/*How we work sekcion*/}
-      <Section background={theme.colors.yellow_accent}>
-        <HeaderWrapper>
-          <H2Header>How we work?</H2Header>
-          <SubHeader>
-            Depending on projects demands and possibilities we have different
-            operational workflows.
-          </SubHeader>
-          <DesktopOnly>
-            <Button variant="dark" as={Link} href="/contact">
-              Start a commission →
-            </Button>
-          </DesktopOnly>
-        </HeaderWrapper>
-        <TextListWrapper>
-          <StepWrapper>
-            <H4Header>1. We talk about the memories</H4Header>
-            <p>
-              You don't need to have ideas on what the art will be, but you sure
-              have a memory, person, pet, place, or really anything that might
-              make you emotional. That is for me the best reason to create small
-              art.
-            </p>
-          </StepWrapper>
-          <StepWrapper>
-            <H4Header>2. You choose the idea</H4Header>
-            <p>
-              Don't worry, we are here to help you decide. We talk about
-              possible ideas and options to fit in your budget.
-            </p>
-          </StepWrapper>
-          <StepWrapper>
-            <H4Header>3. We shake hands</H4Header>
-            <p>
-              Paper work and delivery agreements, we can not go without them,
-              for both of our sake.
-            </p>
-          </StepWrapper>
-          <StepWrapper>
-            <H4Header>4. Magic of making </H4Header>
-            <p>
-              We don't leave you in the dark. Except if you want it that way. We
-              start making and we give updated on the progress when necessary.
-            </p>
-          </StepWrapper>
-          <StepWrapper>
-            <H4Header>5. Delivery </H4Header>
-            <p>
-              We carefully package and protect the item so it is delivered
-              safely, small things are really fragile.
-            </p>
-          </StepWrapper>
-          <MobileOnly>
-            <Button variant="dark" as={Link} href="/contact">
-              Start a commission →
-            </Button>
-          </MobileOnly>
-        </TextListWrapper>
       </Section>
 
       <Footer />

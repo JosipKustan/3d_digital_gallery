@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
+  BodyLead,
   ButtonZone,
   ContactWrapper,
   Fake3DModel,
@@ -97,12 +98,12 @@ function Portfolio() {
             What comes <br />
             with me?
           </H2Header>
-          <SubHeader>
+          <BodyLead>
             4+ years of agency and freelance experience across complex
             enterprise apps, niche B2B solutions, and small business sites.
             Ready for product teams, but open to interesting challenges
             anywhere.
-          </SubHeader>
+          </BodyLead>
         </HeaderWrapper>
         {!isMobileView && (
           <>
