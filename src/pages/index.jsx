@@ -75,7 +75,7 @@ function Home() {
             <H1Highlight>Tiny art, </H1Highlight>big memories
           </HeroHeader>
           <H1Small>
-            Personalised Miniature Art &amp; Handcrafted Gifts — crafting for
+            Personalised Miniature Art &amp; Handcrafted Gifts, made for
             individuals and businesses.
           </H1Small>
           <Link href="/gallery">
@@ -120,8 +120,8 @@ function Home() {
         <GalleryTeaser
           featured={[
             { id: 1, category: "Places" },
-            { id: 5, category: "Fan Art — Gaming" },
-            { id: 4, category: "Fan Art — Gaming" },
+            { id: 5, category: "Gaming Fan Art" },
+            { id: 4, category: "Gaming Fan Art" },
           ]}
         />
       </Section>
@@ -223,7 +223,7 @@ function Home() {
           <H2Header>The artisan </H2Header>
           <BodyLead>
             An engineer with too many hobbies and too little time for them all.
-            Woodworking, sculpting, painting, cooking... somewhere in between,{" "}
+            Cooking, woodworking, sculpting, painting... somewhere in between,{" "}
             <strong>Creative Studio Kuki was born</strong>.
           </BodyLead>
           <BodyLead>
@@ -245,7 +245,7 @@ function Home() {
         </HeaderWrapper>
 
         <ArtisanGalleryWrap>
-          {/* Tall left column — wedding keepsake */}
+          {/* Tall left column: wedding keepsake */}
           <ArtisanPhotoCol>
             <ArtisanPhoto style={{ transform: "rotate(-2.5deg)" }}>
               <ArtisanPhotoInner style={{ aspectRatio: "23/36" }}>
@@ -261,7 +261,7 @@ function Home() {
             </ArtisanPhoto>
           </ArtisanPhotoCol>
 
-          {/* Right column — two smaller pieces */}
+          {/* Right column: two smaller pieces */}
           <ArtisanPhotoCol>
             <ArtisanPhoto style={{ transform: "rotate(1.8deg)" }}>
               <ArtisanPhotoInner style={{ aspectRatio: "1/1" }}>
@@ -270,7 +270,7 @@ function Home() {
                   fill
                   sizes="(min-width: 1080px) 20vw, 40vw"
                   style={{ objectFit: "cover" }}
-                  alt="Team meeting - all cats on a window"
+                  alt="Team meeting, all cats on a window"
                 />
               </ArtisanPhotoInner>
               <PolaroidTitle>Team meeting</PolaroidTitle>

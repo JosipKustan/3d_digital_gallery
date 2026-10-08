@@ -18,7 +18,7 @@ export default function AttackOnBaldursGatePage() {
   return (
     <>
       <SEO
-        title="Attack on Baldur's Gate — 3D Miniature | Creative Studio Kuki"
+        title="Attack on Baldur's Gate 3D Miniature | Creative Studio Kuki"
         description="Interactive 3D miniature of the Attack on Baldur's Gate scene. Explore the handcrafted model in your browser."
         path="/gallery/3d/attack-on-baldurs-gate"
         image={work.src}

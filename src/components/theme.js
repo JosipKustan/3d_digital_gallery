@@ -25,16 +25,16 @@ const theme = {
   },
   typography: {
     size: {
-      // UI elements — fixed px, intentionally ignore user font-size prefs
+      // UI elements: fixed px, intentionally ignore user font-size prefs
       tag:        "10px",
       label:      "11px",
       micro:      "12px",
       ui:         "13px",
       caption:    "14px",
-      // Body — rem, scales with user browser font-size preference
+      // Body: rem, scales with user browser font-size preference
       body:       "1rem",
       lead:       "1.125rem",
-      // Headings — clamp(rem, vw + rem, rem)
+      // Headings: clamp(rem, vw + rem, rem)
       // Fluid between viewports AND respects user font-size preference
       subheading: "clamp(1.25rem, 1.8vw + 0.5rem, 1.75rem)",
       heading:    "clamp(1.75rem, 3.5vw + 0.75rem, 3rem)",

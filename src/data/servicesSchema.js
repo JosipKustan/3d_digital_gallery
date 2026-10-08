@@ -1,7 +1,7 @@
 export const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Creative Studio Kuki – Miniature Commission Services",
+  name: "Creative Studio Kuki Miniature Commission Services",
   description:
     "Handmade personalised miniature commissions. Categories: individual commissions (love stories, life moments, places, achievements), business commissions (employee gifts, anniversary projects), and fan art (gaming, movie and TV).",
   url: "https://creativestudiokuki.com/services",

@@ -352,7 +352,7 @@ function ProjectPage({ work, cat }) {
     <MainContentContainer>
       {/* title must be one string: mixed JSX parts like {a} | {b} render an empty <title> */}
       <SEO
-        title={`${work.name} — ${cat.label} | Creative Studio Kuki`}
+        title={`${work.name} | ${cat.label} | Creative Studio Kuki`}
         ogTitle={`${work.name} | Creative Studio Kuki`}
         description={work.shortDescription}
         path={projectPath}
@@ -456,7 +456,7 @@ function ProjectPage({ work, cat }) {
                 Interactive 3D model available
               </H4Header>
               <ThreeDHint>
-                Explore this piece in real-time 3D — rotate, zoom, and inspect every detail.
+                Rotate, zoom and inspect every detail of this piece in real-time 3D.
               </ThreeDHint>
               <Button variant="light" as={Link} href={work.link}>
                 View in 3D ✦
@@ -469,7 +469,7 @@ function ProjectPage({ work, cat }) {
       {/* ── FULL IMAGE GALLERY ── */}
       <GallerySectionWrap>
         <GalleryMetaRow>
-          <GalleryLabel>All photos — {work.galleryImages.length} images</GalleryLabel>
+          <GalleryLabel>All {work.galleryImages.length} photos</GalleryLabel>
           <ScrollHint>scroll →</ScrollHint>
         </GalleryMetaRow>
         <PhotoswipeScroller

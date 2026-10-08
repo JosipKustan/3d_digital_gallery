@@ -18,8 +18,8 @@ export default function RastovacLidarPage() {
   return (
     <>
       <SEO
-        title="Rastovac LiDAR — 3D Scan | Creative Studio Kuki"
-        description="Interactive 3D LiDAR scan of Rastovac — a childhood memory preserved in miniature. Explore the model in your browser."
+        title="Rastovac LiDAR 3D Scan | Creative Studio Kuki"
+        description="Interactive 3D LiDAR scan of Rastovac, a childhood memory preserved in miniature. Explore the model in your browser."
         path="/gallery/3d/rastovac"
         image={work.src}
       />

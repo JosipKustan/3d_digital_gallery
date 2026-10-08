@@ -221,7 +221,7 @@ export default function NotFound() {
   return (
     <>
       <Head>
-        <title>404 — Page Not Found</title>
+        <title>404 | Page Not Found</title>
         <meta name="robots" content="noindex" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

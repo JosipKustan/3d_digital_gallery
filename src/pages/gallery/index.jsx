@@ -127,9 +127,9 @@ function GalleryPage() {
   return (
     <MainContentContainer>
       <SEO
-        title="Gallery — Miniature Art Portfolio | Creative Studio Kuki"
-        description="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces organised by category: love stories, places, gaming art, and more."
-        ogDescription="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalised gifts, and unique creations by Josip Kuki."
+        title="Gallery | Miniature Art Portfolio | Creative Studio Kuki"
+        description="Browse handcrafted miniature art by Creative Studio Kuki, organised by category: love stories, places, gaming art, and more."
+        ogDescription="Handcrafted miniature art and personalised gifts by Josip 'Kuki' Kuštan."
         path="/gallery"
       />
 
@@ -198,7 +198,7 @@ function GalleryPage() {
           <ThreeDSection id="interactive-3d">
             <SectionTopRow>
               <SectionTitleGroup>
-                <CategoryLabel $accent={ThreeDAccent}>Explore in your browser — rotate, zoom, interact</CategoryLabel>
+                <CategoryLabel $accent={ThreeDAccent}>Rotate, zoom and explore in your browser</CategoryLabel>
                 <H5Header>Interactive 3D</H5Header>
               </SectionTitleGroup>
             </SectionTopRow>
