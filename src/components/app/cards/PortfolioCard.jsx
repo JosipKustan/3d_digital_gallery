@@ -39,7 +39,7 @@ export function PortfolioCard({
       <CardBottomWrapper>
         <CircleWrapper color={colorAccent}>
           {img ? (
-            <CardImage src={img} alt={`${header} art`} />
+            <CardImage src={img} alt={`${header} art`} sizes="148px" />
           ) : (
             <SVGWrapper>{svg}</SVGWrapper>
           )}

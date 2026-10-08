@@ -121,7 +121,7 @@ function Portfolio() {
         <SkillCardsWrapper>
           <PortfolioCard
             svg={<IndividualCatSVG />}
-            img="/assets/images/Logos/cpsHand.png"
+            img="/assets/images/Logos/webp/big/cpsHand-1308x1308.webp"
             header="Fundraising website for charities"
             description="3x donation revenue through intuitive UX flows."
             responsibilities="UX research, workshops, user flows, design, prototypes, and user testing."

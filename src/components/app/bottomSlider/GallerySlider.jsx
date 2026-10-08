@@ -26,7 +26,7 @@ function ThumbnailItem({ path, index, total, name }) {
           className="image-item"
           src={path}
           alt={label}
-          loading="lazy"
+          sizes="(min-width: 768px) 768px, 100vw"
         />
       )}
     </Item>

@@ -1,7 +1,7 @@
 import { useState, forwardRef } from "react";
 import styled, { keyframes } from "styled-components";
 import theme from "../theme";
-import { getSmallImagePath } from "./hooks/useImageDimensions";
+import WorkImage from "./WorkImage";
 
 const shimmer = keyframes`
   0%   { background-position: 200% 0; }
@@ -33,20 +33,7 @@ const Skeleton = styled.div`
   pointer-events: none;
 `;
 
-const PlaceholderImg = styled.img`
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(12px);
-  transform: scale(1.08);
-  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-`;
-
-const FullImg = styled.img`
+const FullImg = styled(WorkImage)`
   position: absolute;
   inset: 0;
   width: 100%;
@@ -57,32 +44,22 @@ const FullImg = styled.img`
   cursor: pointer;
 `;
 
+// Shimmer until the image arrives. The image itself is a ~360px WebP from
+// next/image, small enough that a separate blur-up copy is not needed.
 const ProgressiveImg = forwardRef(function ProgressiveImg(
   { src, alt, onClick, className },
   ref
 ) {
-  const [placeholderLoaded, setPlaceholderLoaded] = useState(false);
   const [fullLoaded, setFullLoaded] = useState(false);
-  const smallSrc = getSmallImagePath(src);
 
   return (
     <Wrapper>
       <Skeleton $hidden={fullLoaded} />
-      {/* Decorative blur-up copy: empty alt keeps it out of image search and screen readers */}
-      <PlaceholderImg
-        src={smallSrc}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        onLoad={() => setPlaceholderLoaded(true)}
-        $visible={placeholderLoaded && !fullLoaded}
-      />
       <FullImg
         ref={ref}
         src={src}
         alt={alt}
-        loading="lazy"
-        decoding="async"
+        sizes="360px"
         onClick={onClick}
         className={className}
         onLoad={() => setFullLoaded(true)}

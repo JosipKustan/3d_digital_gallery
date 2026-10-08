@@ -250,7 +250,7 @@ function Home() {
             <ArtisanPhoto style={{ transform: "rotate(-2.5deg)" }}>
               <ArtisanPhotoInner style={{ aspectRatio: "23/36" }}>
                 <Image
-                  src="/assets/images/Portrets/MeInAPainting.JPG"
+                  src="/assets/images/Portrets/webp/big/MeInAPainting-1920x2560.webp"
                   fill
                   sizes="(min-width: 1080px) 25vw, 45vw"
                   style={{ objectFit: "cover" }}
@@ -266,7 +266,7 @@ function Home() {
             <ArtisanPhoto style={{ transform: "rotate(1.8deg)" }}>
               <ArtisanPhotoInner style={{ aspectRatio: "1/1" }}>
                 <Image
-                  src="/assets/images/Portrets/WholeTeamMeeting.JPG"
+                  src="/assets/images/Portrets/webp/big/WholeTeamMeeting-1920x2560.webp"
                   fill
                   sizes="(min-width: 1080px) 20vw, 40vw"
                   style={{ objectFit: "cover" }}
@@ -278,7 +278,7 @@ function Home() {
             <ArtisanPhoto style={{ transform: "rotate(-1.2deg)" }}>
               <ArtisanPhotoInner style={{ aspectRatio: "8/7" }}>
                 <Image
-                  src="/assets/images/Portrets/ZukiSundown.JPG"
+                  src="/assets/images/Portrets/webp/big/ZukiSundown-2006x2560.webp"
                   fill
                   sizes="(min-width: 1080px) 20vw, 40vw"
                   style={{ objectFit: "cover" }}

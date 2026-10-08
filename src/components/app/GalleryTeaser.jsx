@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 import { galleryWorks } from "../../data/siteContent";
 import { Button } from "../shared/Button";
+import WorkImage from "../shared/WorkImage";
 import { MiniZukiInAHat } from "./SVG/MiniZukiInAHat";
 import theme from "../theme";
 
@@ -113,7 +114,7 @@ const ImageWrapper = styled.div`
   overflow: hidden;
 `;
 
-const CardImage = styled.img`
+const CardImage = styled(WorkImage)`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -186,7 +187,11 @@ export function GalleryTeaser({ featured }) {
             <Card $color={getCategoryColor(work.category)}>
               <CardNumber>0{i + 1}</CardNumber>
               <ImageWrapper>
-                <CardImage src={work.src} alt={work.name} loading="lazy" />
+                <CardImage
+                  src={work.src}
+                  alt={work.name}
+                  sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+                />
               </ImageWrapper>
               <CardBody>
                 <CardCategory $color={getCategoryColor(work.category)}>
