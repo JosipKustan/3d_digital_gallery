@@ -48,8 +48,7 @@ export function PortfolioCard({
           {links &&
             links.map(([link, name], index) => (
               <Button
-                color={color}
-                colorAccent={colorAccent}
+                variant="solid"
                 key={index}
                 onClick={() => openLink(link)}
               >
