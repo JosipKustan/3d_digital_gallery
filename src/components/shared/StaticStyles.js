@@ -118,29 +118,6 @@ export const BeachIllustrationWrapper = styled.div`
   }
 `;
 
-export const FloatCardSection = styled.section`
-  position: relative;
-  width: 100vw;
-  box-sizing: border-box;
-  padding: 64px 24px;
-  background-color: ${(props) => props.background || theme.colors.white};
-  color: ${(props) => props.color || theme.colors.black};
-
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  padding: 0px 128px;
-  height: 0vh;
-  @media (max-width: 1080px) {
-    padding-inline: 24px;
-    padding-bottom: 64px;
-    align-items: center;
-    justify-content: end;
-    height: fit-content;
-  }
-`;
-
 export const Section3D = styled.section`
   position: relative;
   width: 100vw;
@@ -463,30 +440,6 @@ export const ButtonZone = styled.div`
   display: flex;
   justify-content: center;
 `;
-export const BasicCard = styled.div`
-  width: 100%;
-  max-width: 620px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  color: ${theme.colors.white};
-  font-size: ${theme.typography.size.subheading};
-  font-weight: 300;
-  background: ${theme.colors.background_dark};
-  box-sizing: border-box;
-
-  padding: 32px 16px;
-  margin-top: -164px;
-  border-radius: ${theme.border.medium};
-
-  z-index: 10;
-
-  @media (min-width: 1080px) {
-    margin-top: 0px;
-  }
-`;
-
 export const H4Header = styled.h4`
   margin: 0px;
   font-family: ${theme.fonts.heading};
@@ -693,6 +646,9 @@ export const ArtisanGalleryWrap = styled.div`
     gap: 10px;
     width: 100%;
     max-width: 480px;
+    /* keep tilted polaroids inside the screen on phones */
+    padding-inline: 24px;
+    box-sizing: border-box;
   }
 `;
 
