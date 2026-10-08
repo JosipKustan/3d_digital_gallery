@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 import { useState } from "react";
 import { ChevronIcon, ChevronWrapper } from "./Chevron.jsx";
 import {

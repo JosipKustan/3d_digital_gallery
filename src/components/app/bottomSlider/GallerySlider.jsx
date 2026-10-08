@@ -7,6 +7,30 @@ import {
 import "photoswipe/style.css";
 import useImageDimensions from "../../shared/hooks/useImageDimensions";
 
+// Separate component so the hook runs once per image, not inside a loop
+function ThumbnailItem({ path, index }) {
+  const { width, height } = useImageDimensions(path);
+  return (
+    <Item
+      original={path}
+      thumbnail={path}
+      width={width}
+      height={height}
+      caption={`Gallery Image ${index + 1}`}
+    >
+      {({ ref, open }) => (
+        <Thumbnail
+          ref={ref}
+          onClick={open}
+          className="image-item"
+          src={path}
+          alt={`Gallery Image ${index + 1}`}
+        />
+      )}
+    </Item>
+  );
+}
+
 export function GallerySlider({ images }) {
   return (
     <Gallery>
@@ -31,29 +55,9 @@ export function GallerySlider({ images }) {
             />
           </svg>
         </CameraFrontDrop>
-        {images.map((path, index) => {
-          const { width, height } = useImageDimensions(path);
-          return (
-            <Item
-              key={index}
-              original={path}
-              thumbnail={path}
-              width={width}
-              height={height}
-              caption={`Gallery Image ${index + 1}`}
-            >
-              {({ ref, open }) => (
-                <Thumbnail
-                  ref={ref}
-                  onClick={open}
-                  className="image-item"
-                  src={path}
-                  alt={`Gallery Image ${index + 1}`}
-                />
-              )}
-            </Item>
-          );
-        })}
+        {images.map((path, index) => (
+          <ThumbnailItem key={path} path={path} index={index} />
+        ))}
       </GallerySliderWrapper>
     </Gallery>
   );

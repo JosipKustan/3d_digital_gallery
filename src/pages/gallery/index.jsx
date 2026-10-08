@@ -1,5 +1,4 @@
-/* eslint-disable quotes */
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -21,6 +20,7 @@ import {
   SubHeader,
 } from "../../components/shared/StaticStyles";
 import { Button } from "../../components/shared/Button";
+import useActiveSection from "../../components/shared/hooks/useActiveSection";
 import theme from "../../components/theme";
 import { GALLERY_CATEGORIES, galleryWorks } from "../../data/siteContent";
 import { scrollToSection } from "../../utils/scroll";
@@ -105,49 +105,24 @@ const GALLERY_NAV = [
   { id: "interactive-3d", label: "Interactive 3D", accent: ThreeDAccent },
 ];
 
+const SECTION_IDS = GALLERY_NAV.map((item) => item.id);
+
 // ─── Component ───────────────────────────────────────────────────────────────
 
 function GalleryPage() {
   const router = useRouter();
-  const [activeSection, setActiveSection] = useState(null);
-  const sectionTimers = useRef({});
-
-  useEffect(() => {
-    const ids = [...GALLERY_CATEGORIES.map((c) => c.slug), "interactive-3d"];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            sectionTimers.current[e.target.id] = setTimeout(
-              () => setActiveSection(e.target.id),
-              300,
-            );
-          } else {
-            clearTimeout(sectionTimers.current[e.target.id]);
-            delete sectionTimers.current[e.target.id];
-          }
-        });
-      },
-      { rootMargin: "-25% 0px -65% 0px", threshold: 0 },
-    );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => {
-      observer.disconnect();
-      Object.values(sectionTimers.current).forEach(clearTimeout);
-    };
-  }, []);
+  const [activeSection, setActiveSection] = useActiveSection(SECTION_IDS);
 
   // Scroll to hash on mount (e.g. /gallery#gaming-art from services page)
   useEffect(() => {
     const hash = router.asPath.split("#")[1];
-    if (hash) {
-      setTimeout(() => scrollToSection(hash), 100);
+    if (!hash) return;
+    const timer = setTimeout(() => {
+      scrollToSection(hash);
       setActiveSection(hash);
-    }
-  }, [router.asPath]);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [router.asPath, setActiveSection]);
 
   return (
     <MainContentContainer>

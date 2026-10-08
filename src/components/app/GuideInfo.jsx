@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useSyncExternalStore } from "react";
 import { InfoTag } from "../shared/InfoTag.js";
 import { TopRightContainer } from "../shared/containers/TopRightContainer.js";
 
@@ -173,22 +173,27 @@ function DesktopIcons({ color }) {
     </>
   );
 }
+// Touch support is detected up front, or on the first touch
+let touchSeen = false;
+
+function subscribeTouch(onChange) {
+  const handleTouchStart = () => {
+    touchSeen = true;
+    onChange();
+  };
+  window.addEventListener("touchstart", handleTouchStart, { once: true });
+  return () => window.removeEventListener("touchstart", handleTouchStart);
+}
+
+const getTouchSnapshot = () => touchSeen || "ontouchstart" in window;
+const getServerTouchSnapshot = () => false;
+
 function GuideInfo({ color }) {
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-  useEffect(() => {
-    const handleTouchStart = () => {
-      setIsTouchDevice(true);
-    };
-
-    if ("ontouchstart" in window) {
-      setIsTouchDevice(true);
-    } else {
-      window.addEventListener("touchstart", handleTouchStart);
-    }
-
-    return () => window.removeEventListener("touchstart", handleTouchStart);
-  }, []);
+  const isTouchDevice = useSyncExternalStore(
+    subscribeTouch,
+    getTouchSnapshot,
+    getServerTouchSnapshot,
+  );
 
   return (
     <TopRightContainer>

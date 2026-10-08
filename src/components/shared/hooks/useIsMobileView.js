@@ -1,20 +1,17 @@
-import { useState, useEffect } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
+function subscribe(onChange) {
+  window.addEventListener("resize", onChange);
+  return () => window.removeEventListener("resize", onChange);
+}
+
+// Server render and hydration use false, then the real value takes over
 function useIsMobileView(breakpoint = 1080) {
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    setIsMobileView(window.innerWidth <= breakpoint);
-
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= breakpoint);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [breakpoint]);
-
-  return isMobileView;
+  const getSnapshot = useCallback(
+    () => window.innerWidth <= breakpoint,
+    [breakpoint],
+  );
+  return useSyncExternalStore(subscribe, getSnapshot, () => false);
 }
 
 export default useIsMobileView;

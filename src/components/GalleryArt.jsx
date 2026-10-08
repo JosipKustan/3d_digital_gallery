@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 import React from "react";
 import BottomSlider from "./app/bottomSlider/BottomSlider";
 import GuideInfo from "./app/GuideInfo";

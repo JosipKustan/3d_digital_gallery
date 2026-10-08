@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 import Link from "next/link";
 import styled from "styled-components";
 import PhotoswipeScroller from "../../shared/PhotoswipeScroller";
