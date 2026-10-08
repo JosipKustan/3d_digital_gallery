@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Backdrop,
@@ -55,21 +55,19 @@ function MobileNavMenu() {
   const [openCount, setOpenCount] = useState(0);
   const [message, setMessage] = useState(null);
 
-  const toggleMenu = () => setIsOpen((prev) => !prev);
-
-  useEffect(() => {
-    if (isOpen) {
-      setOpenCount((c) => {
-        const next = c + 1;
-        if (next >= 2) {
-          setMessage(
-            TIGI_COMPLAINTS[Math.floor(Math.random() * TIGI_COMPLAINTS.length)],
-          );
-        }
-        return next;
-      });
+  const toggleMenu = () => {
+    if (!isOpen) {
+      const nextCount = openCount + 1;
+      setOpenCount(nextCount);
+      // Tigi starts complaining from the second open
+      if (nextCount >= 2) {
+        setMessage(
+          TIGI_COMPLAINTS[Math.floor(Math.random() * TIGI_COMPLAINTS.length)],
+        );
+      }
     }
-  }, [isOpen]);
+    setIsOpen(!isOpen);
+  };
 
   const handleTouchStart = (event) => {
     setStartX(event.touches[0].clientX);

@@ -1,5 +1,3 @@
-/* eslint-disable quotes */
-
 // ─── Gallery works (3D art pieces) ────────────────────────────────────────────
 
 export const GALLERY_CATEGORIES = [

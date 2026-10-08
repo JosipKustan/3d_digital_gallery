@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useEffect, useId, useState } from "react";
 import ServiceCard from "../components/app/cards/ServiceCard";
 import { CategoryLabel } from "../components/app/nav/NavMenuStyles";
 import { Button } from "../components/shared/Button";
 import CardsGrid from "../components/shared/CardsGrid";
 import Footer from "../components/shared/Footer";
 import SectionNav from "../components/shared/SectionNav";
+import useActiveSection from "../components/shared/hooks/useActiveSection";
 import {
   BodyLead,
   ButtonZone,
@@ -38,6 +39,8 @@ import { servicesSchema } from "../data/servicesSchema";
 import { scrollToSection } from "../utils/scroll";
 import styled from "styled-components";
 
+const SECTION_IDS = SERVICES_NAV.map((item) => item.id);
+
 // ─── Hero ticker ───────────────────────────────────────────────────────────────
 
 const HERO_IDEAS = [
@@ -51,13 +54,16 @@ const HERO_IDEAS = [
 
 function RotatingIdea() {
   const [index, setIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
 
+  // Reduced motion: keep the first idea on screen instead of cycling
   useEffect(() => {
+    if (reduceMotion) return;
     const timer = setInterval(() => {
       setIndex((i) => (i + 1) % HERO_IDEAS.length);
     }, 2600);
     return () => clearInterval(timer);
-  }, []);
+  }, [reduceMotion]);
 
   return (
     <IdeaTickerWrapper>
@@ -84,6 +90,7 @@ function RotatingIdea() {
 
 function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState(0);
+  const baseId = useId();
 
   return (
     <FAQList>
@@ -98,27 +105,36 @@ function FAQAccordion() {
             </FAQLink>
           </>
         );
+        const buttonId = `${baseId}-q${i}`;
+        const answerId = `${baseId}-a${i}`;
         return (
-          <FAQItem
-            key={item.q}
-            as={motion.div}
-            style={{ cursor: "pointer" }}
-            onClick={() => setOpenIndex(isOpen ? -1 : i)}
-          >
-            <FAQAccordionRow>
-              <H5Header style={{ marginBottom: 0 }}>{item.q}</H5Header>
-              <FAQChevron
-                as={motion.span}
-                animate={{ rotate: isOpen ? 180 : 0 }}
-                transition={{ duration: 0.25, ease: [0.25, 1, 0.5, 1] }}
+          <FAQItem key={item.q}>
+            <H5Header style={{ marginBottom: 0 }}>
+              <FAQToggle
+                type="button"
+                id={buttonId}
+                aria-expanded={isOpen}
+                aria-controls={answerId}
+                onClick={() => setOpenIndex(isOpen ? -1 : i)}
               >
-                ↓
-              </FAQChevron>
-            </FAQAccordionRow>
+                <span>{item.q}</span>
+                <FAQChevron
+                  as={motion.span}
+                  aria-hidden="true"
+                  animate={{ rotate: isOpen ? 180 : 0 }}
+                  transition={{ duration: 0.25, ease: [0.25, 1, 0.5, 1] }}
+                >
+                  ↓
+                </FAQChevron>
+              </FAQToggle>
+            </H5Header>
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div
                   key="answer"
+                  id={answerId}
+                  role="region"
+                  aria-labelledby={buttonId}
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
@@ -171,11 +187,24 @@ const IdeaTickerSlot = styled.div`
   line-height: 1.75;
 `;
 
-const FAQAccordionRow = styled.div`
+const FAQToggle = styled.button`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 6px;
+  }
 `;
 
 const FAQChevron = styled.span`
@@ -191,36 +220,7 @@ const FAQChevron = styled.span`
 
 function ServicesPage() {
   const router = useRouter();
-  const [activeSection, setActiveSection] = useState(null);
-  const sectionTimers = useRef({});
-
-  useEffect(() => {
-    const ids = ["individual", "business", "fan-art", "faq"];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            sectionTimers.current[e.target.id] = setTimeout(
-              () => setActiveSection(e.target.id),
-              300,
-            );
-          } else {
-            clearTimeout(sectionTimers.current[e.target.id]);
-            delete sectionTimers.current[e.target.id];
-          }
-        });
-      },
-      { rootMargin: "-25% 0px -65% 0px", threshold: 0 },
-    );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => {
-      observer.disconnect();
-      Object.values(sectionTimers.current).forEach(clearTimeout);
-    };
-  }, []);
+  const [activeSection, setActiveSection] = useActiveSection(SECTION_IDS);
 
   return (
     <MainContentContainer>

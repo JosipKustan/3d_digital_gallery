@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { MotionConfig } from "framer-motion";
 import { GlobalWrapper } from "../components/shared/containers/GlobalWrapper";
 import NavMenu from "../components/app/nav/NavMenu";
 import "../styles/globals.css";
@@ -23,10 +24,14 @@ export default function App({ Component, pageProps }) {
   const isPortfolio = router.pathname === "/portfolio";
 
   return (
-    <GlobalWrapper>
-      {!isPortfolio && <NavMenu />}
-      <ScrollToTop />
-      <Component {...pageProps} />
-    </GlobalWrapper>
+    // reducedMotion="user": Framer Motion skips transform animations when the
+    // visitor has turned on reduced motion in their OS settings
+    <MotionConfig reducedMotion="user">
+      <GlobalWrapper>
+        {!isPortfolio && <NavMenu />}
+        <ScrollToTop />
+        <Component {...pageProps} />
+      </GlobalWrapper>
+    </MotionConfig>
   );
 }

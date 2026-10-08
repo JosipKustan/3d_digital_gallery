@@ -6,19 +6,24 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://creativestudiokuki.com/gallery</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://creativestudiokuki.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://creativestudiokuki.com/portfolio</loc>
+    <loc>https://creativestudiokuki.com/gallery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/about</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://creativestudiokuki.com/price-factors</loc>
@@ -26,27 +31,47 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://creativestudiokuki.com/lidar</loc>
+    <loc>https://creativestudiokuki.com/portfolio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/places</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/gaming-art</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/places/rastovac</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/gaming-art/attack-on-baldurs-gate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/gaming-art/nautaloid-crash</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/3d/rastovac</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://creativestudiokuki.com/photogrammetry</loc>
+    <loc>https://creativestudiokuki.com/gallery/3d/attack-on-baldurs-gate</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://creativestudiokuki.com/bg3crash</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://creativestudiokuki.com/attackonbaldursgate</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://creativestudiokuki.com/deimos-axe</loc>
+    <loc>https://creativestudiokuki.com/gallery/3d/nautaloid-crash</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

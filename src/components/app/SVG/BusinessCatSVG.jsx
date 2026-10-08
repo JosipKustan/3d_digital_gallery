@@ -3,7 +3,6 @@ export function BusinessCatSVG(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
-      height="auto"
       fill="none"
       viewBox="0 0 128 171"
       {...props}
