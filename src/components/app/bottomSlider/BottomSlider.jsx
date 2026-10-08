@@ -47,7 +47,10 @@ function BottomSlider({ artPiece }) {
       <BottomSliderContent>
         <InfoHeader artPiece={artPiece} isOpen={isOpen} />
         <Description>{artPiece.description}</Description>
-        <GallerySlider images={artPiece.galleryImages} />
+        <GallerySlider
+          images={artPiece.galleryImages}
+          name={artPiece.name}
+        />
       </BottomSliderContent>
     </BottomSliderWrapper>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import Head from "next/head";
+import { SEO } from "../components/shared/SEO";
 import { Button } from "../components/shared/Button";
 import {
   Absolute3DModel,
@@ -59,24 +59,12 @@ function Portfolio() {
 
   return (
     <MainContentContainer>
-      <Head>
-        <title>
-          Portfolio — Josip Kuštan, Designer & Artist | Creative Studio Kuki
-        </title>
-        <link rel="canonical" href="https://creativestudiokuki.com/portfolio" />
-        <meta
-          name="description"
-          content="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
-        />
-        <meta
-          property="og:title"
-          content="Portfolio — Josip Kuštan, Designer & Artist | Creative Studio Kuki"
-        />
-        <meta
-          property="og:description"
-          content="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist."
-        />
-      </Head>
+      <SEO
+        title="Portfolio — Josip Kuštan, Designer & Artist | Creative Studio Kuki"
+        description="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
+        ogDescription="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist."
+        path="/portfolio"
+      />
       {/*HERO SECTION*/}
       <SectionPortfolio>
         <HeaderWrapper>

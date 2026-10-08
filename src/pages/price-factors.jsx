@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { SEO } from "../components/shared/SEO";
 import {
   BodyLead,
   H2Header,
@@ -14,22 +14,18 @@ import theme from "../components/theme";
 export default function PriceFactors() {
   return (
     <MainContentContainer>
-      <Head>
-        <title>Pricing Factors — Custom Miniature Art | Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/price-factors" />
-        <meta
-          name="description"
-          content="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalised quote."
-        />
-        <meta property="og:title" content="Pricing Factors — Custom Miniature Art | Creative Studio Kuki" />
-        <meta property="og:description" content="Understand how pricing works for custom miniature art at Creative Studio Kuki." />
-      </Head>
+      <SEO
+        title="Pricing Factors — Custom Miniature Art | Creative Studio Kuki"
+        description="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalised quote."
+        ogDescription="Understand how pricing works for custom miniature art at Creative Studio Kuki."
+        path="/price-factors"
+      />
       <Section
         background={theme.colors.background_dark}
         color={theme.colors.white}
       >
         <HeaderWrapper>
-          <H2Header>Price Factors</H2Header>
+          <H2Header as="h1">Price Factors</H2Header>
           <BodyLead>
             A closer look at the elements that impact pricing for your custom
             art projects.

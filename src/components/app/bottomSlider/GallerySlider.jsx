@@ -8,15 +8,16 @@ import "photoswipe/style.css";
 import useImageDimensions from "../../shared/hooks/useImageDimensions";
 
 // Separate component so the hook runs once per image, not inside a loop
-function ThumbnailItem({ path, index }) {
+function ThumbnailItem({ path, index, total, name }) {
   const { width, height } = useImageDimensions(path);
+  const label = `${name}, photo ${index + 1} of ${total}`;
   return (
     <Item
       original={path}
       thumbnail={path}
       width={width}
       height={height}
-      caption={`Gallery Image ${index + 1}`}
+      caption={label}
     >
       {({ ref, open }) => (
         <Thumbnail
@@ -24,14 +25,15 @@ function ThumbnailItem({ path, index }) {
           onClick={open}
           className="image-item"
           src={path}
-          alt={`Gallery Image ${index + 1}`}
+          alt={label}
+          loading="lazy"
         />
       )}
     </Item>
   );
 }
 
-export function GallerySlider({ images }) {
+export function GallerySlider({ images, name }) {
   return (
     <Gallery>
       <GallerySliderWrapper>
@@ -56,7 +58,13 @@ export function GallerySlider({ images }) {
           </svg>
         </CameraFrontDrop>
         {images.map((path, index) => (
-          <ThumbnailItem key={path} path={path} index={index} />
+          <ThumbnailItem
+            key={path}
+            path={path}
+            index={index}
+            total={images.length}
+            name={name}
+          />
         ))}
       </GallerySliderWrapper>
     </Gallery>

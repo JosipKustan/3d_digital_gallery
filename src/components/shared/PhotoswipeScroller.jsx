@@ -51,22 +51,23 @@ const SlotImg = styled(ProgressiveImg)`
 
 // ─── ImageItem must be a separate component so hooks run per-image ────────────
 
-function ImageItem({ path, index }) {
+function ImageItem({ path, index, total, name }) {
   const { width, height } = useImageDimensions(path);
+  const label = `${name ? `${name}, photo` : "Photo"} ${index + 1} of ${total}`;
   return (
     <Item
       original={path}
       thumbnail={path}
       width={width}
       height={height}
-      caption={`Image ${index + 1}`}
+      caption={label}
     >
       {({ ref, open }) => (
         <ImageSlot onClick={open}>
           <SlotImg
             ref={ref}
             src={path}
-            alt={`Image ${index + 1}`}
+            alt={label}
             className="image-item"
           />
         </ImageSlot>
@@ -110,19 +111,26 @@ const FadeWrap = styled.div`
 // ─── Component ────────────────────────────────────────────────────────────────
 
 /**
- * PhotoswipeScroller — horizontal image strip with photoswipe lightbox.
+ * PhotoswipeScroller: horizontal image strip with photoswipe lightbox.
  * @param {string[]} images      Array of image paths.
+ * @param {string}  [name]       Project name, used in alt text and captions.
  * @param {string}  [fadeColor]  Right-edge gradient fade colour (matches parent bg).
  * @param {boolean} [breakout]   Break out of padded parent to reach screen edges.
  */
-export default function PhotoswipeScroller({ images, fadeColor, breakout }) {
+export default function PhotoswipeScroller({ images, name, fadeColor, breakout }) {
   return (
     <FadeWrap $fadeColor={fadeColor} $breakout={breakout}>
       <Gallery>
         <ScrollTrack $breakout={breakout}>
           <div style={{ flexShrink: 0, width: 20 }} aria-hidden="true" />
           {images.map((path, i) => (
-            <ImageItem key={path} path={path} index={i} />
+            <ImageItem
+              key={path}
+              path={path}
+              index={i}
+              total={images.length}
+              name={name}
+            />
           ))}
         </ScrollTrack>
       </Gallery>

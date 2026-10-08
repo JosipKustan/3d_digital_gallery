@@ -68,7 +68,7 @@ export const galleryWorks = [
     src: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-7-2259x1696.webp",
     link: "/gallery/3d/rastovac",
     description:
-      "A 3D scan of an object using LiDAR technology. First parts of this house were built around 1910 by the wealthiest family in the village. In next 30 years it was built apon and finished and the chicken coop was rebuilt in 1940s. Last 15 solitary years of old lady Milka's life were spent here. She took care of her chickens, the house and the property. Every rain leak, fox brake in, fance repair was done by her. After her passing the old chicken coop was planned for demolition. Because this person and place was a big part of my childhood, I decided to take photos and exact messurments to replicate it as close as possible",
+      "A 3D scan of an object using LiDAR technology. First parts of this house were built around 1910 by the wealthiest family in the village. Over the next 30 years it was built upon and finished, and the chicken coop was rebuilt in the 1940s. The last 15 solitary years of old lady Milka's life were spent here. She took care of her chickens, the house and the property. Every rain leak, fox break-in and fence repair was done by her. After her passing the old chicken coop was planned for demolition. Because this person and place were a big part of my childhood, I decided to take photos and exact measurements to replicate it as closely as possible.",
     shortDescription:
       "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
     making:
@@ -115,9 +115,9 @@ export const galleryWorks = [
     src: "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-6-2016x1512.webp",
     link: "/gallery/3d/attack-on-baldurs-gate",
     description:
-      "Miniture sculpture of an Intro Cinematic sceen from Baldur's Gate 3 Where the Nautaloid is grabbing the tower and destroying it.",
+      "Miniature sculpture of the intro cinematic scene from Baldur's Gate 3, where the Nautiloid grabs the tower and destroys it.",
     shortDescription:
-      "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
+      "A miniature sculpture of the Baldur's Gate 3 intro cinematic, where the Nautiloid grabs the tower and destroys it. See it in photos and interactive 3D.",
     making:
       "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Baldur's Gate 3",
@@ -137,14 +137,14 @@ export const galleryWorks = [
   {
     id: 4,
     category: "gaming-art",
-    slug: "nautaloid-crash",
-    name: "Nautaloid Crash - Starting area",
+    slug: "nautiloid-crash",
+    name: "Nautiloid Crash - Starting area",
     src: "/assets/images/works/Crash/Webp/big/BG_Crash-1-1836x1033.webp",
-    link: "/gallery/3d/nautaloid-crash",
+    link: "/gallery/3d/nautiloid-crash",
     description:
-      "Miniture sculpture of a Nautaloid Crash from The Game of the Year awarded Baldur's gate 3",
+      "Miniature sculpture of the Nautiloid crash from Baldur's Gate 3, the Game of the Year winner.",
     shortDescription:
-      "This project holds a special place in our hearts. When the original chicken coop had to be demolished, measurements and photos were taken to recreate it in miniature form.",
+      "A miniature sculpture of the Nautiloid crash site, the starting area of Baldur's Gate 3, 3D printed from the game's model. See it in photos and interactive 3D.",
     making:
       "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Baldur's Gate 3",

@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import Head from "next/head";
+import { SEO } from "../../components/shared/SEO";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
@@ -126,16 +126,12 @@ function GalleryPage() {
 
   return (
     <MainContentContainer>
-      <Head>
-        <title>Gallery — Miniature Art Portfolio | Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/gallery" />
-        <meta
-          name="description"
-          content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces organised by category: love stories, places, gaming art, and more."
-        />
-        <meta property="og:title" content="Gallery — Miniature Art Portfolio | Creative Studio Kuki" />
-        <meta property="og:description" content="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalised gifts, and unique creations by Josip Kuki." />
-      </Head>
+      <SEO
+        title="Gallery — Miniature Art Portfolio | Creative Studio Kuki"
+        description="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces organised by category: love stories, places, gaming art, and more."
+        ogDescription="Browse the Creative Studio Kuki gallery — handcrafted miniature art pieces, personalised gifts, and unique creations by Josip Kuki."
+        path="/gallery"
+      />
 
       {/* ── HERO ── */}
       <GallerySection color={theme.colors.black}>
