@@ -634,7 +634,7 @@ export const PurPurAnimated = styled(PurPur)`
   animation: ${catPurr} 3.5s linear infinite;
 `;
 
-// Artisan section — polaroid photo gallery
+// Artisan section: polaroid photo gallery
 export const ArtisanGalleryWrap = styled.div`
   display: flex;
   gap: 16px;
@@ -703,7 +703,7 @@ export const ArtisanPhotoInner = styled.div`
   width: 100%;
 `;
 
-// ─── Services page — category section layout ───────────────────────────────────
+// ─── Services page: category section layout ───────────────────────────────────
 
 export const CategorySection = styled.section`
   position: relative;
@@ -739,7 +739,7 @@ export const SectionTitleGroup = styled.div`
   gap: 10px;
 `;
 
-// ─── Services page — FAQ ───────────────────────────────────────────────────────
+// ─── Services page: FAQ ───────────────────────────────────────────────────────
 
 export const FAQSection = styled(Section)`
   padding: 72px 24px 96px;
@@ -800,4 +800,39 @@ export const VisuallyHidden = styled.span`
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+`;
+
+export const RateList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const RateRow = styled.li`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0;
+  /* currentColor keeps the dividers visible on light and dark sections */
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+
+  &:last-child {
+    border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  }
+
+  p {
+    margin: 4px 0 0;
+    opacity: 0.65;
+  }
+`;
+
+export const RatePrice = styled.span`
+  flex-shrink: 0;
+  font-family: ${theme.fonts.heading};
+  font-size: ${theme.typography.size.subheading};
+  font-weight: ${theme.typography.weight.bold};
+  white-space: nowrap;
 `;

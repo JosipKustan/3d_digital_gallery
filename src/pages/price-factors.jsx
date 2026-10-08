@@ -1,23 +1,29 @@
+import Footer from "../components/shared/Footer";
+import HourlyRates from "../components/shared/HourlyRates";
 import { SEO } from "../components/shared/SEO";
 import {
   BodyLead,
   H2Header,
   H4Header,
   HeaderWrapper,
+  InlineLink,
   MainContentContainer,
   Section,
   StepWrapper,
   TextListWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
+import { CUSTOM_DESIGN_RATE } from "../data/siteContent";
+
+const CUSTOM_RATE = `€${CUSTOM_DESIGN_RATE.rate} per hour`;
 
 export default function PriceFactors() {
   return (
     <MainContentContainer>
       <SEO
-        title="Pricing Factors — Custom Miniature Art | Creative Studio Kuki"
-        description="Understand how pricing works for custom miniature art at Creative Studio Kuki. Complexity, size, and materials all play a role. Get a personalised quote."
-        ogDescription="Understand how pricing works for custom miniature art at Creative Studio Kuki."
+        title="Pricing and Hourly Rates | Creative Studio Kuki"
+        description={`Custom design work at Creative Studio Kuki is ${CUSTOM_RATE}, no VAT added. Once we agree on the brief, I estimate the hours, so you know the price up front.`}
+        ogDescription={`Custom design work is ${CUSTOM_RATE}. I estimate the hours up front, so you know the price before work starts.`}
         path="/price-factors"
       />
       <Section
@@ -25,38 +31,50 @@ export default function PriceFactors() {
         color={theme.colors.white}
       >
         <HeaderWrapper>
-          <H2Header as="h1">Price Factors</H2Header>
+          <H2Header as="h1">Pricing</H2Header>
           <BodyLead>
-            A closer look at the elements that impact pricing for your custom
-            art projects.
+            Every project is different, so I price by the hour. Once we agree
+            on what we are making, I estimate how long it will take, and that
+            estimate sets the price.
           </BodyLead>
         </HeaderWrapper>
         <TextListWrapper>
           <StepWrapper>
-            <H4Header>1. People and Character Details</H4Header>
+            <H4Header as="h2">Hourly rate</H4Header>
+            <HourlyRates rates={[CUSTOM_DESIGN_RATE]} />
+            <p>
+              Rates for digital design, programming and other services are on
+              the <InlineLink href="/legal">legal information page</InlineLink>.
+            </p>
+          </StepWrapper>
+          <StepWrapper>
+            <H4Header as="h2">What affects the price</H4Header>
+          </StepWrapper>
+          <StepWrapper>
+            <H4Header as="h3">1. People and Character Details</H4Header>
             <p>
               <strong>Figures Up to 3 cm:</strong> Small-scale figures don't
-              require intricate facial details, so the price remains manageable
-              for generic representations.
+              require intricate facial details, so generic representations take
+              fewer hours.
             </p>
             <p>
               <strong>Detailed Sculptures of Specific People:</strong> When a
               project requires realistic 3D modeling of someone's face or
               figure, especially for larger works, the time and effort increase
               significantly. Sculpting a lifelike representation demands
-              advanced techniques and precision, adding to the cost.
+              advanced techniques and precision, which adds hours.
             </p>
           </StepWrapper>
           <StepWrapper>
-            <H4Header>2. Epoxy Resin (Water Effects)</H4Header>
+            <H4Header as="h3">2. Epoxy Resin (Water Effects)</H4Header>
             <p>
               Epoxy resin is an essential material for creating realistic water
               effects, transparent surfaces, or glossy finishes. However, it's:
             </p>
             <ul>
               <li>
-                <strong>Expensive:</strong> High-quality resin comes at a
-                premium.
+                <strong>Expensive:</strong> High-quality resin is a special
+                material, so its cost may be added to the quote.
               </li>
               <li>
                 <strong>Delicate to Work With:</strong> Requires specialty tools
@@ -69,7 +87,7 @@ export default function PriceFactors() {
             </ul>
           </StepWrapper>
           <StepWrapper>
-            <H4Header>3. Lighting Effects</H4Header>
+            <H4Header as="h3">3. Lighting Effects</H4Header>
             <p>
               Even in small-scale works, adding lighting requires a higher level
               of planning, materials, and labor:
@@ -88,22 +106,23 @@ export default function PriceFactors() {
             </ul>
             <p>
               Lighting effects are transformative but involve additional steps
-              that impact both time and material costs.
+              that add hours. Lighting components with a high cost may be added
+              to the quote.
             </p>
           </StepWrapper>
           <StepWrapper>
-            <H4Header>4. 3D Impact on Costs</H4Header>
+            <H4Header as="h3">4. Size and Scale</H4Header>
             <p>
-              Working in three dimensions increases the amount of materials
-              needed, and as the size of the project grows, the price scales up
-              exponentially.
+              Working in three dimensions takes more modelling, printing and
+              painting time, and as the project grows in size, the hours grow
+              quickly.
             </p>
           </StepWrapper>
           <StepWrapper>
-            <H4Header>5. Delivery</H4Header>
+            <H4Header as="h3">5. Delivery</H4Header>
             <p>
-              Ensuring your art piece arrives safely is a priority. Here's how
-              delivery affects pricing:
+              Ensuring your art piece arrives safely is a priority. Delivery is
+              not part of the hourly rate and is charged separately:
             </p>
             <ul>
               <li>
@@ -131,6 +150,8 @@ export default function PriceFactors() {
           </StepWrapper>
         </TextListWrapper>
       </Section>
+
+      <Footer />
     </MainContentContainer>
   );
 }
