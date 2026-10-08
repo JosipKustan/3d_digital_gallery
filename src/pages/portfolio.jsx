@@ -40,7 +40,10 @@ import { GameMasterSVG } from "../components/app/SVG/GameMasterSVG";
 import { DanceSVG } from "../components/app/SVG/DanceSVG";
 import { CountrysideSVG } from "../components/app/SVG/CountrysideSVG";
 import { QedSVG } from "../components/app/SVG/QedSVG";
-import { BusinessCatSVG } from "../components/app/SVG/BusinessCatSVG";
+import {
+  NEWSLABS_BLUE,
+  NewslabsLogoSVG,
+} from "../components/app/SVG/NewslabsLogoSVG";
 import { ContactZuki } from "../components/app/SVG/ContactZuki";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 
@@ -59,7 +62,7 @@ function Portfolio() {
   const isMobileView = useIsMobileView();
 
   return (
-    <MainContentContainer>
+    <MainContentContainer $noNav>
       <SEO
         title="Portfolio | Josip Kuštan, Designer & Artist | Creative Studio Kuki"
         description="The personal portfolio of Josip Kuštan, a UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
@@ -158,12 +161,18 @@ function Portfolio() {
             links={[["/assets/PDF/NDA Case Study.pdf#zoom=50", "Case Study"]]}
           />
           <PortfolioCard
-            svg={<BusinessCatSVG style={{ width: "100%", height: "100%" }} />}
+            svg={
+              <NewslabsLogoSVG
+                showBackground={false}
+                style={{ width: "112px", height: "112px" }}
+              />
+            }
             header="Design Lead / Front-end Developer for Newslabs"
             description="Creating and handling the visual language of the brand across the web and the app."
             responsibilities="brand visual language, web and app design, UX work, and front-end development."
-            color={theme.colors.purple_dark}
-            colorAccent={theme.colors.purple_accent}
+            color={theme.colors.yellow_accent}
+            colorAccent={NEWSLABS_BLUE}
+            textColor={theme.colors.black}
             links={[["https://newslabs.io/", "Website"]]}
           />
         </SkillCardsWrapper>

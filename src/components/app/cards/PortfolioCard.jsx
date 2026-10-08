@@ -19,13 +19,19 @@ export function PortfolioCard({
   description,
   color,
   colorAccent,
+  textColor,
   responsibilities,
   links, // Default to empty array as fallback
 }) {
   const { openLink } = useOpenLink();
 
   return (
-    <CardWrapper color={color} direction="column" align="left">
+    <CardWrapper
+      color={color}
+      $textColor={textColor}
+      direction="column"
+      align="left"
+    >
       <TextWrapper>
         <CatCardHeader>{header}</CatCardHeader>
 

@@ -6,8 +6,9 @@ import { HeroBeach } from "../app/SVG/HeroBeach";
 import { PurPur } from "../app/SVG/PurPur";
 import { PortfolioHero } from "../app/SVG/PortfolioHero";
 
+// margin-top leaves room for the fixed NavMenu; pass $noNav on pages without it
 export const MainContentContainer = styled.div`
-  margin-top: 64px;
+  margin-top: ${(props) => (props.$noNav ? 0 : "64px")};
 `;
 
 export const HeroSection = styled.section`
