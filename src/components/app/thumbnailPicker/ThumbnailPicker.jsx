@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import theme from "../../theme";
+import WorkImage from "../../shared/WorkImage";
 
 const Thumbnail = styled.div`
   width: 100%;
@@ -15,7 +16,7 @@ const Thumbnail = styled.div`
   border-radius: ${theme.border.small};
 `;
 
-const ThumbnailImage = styled.img`
+const ThumbnailImage = styled(WorkImage)`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -47,7 +48,7 @@ function ThumbnailPicker({ image }) {
   return (
     <Link key={image.id} href={image.link}>
       <Thumbnail>
-        <ThumbnailImage src={image.src} alt={image.name} />
+        <ThumbnailImage src={image.src} alt={image.name} sizes="330px" />
         <ThumbnailName>{image.name}</ThumbnailName>
       </Thumbnail>
     </Link>

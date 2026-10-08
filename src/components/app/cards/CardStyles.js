@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 import theme from "../../theme";
+import WorkImage from "../../shared/WorkImage";
 
 export const CardWrapper = styled.div`
   position: relative;
@@ -99,7 +100,7 @@ export const CardName = styled.p`
   }
 `;
 
-export const CardImage = styled.img`
+export const CardImage = styled(WorkImage)`
   width: auto;
   height: 148px;
   object-fit: cover;

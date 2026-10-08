@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import WorkImage from "../../shared/WorkImage";
 import theme from "../../theme";
 import { GALLERY_CATEGORIES } from "../../../data/siteContent";
 
@@ -72,7 +73,7 @@ const ImageWrapper = styled.div`
   display: block;
 `;
 
-const CardImg = styled.img`
+const CardImg = styled(WorkImage)`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -165,7 +166,11 @@ export default function ProjectCard({ work, accent, showNumber }) {
         style={{ textDecoration: "none", display: "block" }}
       >
         <ImageWrapper>
-          <CardImg src={work.src} alt={work.name} loading="lazy" />
+          <CardImg
+            src={work.src}
+            alt={work.name}
+            sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+          />
         </ImageWrapper>
         <CardBody>
           <CategoryLabel $color={color}>

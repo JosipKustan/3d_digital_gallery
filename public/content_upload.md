@@ -6,29 +6,28 @@ Step-by-step guide for adding a new project to the Creative Studio Kuki gallery.
 
 ## 1. Prepare and place images
 
-All images go inside `public/assets/images/works/[ProjectName]/webp/big/`.
+Put the original photos (JPG, PNG or WebP, any size) in `public/assets/images/works/[ProjectName]/`, then run:
 
-**Naming convention — include pixel dimensions in the filename:**
+```bash
+npm run images -- public/assets/images/works/[ProjectName]
+```
+
+This writes WebP copies to `.../[ProjectName]/webp/big/`, capped at 2560px on the long edge, with the pixel size in the name:
 
 ```
 ProjectName-1-2016x1512.webp
 ProjectName-2-1643x791.webp
-ProjectName-3-3026x2812.webp
 ```
 
-The number after the last hyphen and before the extension encodes `WIDTHxHEIGHT` in pixels.
-This is read automatically by `useImageDimensions` to size the PhotoSwipe lightbox correctly.
+The `WIDTHxHEIGHT` part is required. The lightbox and the image component read the size from it.
+Originals are never changed. Name the originals `ProjectName-1.jpg`, `ProjectName-2.jpg` and so on before running the script; spaces become `_`.
 
-**Small thumbnails** (used by ProgressiveImg for blur-up loading) follow the same name but go in `.../webp/small/` with dimensions halved:
+You do not need thumbnails or `small/` copies. The site resizes every image to the slot it is shown in (next/image, Netlify Image CDN in production) and serves it as WebP.
 
-```
-ProjectName-1-1008x756.webp   ← half of 2016x1512
-```
+**Letter case matters on the live server.** `Webp/big` and `webp/big` are the same folder on a Mac but not on Netlify. The build checks every image path in `siteContent.js` and fails if one does not match the file on disk exactly.
 
-The helper `getSmallImagePath` in `src/components/shared/hooks/useImageDimensions.js` derives small paths automatically from big paths.
-
-**Thumbnail / cover image** (used as the card preview, `src` field):
-Pick the best shot. Can be a big path or a separate image.
+**Cover image** (the `src` field, used on cards, the project hero and share previews):
+pick the best shot from `webp/big/`.
 
 ---
 
@@ -41,11 +40,11 @@ Open `src/data/siteContent.js` and add a new object to the `galleryWorks` array:
   id: 7,                              // next available integer, never reuse
   category: "places",                 // slug from GALLERY_CATEGORIES (see section 3)
   slug: "my-project-name",            // URL-safe string, lowercase, hyphens only
-  name: "My Project Name",            // display title shown on cards and detail page
+  name: "My Project Name",            // page title, H1, card title and image alt text: say what it is
   src: "/assets/images/works/MyProject/webp/big/MyProject-1-2016x1512.webp",
   link: "/my-3d-page",                // route to the 3D interactive page — omit if no 3D scene
   description: "Full description...", // shown on the project detail page
-  shortDescription: "One sentence.",  // used for SEO meta description
+  shortDescription: "...",            // meta description: unique, 120 to 160 characters
   making: "How it was made...",       // process/materials, shown on detail page
   artistName: "Client / IP name",     // e.g. "Personal project" or "Baldur's Gate 3"
   artistRealName: "Year or author",   // e.g. "2024" or "Larian Studios"
@@ -90,9 +89,9 @@ Available categories from `GALLERY_CATEGORIES` in `siteContent.js`:
 
 If the project has a 3D interactive representation:
 
-1. Create `src/pages/[project-name].jsx` (e.g. `waterfallfamily.jsx`).
-2. Use the `GalleryArt` wrapper component (see `/lidar.jsx`, `/bg3crash.jsx` for reference).
-3. Set `link: "/project-name"` on the galleryWork entry.
+1. Create `src/pages/gallery/3d/[project-name].jsx` (copy `src/pages/gallery/3d/rastovac.jsx`).
+2. It uses the `GalleryArt` wrapper and the `SEO` component; update the work id, title, description and path.
+3. Set `link: "/gallery/3d/project-name"` on the galleryWork entry. The sitemap picks it up automatically.
 
 The "View in 3D ✦" CTA button will then appear automatically on:
 
@@ -117,4 +116,4 @@ npm run dev
 npm run build
 ```
 
-All project detail pages are statically pre-rendered. Build will fail if `galleryImages` paths or `slug`/`category` values are malformed, which is a useful safety check.
+All project detail pages are statically pre-rendered. Before building, `check-images` fails the build if any image path does not exist with exactly that spelling, and the sitemap is regenerated with the new project.

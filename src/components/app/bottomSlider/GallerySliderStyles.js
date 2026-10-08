@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import theme from "../../theme";
+import WorkImage from "../../shared/WorkImage";
 
 export const GallerySliderWrapper = styled.div`
   position: relative;
@@ -18,7 +19,7 @@ export const GallerySliderWrapper = styled.div`
 
   cursor: pointer;
 `;
-export const Thumbnail = styled.img`
+export const Thumbnail = styled(WorkImage)`
   width: 100%;
   height: 250px;
   background-color: gray;

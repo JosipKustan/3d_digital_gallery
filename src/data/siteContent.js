@@ -122,12 +122,12 @@ export const galleryWorks = [
       "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Baldur's Gate 3",
     artistRealName: "Larian Studios",
-    artistsImage: "/assets/images/HeaderImages/Bg3_Simple.png",
+    artistsImage: "/assets/images/HeaderImages/webp/big/Bg3_Simple-256x256.webp",
     galleryImages: [
       "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-1-2016x1512.webp",
       "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-2-2016x1512.webp",
-      "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-3-4032x3024.webp",
-      "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-4-2770x2561.webp",
+      "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-3-2560x1920.webp",
+      "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-4-2560x2367.webp",
       "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-5-2016x1512.webp",
       "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-6-2016x1512.webp",
       "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-7-2016x1512.webp",
@@ -149,11 +149,11 @@ export const galleryWorks = [
       "3D model was taken from the game and edited so it can be printed with a precise 3D printer. ",
     artistName: "Baldur's Gate 3",
     artistRealName: "Larian Studios",
-    artistsImage: "/assets/images/HeaderImages/Bg3_Simple.png",
+    artistsImage: "/assets/images/HeaderImages/webp/big/Bg3_Simple-256x256.webp",
     galleryImages: [
       "/assets/images/works/Crash/Webp/big/BG_Crash-1-1836x1033.webp",
       "/assets/images/works/Crash/Webp/big/BG_Crash-2-1643x791.webp",
-      "/assets/images/works/Crash/Webp/big/BG_Crash-3-3026x2812.webp",
+      "/assets/images/works/Crash/Webp/big/BG_Crash-3-2560x2379.webp",
       "/assets/images/works/Crash/Webp/big/BG_Crash-4-1787x926.webp",
       "/assets/images/works/Crash/Webp/big/BG_Crash-5-1975x1073.webp",
       "/assets/images/works/Crash/Webp/big/BG_Crash-6-1850x1092.webp",
@@ -217,25 +217,25 @@ export const INDIVIDUAL_CARDS = [
   {
     title: "Love Stories",
     href: "/gallery/love-stories",
-    image: "/assets/images/works/weddinggifts/Wedding_MainShot.jpg",
+    image: "/assets/images/works/weddinggifts/Webp/big/Wedding_MainShot-1512x1716.webp",
     copy: "Proposals, weddings, anniversaries, first meetings. The moments that started something, and the ones that kept it going.",
   },
   {
     title: "Life Moments",
     href: "/gallery/life-moments",
-    image: "/assets/images/works/weddinggifts/Wedding_Scale.jpg",
+    image: "/assets/images/works/weddinggifts/Webp/big/Wedding_Scale-1425x1415.webp",
     copy: "The day a family grows. The day someone becomes something new. The kind of thing that does not need an occasion to be worth marking.",
   },
   {
     title: "Places",
     href: "/gallery/places",
-    image: "/assets/images/works/Rastovac/Rastovac_KuminaKuca-3.jpg",
+    image: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-3-1672x1255.webp",
     copy: "A childhood home. A view from a window that no longer exists. A corner of a city that was yours for a while. Places carry memories.",
   },
   {
     title: "Achievements",
     href: "/gallery/achievements",
-    image: "/assets/images/works/Rastovac/Rastovac_KuminaKuca-1.jpg",
+    image: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-1-2000x1500.webp",
     copy: "Graduations, promotions, completions. Something that took years. Something worth handing someone in three dimensions.",
   },
 ];
@@ -244,13 +244,13 @@ export const BUSINESS_CARDS = [
   {
     title: "Employee & Team Gifts",
     href: "/gallery/employee-gifts",
-    image: "/assets/images/works/MiniMees/GiftforEmployees.jpg",
+    image: "/assets/images/works/MiniMees/webp/big/GiftforEmployees-2560x818.webp",
     copy: "Individual miniatures for individual people. Gifts that do not look like they came from a catalogue, because they did not.",
   },
   {
     title: "Anniversary Projects",
     href: "/gallery/anniversary-projects",
-    image: "/assets/images/works/Rastovac/Rastovac_KuminaKuca-5.jpg",
+    image: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-5-2296x1724.webp",
     copy: "Ten years. Twenty years. A milestone that deserves more than a dinner. A commemorative piece with a proper brief.",
   },
 ];
@@ -259,13 +259,13 @@ export const FAN_CARDS = [
   {
     title: "Gaming Art",
     href: "/gallery/gaming-art",
-    image: "/assets/images/works/attackonbaldursgate/BG_Attack-7.jpg",
+    image: "/assets/images/works/attackonbaldursgate/webp/big/BG_Attack-7-2016x1512.webp",
     copy: "A scene from a game. A character at the moment that mattered. Dioramas built from games that left something behind.",
   },
   {
     title: "Movie & TV Art",
     href: "/gallery/movie-art",
-    image: "/assets/images/works/Crash/BG_Crash-1.jpg",
+    image: "/assets/images/works/Crash/Webp/big/BG_Crash-1-1836x1033.webp",
     copy: "A frame frozen. A ship. A moment from a film that still sits somewhere in the back of your head.",
   },
 ];

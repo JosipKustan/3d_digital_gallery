@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 import Footer from "../../../components/shared/Footer";
 import PhotoswipeScroller from "../../../components/shared/PhotoswipeScroller";
+import WorkImage from "../../../components/shared/WorkImage";
 import {
   H1Header,
   H4Header,
@@ -53,9 +54,6 @@ const HeroSection = styled.section`
 const HeroBg = styled.div`
   position: absolute;
   inset: 0;
-  background-image: url(${({ $src }) => $src});
-  background-size: cover;
-  background-position: center;
   will-change: transform;
   animation: ${kenBurns} 22s ease-in-out infinite alternate;
 
@@ -161,7 +159,7 @@ const DetailSection = styled.section`
   }
 `;
 
-const HeroImage = styled.img`
+const HeroImage = styled(WorkImage)`
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -191,7 +189,7 @@ const ArtistRow = styled.div`
   gap: 12px;
 `;
 
-const ArtistAvatar = styled.img`
+const ArtistAvatar = styled(WorkImage)`
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -384,7 +382,18 @@ function ProjectPage({ work, cat }) {
 
       {/* ── HERO: full-bleed image ── */}
       <HeroSection>
-        <HeroBg $src={work.src} />
+        {/* Real <img> instead of a CSS background: preloaded as the LCP image and
+            visible to Google Images */}
+        <HeroBg>
+          <WorkImage
+            src={work.src}
+            alt=""
+            fill
+            preload
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+        </HeroBg>
         <HeroOverlay />
         <HeroContent>
           {/* Mobile: single back link */}
@@ -413,11 +422,21 @@ function ProjectPage({ work, cat }) {
 
       {/* ── DETAIL: image + description ── */}
       <DetailSection $bg={bg}>
-        <HeroImage src={work.galleryImages[0]} alt={work.name} $accent={accent} />
+        <HeroImage
+          src={work.galleryImages[0]}
+          alt={work.name}
+          sizes="(min-width: 1080px) 50vw, 100vw"
+          $accent={accent}
+        />
 
         <DescriptionColumn>
           <ArtistRow>
-            <ArtistAvatar src={work.artistsImage} alt={work.artistName} />
+            <ArtistAvatar
+              src={work.artistsImage}
+              alt={work.artistName}
+              width={40}
+              height={40}
+            />
             <ArtistInfo>
               <ArtistName>{work.artistName}</ArtistName>
               <ArtistSub>{work.artistRealName}</ArtistSub>
