@@ -20,6 +20,16 @@ const variants = {
       color: ${theme.colors.white};
     }
   `,
+  solid: css`
+    background: ${theme.colors.black};
+    border-color: ${theme.colors.black};
+    color: ${theme.colors.white};
+    &:hover {
+      background: ${theme.colors.white};
+      border-color: ${theme.colors.white};
+      color: ${theme.colors.black};
+    }
+  `,
   light: css`
     border-color: rgba(255, 255, 255, 0.55);
     color: ${theme.colors.white};

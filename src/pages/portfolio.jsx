@@ -40,6 +40,7 @@ import { GameMasterSVG } from "../components/app/SVG/GameMasterSVG";
 import { DanceSVG } from "../components/app/SVG/DanceSVG";
 import { CountrysideSVG } from "../components/app/SVG/CountrysideSVG";
 import { QedSVG } from "../components/app/SVG/QedSVG";
+import { BusinessCatSVG } from "../components/app/SVG/BusinessCatSVG";
 import { ContactZuki } from "../components/app/SVG/ContactZuki";
 import useIsMobileView from "../components/shared/hooks/useIsMobileView";
 
@@ -60,9 +61,9 @@ function Portfolio() {
   return (
     <MainContentContainer>
       <SEO
-        title="Portfolio — Josip Kuštan, Designer & Artist | Creative Studio Kuki"
-        description="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
-        ogDescription="The personal portfolio of Josip Kuštan — UX designer, software engineer, and miniature artist."
+        title="Portfolio | Josip Kuštan, Designer & Artist | Creative Studio Kuki"
+        description="The personal portfolio of Josip Kuštan, a UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
+        ogDescription="The personal portfolio of Josip Kuštan, a UX designer, software engineer, and miniature artist."
         path="/portfolio"
       />
       {/*HERO SECTION*/}
@@ -71,7 +72,7 @@ function Portfolio() {
           <H1Header>
             <H1Highlight>Hi! I'm </H1Highlight> Josip Kuštan
           </H1Header>
-          <SubHeader>UX Designer - with miniature artist's patience.</SubHeader>
+          <SubHeader>UX Designer with a miniature artist's patience.</SubHeader>
         </HeaderWrapper>
         <HeroPortfolioIllustration />
       </SectionPortfolio>
@@ -156,6 +157,15 @@ function Portfolio() {
             colorAccent={theme.colors.blue_accent}
             links={[["/assets/PDF/NDA Case Study.pdf#zoom=50", "Case Study"]]}
           />
+          <PortfolioCard
+            svg={<BusinessCatSVG style={{ width: "100%", height: "100%" }} />}
+            header="Design Lead / Front-end Developer for Newslabs"
+            description="Creating and handling the visual language of the brand across the web and the app."
+            responsibilities="brand visual language, web and app design, UX work, and front-end development."
+            color={theme.colors.purple_dark}
+            colorAccent={theme.colors.purple_accent}
+            links={[["https://newslabs.io/", "Website"]]}
+          />
         </SkillCardsWrapper>
       </SkillSectionPortfolio>
 
@@ -167,16 +177,13 @@ function Portfolio() {
         </HeaderWrapper>
         <TextListWrapper>
           <StepWrapper>
-            <H4Header>1. Tiller - Design System</H4Header>
+            <H4Header>1. Tiller Design System</H4Header>
             <p>
-              My first of four design systems—open source. I worked with
+              My first of four design systems, and it is open source. I worked with
               developers and designers to create a tool that fits company goals.
             </p>
             <Button
-              background={theme.colors.transparent}
-              colorAccent={theme.colors.black}
-              colorText={theme.colors.black}
-              color={theme.colors.white}
+              variant="dark"
               onClick={() =>
                 openLink(
                   "https://croz-ltd.github.io/tiller/?path=/story/introduction--page",
@@ -184,7 +191,7 @@ function Portfolio() {
               }
             >
               Showcase
-              <IconNewTab style={{ fill: "black" }} />
+              <IconNewTab />
             </Button>
           </StepWrapper>
           <StepWrapper>
@@ -195,14 +202,11 @@ function Portfolio() {
               using and teaching complex Figma systems for faster iteration.
             </p>
             <Button
-              background={theme.colors.transparent}
-              colorAccent={theme.colors.black}
-              colorText={theme.colors.black}
-              color={theme.colors.white}
+              variant="dark"
               onClick={() => openLink("https://www.rba.hr/hr/gradani.html")}
             >
               Website
-              <IconNewTab style={{ fill: "black" }} />
+              <IconNewTab />
             </Button>
           </StepWrapper>
           <StepWrapper>
@@ -210,7 +214,7 @@ function Portfolio() {
             <p>
               I mentored junior designers, reviewed and guided them in their
               projects. UX CoP was the best way to learn and share knowledge
-              between designers — you practically never work alone.
+              between designers. You practically never work alone.
             </p>
           </StepWrapper>
           <StepWrapper>
@@ -221,14 +225,11 @@ function Portfolio() {
               cats.
             </p>
             <Button
-              background={theme.colors.transparent}
-              colorAccent={theme.colors.black}
-              colorText={theme.colors.black}
-              color={theme.colors.white}
+              variant="dark"
               onClick={() => openLink("https://creativestudiokuki.com/")}
             >
               Homepage
-              <IconNewTab style={{ fill: "black" }} />
+              <IconNewTab />
             </Button>
           </StepWrapper>
           <StepWrapper>
@@ -238,14 +239,11 @@ function Portfolio() {
               sailing boats.
             </p>
             <Button
-              background={theme.colors.transparent}
-              colorAccent={theme.colors.black}
-              colorText={theme.colors.black}
-              color={theme.colors.white}
+              variant="dark"
               onClick={() => openLink("https://code-x-marine.com/")}
             >
               Website
-              <IconNewTab style={{ fill: "black" }} />
+              <IconNewTab />
             </Button>
           </StepWrapper>
         </TextListWrapper>
@@ -263,7 +261,7 @@ function Portfolio() {
         <SkillCardsWrapper>
           <SkillsCard
             svg={<CookingSvg style={{ width: "100%", height: "100%" }} />}
-            header="Cooking – 13 years"
+            header="Cooking, 13 years"
             description="I love science behind food and how we perceive it. And of course to feed my friends and family."
             color={theme.colors.blue_dark}
             skills={[
@@ -274,7 +272,7 @@ function Portfolio() {
           />
           <SkillsCard
             svg={<GameMasterSVG style={{ width: "100%", height: "100%" }} />}
-            header="Game Master (D&D) – 10 years"
+            header="Game Master (D&D), 10 years"
             description="A creative game where I've led more than 50 players through 10+ big and small stories."
             color={theme.colors.purple_dark}
             skills={[
@@ -285,7 +283,7 @@ function Portfolio() {
           />
           <SkillsCard
             svg={<DanceSVG style={{ width: "100%", height: "100%" }} />}
-            header="Art & Dance – 9 years"
+            header="Art & Dance, 9 years"
             description="I was in competitive Standard and Latin dancing as a young one and now I make miniature art."
             color={theme.colors.tiel_dark}
             skills={["Beauty appreciation", "Spatial harmony"]}
@@ -339,8 +337,8 @@ function Portfolio() {
             <H4Header>Professional '25 Kitchen</H4Header>
             <p>
               Worked as a cook in a small restaurant, from menu R&D to daily
-              execution. It was very successful—and also the hardest job I've
-              ever done.
+              execution. It was very successful. It was also the hardest job
+              I've ever done.
             </p>
             <br />
           </StepWrapper>
