@@ -71,7 +71,7 @@ function CategoryGalleryPage({ cat, works }) {
     <MainContentContainer>
       {/* Empty categories stay out of search results until they get a project */}
       <SEO
-        title={`${cat.label} — Gallery | Creative Studio Kuki`}
+        title={`${cat.label} Gallery | Creative Studio Kuki`}
         description={`${cat.label} miniature art pieces by Creative Studio Kuki. ${cat.description} Handcrafted, 3D-printed, hand-painted.`}
         ogDescription={`${cat.label} miniature art pieces by Creative Studio Kuki. ${cat.description}`}
         path={`/gallery/${cat.slug}`}

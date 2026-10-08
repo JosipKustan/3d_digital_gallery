@@ -8,7 +8,7 @@ import theme from "../theme";
 
 const categoryColors = {
   Places: theme.colors.tiel_accent,
-  "Fan Art — Gaming": theme.colors.yellow_accent,
+  "Gaming Fan Art": theme.colors.yellow_accent,
 };
 
 const getCategoryColor = (category) =>

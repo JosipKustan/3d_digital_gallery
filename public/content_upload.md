@@ -42,7 +42,7 @@ Open `src/data/siteContent.js` and add a new object to the `galleryWorks` array:
   slug: "my-project-name",            // URL-safe string, lowercase, hyphens only
   name: "My Project Name",            // page title, H1, card title and image alt text: say what it is
   src: "/assets/images/works/MyProject/webp/big/MyProject-1-2016x1512.webp",
-  link: "/my-3d-page",                // route to the 3D interactive page — omit if no 3D scene
+  link: "/my-3d-page",                // route to the 3D interactive page, leave out if there is no 3D scene
   description: "Full description...", // shown on the project detail page
   shortDescription: "...",            // meta description: unique, 120 to 160 characters
   making: "How it was made...",       // process/materials, shown on detail page
@@ -106,10 +106,10 @@ The "View in 3D ✦" CTA button will then appear automatically on:
 npm run dev
 ```
 
-1. Visit `/gallery` — new project card should appear in its category section.
-2. Click the card → `/gallery/[category]/[slug]` — hero image, description, and gallery should load.
+1. Visit `/gallery`. The new project card should appear in its category section.
+2. Click the card to open `/gallery/[category]/[slug]`. The hero image, description and gallery should load.
 3. If 3D: click "View in 3D ✦" → 3D scene page should open.
-4. Click through the PhotoSwipe lightbox on the detail page — all images should open correctly.
+4. Click through the PhotoSwipe lightbox on the detail page. All images should open correctly.
 5. Check that no images return 404 (browser Network tab).
 
 ```bash

@@ -50,7 +50,7 @@ export default function ContactPage() {
   return (
     <MainContentContainer>
       <SEO
-        title="Contact & Commission - Creative Studio Kuki"
+        title="Contact & Commission | Creative Studio Kuki"
         description="Commission a personalised miniature art piece from Creative Studio Kuki. Get in touch and let's talk about the memory you want to preserve."
         ogDescription="Commission a personalised miniature art piece from Creative Studio Kuki."
         path="/contact"
@@ -72,7 +72,7 @@ export default function ContactPage() {
         </HeaderWrapper>
         <ContactFormWrapper onSubmit={handleSubmit} name="commission">
           <input type="hidden" name="form-name" value="commission" />
-          {/* Honeypot — hidden from humans, bots fill it in */}
+          {/* Honeypot: hidden from humans, bots fill it in */}
           <input name="bot-field" style={{ display: "none" }} />
 
           <input type="text" name="name" placeholder="Your name" required />

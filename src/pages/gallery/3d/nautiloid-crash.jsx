@@ -18,7 +18,7 @@ export default function NautiloidCrashPage() {
   return (
     <>
       <SEO
-        title="Nautiloid Crash — Baldur's Gate 3 | Creative Studio Kuki"
+        title="Nautiloid Crash from Baldur's Gate 3 | Creative Studio Kuki"
         description="Interactive 3D miniature of the Nautiloid crash scene from Baldur's Gate 3. Explore the model in your browser."
         path="/gallery/3d/nautiloid-crash"
         image={work.src}
