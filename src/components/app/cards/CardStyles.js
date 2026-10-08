@@ -12,7 +12,7 @@ export const CardWrapper = styled.div`
   flex-direction: ${(props) => props.direction || "row"};
   gap: 8px;
   align-items: ${(props) => props.align || "center"};
-  color: ${theme.colors.white};
+  color: ${(props) => props.$textColor || theme.colors.white};
   border-radius: ${theme.border.big};
   height: fit-content;
   justify-content: space-around;
