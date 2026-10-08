@@ -15,6 +15,7 @@ const STATIC_PAGES = [
   { path: "/contact", changefreq: "yearly", priority: "0.7" },
   { path: "/price-factors", changefreq: "monthly", priority: "0.7" },
   { path: "/portfolio", changefreq: "monthly", priority: "0.6" },
+  { path: "/legal", changefreq: "yearly", priority: "0.3" },
 ];
 
 // Empty categories are left out so search engines do not index blank pages.

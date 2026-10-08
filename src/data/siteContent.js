@@ -64,7 +64,7 @@ export const galleryWorks = [
     id: 1,
     category: "places",
     slug: "rastovac",
-    name: "Rastovac - A childhood memory",
+    name: "Rastovac, a childhood memory",
     src: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-7-2259x1696.webp",
     link: "/gallery/3d/rastovac",
     description:
@@ -138,7 +138,7 @@ export const galleryWorks = [
     id: 4,
     category: "gaming-art",
     slug: "nautiloid-crash",
-    name: "Nautiloid Crash - Starting area",
+    name: "Nautiloid Crash, starting area",
     src: "/assets/images/works/Crash/Webp/big/BG_Crash-1-1836x1033.webp",
     link: "/gallery/3d/nautiloid-crash",
     description:
@@ -275,11 +275,11 @@ export const FAN_CARDS = [
 export const FAQ_ITEMS = [
   {
     q: "How long does a piece take?",
-    a: "Depends on complexity and scale. A 1:72 scene with two figures and a simple base typically takes 10–12 hours of build time, not counting 3D printing time. A larger piece at 1:18 scale can be 20 hours or more. Realistic timelines are discussed at the brief stage.",
+    a: "Depends on complexity and scale. A 1:72 scene with two figures and a simple base typically takes 10 to 12 hours of build time, not counting 3D printing time. A larger piece at 1:18 scale can be 20 hours or more. Realistic timelines are discussed at the brief stage.",
   },
   {
     q: "What do you need from me to start?",
-    a: "The more you can tell me, the better. Photos help. A description of the place or the person. The occasion and when it needs to arrive. Nothing has to be perfect at the start — the brief develops through conversation.",
+    a: "The more you can tell me, the better. Photos help. A description of the place or the person. The occasion and when it needs to arrive. Nothing has to be perfect at the start. The brief develops as we talk.",
   },
   {
     q: "Do the people in the piece need to know about it?",
@@ -298,6 +298,49 @@ export const FAQ_ITEMS = [
     a: null,
   },
 ];
+
+// ─── Hourly rates ─────────────────────────────────────────────────────────────
+// The only prices we publish. Every quote is estimated hours × one of these rates.
+// One entry per registered activity group (NKD 2025). /price-factors shows the
+// custom design rate, /legal shows all of them.
+// Not in the VAT system, so these are final prices.
+
+export const HOURLY_RATES = [
+  {
+    id: "custom-design",
+    service: "Custom design work",
+    nkd: ["90.12.0"],
+    rate: 40,
+    note: "Handmade miniatures and personalised gifts, created across media such as video, painting and 3D modelling.",
+  },
+  {
+    id: "digital",
+    service: "Digital design and programming",
+    nkd: ["74.12.0", "62.10.9"],
+    rate: 30,
+    note: "Graphic design and visual communication, 3D modelling and visual design, software design and development.",
+  },
+  {
+    id: "trade-fairs",
+    service: "Trade fair organisation and creative direction",
+    nkd: ["82.30.0"],
+    rate: 35,
+    note: "Organisation and moderation of national and international trade fairs, creative direction of fairs.",
+  },
+];
+
+export const CUSTOM_DESIGN_RATE =
+  HOURLY_RATES.find((r) => r.id === "custom-design") ?? HOURLY_RATES[0];
+
+export const rateFor = (id) => HOURLY_RATES.find((r) => r.id === id)?.rate;
+
+export const formatRate = (rate) => `€${rate} / hour`;
+
+export const VAT_NOTE = "Creative Studio Kuki is not in the VAT system, so there is no VAT on top.";
+
+// What a quote is made of: hours × rate, plus delivery. Standard materials are
+// part of the rate; only special, high-cost materials are added separately.
+export const QUOTE_NOTE = "Standard materials are included in the rate. Delivery is charged separately, and special materials with a high cost, such as epoxy resin or specialty paints, may be added to the quote.";
 
 // ─── Services sticky nav config ────────────────────────────────────────────────
 

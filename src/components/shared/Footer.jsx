@@ -18,7 +18,8 @@ function Footer({ credit, link }) {
         <Link href="/services" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Services</Link>
         <Link href="/about" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>About</Link>
         <Link href="/contact" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Contact</Link>
-        <Link href="/pricing" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Pricing</Link>
+        <Link href="/price-factors" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Pricing</Link>
+        <Link href="/legal" style={{ color: "inherit", textDecoration: "none", opacity: 0.8 }}>Legal</Link>
       </nav>
       <MuckoStretchSVG
         style={{ width: "100%", height: "100%", maxWidth: "500px" }}

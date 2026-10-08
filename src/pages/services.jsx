@@ -34,7 +34,7 @@ import {
   TextListWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
-import { BUSINESS_CARDS, FAQ_ITEMS, FAN_CARDS, INDIVIDUAL_CARDS, SERVICES_NAV } from "../data/siteContent";
+import { BUSINESS_CARDS, FAQ_ITEMS, FAN_CARDS, CUSTOM_DESIGN_RATE, formatRate, INDIVIDUAL_CARDS, SERVICES_NAV } from "../data/siteContent";
 import { servicesSchema } from "../data/servicesSchema";
 import { scrollToSection } from "../utils/scroll";
 import styled from "styled-components";
@@ -67,7 +67,7 @@ function RotatingIdea() {
 
   return (
     <IdeaTickerWrapper>
-      <IdeaTickerLabel>For example —</IdeaTickerLabel>
+      <IdeaTickerLabel>For example</IdeaTickerLabel>
       <IdeaTickerSlot>
         <AnimatePresence mode="wait">
           <motion.span
@@ -98,8 +98,11 @@ function FAQAccordion() {
         const isOpen = openIndex === i;
         const answer = item.a ?? (
           <>
-            Complexity, scale, number of figures, and build time are the main
-            factors.{" "}
+            By the hour. Custom design work is{" "}
+            {formatRate(CUSTOM_DESIGN_RATE.rate)}, with no VAT added. Once we
+            agree on what we are making, I estimate the hours, so you know the
+            price before work starts. Complexity, scale and the number of
+            figures decide how long it takes.{" "}
             <FAQLink href="/price-factors">
               Full breakdown on the pricing page →
             </FAQLink>
@@ -225,7 +228,7 @@ function ServicesPage() {
   return (
     <MainContentContainer>
       <SEO
-        title="Handmade Personalised Miniatures – What We Make | Creative Studio Kuki"
+        title="Handmade Personalised Miniatures | Creative Studio Kuki"
         description="Handmade personalised miniature commissions. Love stories, anniversaries, graduations, fan art, business gifts. Each piece made for exactly one person. Croatia."
         ogDescription="Handmade personalised miniature commissions. Love stories, anniversaries, graduations, fan art, business gifts. Each piece made for exactly one person."
         path="/services"
