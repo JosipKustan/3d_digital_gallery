@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Head from "next/head";
+import { SEO } from "../components/shared/SEO";
 import {
   ContactFormWrapper,
   H2Header,
@@ -49,22 +49,12 @@ export default function ContactPage() {
 
   return (
     <MainContentContainer>
-      <Head>
-        <title>Contact &amp; Commission - Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/contact" />
-        <meta
-          name="description"
-          content="Commission a personalised miniature art piece from Creative Studio Kuki. Get in touch and let's talk about the memory you want to preserve."
-        />
-        <meta
-          property="og:title"
-          content="Contact &amp; Commission - Creative Studio Kuki"
-        />
-        <meta
-          property="og:description"
-          content="Commission a personalised miniature art piece from Creative Studio Kuki."
-        />
-      </Head>
+      <SEO
+        title="Contact & Commission - Creative Studio Kuki"
+        description="Commission a personalised miniature art piece from Creative Studio Kuki. Get in touch and let's talk about the memory you want to preserve."
+        ogDescription="Commission a personalised miniature art piece from Creative Studio Kuki."
+        path="/contact"
+      />
 
       <Section
         color={theme.colors.white}
@@ -72,7 +62,7 @@ export default function ContactPage() {
         id="contact"
       >
         <HeaderWrapper>
-          <H2Header>Start a commission</H2Header>
+          <H2Header as="h1">Start a commission</H2Header>
           <SubHeader>
             {
               "Let's unlock the ideas together! You might be surprised what can be done."

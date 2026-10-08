@@ -68,9 +68,12 @@ const ProgressiveImg = forwardRef(function ProgressiveImg(
   return (
     <Wrapper>
       <Skeleton $hidden={fullLoaded} />
+      {/* Decorative blur-up copy: empty alt keeps it out of image search and screen readers */}
       <PlaceholderImg
         src={smallSrc}
+        alt=""
         aria-hidden="true"
+        loading="lazy"
         onLoad={() => setPlaceholderLoaded(true)}
         $visible={placeholderLoaded && !fullLoaded}
       />
@@ -78,6 +81,8 @@ const ProgressiveImg = forwardRef(function ProgressiveImg(
         ref={ref}
         src={src}
         alt={alt}
+        loading="lazy"
+        decoding="async"
         onClick={onClick}
         className={className}
         onLoad={() => setFullLoaded(true)}

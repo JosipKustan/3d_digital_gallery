@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { SEO } from "../components/shared/SEO";
 import Link from "next/link";
 import {
   BasicCard,
@@ -25,19 +25,12 @@ import theme from "../components/theme";
 export default function AboutPage() {
   return (
     <MainContentContainer>
-      <Head>
-        <title>About Kuki — Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/about" />
-        <meta
-          name="description"
-          content="Meet Josip 'Kuki' Kuštan — the engineer-turned-artisan behind Creative Studio Kuki. Too many hobbies, too little time, and a studio born from all of it."
-        />
-        <meta property="og:title" content="About Kuki — Creative Studio Kuki" />
-        <meta
-          property="og:description"
-          content="Meet Josip 'Kuki' Kuštan — the engineer-turned-artisan behind Creative Studio Kuki."
-        />
-      </Head>
+      <SEO
+        title="About Kuki — Creative Studio Kuki"
+        description="Meet Josip 'Kuki' Kuštan — the engineer-turned-artisan behind Creative Studio Kuki. Too many hobbies, too little time, and a studio born from all of it."
+        ogDescription="Meet Josip 'Kuki' Kuštan — the engineer-turned-artisan behind Creative Studio Kuki."
+        path="/about"
+      />
 
       <HeroSection>
         <HeaderWrapper>

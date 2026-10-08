@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
+import { SEO } from "../components/shared/SEO";
 import Link from "next/link";
 import SceneErrorBoundary from "../components/shared/SceneErrorBoundary";
 import { Button } from "../components/shared/Button";
@@ -63,24 +63,11 @@ const RastovacLiDARScene = dynamic(
 function Home() {
   return (
     <MainContentContainer>
-      <Head>
-        <title>
-          Personalised Miniature Art &amp; Handcrafted Gifts | Studio Kuki
-        </title>
-        <link rel="canonical" href="https://creativestudiokuki.com/" />
-        <meta
-          name="description"
-          content="Studio Kuki crafts personalised miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan."
-        />
-        <meta
-          property="og:title"
-          content="Personalised Miniature Art & Handcrafted Gifts | Studio Kuki"
-        />
-        <meta
-          property="og:description"
-          content="Studio Kuki crafts personalised miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan."
-        />
-      </Head>
+      <SEO
+        title="Personalised Miniature Art & Handcrafted Gifts | Studio Kuki"
+        description="Studio Kuki crafts personalised miniature art, unique gifts, wedding keepsakes, and business awards. Handmade with care by Josip Kuštan."
+        path="/"
+      />
       {/*HERO SECTION*/}
       <HeroSection>
         <HeaderWrapper>

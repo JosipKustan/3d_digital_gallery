@@ -1,5 +1,5 @@
-import Head from "next/head";
 import Link from "next/link";
+import { SEO, breadcrumbSchema } from "../../../components/shared/SEO";
 import styled from "styled-components";
 import Footer from "../../../components/shared/Footer";
 import ProjectStrip from "../../../components/app/cards/ProjectStrip";
@@ -69,16 +69,19 @@ function CategoryGalleryPage({ cat, works }) {
 
   return (
     <MainContentContainer>
-      <Head>
-        <title>{cat.label} — Gallery | Creative Studio Kuki</title>
-        <link rel="canonical" href={`https://creativestudiokuki.com/gallery/${cat.slug}`} />
-        <meta
-          name="description"
-          content={`${cat.label} miniature art pieces by Creative Studio Kuki. ${cat.description} Handcrafted, 3D-printed, hand-painted.`}
-        />
-        <meta property="og:title" content={`${cat.label} — Gallery | Creative Studio Kuki`} />
-        <meta property="og:description" content={`${cat.label} miniature art pieces by Creative Studio Kuki. ${cat.description}`} />
-      </Head>
+      {/* Empty categories stay out of search results until they get a project */}
+      <SEO
+        title={`${cat.label} — Gallery | Creative Studio Kuki`}
+        description={`${cat.label} miniature art pieces by Creative Studio Kuki. ${cat.description} Handcrafted, 3D-printed, hand-painted.`}
+        ogDescription={`${cat.label} miniature art pieces by Creative Studio Kuki. ${cat.description}`}
+        path={`/gallery/${cat.slug}`}
+        image={works[0]?.src}
+        noindex={works.length === 0}
+        jsonLd={breadcrumbSchema([
+          { name: "Gallery", path: "/gallery" },
+          { name: cat.label, path: `/gallery/${cat.slug}` },
+        ])}
+      />
 
       {/* ── HERO ── */}
       <GallerySection color={theme.colors.black}>

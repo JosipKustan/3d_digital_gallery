@@ -1,5 +1,11 @@
-import Head from "next/head";
 import Link from "next/link";
+import {
+  SEO,
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+  breadcrumbSchema,
+} from "../../../components/shared/SEO";
 import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 import Footer from "../../../components/shared/Footer";
@@ -342,17 +348,39 @@ const ScrollHint = styled.span`
 function ProjectPage({ work, cat }) {
   const bg = GROUP_BG[cat.group];
   const accent = cat.accent;
+  const projectPath = `/gallery/${cat.slug}/${work.slug}`;
 
   return (
     <MainContentContainer>
-      <Head>
-        <title>{work.name} — {cat.label} | Creative Studio Kuki</title>
-        <link rel="canonical" href={`https://creativestudiokuki.com/gallery/${cat.slug}/${work.slug}`} />
-        <meta name="description" content={work.shortDescription} />
-        <meta property="og:title" content={`${work.name} | Creative Studio Kuki`} />
-        <meta property="og:description" content={work.shortDescription} />
-        <meta property="og:image" content={work.src} />
-      </Head>
+      {/* title must be one string: mixed JSX parts like {a} | {b} render an empty <title> */}
+      <SEO
+        title={`${work.name} — ${cat.label} | Creative Studio Kuki`}
+        ogTitle={`${work.name} | Creative Studio Kuki`}
+        description={work.shortDescription}
+        path={projectPath}
+        image={work.src}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "VisualArtwork",
+            name: work.name,
+            description: work.shortDescription,
+            url: absoluteUrl(projectPath),
+            image: work.galleryImages.map(absoluteUrl),
+            artform: "Miniature",
+            creator: {
+              "@type": "Organization",
+              name: SITE_NAME,
+              url: SITE_URL,
+            },
+          },
+          breadcrumbSchema([
+            { name: "Gallery", path: "/gallery" },
+            { name: cat.label, path: `/gallery/${cat.slug}` },
+            { name: work.name, path: projectPath },
+          ]),
+        ]}
+      />
 
       {/* ── HERO: full-bleed image ── */}
       <HeroSection>
@@ -427,6 +455,7 @@ function ProjectPage({ work, cat }) {
         </GalleryMetaRow>
         <PhotoswipeScroller
           images={work.galleryImages}
+          name={work.name}
           fadeColor={theme.colors.background_dark}
         />
       </GallerySectionWrap>

@@ -3,8 +3,8 @@ import { SEO } from "../../../components/shared/SEO";
 import GalleryArt from "../../../components/GalleryArt";
 import { galleryWorks } from "../../../data/siteContent";
 
-const RastovacLiDARScene = dynamic(
-  () => import("../../../scenes/RastovacLiDARScene"),
+const Bg3CrashScene = dynamic(
+  () => import("../../../scenes/Bg3CrashScene"),
   {
     ssr: false,
     loading: () => (
@@ -13,18 +13,18 @@ const RastovacLiDARScene = dynamic(
   }
 );
 
-export default function RastovacLidarPage() {
-  const work = galleryWorks.find((w) => w.id === 1);
+export default function NautiloidCrashPage() {
+  const work = galleryWorks.find((w) => w.id === 4);
   return (
     <>
       <SEO
-        title="Rastovac LiDAR — 3D Scan | Creative Studio Kuki"
-        description="Interactive 3D LiDAR scan of Rastovac — a childhood memory preserved in miniature. Explore the model in your browser."
-        path="/gallery/3d/rastovac"
+        title="Nautiloid Crash — Baldur's Gate 3 | Creative Studio Kuki"
+        description="Interactive 3D miniature of the Nautiloid crash scene from Baldur's Gate 3. Explore the model in your browser."
+        path="/gallery/3d/nautiloid-crash"
         image={work.src}
       />
       <GalleryArt galleryID={work}>
-        <RastovacLiDARScene />
+        <Bg3CrashScene />
       </GalleryArt>
     </>
   );

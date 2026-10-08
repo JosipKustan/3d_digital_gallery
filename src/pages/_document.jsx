@@ -34,37 +34,31 @@ export default class MyDocument extends Document {
             content="miniature art, personalised gifts, handcrafted art, custom miniatures, wedding gifts, anniversary gifts, business awards, creative studio, Kuki, Josip Kuštan, unique gifts, 3D gallery"
           />
 
-          {/* Open Graph base */}
+          {/* Open Graph and Twitter base. Page-specific tags (url, image,
+              title, description) come from components/shared/SEO.jsx */}
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://creativestudiokuki.com" />
-          <meta
-            property="og:image"
-            content="https://creativestudiokuki.com/assets/images/Logos/OSLinkImage.png"
-          />
           <meta property="og:site_name" content="Creative Studio Kuki" />
-
-          {/* Twitter Card base */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:image"
-            content="https://creativestudiokuki.com/assets/images/Logos/OSLinkImage.png"
-          />
 
-          {/* Schema.org structured data */}
+          {/* Schema.org structured data. Organization, not LocalBusiness:
+              LocalBusiness needs a street address to be valid for Google.
+              Add social profile URLs to sameAs when they exist. */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "LocalBusiness",
+                "@type": "Organization",
+                "@id": "https://creativestudiokuki.com/#organization",
                 name: "Creative Studio Kuki",
                 description:
                   "Handcrafted personalised miniature art, unique gifts, wedding keepsakes, and business awards.",
                 url: "https://creativestudiokuki.com",
+                logo: "https://creativestudiokuki.com/assets/images/Logos/OSLinkImage.png",
                 image:
                   "https://creativestudiokuki.com/assets/images/Logos/OSLinkImage.png",
+                address: { "@type": "PostalAddress", addressCountry: "HR" },
                 founder: { "@type": "Person", name: "Josip Kuštan" },
-                sameAs: [],
               }),
             }}
           />

@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
+import { SEO } from "../../../components/shared/SEO";
 import GalleryArt from "../../../components/GalleryArt";
 import { galleryWorks } from "../../../data/siteContent";
 
@@ -14,17 +14,16 @@ const AttackOnBaldursGateScene = dynamic(
 );
 
 export default function AttackOnBaldursGatePage() {
+  const work = galleryWorks.find((w) => w.id === 5);
   return (
     <>
-      <Head>
-        <title>Attack on Baldur&apos;s Gate — 3D Miniature | Creative Studio Kuki</title>
-        <link rel="canonical" href="https://creativestudiokuki.com/gallery/3d/attack-on-baldurs-gate" />
-        <meta
-          name="description"
-          content="Interactive 3D miniature of the Attack on Baldur's Gate scene. Explore the handcrafted model in your browser."
-        />
-      </Head>
-      <GalleryArt galleryID={galleryWorks.find((w) => w.id === 5)}>
+      <SEO
+        title="Attack on Baldur's Gate — 3D Miniature | Creative Studio Kuki"
+        description="Interactive 3D miniature of the Attack on Baldur's Gate scene. Explore the handcrafted model in your browser."
+        path="/gallery/3d/attack-on-baldurs-gate"
+        image={work.src}
+      />
+      <GalleryArt galleryID={work}>
         <AttackOnBaldursGateScene />
       </GalleryArt>
     </>

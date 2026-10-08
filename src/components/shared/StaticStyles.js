@@ -831,3 +831,17 @@ export const InlineLink = styled(Link)`
     opacity: 1;
   }
 `;
+
+// Readable by search engines and screen readers, invisible on screen.
+// Use for headings on pages whose visual title is a canvas or image.
+export const VisuallyHidden = styled.span`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+`;

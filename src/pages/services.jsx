@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { SEO } from "../components/shared/SEO";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -224,28 +224,13 @@ function ServicesPage() {
 
   return (
     <MainContentContainer>
-      <Head>
-        <title>
-          Handmade Personalised Miniatures – What We Make | Creative Studio Kuki
-        </title>
-        <link rel="canonical" href="https://creativestudiokuki.com/services" />
-        <meta
-          name="description"
-          content="Handmade personalised miniature commissions. Love stories, anniversaries, graduations, fan art, business gifts. Each piece made for exactly one person. Croatia."
-        />
-        <meta
-          property="og:title"
-          content="Handmade Personalised Miniatures – What We Make | Creative Studio Kuki"
-        />
-        <meta
-          property="og:description"
-          content="Handmade personalised miniature commissions. Love stories, anniversaries, graduations, fan art, business gifts. Each piece made for exactly one person."
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
-        />
-      </Head>
+      <SEO
+        title="Handmade Personalised Miniatures – What We Make | Creative Studio Kuki"
+        description="Handmade personalised miniature commissions. Love stories, anniversaries, graduations, fan art, business gifts. Each piece made for exactly one person. Croatia."
+        ogDescription="Handmade personalised miniature commissions. Love stories, anniversaries, graduations, fan art, business gifts. Each piece made for exactly one person."
+        path="/services"
+        jsonLd={servicesSchema}
+      />
 
       {/* ── HERO ── */}
       <HeroServicesSection id="services">

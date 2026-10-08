@@ -111,7 +111,12 @@ export default function ProjectStrip({ work, accent, fadeColor }) {
         </CTARow>
       </TopRow>
 
-      <PhotoswipeScroller images={work.galleryImages} fadeColor={fadeColor} breakout />
+      <PhotoswipeScroller
+        images={work.galleryImages}
+        name={work.name}
+        fadeColor={fadeColor}
+        breakout
+      />
     </StripWrapper>
   );
 }
