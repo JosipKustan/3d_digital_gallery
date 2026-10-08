@@ -22,12 +22,14 @@ const CardOuter = styled.div`
   border: 1px solid ${({ $color }) => $color};
   overflow: visible;
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px ${({ $color }) => $color}33;
+    transform: scale(1.03);
+    box-shadow: 6px 8px 0 0 ${({ $color }) => $color};
+    border-color: ${({ $color }) => $color};
   }
 
   &:hover img {
@@ -156,19 +158,20 @@ export default function ProjectCard({ work, accent, showNumber }) {
 
   return (
     <CardOuter $color={color}>
-      {showNumber != null && (
-        <CardNumber>0{showNumber + 1}</CardNumber>
-      )}
-      {work.link && (
-        <Has3DBadge $color={color}>3D ✦</Has3DBadge>
-      )}
+      {showNumber != null && <CardNumber>0{showNumber + 1}</CardNumber>}
+      {work.link && <Has3DBadge $color={color}>3D ✦</Has3DBadge>}
 
-      <Link href={projectHref} style={{ textDecoration: "none", display: "block" }}>
+      <Link
+        href={projectHref}
+        style={{ textDecoration: "none", display: "block" }}
+      >
         <ImageWrapper>
           <CardImg src={work.src} alt={work.name} loading="lazy" />
         </ImageWrapper>
         <CardBody>
-          <CategoryLabel $color={color}>{work.category.replace(/-/g, " ")}</CategoryLabel>
+          <CategoryLabel $color={color}>
+            {work.category.replace(/-/g, " ")}
+          </CategoryLabel>
           <CardTitle>{work.name}</CardTitle>
         </CardBody>
       </Link>

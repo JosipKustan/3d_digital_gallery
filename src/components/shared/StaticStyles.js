@@ -349,7 +349,7 @@ export const StepWrapper = styled.div`
   }
 `;
 
-export const HeroHeader = styled.h3`
+export const HeroHeader = styled.h1`
   margin: 0;
   font-size: ${theme.typography.size.hero};
   text-transform: uppercase;
@@ -374,7 +374,7 @@ export const H1Highlight = styled.span`
   line-height: ${theme.typography.leading.tight};
 `;
 
-export const H1Small = styled.h1`
+export const H1Small = styled.h2`
   margin: 0;
   font-family: ${theme.fonts.body};
   font-size: ${theme.typography.size.body};
@@ -404,6 +404,18 @@ export const SubHeader = styled.h3`
   font-size: ${theme.typography.size.lead};
   @media (min-width: 1080px) {
     font-size: 32px;
+  }
+`;
+
+export const BodyLead = styled.p`
+  margin: 0;
+  font-family: ${theme.fonts.body};
+  font-weight: ${theme.typography.weight.regular};
+  line-height: ${theme.typography.leading.relaxed};
+  font-size: ${theme.typography.size.lead};
+
+  @media (min-width: 1080px) {
+    font-size: ${theme.typography.size.subheading};
   }
 `;
 

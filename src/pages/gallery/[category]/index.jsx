@@ -11,9 +11,7 @@ import {
   H1Header,
   H4Header,
   HeaderWrapper,
-  H5Header,
   MainContentContainer,
-  SectionTitleGroup,
   SectionTopRow,
   SubHeader,
 } from "../../../components/shared/StaticStyles";
@@ -95,10 +93,6 @@ function CategoryGalleryPage({ cat, works }) {
       {/* ── WORKS ── */}
       <CategorySection id={cat.slug} $bg={bg}>
         <SectionTopRow>
-          <SectionTitleGroup>
-            <CategoryLabel $accent={cat.accent}>{cat.description}</CategoryLabel>
-            <H5Header>{cat.label}</H5Header>
-          </SectionTitleGroup>
           <Button variant="light" as={Link} href="/contact">
             Commission one →
           </Button>
@@ -110,6 +104,7 @@ function CategoryGalleryPage({ cat, works }) {
               key={work.id}
               work={work}
               accent={cat.accent}
+              fadeColor={bg}
             />
           ))
         ) : (

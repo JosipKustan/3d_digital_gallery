@@ -1,59 +1,89 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Backdrop,
   BrandName,
+  ComicBubble,
   Hamburger,
   MenuItem,
   MenuList,
   Nav,
-  NavScrollZone,
+  TigiPeekZone,
   TopNavigationWrapper,
 } from "./NavMenuStyles.js";
-import GalleryList from "./GalleryList.jsx";
-import { CatCard } from "../cards/CatCard.jsx";
-import theme from "../../theme.js";
-import { BusinessCatSVG } from "../SVG/BusinessCatSVG.jsx";
-import { IndividualCatSVG } from "../SVG/IndividualCatSVG.jsx";
-import { CardsWrapper } from "../cards/CardStyles.js";
-import { H5Header, H6Header } from "../../shared/StaticStyles.js";
+import { TigiSVG } from "../SVG/TigiSideEyeSVG.jsx";
+
+const TIGI_COMPLAINTS = [
+  // meows
+  "...meooow...",
+  "...mrrrow...",
+  "...meeOOOw...",
+  "...mrowr...",
+  "...miaow...",
+  "...meh.",
+  "...mrp.",
+  // short and annoyed
+  "You again.",
+  "Hurry up.",
+  "Rude.",
+  "Fine. What.",
+  "No.",
+  "Again?",
+  "Unbelievable.",
+  "I was warm. You ruined it.",
+  "Pick one already.",
+  "I have naps scheduled.",
+  "Žuki is asleep. Lucky him.",
+  "You could have just scrolled.",
+  "I was literally sleeping.",
+];
 
 const variants = {
   open: {
     x: 0,
-    transition: {
-      ease: "easeInOut",
-    },
+    transition: { ease: "easeInOut" },
   },
   closed: {
     x: "-100%",
-    transition: {
-      ease: "easeInOut",
-    },
+    transition: { ease: "easeInOut" },
   },
 };
+
 function MobileNavMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showBackdrop, setShowBackdrop] = useState(false);
   const [startX, setStartX] = useState(null);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    setShowBackdrop(!showBackdrop);
-  };
+  const [openCount, setOpenCount] = useState(0);
+  const [message, setMessage] = useState(null);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  useEffect(() => {
+    if (isOpen) {
+      setOpenCount((c) => {
+        const next = c + 1;
+        if (next >= 2) {
+          setMessage(
+            TIGI_COMPLAINTS[Math.floor(Math.random() * TIGI_COMPLAINTS.length)],
+          );
+        }
+        return next;
+      });
+    }
+  }, [isOpen]);
+
   const handleTouchStart = (event) => {
     setStartX(event.touches[0].clientX);
   };
 
   const handleTouchEnd = (event) => {
     const endX = event.changedTouches[0].clientX;
-
-    if (endX < startX) {
-      toggleMenu();
-    }
+    if (endX < startX) toggleMenu();
   };
+
   return (
     <>
       <TopNavigationWrapper>
-        <Hamburger onClick={toggleMenu}>
+        <Hamburger onClick={toggleMenu} aria-label="Open navigation menu">
           <svg
             width="24"
             height="18"
@@ -83,45 +113,61 @@ function MobileNavMenu() {
           onTouchEnd={handleTouchEnd}
         />
       )}
+
       <Nav
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        // onTouchStart={handleTouchStart}
-        // onTouchEnd={handleTouchEnd}
         onClick={toggleMenu}
       >
-        <H5Header style={{ paddingLeft: "16px" }}>
-          VIEW SOME WORK IN 3D
-        </H5Header>
-        <GalleryList />
         <MenuList>
           <MenuItem href="/">Home</MenuItem>
           <MenuItem href="/gallery">Gallery</MenuItem>
           <MenuItem href="/services">Services</MenuItem>
+          <MenuItem href="/about">About</MenuItem>
           <MenuItem href="/contact">Contact</MenuItem>
         </MenuList>
 
-        <H5Header style={{ paddingLeft: "16px", marginTop: "16px" }}>
-          CHECK OUT OUR SERVICES
-        </H5Header>
-        <CardsWrapper>
-          <CatCard
-            svg={<IndividualCatSVG />}
-            header="For Individuals"
-            description="Personalised Miniature Art for one or many."
-            color={theme.colors.tiel_dark}
-          />
-          <CatCard
-            svg={<BusinessCatSVG />}
-            header="For Businesses"
-            description="Gifts, Memorabilia, Awards and Game Events."
-            color={theme.colors.blue_dark}
-          />
-        </CardsWrapper>
-        <NavScrollZone />
+        <AnimatePresence>
+          {isOpen && openCount >= 2 && message && (
+            <motion.div
+              key={`bubble-${openCount}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 0, 1] }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 2.4,
+                times: [0, 0.45, 1],
+                ease: "easeOut",
+                delay: 0.8,
+              }}
+              style={{
+                position: "absolute",
+                bottom: 0,
+                right: 0,
+                width: "100%",
+                height: "100%",
+                pointerEvents: "none",
+              }}
+            >
+              <ComicBubble>{message}</ComicBubble>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <TigiPeekZone>
+          <motion.div
+            style={{ position: "absolute", bottom: 0, right: 0 }}
+            initial={{ y: "50%" }}
+            animate={{ y: openCount >= 1 ? "0%" : "50%" }}
+            transition={{ duration: 7, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+          >
+            <TigiSVG width={200} height={183} />
+          </motion.div>
+        </TigiPeekZone>
       </Nav>
     </>
   );
 }
+
 export default MobileNavMenu;

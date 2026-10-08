@@ -80,14 +80,14 @@ const Card = styled.div`
   flex-direction: column;
   width: 100%;
   transition:
-    border-color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
+    transform: scale(1.03);
+    box-shadow: 6px 8px 0 0 ${({ $color }) => $color};
     border-color: ${({ $color }) => $color};
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px ${({ $color }) => $color}33;
   }
 
   &:hover img {

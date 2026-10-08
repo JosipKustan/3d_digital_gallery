@@ -1,10 +1,7 @@
 /* eslint-disable quotes */
 import Link from "next/link";
 import styled from "styled-components";
-import { Gallery, Item } from "react-photoswipe-gallery";
-import "photoswipe/style.css";
-import useImageDimensions from "../../shared/hooks/useImageDimensions";
-import ProgressiveImg from "../../shared/ProgressiveImg";
+import PhotoswipeScroller from "../../shared/PhotoswipeScroller";
 import { Button } from "../../shared/Button";
 import theme from "../../theme";
 
@@ -66,53 +63,6 @@ const CTARow = styled.div`
   flex-shrink: 0;
 `;
 
-// ─── Horizontal image scroll ──────────────────────────────────────────────────
-
-const ScrollTrack = styled.div`
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-inline: 24px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-
-  /* hide scrollbar but keep scroll behaviour */
-  scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
-
-  @media (min-width: 1080px) {
-    padding-inline: 0;
-  }
-`;
-
-const ImageSlot = styled.div`
-  flex-shrink: 0;
-  height: 260px;
-  width: auto;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 4px;
-  scroll-snap-align: start;
-  cursor: pointer;
-  position: relative;
-
-  &:hover img {
-    transform: scale(1.04);
-  }
-
-  @media (min-width: 768px) {
-    height: 320px;
-  }
-`;
-
-const SlotImg = styled(ProgressiveImg)`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-`;
-
 // ─── 3D pill ──────────────────────────────────────────────────────────────────
 
 const ThreeDButton = styled(Link)`
@@ -138,35 +88,9 @@ const ThreeDButton = styled(Link)`
   }
 `;
 
-// ─── Individual image item (hooks must be in a child component) ───────────────
-
-function ImageItem({ path, index }) {
-  const { width, height } = useImageDimensions(path);
-  return (
-    <Item
-      original={path}
-      thumbnail={path}
-      width={width}
-      height={height}
-      caption={`Image ${index + 1}`}
-    >
-      {({ ref, open }) => (
-        <ImageSlot onClick={open}>
-          <SlotImg
-            ref={ref}
-            src={path}
-            alt={`Image ${index + 1}`}
-            className="image-item"
-          />
-        </ImageSlot>
-      )}
-    </Item>
-  );
-}
-
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function ProjectStrip({ work, accent }) {
+export default function ProjectStrip({ work, accent, fadeColor }) {
   const projectHref = `/gallery/${work.category}/${work.slug}`;
 
   return (
@@ -188,13 +112,7 @@ export default function ProjectStrip({ work, accent }) {
         </CTARow>
       </TopRow>
 
-      <Gallery>
-        <ScrollTrack>
-          {work.galleryImages.map((path, i) => (
-            <ImageItem key={path} path={path} index={i} />
-          ))}
-        </ScrollTrack>
-      </Gallery>
+      <PhotoswipeScroller images={work.galleryImages} fadeColor={fadeColor} breakout />
     </StripWrapper>
   );
 }

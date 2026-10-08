@@ -151,6 +151,50 @@ export const NavScrollZone = styled.div`
   width: 100%;
 `;
 
+export const TigiPeekZone = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: -56px;
+  width: 200px;
+  height: 183px;
+  overflow: hidden;
+  pointer-events: none;
+`;
+
+export const ComicBubble = styled.div`
+  position: absolute;
+  bottom: 100px;
+  right: 152px;
+  background: #fff;
+  border: 2.5px solid #000;
+  border-radius: 14px;
+  padding: 8px 14px;
+  font-family: "Kanit", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  white-space: nowrap;
+  pointer-events: none;
+  transform-origin: bottom right;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -13px;
+    bottom: 14px;
+    border: 7px solid transparent;
+    border-left-color: #000;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    bottom: 15px;
+    border: 6px solid transparent;
+    border-left-color: #fff;
+  }
+`;
+
 export const DesktopNavWrapper = styled.nav`
   position: fixed;
   top: 0px;
@@ -252,4 +296,52 @@ export const CategoryLabel = styled.div`
   border: 1.5px solid ${({ $accent }) => $accent};
   border-radius: 100px;
   width: fit-content;
+`;
+
+export const NavServiceLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: ${theme.colors.black};
+  border-left: 3px solid ${({ $accent }) => $accent};
+  background: ${({ $accent }) => $accent}14;
+  border-radius: 0 ${theme.border.medium} ${theme.border.medium} 0;
+  transition: background 0.2s ease;
+  &:hover {
+    background: ${({ $accent }) => $accent}28;
+  }
+`;
+
+export const NavServiceBadge = styled.div`
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: ${({ $color }) => $color};
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+`;
+
+export const NavServiceText = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+`;
+
+export const NavServiceName = styled.span`
+  font-family: ${theme.fonts.heading};
+  font-size: ${theme.typography.size.subheading};
+  font-weight: ${theme.typography.weight.bold};
+  line-height: ${theme.typography.leading.tight};
+`;
+
+export const NavServiceDesc = styled.span`
+  font-size: ${theme.typography.size.caption};
+  color: rgba(0, 0, 0, 0.55);
+  line-height: ${theme.typography.leading.snug};
 `;

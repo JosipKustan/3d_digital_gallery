@@ -15,6 +15,7 @@ function DesktopNavMenu() {
         <MenuItem href="/">Home</MenuItem>
         <MenuItem href="/gallery">Gallery</MenuItem>
         <MenuItem href="/services">Services</MenuItem>
+        <MenuItem href="/about">About</MenuItem>
         <MenuItem href="/contact">Contact</MenuItem>
       </MenuList>
     </DesktopNavWrapper>
