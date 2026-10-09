@@ -15,16 +15,19 @@ import {
   HeaderWrapper,
   HeroPortfolioIllustration,
   MainContentContainer,
+  PortfolioCardsGrid,
   PurPurAnimated,
   ScrollZoneBottom,
   ScrollZoneTop,
   Section3D,
+  Section3DHeader,
   SectionPortfolio,
   SkillCardsWrapper,
   SkillSectionPortfolio,
   StepWrapper,
   SubHeader,
   TextListWrapper,
+  WideHeaderWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
 import GuideInfo from "../components/app/GuideInfo";
@@ -82,10 +85,11 @@ function Portfolio() {
 
       {/*3D SECTION*/}
       <Section3D
+        $growWithContent
         background={theme.colors.purple_dark}
         color={theme.colors.white}
       >
-        <HeaderWrapper>
+        <Section3DHeader>
           <H2Header>
             What comes <br />
             with me?
@@ -96,7 +100,14 @@ function Portfolio() {
             Ready for product teams, but open to interesting challenges
             anywhere.
           </BodyLead>
-        </HeaderWrapper>
+          <Button
+            variant="solid"
+            onClick={() => openLink("/assets/PDF/Josip_Kustan_CV.pdf")}
+          >
+            View CV
+            <IconNewTab />
+          </Button>
+        </Section3DHeader>
         {!isMobileView && (
           <>
             <ScrollZoneTop />
@@ -116,13 +127,13 @@ function Portfolio() {
         background={theme.colors.background_dark}
         color={theme.colors.white}
       >
-        <HeaderWrapper>
+        <WideHeaderWrapper>
           <H2Header>Work I am proud of</H2Header>
           <SubHeader>
             Most work is under NDA, but here's what I can show
           </SubHeader>
-        </HeaderWrapper>
-        <SkillCardsWrapper>
+        </WideHeaderWrapper>
+        <PortfolioCardsGrid>
           <PortfolioCard
             svg={<IndividualCatSVG />}
             img="/assets/images/Logos/webp/big/cpsHand-1308x1308.webp"
@@ -175,7 +186,7 @@ function Portfolio() {
             textColor={theme.colors.black}
             links={[["https://newslabs.io/", "Website"]]}
           />
-        </SkillCardsWrapper>
+        </PortfolioCardsGrid>
       </SkillSectionPortfolio>
 
       {/*MoWook*/}
@@ -260,12 +271,12 @@ function Portfolio() {
 
       {/* MoSkills */}
       <SkillSectionPortfolio background={theme.colors.white}>
-        <HeaderWrapper>
+        <WideHeaderWrapper>
           <H2Header>LIFE Skills</H2Header>
           <SubHeader>
             Life experience has been preparing me for UX and design.
           </SubHeader>
-        </HeaderWrapper>
+        </WideHeaderWrapper>
 
         <SkillCardsWrapper>
           <SkillsCard

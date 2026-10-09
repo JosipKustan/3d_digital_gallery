@@ -137,6 +137,13 @@ export const Section3D = styled.section`
     padding: 128px 0px 0px 128px;
     align-items: center;
     height: 100vh;
+    ${(props) =>
+      props.$growWithContent &&
+      `
+      height: auto;
+      min-height: 100vh;
+      padding-bottom: 128px;
+    `}
   }
 `;
 
@@ -255,6 +262,21 @@ export const HeaderWrapper = styled.header`
     width: auto;
   }
 `;
+// Centered section header as wide as the PortfolioCardsGrid (2 x 540px + 48px gap),
+// so big H2s wrap less on desktop; balance avoids a lone last word
+export const WideHeaderWrapper = styled(HeaderWrapper)`
+  h2 {
+    text-wrap: balance;
+  }
+  @media (min-width: 1080px) {
+    max-width: 1128px;
+  }
+`;
+// Header in Section3D that holds buttons: sits above ScrollZoneTop/Bottom so it stays clickable
+export const Section3DHeader = styled(HeaderWrapper)`
+  z-index: 11;
+`;
+
 export const ScreenWrapper = styled.div`
   height: 100vh;
 `;
@@ -313,6 +335,16 @@ export const SkillCardsWrapper = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     padding-inline: 0px;
+    justify-content: center;
+  }
+`;
+
+// Portfolio cards: 2 columns on desktop, every row as tall as the tallest card
+export const PortfolioCardsGrid = styled(SkillCardsWrapper)`
+  @media (min-width: 1080px) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 540px));
+    grid-auto-rows: 1fr;
     justify-content: center;
   }
 `;

@@ -2,12 +2,12 @@ import { Button } from "../../shared/Button";
 import { useOpenLink } from "../../shared/hooks/useOpenLink";
 import { IconNewTab } from "../SVG/IconNewTab";
 import {
-  CardBottomWrapper,
   CardImage,
-  CardWrapper,
   CatCardDescription,
   CatCardHeader,
   CircleWrapper,
+  PortfolioCardBottom,
+  PortfolioCardWrapper,
   SVGWrapper,
   TextWrapper,
 } from "./CardStyles";
@@ -26,7 +26,7 @@ export function PortfolioCard({
   const { openLink } = useOpenLink();
 
   return (
-    <CardWrapper
+    <PortfolioCardWrapper
       color={color}
       $textColor={textColor}
       direction="column"
@@ -42,7 +42,7 @@ export function PortfolioCard({
           <strong>{responsibilities}</strong>
         </CatCardDescription>
       </TextWrapper>
-      <CardBottomWrapper>
+      <PortfolioCardBottom>
         <CircleWrapper color={colorAccent}>
           {img ? (
             <CardImage src={img} alt={`${header} art`} sizes="148px" />
@@ -63,7 +63,7 @@ export function PortfolioCard({
               </Button>
             ))}
         </TextWrapper>
-      </CardBottomWrapper>
-    </CardWrapper>
+      </PortfolioCardBottom>
+    </PortfolioCardWrapper>
   );
 }

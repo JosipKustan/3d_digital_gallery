@@ -19,6 +19,11 @@ export const CardWrapper = styled.div`
   box-sizing: border-box;
   padding: 8px 16px;
 `;
+// Fills its grid cell; the bottom row (image + links) sits at the bottom
+export const PortfolioCardWrapper = styled(CardWrapper)`
+  height: 100%;
+  justify-content: flex-start;
+`;
 export const SkillCardWrapper = styled.div`
   position: relative;
   width: 100%;
@@ -57,6 +62,9 @@ export const CardBottomWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   padding-top: 16px;
+`;
+export const PortfolioCardBottom = styled(CardBottomWrapper)`
+  margin-top: auto;
 `;
 export const CatCardHeader = styled.h4`
   font-family: ${theme.fonts.heading};
