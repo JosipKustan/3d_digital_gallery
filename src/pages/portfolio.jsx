@@ -31,6 +31,7 @@ import {
   WideHeaderWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
+import SceneLoader from "../components/shared/SceneLoader";
 import GuideInfo from "../components/app/GuideInfo";
 import { IndividualCatSVG } from "../components/app/SVG/IndividualCatSVG";
 import Footer from "../components/shared/Footer";
@@ -56,9 +57,7 @@ const RastovacLiDARScene = dynamic(
   () => import("../scenes/RastovacLiDARScene"),
   {
     ssr: false,
-    loading: () => (
-      <div style={{ width: "100%", height: "100%", background: "#131122" }} />
-    ),
+    loading: () => <SceneLoader />,
   },
 );
 

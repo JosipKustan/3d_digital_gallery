@@ -35,6 +35,7 @@ import {
   TextListWrapper,
 } from "../components/shared/StaticStyles";
 import theme from "../components/theme";
+import SceneLoader from "../components/shared/SceneLoader";
 import { ModelDescription } from "../components/app/cards/ModelDescription";
 import GuideInfo from "../components/app/GuideInfo";
 import { GalleryTeaser } from "../components/app/GalleryTeaser";
@@ -54,9 +55,7 @@ const RastovacLiDARScene = dynamic(
   () => import("../scenes/RastovacLiDARScene"),
   {
     ssr: false,
-    loading: () => (
-      <div style={{ width: "100%", height: "100%", background: "#131122" }} />
-    ),
+    loading: () => <SceneLoader />,
   },
 );
 
