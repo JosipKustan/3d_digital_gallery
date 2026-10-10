@@ -41,12 +41,37 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://creativestudiokuki.com/gallery/love-stories</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/life-moments</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://creativestudiokuki.com/gallery/places</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://creativestudiokuki.com/gallery/achievements</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/employee-gifts</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://creativestudiokuki.com/gallery/gaming-art</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/movie-art</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,6 +87,76 @@
   </url>
   <url>
     <loc>https://creativestudiokuki.com/gallery/gaming-art/nautiloid-crash</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/places/kocusa-waterfall-family</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/love-stories/monopoli-beach-wedding-anniversary</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/love-stories/vir-pier-i-love-you</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/love-stories/couple-and-dog-in-their-garden</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/love-stories/artemis-of-ephesus-photo-shoot</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/love-stories/cafe-ferrari</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/life-moments/camper-van-dream-documentary</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/achievements/dentist-graduation-pag-folk-costume</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/employee-gifts/partisan-grill-aarhus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/gaming-art/pyramid-head-silent-hill-2</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/gaming-art/mollymauk-tealeaf-critical-role</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/movie-art/dune-attack-of-the-maker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/movie-art/interstellar-tesseract-infinity-box</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://creativestudiokuki.com/gallery/movie-art/vi-arcane-bust</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

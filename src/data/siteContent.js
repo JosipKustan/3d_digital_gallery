@@ -182,33 +182,370 @@ export const galleryWorks = [
       "/assets/images/works/attackonbaldursgate/attack_3.jpg",
       "/assets/images/works/attackonbaldursgate/attack_4.jpg",
     ],
-  },
+  }, */
   {
     id: 6,
-    name: "Waterfall Family Memory",
-    src: "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-1-1836x1033.webp",
-    link: "/waterfallfamily",
+    category: "places",
+    slug: "kocusa-waterfall-family",
+    name: "Family at Kočuša waterfall",
+    src: "/assets/images/works/KocusaWaterfall/webp/big/KocusaWaterfall-1-1920x2560.webp",
     description:
-      "This piece portrays a family of five at their hometown waterfall, complete with a duck family of five swimming nearby.",
+      "A family of five at the Kočuša waterfall, their hometown waterfall, with a family of ducks swimming nearby.",
     shortDescription:
-      "A miniature sculpture capturing a family of five at a waterfall, their cherished place of origin.",
+      "A family of five at the Kočuša waterfall in miniature, with 3 cm resin-printed figures, epoxy water and soft light glowing behind the falls.",
     making:
-      "They are 3cm, 3D printed using a 3D resin printer. Model was created with refrence to their picture. Crafted from epoxy and plaster with delicate lighting effects behind the waterfall to enhance the scene's warmness.",
-    artistName: "Waterfall Family",
-    artistRealName: "Josip Kuštan",
-    artistsImage: "/assets/images/HeaderImages/Waterfall_Simple.png",
+      "The figures are 3 cm tall, 3D printed on a resin printer and modelled from the family's photo. The water is crafted from epoxy and plaster, with delicate lighting behind the waterfall to warm up the scene.",
+    artistName: "Family miniature",
+    artistRealName: "2024",
+    artistsImage: "/assets/images/avatarImage.webp",
     galleryImages: [
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-1-1836x1033.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-2-1643x791.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-3-3026x2812.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-4-1787x926.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-5-1975x1073.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-6-1850x1092.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-7-2016x1215.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-8-1951x1202.webp",
-      "/assets/images/works/WaterfallFamily/Webp/big/WaterfallFamily-9-1512x2016.webp",
+      "/assets/images/works/KocusaWaterfall/webp/big/KocusaWaterfall-1-1920x2560.webp",
+      "/assets/images/works/KocusaWaterfall/webp/big/KocusaWaterfall-2-1440x2560.webp",
+      "/assets/images/works/KocusaWaterfall/webp/big/KocusaWaterfall-3-1920x2560.webp",
+      "/assets/images/works/KocusaWaterfall/webp/big/KocusaWaterfall-4-1920x2560.webp",
+      "/assets/images/works/KocusaWaterfall/webp/big/KocusaWaterfall-5-1440x2560.webp",
     ],
-  }, */
+  },
+  {
+    id: 7,
+    category: "love-stories",
+    slug: "monopoli-beach-wedding-anniversary",
+    name: "Monopoli beach, a 25th wedding anniversary",
+    src: "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-1-2560x1920.webp",
+    description:
+      "A commission for a 25th wedding anniversary. The wedding was held on a beach in Monopoli, Italy, so that is where the couple stand: on that exact beach, dressed as they were on their wedding day. There's a heart drawn in the sand, petals, beautiful waves, and small waves frothing on the shore.",
+    shortDescription:
+      "A 25th wedding anniversary miniature: the couple on the Monopoli beach where they married, with a heart in the sand, petals and frothing waves.",
+    making:
+      "The sea fills most of the round base, with the foam of each wave picked out in white where it breaks on the sand. Two blossoming trees frame the couple, and a name plaque sits on the base. The last photos show the piece in progress on my desk.",
+    artistName: "Wedding anniversary commission",
+    artistRealName: "2024",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-1-2560x1920.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-2-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-3-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-4-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-5-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-6-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-7-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-8-1440x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-9-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-10-1920x2560.webp",
+      "/assets/images/works/MonopoliBeach/webp/big/MonopoliBeach-11-1920x2560.webp",
+    ],
+  },
+  {
+    id: 8,
+    category: "love-stories",
+    slug: "vir-pier-i-love-you",
+    name: "I love you, the Vir pier where they met",
+    src: "/assets/images/works/VirPier/webp/big/VirPier-1-2560x1920.webp",
+    description:
+      "An anniversary gift from a boyfriend to his girlfriend. It shows the place where they actually met: the main pier on the island of Vir, Croatia. The pier has a huge sign that says \"I ♥ VIR\", and we changed it to \"I ♥ YOU\".",
+    shortDescription:
+      "An anniversary miniature of the Vir pier in Croatia where a couple first met, with the island's famous I ♥ VIR sign changed to I ♥ YOU.",
+    making:
+      "The couple sit on the pier under the sign while the sea breaks on the rocks below. A string of fairy lights inside the glass dome makes it glow in the dark. The last photo shows the build before painting.",
+    artistName: "Anniversary commission",
+    artistRealName: "2024",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/VirPier/webp/big/VirPier-1-2560x1920.webp",
+      "/assets/images/works/VirPier/webp/big/VirPier-2-1920x2560.webp",
+      "/assets/images/works/VirPier/webp/big/VirPier-3-2560x1920.webp",
+      "/assets/images/works/VirPier/webp/big/VirPier-4-1920x2560.webp",
+      "/assets/images/works/VirPier/webp/big/VirPier-5-1920x2560.webp",
+      "/assets/images/works/VirPier/webp/big/VirPier-6-1676x2560.webp",
+    ],
+  },
+  {
+    id: 9,
+    category: "love-stories",
+    slug: "couple-and-dog-in-their-garden",
+    name: "A couple and their dog in their own garden",
+    src: "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-1-1920x2560.webp",
+    description:
+      "A commission given as a gift on Valentine's Day. It shows the couple and their dog playing in a garden they made themselves. The garden was the first bigger project at their new home, so it meant a lot to them. It's the place where they first truly felt at home: calm, with no worries. That's the place I depicted.",
+    shortDescription:
+      "A Valentine's Day miniature of a couple playing with their dog in the garden they built at their new home, the place where they first felt at home.",
+    making:
+      "Grass, a tiled terrace with a dining table, potted plants and a fence covered in red climbing flowers, all on a small brass base under a glass dome. The couple and their dog are painted by hand.",
+    artistName: "Valentine's Day commission",
+    artistRealName: "2026",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-1-1920x2560.webp",
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-2-1920x2560.webp",
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-3-1920x2560.webp",
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-4-1920x2560.webp",
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-5-1920x2560.webp",
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-6-1920x2560.webp",
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-7-1920x2560.webp",
+      "/assets/images/works/CoupleGarden/webp/big/CoupleGarden-8-1920x2560.webp",
+    ],
+  },
+  {
+    id: 10,
+    category: "love-stories",
+    slug: "artemis-of-ephesus-photo-shoot",
+    name: "Artemis of Ephesus photo shoot",
+    src: "/assets/images/works/ArtemisOfEphesus/webp/big/Artemis-cover-1920x1440.webp",
+    description:
+      "An anniversary gift for a very adventurous couple who love to travel and do crazy things. They are doing a photo shoot on the statue of Artemis of Ephesus: she climbs onto the statue while he kneels below with the camera. The statue is splashed with paint, as if they've almost vandalized it. It's a photo shoot, though, so the scene is clearly set in a studio, with studio lights, light stands, paint cans and props around the base. A wacky anniversary gift, but they liked it.",
+    shortDescription:
+      "An anniversary miniature of an adventurous couple's photo shoot on a paint-splashed Artemis of Ephesus statue, lit by working studio LEDs under a glass dome.",
+    making:
+      "The lighting is what makes this one special. I wanted a real studio setting, so the miniature is built to be seen in the dark. It has two strong LEDs: one hidden behind a diffusion box, like real photo gear, and a pink one for contrast. Everything sits under a glass dome.",
+    artistName: "Anniversary commission",
+    artistRealName: "2025",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/ArtemisOfEphesus/webp/big/Artemis-1-1920x2560.webp",
+      "/assets/images/works/ArtemisOfEphesus/webp/big/Artemis-2-1920x2560.webp",
+      "/assets/images/works/ArtemisOfEphesus/webp/big/Artemis-3-1920x2560.webp",
+      "/assets/images/works/ArtemisOfEphesus/webp/big/Artemis-4-1920x2560.webp",
+      "/assets/images/works/ArtemisOfEphesus/webp/big/Artemis-5-1536x2048.webp",
+      "/assets/images/works/ArtemisOfEphesus/webp/big/Artemis-6-1920x2560.webp",
+    ],
+  },
+  {
+    id: 11,
+    category: "love-stories",
+    slug: "cafe-ferrari",
+    name: "Cafe Ferrari, where her parents met",
+    src: "/assets/images/works/CafeFerrari/webp/big/CafeFerrari-1-1920x2560.webp",
+    description:
+      "A daughter's gift to her parents for their big wedding anniversary. Cafe Ferrari is where her parents met. It was a big, well-known café in their hometown. It has since closed, the whole town was sad to see it go, and the parents still bring it up in conversation. Now they have it back in miniature.",
+    shortDescription:
+      "A wedding anniversary gift: Cafe Ferrari, the closed hometown café where her parents met, rebuilt in miniature from old photos and Facebook posts.",
+    making:
+      "This one took a lot of detective work. When a piece is a surprise gift, there often isn't enough visual information to go on. For this one there were only a few really old photos, so I dug through old Facebook posts and internet rabbit holes to find enough references to get it right. They told me I did. The first sketch was drawn to scale to work out the topography, so I'd know how big to make everything in Blender before 3D printing.",
+    artistName: "Wedding anniversary commission",
+    artistRealName: "2026",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/CafeFerrari/webp/big/CafeFerrari-1-1920x2560.webp",
+      "/assets/images/works/CafeFerrari/webp/big/CafeFerrari-2-1920x2560.webp",
+      "/assets/images/works/CafeFerrari/webp/big/CafeFerrari-3-1920x2560.webp",
+      "/assets/images/works/CafeFerrari/webp/big/CafeFerrari-4-1920x2560.webp",
+    ],
+  },
+  {
+    id: 12,
+    category: "life-moments",
+    slug: "camper-van-dream-documentary",
+    name: "Camper van dream, miniature sets for a documentary",
+    src: "/assets/images/works/CamperVan/webp/big/CamperVan-1-2560x1920.webp",
+    description:
+      "A friend's project: a documentary about our dream of traveling around in a camper van we built ourselves. Some of the shots were made in miniature. Some dreams get delayed because you have to be an adult.",
+    shortDescription:
+      "Miniature sets built for a friend's documentary about our dream of a self-built camper van, shown behind the scenes while filming.",
+    making:
+      "These photos are from behind the scenes, building and shooting the miniature sets: a small camper van on a rocky coast and a night scene on red, rocky ground, lit and filmed with a cinema camera. The last photo is my friend filming the documentary.",
+    artistName: "Documentary sets",
+    artistRealName: "2026",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/CamperVan/webp/big/CamperVan-1-2560x1920.webp",
+      "/assets/images/works/CamperVan/webp/big/CamperVan-2-2560x1928.webp",
+      "/assets/images/works/CamperVan/webp/big/CamperVan-3-1920x2560.webp",
+      "/assets/images/works/CamperVan/webp/big/CamperVan-4-1920x2560.webp",
+      "/assets/images/works/CamperVan/webp/big/CamperVan-5-2560x1928.webp",
+      "/assets/images/works/CamperVan/webp/big/CamperVan-6-1920x2560.webp",
+    ],
+  },
+  {
+    id: 13,
+    category: "achievements",
+    slug: "dentist-graduation-pag-folk-costume",
+    name: "A dentist's graduation in Pag folk costume",
+    src: "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-cover-1920x1440.webp",
+    description:
+      "A commission from a group of friends for their friend's graduation. She's now a dentist. She comes from the island of Pag in Croatia and dances folklore, so we made her in Pag's traditional folk costume, standing next to a dentist's chair and tools.",
+    shortDescription:
+      "A graduation gift from friends: a new dentist from the island of Pag, made in her traditional folk costume and standing beside a dentist's chair.",
+    making:
+      "The figure, the chair with its lamp and hoses, and the tiled floor are all painted by hand on a round base. The last photo shows the piece unpainted, before any colour went on.",
+    artistName: "Graduation commission",
+    artistRealName: "2025",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-1-1920x2560.webp",
+      "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-2-1920x2560.webp",
+      "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-3-1920x2560.webp",
+      "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-4-1920x2560.webp",
+      "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-5-1070x1560.webp",
+      "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-6-1920x2560.webp",
+    ],
+  },
+  {
+    id: 14,
+    category: "employee-gifts",
+    slug: "partisan-grill-aarhus",
+    name: "Partisan Grill, a restaurant in Aarhus",
+    src: "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-1-1920x2560.webp",
+    description:
+      "A miniature of Partisan Grill, a restaurant in Aarhus, Denmark. It was commissioned as a gift from one of the workers to the restaurant owner. The goal was to capture this small, fun place and its walls full of memorabilia from old Yugoslavia: books, old banknotes, albums, shirts, and gifts left by people who visited.",
+    shortDescription:
+      "A worker's gift to the owner: Partisan Grill in Aarhus as a miniature, its walls full of old Yugoslav memorabilia, on a burned wooden base.",
+    making:
+      "The base is handmade from wood, then burned for effect, since it's a grill. The restaurant was mostly 3D modelled digitally by Elanor, someone I'm mentoring. These photos aren't polished or Photoshopped. They show what the piece looks like while I'm working on it.",
+    artistName: "Gift for the owner",
+    artistRealName: "2026",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-1-1920x2560.webp",
+      "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-2-1920x2560.webp",
+      "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-3-1920x2560.webp",
+      "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-4-1920x2560.webp",
+      "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-5-2560x1440.webp",
+      "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-6-1440x2560.webp",
+      "/assets/images/works/PartisanGrill/webp/big/PartisanGrill-7-1920x2560.webp",
+    ],
+  },
+  {
+    id: 15,
+    category: "gaming-art",
+    slug: "pyramid-head-silent-hill-2",
+    name: "Pyramid Head from Silent Hill 2",
+    src: "/assets/images/works/PyramidHead/webp/big/PyramidHead-cover-1920x1440.webp",
+    description:
+      "A gift for a friend who worked on the game Silent Hill 2. Pyramid Head is one of the game's iconic villains.",
+    shortDescription:
+      "A hand-painted Pyramid Head, the iconic Silent Hill 2 villain, made as a gift for a friend who worked on the game and shot under dramatic red light.",
+    making:
+      "I bought the 3D model, printed it, then painted it with careful attention to detail. Probably one of my best paint jobs on a character or creature. Some of the photos are under dramatic lighting, especially the monochrome red or orange light, which makes him look beautiful.",
+    artistName: "Silent Hill 2",
+    artistRealName: "2025",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-1-1920x2560.webp",
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-2-1920x2560.webp",
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-3-1920x2560.webp",
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-4-1920x2560.webp",
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-5-1920x2560.webp",
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-6-1920x2560.webp",
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-7-1920x2560.webp",
+      "/assets/images/works/PyramidHead/webp/big/PyramidHead-8-1920x2560.webp",
+    ],
+  },
+  {
+    id: 16,
+    category: "gaming-art",
+    slug: "mollymauk-tealeaf-critical-role",
+    name: "Mollymauk Tealeaf, painted by Elanor",
+    src: "/assets/images/works/Mollymauk/webp/big/Mollymauk-cover-1920x1440.webp",
+    description:
+      "Mollymauk Tealeaf from Critical Role, Campaign 2. Painted by Elanor, someone I'm mentoring. It's only her second fully painted miniature, and it won a junior gold prize.",
+    shortDescription:
+      "Mollymauk Tealeaf from Critical Role, painted by my mentee Elanor in a bold, flat Campaign 2 style. Her second painted miniature won a junior gold prize.",
+    making:
+      "She nailed the look of the Campaign 2 artwork: bold, flat colors, hard transitions, and graphic outlines. That style is made for a 2D medium, and she carried it over to a 3D figure really well.",
+    artistName: "Critical Role",
+    artistRealName: "Painted by Elanor, 2026",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/Mollymauk/webp/big/Mollymauk-1-1920x2560.webp",
+      "/assets/images/works/Mollymauk/webp/big/Mollymauk-2-1920x2560.webp",
+      "/assets/images/works/Mollymauk/webp/big/Mollymauk-3-1920x2560.webp",
+      "/assets/images/works/Mollymauk/webp/big/Mollymauk-4-1920x2560.webp",
+      "/assets/images/works/Mollymauk/webp/big/Mollymauk-5-1920x2560.webp",
+      "/assets/images/works/Mollymauk/webp/big/Mollymauk-6-1920x2560.webp",
+    ],
+  },
+  {
+    id: 17,
+    category: "movie-art",
+    slug: "dune-attack-of-the-maker",
+    name: "Dune: Attack of the Maker",
+    src: "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-1-1440x1920.webp",
+    description:
+      "A gift from one brother to another, a devoted fan of the Dune books and movies. Two ornithopters, the dragonfly-like aircraft with four wings, attempt to escape the colossal Maker, a sandworm native to the desert planet Arrakis. One thopter is being pulled down while the other ascends. The base reads \"DUNE 2025\".",
+    shortDescription:
+      "A sandworm bursts from the sands of Arrakis as two ornithopters try to escape. A hand-sculpted Dune miniature, made as a gift from brother to brother.",
+    making:
+      "Almost everything is handmade, apart from the ornithopters. The desert landscape is sculpted from clay and airbrushed for a smooth, realistic finish. The Maker is hand-sculpted from polyclay, while the ornithopters are 3D printed. Colored pillow fluff is added to simulate dust clouds. The challenge was capturing movement: the beating wings, the worm, the sand and dust clouds.",
+    artistName: "Dune",
+    artistRealName: "2025",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-1-1440x1920.webp",
+      "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-2-1440x1920.webp",
+      "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-3-1440x1920.webp",
+      "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-4-1440x1918.webp",
+      "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-5-1440x1920.webp",
+      "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-6-1440x1918.webp",
+      "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-7-1920x2560.webp",
+    ],
+  },
+  {
+    id: 18,
+    category: "movie-art",
+    slug: "interstellar-tesseract-infinity-box",
+    name: "Interstellar tesseract infinity box",
+    src: "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-1-2560x2560.webp",
+    description:
+      "A prototype of the Interstellar scene where the main character, inside the tesseract, watches himself from the fourth dimension and tries to make contact by pushing books off the shelf.",
+    shortDescription:
+      "The Interstellar bedroom repeated endlessly in an infinity box: a one-way mirror and LEDs turn one small room into a room inside the tesseract.",
+    making:
+      "I built it as an infinity box. A one-way mirror and LEDs repeat the room endlessly, giving the effect of a room inside a tesseract. This was the prototype, and the final version is in a different box. The process photos show the room being built inside its clear case.",
+    artistName: "Interstellar",
+    artistRealName: "2025",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-1-2560x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-2-2560x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-3-2560x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-4-2560x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-5-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-6-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-7-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-8-2560x1920.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-9-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-10-1440x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-11-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-12-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-13-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-14-1920x2560.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-15-2560x1920.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-16-2560x1920.webp",
+      "/assets/images/works/InterstellarTesseract/webp/big/Interstellar-17-1920x2560.webp",
+    ],
+  },
+  {
+    id: 19,
+    category: "movie-art",
+    slug: "vi-arcane-bust",
+    name: "Vi from Arcane, a painted bust",
+    src: "/assets/images/works/ViArcane/webp/big/ViArcane-1-1920x2560.webp",
+    description:
+      "Vi from Arcane and League of Legends, painted by me. This one is a bust, not a full figure. A really fun paint, done while I was teaching Elanor.",
+    shortDescription:
+      "A painted bust of Vi from Arcane and League of Legends, her tattoos painted freehand across her back and arms, photographed under low, moody light.",
+    making:
+      "The challenge was painting her tattoos freehand. Most of the photos are under low, coloured light to show the skin tones and the tattoo work across her back and arms.",
+    artistName: "Arcane",
+    artistRealName: "2026",
+    artistsImage: "/assets/images/avatarImage.webp",
+    galleryImages: [
+      "/assets/images/works/ViArcane/webp/big/ViArcane-1-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-2-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-3-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-4-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-5-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-6-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-7-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-8-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-9-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-10-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-11-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-12-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-13-1920x2560.webp",
+      "/assets/images/works/ViArcane/webp/big/ViArcane-14-1440x2560.webp",
+    ],
+  },
 ];
 
 // ─── Services card data ────────────────────────────────────────────────────────
@@ -235,7 +572,7 @@ export const INDIVIDUAL_CARDS = [
   {
     title: "Achievements",
     href: "/gallery/achievements",
-    image: "/assets/images/works/Rastovac/webp/big/Rastovac_KuminaKuca-1-2000x1500.webp",
+    image: "/assets/images/works/DentistGraduation/webp/big/DentistGraduation-cover-1920x1440.webp",
     copy: "Graduations, promotions, completions. Something that took years. Something worth handing someone in three dimensions.",
   },
 ];
@@ -265,7 +602,7 @@ export const FAN_CARDS = [
   {
     title: "Movie & TV Art",
     href: "/gallery/movie-art",
-    image: "/assets/images/works/Crash/Webp/big/BG_Crash-1-1836x1033.webp",
+    image: "/assets/images/works/DuneSandworm/webp/big/DuneSandworm-1-1440x1920.webp",
     copy: "A frame frozen. A ship. A moment from a film that still sits somewhere in the back of your head.",
   },
 ];

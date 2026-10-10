@@ -3,9 +3,8 @@ import ThumbnailPicker from "../thumbnailPicker/ThumbnailPicker.jsx";
 import { galleryWorks } from "../../../data/siteContent";
 
 function GalleryList({ big, excludeId }) {
-  const items = excludeId
-    ? galleryWorks.filter((w) => w.id !== excludeId)
-    : galleryWorks;
+  // Only works with a 3D scene: each thumbnail links to work.link
+  const items = galleryWorks.filter((w) => w.link && w.id !== excludeId);
   return (
     <NavList size={big}>
       {items.map((image) => (
