@@ -409,7 +409,7 @@ export const galleryWorks = [
     category: "gaming-art",
     slug: "pyramid-head-silent-hill-2",
     name: "Pyramid Head from Silent Hill 2",
-    src: "/assets/images/works/PyramidHead/webp/big/PyramidHead-cover-1920x1440.webp",
+    src: "/assets/images/works/PyramidHead/webp/big/PyramidHead-cover-red-1920x1440.webp",
     description:
       "A gift for a friend who worked on the game Silent Hill 2. Pyramid Head is one of the game's iconic villains.",
     shortDescription:
@@ -519,7 +519,7 @@ export const galleryWorks = [
     category: "movie-art",
     slug: "vi-arcane-bust",
     name: "Vi from Arcane, a painted bust",
-    src: "/assets/images/works/ViArcane/webp/big/ViArcane-1-1920x2560.webp",
+    src: "/assets/images/works/ViArcane/webp/big/ViArcane-cover-1920x1440.webp",
     description:
       "Vi from Arcane and League of Legends, painted by me. This one is a bust, not a full figure. A really fun paint, done while I was teaching Elanor.",
     shortDescription:
