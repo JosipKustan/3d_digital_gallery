@@ -1,10 +1,11 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { SEO } from "../components/shared/SEO";
-import { Button } from "../components/shared/Button";
+import { Button, IconButton } from "../components/shared/Button";
 import {
   Absolute3DModel,
   BodyLead,
+  ButtonRow,
   ButtonZone,
   ContactWrapper,
   Fake3DModel,
@@ -36,6 +37,7 @@ import Footer from "../components/shared/Footer";
 import { PortfolioCard } from "../components/app/cards/PortfolioCard";
 import { NDAZukiSvg } from "../components/app/SVG/NDAZukiSvg";
 import { IconNewTab } from "../components/app/SVG/IconNewTab";
+import { IconGitHub } from "../components/app/SVG/IconGitHub";
 import { useOpenLink } from "../components/shared/hooks/useOpenLink";
 import { SkillsCard } from "../components/app/cards/SkillsCard";
 import { CookingSvg } from "../components/app/SVG/CookingSvg";
@@ -100,13 +102,23 @@ function Portfolio() {
             Ready for product teams, but open to interesting challenges
             anywhere.
           </BodyLead>
-          <Button
-            variant="solid"
-            onClick={() => openLink("/assets/PDF/Josip_Kustan_CV.pdf")}
-          >
-            View CV
-            <IconNewTab />
-          </Button>
+          <ButtonRow>
+            <Button
+              variant="solid"
+              onClick={() => openLink("/assets/PDF/Josip_Kustan_CV.pdf")}
+            >
+              View CV
+              <IconNewTab />
+            </Button>
+            <IconButton
+              variant="solid"
+              aria-label="GitHub profile (opens in a new tab)"
+              title="GitHub"
+              onClick={() => openLink("https://github.com/JosipKustan")}
+            >
+              <IconGitHub />
+            </IconButton>
+          </ButtonRow>
         </Section3DHeader>
         {!isMobileView && (
           <>

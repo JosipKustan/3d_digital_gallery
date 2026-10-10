@@ -72,6 +72,11 @@ export const Button = styled.button`
   }
 `;
 
+// Square, icon-only Button: always pass an aria-label
+export const IconButton = styled(Button)`
+  padding: 16px;
+`;
+
 export const SecondaryButton = styled.button`
   border: none;
   background: none;

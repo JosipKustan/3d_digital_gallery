@@ -466,6 +466,12 @@ export const ScrollZoneBottom = styled.div`
   width: 100%;
   z-index: 10;
 `;
+export const ButtonRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+`;
 export const ButtonZone = styled.div`
   margin-top: 32px;
   position: relative;
