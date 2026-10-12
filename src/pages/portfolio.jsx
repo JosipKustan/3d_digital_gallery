@@ -69,8 +69,8 @@ function Portfolio() {
     <MainContentContainer $noNav>
       <SEO
         title="Portfolio | Josip Kuštan, Designer & Artist | Creative Studio Kuki"
-        description="The personal portfolio of Josip Kuštan, a UX designer, software engineer, and miniature artist. Explore case studies, skills, and creative work."
-        ogDescription="The personal portfolio of Josip Kuštan, a UX designer, software engineer, and miniature artist."
+        description="The personal portfolio of Josip Kuštan, a UX designer, design engineer and miniature artist. Case studies, skills and creative work."
+        ogDescription="The personal portfolio of Josip Kuštan, a UX designer, design engineer and miniature artist."
         path="/portfolio"
       />
       {/*HERO SECTION*/}
@@ -79,7 +79,7 @@ function Portfolio() {
           <H1Header>
             <H1Highlight>Hi! I'm </H1Highlight> Josip Kuštan
           </H1Header>
-          <SubHeader>UX Designer with a miniature artist's patience.</SubHeader>
+          <SubHeader>UX Designer and Design Engineer with a miniature artist's patience.</SubHeader>
         </HeaderWrapper>
         <HeroPortfolioIllustration />
       </SectionPortfolio>
