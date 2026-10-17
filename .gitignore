@@ -32,3 +32,6 @@ Thumbs.db
 dist/
 stats.html
 .vit/
+
+# CV build output (scripts/build-cv.mjs)
+cv/.build/
