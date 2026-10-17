@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { SEO } from "../components/shared/SEO";
+import { SEO, SITE_URL, breadcrumbSchema } from "../components/shared/SEO";
+import cv from "../../cv/cv.json";
 import { Button, IconButton } from "../components/shared/Button";
 import {
   Absolute3DModel,
@@ -60,6 +61,63 @@ const RastovacLiDARScene = dynamic(
   },
 );
 
+// Who this page is about, for search engines and AI crawlers. The site-wide
+// Organization schema in _document.jsx only describes the miniature studio.
+// Title, location and education come from cv/cv.json so they match the CV.
+const PROFILE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  url: `${SITE_URL}/portfolio`,
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/portfolio#josip-kustan`,
+    name: cv.basics.name,
+    jobTitle: cv.basics.label,
+    description:
+      "UX designer and design engineer with 5+ years of agency and freelance experience across enterprise apps, B2B products, design systems and small business sites. Also a miniature artist.",
+    url: `${SITE_URL}/portfolio`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: cv.basics.location.split(",")[0],
+      addressCountry: "HR",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: cv.education[0].institution,
+    },
+    worksFor: [
+      { "@id": `${SITE_URL}/#organization` },
+      { "@type": "Organization", name: "Newslabs", url: "https://newslabs.io/" },
+    ],
+    knowsLanguage: ["hr", "en"],
+    knowsAbout: [
+      "UX design",
+      "UI design",
+      "Design systems",
+      "Information architecture",
+      "User research",
+      "Usability testing",
+      "Prototyping",
+      "Figma",
+      "Storybook",
+      "Front-end development",
+      "React",
+      "3D on the web",
+      "Miniature art",
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/josip-kustan/",
+      "https://github.com/JosipKustan",
+    ],
+    subjectOf: {
+      "@type": "DigitalDocument",
+      name: `${cv.basics.name} – CV`,
+      url: `${SITE_URL}/assets/PDF/Josip_Kustan_CV.pdf`,
+      encodingFormat: "application/pdf",
+    },
+  },
+};
+
 function Portfolio() {
   const isMobileView = useIsMobileView();
 
@@ -70,6 +128,13 @@ function Portfolio() {
         description="The personal portfolio of Josip Kuštan, a UX designer, design engineer and miniature artist. Case studies, skills and creative work."
         ogDescription="The personal portfolio of Josip Kuštan, a UX designer, design engineer and miniature artist."
         path="/portfolio"
+        jsonLd={[
+          PROFILE_SCHEMA,
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Portfolio", path: "/portfolio" },
+          ]),
+        ]}
       />
       {/*HERO SECTION*/}
       <SectionPortfolio>
