@@ -1,5 +1,4 @@
 import { Button } from "../../shared/Button";
-import { useOpenLink } from "../../shared/hooks/useOpenLink";
 import { IconNewTab } from "../SVG/IconNewTab";
 import {
   CardImage,
@@ -23,8 +22,6 @@ export function PortfolioCard({
   responsibilities,
   links, // Default to empty array as fallback
 }) {
-  const { openLink } = useOpenLink();
-
   return (
     <PortfolioCardWrapper
       color={color}
@@ -56,7 +53,10 @@ export function PortfolioCard({
               <Button
                 variant="solid"
                 key={index}
-                onClick={() => openLink(link)}
+                as="a"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {name || "Case Study"}
                 <IconNewTab />

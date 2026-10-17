@@ -1,0 +1,189 @@
+{
+  "basics": {
+    "name": "Josip Kuštan",
+    "label": "UX Designer and Design Engineer",
+    "summary": "UX Designer and Design Engineer with 5+ years of agency and freelance experience across complex enterprise apps, niche B2B solutions, and small business sites. Four design systems built, with work spanning user research and information architecture through UI to front-end code. Ready for product teams, but open to interesting challenges anywhere.",
+    "location": "Bjelovar, Croatia",
+    "phone": "+385 91 3593 066",
+    "email": "josip.kustan@gmail.com",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/josip-kustan/"
+      },
+      {
+        "network": "Portfolio",
+        "url": "https://creativestudiokuki.com/portfolio"
+      }
+    ]
+  },
+  "work": [
+    {
+      "position": "Lead Designer & Design Engineer (Freelance)",
+      "name": "Newslabs",
+      "url": "https://newslabs.io/",
+      "startDate": "2026-03",
+      "summary": "Creating and handling the visual language of the brand across the web and the app.",
+      "highlights": [
+        "Own the brand's visual language and keep it consistent across web and app.",
+        "Design web and app interfaces, from UX work (flows, structure, testing) to final UI.",
+        "Build front-end implementations, bridging design and development."
+      ]
+    },
+    {
+      "position": "Artisan & UX/UI Freelancer",
+      "name": "Creative Studio Kuki (Self-Employed)",
+      "location": "Bjelovar, Croatia",
+      "url": "https://creativestudiokuki.com/",
+      "startDate": "2024-09",
+      "summary": "Unique creative solutions: UX/UI freelance, small business sites/apps, event apps, personalized miniatures, and memorabilia.",
+      "highlights": [
+        "Delivered UX/UI design for small business websites, tool apps, and event applications.",
+        "Created personalized story-driven miniatures and memorabilia for individuals and businesses (specialty).",
+        "Designed brand assets, employee gifts (e.g., 20-year anniversary sticker album, gift miniatures).",
+        "Organized events, game nights, and moderated for memorable experiences.",
+        "Collaborated with clients and professionals to guide creative processes from concept to delivery."
+      ],
+      "details": [
+        {
+          "label": "Key Tools",
+          "text": "Hands, Figma, Blender, 3D printing/resin workflows."
+        },
+        {
+          "label": "Notable Projects",
+          "text": "2025 World Men's Handball Championship app; Employee gift miniatures & company memorabilia."
+        }
+      ]
+    },
+    {
+      "position": "UX/UI Designer",
+      "name": "CROZ d.o.o.",
+      "location": "Zagreb, Croatia",
+      "url": "https://croz.net/",
+      "startDate": "2021-01",
+      "endDate": "2024-08",
+      "summary": "Enterprise solutions, mobile/web apps, and websites.",
+      "highlights": [
+        "Created an enterprise design system unifying 120+ internal applications (1980s to 2020s): audited ~30 core apps, grouped them into 10 categories, and delivered global layouts, a pattern library, components, Figma prototypes, and a design guidebook in 6 months with a 2.5-person team.",
+        "Redesigned a charity fundraising website (cinipravustvar.hr) through UX research, workshops, prototypes, and user testing, tripling donation revenue.",
+        "Developed design strategies, systems, and style guides with Figma libraries and Storybook documentation, including the open-source Tiller Design System.",
+        "Consulted on UX for a bank: information architecture for legally heavy websites, user testing, and teaching complex Figma systems for faster iteration.",
+        "Defined app objectives, information architecture (sitemaps, user flows, wireframes), and clickable prototypes.",
+        "Designed user interfaces with color schemes, typography, icons, and iterated based on usability testing and feedback.",
+        "Managed developer handoffs, quality assurance, and upgrades for new and existing solutions.",
+        "Led design workshops and stakeholder sessions; co-led the UX Community of Practice, mentoring and reviewing junior designers.",
+        "Negotiated client requirements, presenting feasible solutions and limitations."
+      ],
+      "roles": [
+        {
+          "position": "Front-end Developer (~6 months)",
+          "highlights": [
+            "Built interfaces with HTML/CSS, React.js, WordPress/Elementor, and Flutter."
+          ]
+        }
+      ],
+      "details": [
+        {
+          "label": "Notable Projects (not under NDA)",
+          "text": "CodeX Marine product website; links and case studies for all of the above in the portfolio."
+        },
+        {
+          "label": "Speaker/Moderator",
+          "text": "QED Conference (international) for 2 years, game nights organization."
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "UX",
+      "keywords": [
+        "User research",
+        "Usability testing",
+        "Design workshops",
+        "Information architecture",
+        "User flows",
+        "Wireframing",
+        "Prototyping",
+        "Maze",
+        "Useberry"
+      ]
+    },
+    {
+      "name": "UI & Design Systems",
+      "keywords": [
+        "UI design",
+        "Design systems",
+        "Style guides",
+        "Figma (libraries, prototyping)",
+        "Storybook",
+        "Developer handoff"
+      ]
+    },
+    {
+      "name": "Front-end",
+      "keywords": [
+        "HTML/CSS",
+        "React",
+        "Next.js",
+        "Three.js / React Three Fiber",
+        "styled-components",
+        "WordPress/Elementor",
+        "Flutter"
+      ]
+    },
+    {
+      "name": "3D & Media",
+      "keywords": [
+        "Blender",
+        "3D printing",
+        "Adobe Suite",
+        "DaVinci Resolve",
+        "Affinity Suite"
+      ]
+    },
+    {
+      "name": "Collaboration",
+      "keywords": [
+        "Atlassian Suite",
+        "Stakeholder workshops",
+        "Mentoring",
+        "Public speaking and moderation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "studyType": "Bachelor of Software Engineering",
+      "institution": "Algebra University",
+      "startDate": "2019-08",
+      "endDate": "2023-02",
+      "score": "Average Grade: 4.0 / 5.0 (Very good)",
+      "thesis": "Bachelor Thesis: Optimization of 3D model display in web browsers (Qualitative research)"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Croatian",
+      "fluency": "Mother tongue"
+    },
+    {
+      "language": "English",
+      "fluency": "C2 (listening, reading, spoken production, spoken interaction), C1 (writing)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Craftsmanship",
+      "text": "3D printing, sculpting, painting, woodworking, sewing (foundation of my business)."
+    },
+    {
+      "name": "Cooking",
+      "text": "Passionate experimenter; recipe development and gourmet techniques. Successfully led a professional kitchen in summer '25."
+    },
+    {
+      "name": "Dancing",
+      "text": "National-level standard and Latin sport dancing (youth)."
+    }
+  ]
+}

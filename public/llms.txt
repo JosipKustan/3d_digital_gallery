@@ -1,0 +1,34 @@
+# Creative Studio Kuki
+
+> Creative Studio Kuki is the studio and portfolio of Josip Kuštan, a UX designer and design engineer based in Bjelovar, Croatia. The studio also makes handcrafted, personalised miniature art: gifts, wedding keepsakes and business awards.
+
+## Josip Kuštan: UX Designer and Design Engineer
+
+- 5+ years of agency and freelance experience across enterprise apps, B2B products, design systems and small business sites.
+- Lead Designer & Design Engineer (freelance) at Newslabs since 03/2026: brand visual language, web and app design, front-end implementation.
+- Freelance UX/UI designer through Creative Studio Kuki since 09/2024, including an app for the 2025 World Men's Handball Championship.
+- UX/UI Designer at CROZ, Zagreb, 01/2021 to 08/2024: four design systems (including the open-source Tiller Design System), an enterprise design system unifying 120+ applications, bank UX consulting, a charity fundraising site that tripled donation revenue, and co-leading the UX Community of Practice.
+- Bachelor of Software Engineering, Algebra University (thesis: optimising 3D model display in web browsers).
+- Languages: Croatian (native), English (C2).
+
+- [Portfolio](https://creativestudiokuki.com/portfolio): selected work, case studies and skills
+- [CV (PDF)](https://creativestudiokuki.com/assets/PDF/Josip_Kustan_CV.pdf)
+- [LinkedIn](https://www.linkedin.com/in/josip-kustan/)
+- [GitHub](https://github.com/JosipKustan)
+
+## Case studies and work
+
+- [Fundraising website for charities](https://www.behance.net/gallery/193394665/Do-the-right-thing-(hrv-Cini-pravu-stvar)): UX research to user testing; 3x donation revenue
+- [Enterprise design system case study (PDF)](https://creativestudiokuki.com/assets/PDF/NDA%20Case%20Study.pdf): 120+ applications, legacy to modern, NDA-safe version
+- [Tiller Design System](https://croz-ltd.github.io/tiller/?path=/story/introduction--page): open-source design system
+- [QED conference keynote moderation](https://www.youtube.com/watch?v=DJrN_hCNKxE): international conference, moderator for 2 years
+- [Newslabs](https://newslabs.io/): current brand, web and app design work
+
+## Miniature art studio
+
+- [Home](https://creativestudiokuki.com/)
+- [Gallery](https://creativestudiokuki.com/gallery): finished miniature projects by category
+- [Services](https://creativestudiokuki.com/services)
+- [Pricing factors](https://creativestudiokuki.com/price-factors)
+- [About](https://creativestudiokuki.com/about)
+- [Contact](https://creativestudiokuki.com/contact)

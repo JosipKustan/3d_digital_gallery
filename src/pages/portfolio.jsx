@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import { SEO } from "../components/shared/SEO";
+import { SEO, SITE_URL, breadcrumbSchema } from "../components/shared/SEO";
+import cv from "../../cv/cv.json";
 import { Button, IconButton } from "../components/shared/Button";
 import {
   Absolute3DModel,
@@ -39,7 +40,6 @@ import { PortfolioCard } from "../components/app/cards/PortfolioCard";
 import { NDAZukiSvg } from "../components/app/SVG/NDAZukiSvg";
 import { IconNewTab } from "../components/app/SVG/IconNewTab";
 import { IconGitHub } from "../components/app/SVG/IconGitHub";
-import { useOpenLink } from "../components/shared/hooks/useOpenLink";
 import { SkillsCard } from "../components/app/cards/SkillsCard";
 import { CookingSvg } from "../components/app/SVG/CookingSvg";
 import { GameMasterSVG } from "../components/app/SVG/GameMasterSVG";
@@ -61,8 +61,64 @@ const RastovacLiDARScene = dynamic(
   },
 );
 
+// Who this page is about, for search engines and AI crawlers. The site-wide
+// Organization schema in _document.jsx only describes the miniature studio.
+// Title, location and education come from cv/cv.json so they match the CV.
+const PROFILE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  url: `${SITE_URL}/portfolio`,
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/portfolio#josip-kustan`,
+    name: cv.basics.name,
+    jobTitle: cv.basics.label,
+    description:
+      "UX designer and design engineer with 5+ years of agency and freelance experience across enterprise apps, B2B products, design systems and small business sites. Also a miniature artist.",
+    url: `${SITE_URL}/portfolio`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: cv.basics.location.split(",")[0],
+      addressCountry: "HR",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: cv.education[0].institution,
+    },
+    worksFor: [
+      { "@id": `${SITE_URL}/#organization` },
+      { "@type": "Organization", name: "Newslabs", url: "https://newslabs.io/" },
+    ],
+    knowsLanguage: ["hr", "en"],
+    knowsAbout: [
+      "UX design",
+      "UI design",
+      "Design systems",
+      "Information architecture",
+      "User research",
+      "Usability testing",
+      "Prototyping",
+      "Figma",
+      "Storybook",
+      "Front-end development",
+      "React",
+      "3D on the web",
+      "Miniature art",
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/josip-kustan/",
+      "https://github.com/JosipKustan",
+    ],
+    subjectOf: {
+      "@type": "DigitalDocument",
+      name: `${cv.basics.name} – CV`,
+      url: `${SITE_URL}/assets/PDF/Josip_Kustan_CV.pdf`,
+      encodingFormat: "application/pdf",
+    },
+  },
+};
+
 function Portfolio() {
-  const { openLink } = useOpenLink();
   const isMobileView = useIsMobileView();
 
   return (
@@ -72,6 +128,13 @@ function Portfolio() {
         description="The personal portfolio of Josip Kuštan, a UX designer, design engineer and miniature artist. Case studies, skills and creative work."
         ogDescription="The personal portfolio of Josip Kuštan, a UX designer, design engineer and miniature artist."
         path="/portfolio"
+        jsonLd={[
+          PROFILE_SCHEMA,
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Portfolio", path: "/portfolio" },
+          ]),
+        ]}
       />
       {/*HERO SECTION*/}
       <SectionPortfolio>
@@ -96,7 +159,7 @@ function Portfolio() {
             with me?
           </H2Header>
           <BodyLead>
-            4+ years of agency and freelance experience across complex
+            5+ years of agency and freelance experience across complex
             enterprise apps, niche B2B solutions, and small business sites.
             Ready for product teams, but open to interesting challenges
             anywhere.
@@ -104,7 +167,10 @@ function Portfolio() {
           <ButtonRow>
             <Button
               variant="solid"
-              onClick={() => openLink("/assets/PDF/Josip_Kustan_CV.pdf")}
+              as="a"
+              href="/assets/PDF/Josip_Kustan_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               View CV
               <IconNewTab />
@@ -113,7 +179,10 @@ function Portfolio() {
               variant="solid"
               aria-label="GitHub profile (opens in a new tab)"
               title="GitHub"
-              onClick={() => openLink("https://github.com/JosipKustan")}
+              as="a"
+              href="https://github.com/JosipKustan"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <IconGitHub />
             </IconButton>
@@ -176,7 +245,7 @@ function Portfolio() {
           <PortfolioCard
             svg={<NDAZukiSvg style={{ width: "auto", height: "100%" }} />}
             header="Enterprise Design System (NDA)"
-            description="Unified 120+ applications, legacy 1980s to modern 2020s)"
+            description="Unified 120+ applications (legacy 1980s to modern 2020s)"
             responsibilities="client communication, app analysis and categorization, global layout, pattern creation, component creation, Figma demos and prototypes, and a design guidebook with all UX examples."
             color={theme.colors.blue_dark}
             colorAccent={theme.colors.blue_accent}
@@ -215,11 +284,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() =>
-                openLink(
-                  "https://croz-ltd.github.io/tiller/?path=/story/introduction--page",
-                )
-              }
+              as="a"
+              href="https://croz-ltd.github.io/tiller/?path=/story/introduction--page"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Showcase
               <IconNewTab />
@@ -234,7 +302,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() => openLink("https://www.rba.hr/hr/gradani.html")}
+              as="a"
+              href="https://www.rba.hr/hr/gradani.html"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Website
               <IconNewTab />
@@ -257,7 +328,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() => openLink("https://creativestudiokuki.com/")}
+              as="a"
+              href="https://creativestudiokuki.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Homepage
               <IconNewTab />
@@ -271,7 +345,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() => openLink("https://code-x-marine.com/")}
+              as="a"
+              href="https://code-x-marine.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Website
               <IconNewTab />
@@ -293,7 +370,7 @@ function Portfolio() {
           <SkillsCard
             svg={<CookingSvg style={{ width: "100%", height: "100%" }} />}
             header="Cooking, 13 years"
-            description="I love science behind food and how we perceive it. And of course to feed my friends and family."
+            description="I love the science behind food and how we perceive it. And of course to feed my friends and family."
             color={theme.colors.blue_dark}
             skills={[
               "Iteration and testing",
@@ -367,7 +444,7 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>Professional '25 Kitchen</H4Header>
             <p>
-              Worked as a cook in a small restaurant, from menu R&D to daily
+              Led the kitchen of a small restaurant, from menu R&D to daily
               execution. It was very successful. It was also the hardest job
               I've ever done.
             </p>

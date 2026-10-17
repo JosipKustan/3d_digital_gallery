@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "images": "node scripts/optimize-images.mjs"
+    "images": "node scripts/optimize-images.mjs",
+    "cv": "node scripts/build-cv.mjs && npm run cv:check",
+    "cv:check": "uv run -q cv/ats-check.py public/assets/PDF/Josip_Kustan_CV.pdf"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.0.0",
