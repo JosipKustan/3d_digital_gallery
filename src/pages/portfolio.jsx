@@ -39,7 +39,6 @@ import { PortfolioCard } from "../components/app/cards/PortfolioCard";
 import { NDAZukiSvg } from "../components/app/SVG/NDAZukiSvg";
 import { IconNewTab } from "../components/app/SVG/IconNewTab";
 import { IconGitHub } from "../components/app/SVG/IconGitHub";
-import { useOpenLink } from "../components/shared/hooks/useOpenLink";
 import { SkillsCard } from "../components/app/cards/SkillsCard";
 import { CookingSvg } from "../components/app/SVG/CookingSvg";
 import { GameMasterSVG } from "../components/app/SVG/GameMasterSVG";
@@ -62,7 +61,6 @@ const RastovacLiDARScene = dynamic(
 );
 
 function Portfolio() {
-  const { openLink } = useOpenLink();
   const isMobileView = useIsMobileView();
 
   return (
@@ -104,7 +102,10 @@ function Portfolio() {
           <ButtonRow>
             <Button
               variant="solid"
-              onClick={() => openLink("/assets/PDF/Josip_Kustan_CV.pdf")}
+              as="a"
+              href="/assets/PDF/Josip_Kustan_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               View CV
               <IconNewTab />
@@ -113,7 +114,10 @@ function Portfolio() {
               variant="solid"
               aria-label="GitHub profile (opens in a new tab)"
               title="GitHub"
-              onClick={() => openLink("https://github.com/JosipKustan")}
+              as="a"
+              href="https://github.com/JosipKustan"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <IconGitHub />
             </IconButton>
@@ -215,11 +219,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() =>
-                openLink(
-                  "https://croz-ltd.github.io/tiller/?path=/story/introduction--page",
-                )
-              }
+              as="a"
+              href="https://croz-ltd.github.io/tiller/?path=/story/introduction--page"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Showcase
               <IconNewTab />
@@ -234,7 +237,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() => openLink("https://www.rba.hr/hr/gradani.html")}
+              as="a"
+              href="https://www.rba.hr/hr/gradani.html"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Website
               <IconNewTab />
@@ -257,7 +263,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() => openLink("https://creativestudiokuki.com/")}
+              as="a"
+              href="https://creativestudiokuki.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Homepage
               <IconNewTab />
@@ -271,7 +280,10 @@ function Portfolio() {
             </p>
             <Button
               variant="dark"
-              onClick={() => openLink("https://code-x-marine.com/")}
+              as="a"
+              href="https://code-x-marine.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Website
               <IconNewTab />
