@@ -21,7 +21,7 @@ from pypdf import PdfReader
 logging.getLogger("pdfminer").setLevel(logging.ERROR)  # font warnings are noise here
 
 CV_JSON = Path(__file__).with_name("cv.json")
-SECTIONS = ["Experience", "Education", "Languages", "Hobbies & Interests"]
+SECTIONS = ["Summary", "Experience", "Skills", "Education", "Languages", "Hobbies & Interests"]
 
 
 def lines(text):

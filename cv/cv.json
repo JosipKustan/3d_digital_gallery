@@ -2,12 +2,19 @@
   "basics": {
     "name": "Josip Kuštan",
     "label": "UX Designer and Design Engineer",
+    "summary": "UX Designer and Design Engineer with 5+ years of agency and freelance experience across complex enterprise apps, niche B2B solutions, and small business sites. Four design systems built, with work spanning user research and information architecture through UI to front-end code. Ready for product teams, but open to interesting challenges anywhere.",
     "location": "Bjelovar, Croatia",
     "phone": "+385 91 3593 066",
     "email": "josip.kustan@gmail.com",
     "profiles": [
-      { "network": "LinkedIn", "url": "https://www.linkedin.com/in/josip-kustan/" },
-      { "network": "Portfolio", "url": "https://creativestudiokuki.com/portfolio" }
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/josip-kustan/"
+      },
+      {
+        "network": "Portfolio",
+        "url": "https://creativestudiokuki.com/portfolio"
+      }
     ]
   },
   "work": [
@@ -38,8 +45,14 @@
         "Collaborated with clients and professionals to guide creative processes from concept to delivery."
       ],
       "details": [
-        { "label": "Key Tools", "text": "Hands, Figma, Blender, 3D printing/resin workflows." },
-        { "label": "Notable Projects", "text": "2025 World Men's Handball Championship app; Employee gift miniatures & company memorabilia." }
+        {
+          "label": "Key Tools",
+          "text": "Hands, Figma, Blender, 3D printing/resin workflows."
+        },
+        {
+          "label": "Notable Projects",
+          "text": "2025 World Men's Handball Championship app; Employee gift miniatures & company memorabilia."
+        }
       ]
     },
     {
@@ -51,24 +64,91 @@
       "endDate": "2024-08",
       "summary": "Enterprise solutions, mobile/web apps, and websites.",
       "highlights": [
-        "Developed design strategies, systems, and style guides with Figma libraries and Storybook documentation.",
+        "Created an enterprise design system unifying 120+ internal applications (1980s to 2020s): audited ~30 core apps, grouped them into 10 categories, and delivered global layouts, a pattern library, components, Figma prototypes, and a design guidebook in 6 months with a 2.5-person team.",
+        "Redesigned a charity fundraising website (cinipravustvar.hr) through UX research, workshops, prototypes, and user testing, tripling donation revenue.",
+        "Developed design strategies, systems, and style guides with Figma libraries and Storybook documentation, including the open-source Tiller Design System.",
+        "Consulted on UX for a bank: information architecture for legally heavy websites, user testing, and teaching complex Figma systems for faster iteration.",
         "Defined app objectives, information architecture (sitemaps, user flows, wireframes), and clickable prototypes.",
         "Designed user interfaces with color schemes, typography, icons, and iterated based on usability testing and feedback.",
         "Managed developer handoffs, quality assurance, and upgrades for new and existing solutions.",
-        "Led design workshops, stakeholder sessions, and mentored teams.",
+        "Led design workshops and stakeholder sessions; co-led the UX Community of Practice, mentoring and reviewing junior designers.",
         "Negotiated client requirements, presenting feasible solutions and limitations."
       ],
       "roles": [
         {
           "position": "Front-end Developer (~6 months)",
-          "highlights": ["Built interfaces with HTML/CSS, React.js, WordPress/Elementor, and Flutter."]
+          "highlights": [
+            "Built interfaces with HTML/CSS, React.js, WordPress/Elementor, and Flutter."
+          ]
         }
       ],
       "details": [
-        { "label": "Key Tools", "text": "Figma, Atlassian Suite, Maze, Useberry." },
-        { "label": "Notable Projects (not under NDA)", "text": "Tiller Design System; Fundraising Website (cinipravustvar.hr); CodeX Marine (links and case studies in the portfolio)." },
-        { "label": "Speaker/Moderator", "text": "QED Conference (international), game nights organization." },
-        { "label": "Image/Video", "text": "Adobe Suite, DaVinci Resolve, Affinity Suite." }
+        {
+          "label": "Notable Projects (not under NDA)",
+          "text": "CodeX Marine product website; links and case studies for all of the above in the portfolio."
+        },
+        {
+          "label": "Speaker/Moderator",
+          "text": "QED Conference (international) for 2 years, game nights organization."
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "UX",
+      "keywords": [
+        "User research",
+        "Usability testing",
+        "Design workshops",
+        "Information architecture",
+        "User flows",
+        "Wireframing",
+        "Prototyping",
+        "Maze",
+        "Useberry"
+      ]
+    },
+    {
+      "name": "UI & Design Systems",
+      "keywords": [
+        "UI design",
+        "Design systems",
+        "Style guides",
+        "Figma (libraries, prototyping)",
+        "Storybook",
+        "Developer handoff"
+      ]
+    },
+    {
+      "name": "Front-end",
+      "keywords": [
+        "HTML/CSS",
+        "React",
+        "Next.js",
+        "Three.js / React Three Fiber",
+        "styled-components",
+        "WordPress/Elementor",
+        "Flutter"
+      ]
+    },
+    {
+      "name": "3D & Media",
+      "keywords": [
+        "Blender",
+        "3D printing",
+        "Adobe Suite",
+        "DaVinci Resolve",
+        "Affinity Suite"
+      ]
+    },
+    {
+      "name": "Collaboration",
+      "keywords": [
+        "Atlassian Suite",
+        "Stakeholder workshops",
+        "Mentoring",
+        "Public speaking and moderation"
       ]
     }
   ],
@@ -83,12 +163,27 @@
     }
   ],
   "languages": [
-    { "language": "Croatian", "fluency": "Mother tongue" },
-    { "language": "English", "fluency": "C2 (listening, reading, spoken production, spoken interaction), C1 (writing)" }
+    {
+      "language": "Croatian",
+      "fluency": "Mother tongue"
+    },
+    {
+      "language": "English",
+      "fluency": "C2 (listening, reading, spoken production, spoken interaction), C1 (writing)"
+    }
   ],
   "interests": [
-    { "name": "Craftsmanship", "text": "3D printing, sculpting, painting, woodworking, sewing (foundation of my business)." },
-    { "name": "Cooking", "text": "Passionate experimenter; recipe development and gourmet techniques. Successfully led a professional kitchen in summer '25." },
-    { "name": "Dancing", "text": "National-level standard and Latin sport dancing (youth)." }
+    {
+      "name": "Craftsmanship",
+      "text": "3D printing, sculpting, painting, woodworking, sewing (foundation of my business)."
+    },
+    {
+      "name": "Cooking",
+      "text": "Passionate experimenter; recipe development and gourmet techniques. Successfully led a professional kitchen in summer '25."
+    },
+    {
+      "name": "Dancing",
+      "text": "National-level standard and Latin sport dancing (youth)."
+    }
   ]
 }

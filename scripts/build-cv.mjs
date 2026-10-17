@@ -36,10 +36,12 @@ const details = (items = []) =>
 
 const job = (w) => `
   <section class="entry">
-    <h3>${esc(w.position)}</h3>
-    <p class="org">${esc(w.name)}${w.location ? `, ${esc(w.location)}` : ""}</p>
-    <p class="dates">${dates(w)}</p>
-    ${w.summary ? `<p>${esc(w.summary)}</p>` : ""}
+    <div class="entry-head">
+      <h3>${esc(w.position)}</h3>
+      <p class="org">${esc(w.name)}${w.location ? `, ${esc(w.location)}` : ""}</p>
+      <p class="dates">${dates(w)}</p>
+      ${w.summary ? `<p>${esc(w.summary)}</p>` : ""}
+    </div>
     ${list(w.highlights)}
     ${(w.roles ?? []).map((r) => `<h4>${esc(r.position)}</h4>${list(r.highlights)}`).join("")}
     ${details(w.details)}
@@ -89,7 +91,8 @@ const html = `<!doctype html>
   section.block { break-inside: avoid-page; }
   h3 { margin: 0; font-size: 11pt; font-weight: 600; color: #560289; }
   h4 { margin: 4pt 0 0; font-size: 9.6pt; font-weight: 700; }
-  .entry { margin-bottom: 8pt; break-inside: avoid-page; }
+  .entry { margin-bottom: 8pt; }
+  .entry-head, li { break-inside: avoid-page; }
   .org { font-weight: 700; }
   .dates { font-style: italic; }
   ul { margin: 1pt 0 2pt; padding-left: 13pt; }
@@ -104,8 +107,14 @@ const html = `<!doctype html>
   <p class="contact">${contact}</p>
 </header>
 <main>
+  <h2>Summary</h2>
+  <p>${esc(basics.summary)}</p>
   <h2>Experience</h2>
   ${cv.work.map(job).join("")}
+  <section class="block inline">
+    <h2>Skills</h2>
+    ${cv.skills.map((s) => `<p><strong>${esc(s.name)}:</strong> ${esc(s.keywords.join(", "))}</p>`).join("")}
+  </section>
   <section class="block">
     <h2>Education</h2>
     ${cv.education.map(school).join("")}
