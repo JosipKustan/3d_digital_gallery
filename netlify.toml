@@ -22,4 +22,5 @@
 [[headers]]
   for = "/assets/PDF/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    # PDFs keep their file names when updated (the CV), so they must revalidate.
+    Cache-Control = "public, max-age=0, must-revalidate"
