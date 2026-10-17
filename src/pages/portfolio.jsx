@@ -96,7 +96,7 @@ function Portfolio() {
             with me?
           </H2Header>
           <BodyLead>
-            4+ years of agency and freelance experience across complex
+            5+ years of agency and freelance experience across complex
             enterprise apps, niche B2B solutions, and small business sites.
             Ready for product teams, but open to interesting challenges
             anywhere.
@@ -176,7 +176,7 @@ function Portfolio() {
           <PortfolioCard
             svg={<NDAZukiSvg style={{ width: "auto", height: "100%" }} />}
             header="Enterprise Design System (NDA)"
-            description="Unified 120+ applications, legacy 1980s to modern 2020s)"
+            description="Unified 120+ applications (legacy 1980s to modern 2020s)"
             responsibilities="client communication, app analysis and categorization, global layout, pattern creation, component creation, Figma demos and prototypes, and a design guidebook with all UX examples."
             color={theme.colors.blue_dark}
             colorAccent={theme.colors.blue_accent}
@@ -293,7 +293,7 @@ function Portfolio() {
           <SkillsCard
             svg={<CookingSvg style={{ width: "100%", height: "100%" }} />}
             header="Cooking, 13 years"
-            description="I love science behind food and how we perceive it. And of course to feed my friends and family."
+            description="I love the science behind food and how we perceive it. And of course to feed my friends and family."
             color={theme.colors.blue_dark}
             skills={[
               "Iteration and testing",
@@ -367,7 +367,7 @@ function Portfolio() {
           <StepWrapper>
             <H4Header>Professional '25 Kitchen</H4Header>
             <p>
-              Worked as a cook in a small restaurant, from menu R&D to daily
+              Led the kitchen of a small restaurant, from menu R&D to daily
               execution. It was very successful. It was also the hardest job
               I've ever done.
             </p>
